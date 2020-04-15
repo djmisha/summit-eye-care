@@ -1983,8 +1983,36 @@ aside li {
 }
 
 .f-locations {
+  padding-left: 20px;
+  margin-bottom: 40px;
   background: #fff;
-  border: 1px solid pink;
+  text-align: left;
+  list-style: none;
+}
+
+.f-locations li {
+  padding-left: 70px;
+}
+
+.f-locations li div > div {
+  margin-bottom: 15px;
+}
+
+.f-locations a {
+  color: #858688;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.f-locations .phone, .f-locations .tag {
+  color: #126abf;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.f-locations .phone a, .f-locations .tag a {
+  color: #126abf;
 }
 
 .f-social {
@@ -2014,7 +2042,7 @@ aside li {
 
 .f-social span {
   padding-left: 35px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .f-social i {

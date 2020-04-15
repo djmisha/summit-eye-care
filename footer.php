@@ -34,19 +34,25 @@
 						<div>
 
 							<?php
+								// phone
+								if($phone) echo '<div class="phone">
+								<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
+
+								// Tag
+								if($tag) echo '<div class="tag">' . $tag . '</div>';
+
 								// Directions wrap open
 								if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Footer Contact - Address" class="track-outbound">';
 
 									// locationName
 									if($locationName) echo '<div class="name">' . $locationName . '</div>';
+									
 
-									// Tag
-									if($tag) echo '<div class="tag">' . $tag . '</div>';
 
 									// Address
 									if( $street ) {
 										echo '<div class="street">' . $street;
-										if ($suite) echo ', Suite #' . $suite;
+										if ($suite) echo ', ' . $suite;
 										echo '</div>'; // Street Address
 									}
 									if( $city ) echo ' <div class="city">' . $city . ', ' . $state . ' ' . $zip . '</div>'; // City, State Zip

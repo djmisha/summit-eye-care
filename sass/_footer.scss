@@ -11,8 +11,33 @@
 }
 
 .f-locations {
+	padding-left: 20px;
+	margin-bottom: 40px;
 	background: #fff;
-	border: 1px solid pink;
+	// border: 1px solid pink;
+	text-align: left;
+	list-style: none;
+	// padding-left: 20px;
+	li {
+		padding-left: 70px;
+		div > div {
+			margin-bottom: 15px;
+		}
+	}
+	a {
+		color: $secondaryColor;
+		text-decoration: none;
+		font-size: 20px;
+	}
+	.phone, .tag {
+		color: $primaryColor;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 25px;
+		a {
+			color: $primaryColor;
+		}
+	}
 }
 
 .f-social {
@@ -31,7 +56,7 @@
 	}
 	span {
 		padding-left: 35px;
-		font-size: 14px;
+		font-size: 15px;
 	}
 	i {	
 		width: 40px;
