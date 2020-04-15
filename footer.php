@@ -1,9 +1,7 @@
 	<footer class="site-footer">
 
-		<!-- Upper Footer -->
 		<section class="upper-footer">
 
-		<!-- Contact Form -->
 		<?php if(!is_page(array('contact', 'contact-us'))): ?>
 		<div class="footer-contact-form">
 			<?php echo do_shortcode( '[seaforms name="footer-contact"]' ); ?>
@@ -11,7 +9,6 @@
 		<?php endif; ?>
 
 
-			<!-- Locations Repeater -->
 			<?php if( have_rows('locations', 'option')): ?>
 
 				<ul class="f-locations">
@@ -24,19 +21,16 @@
 					$city = get_sub_field('city');
 					$state = get_sub_field('state');
 					$zip = get_sub_field('zip');
-	    		$phone = get_sub_field('phone');
+		    		$phone = get_sub_field('phone');
 					$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
 					$map = get_sub_field('map');
 					$gmb = get_sub_field('gmb');
 				?>
 
-					<!-- Each Location -->
 					<li>
 
-						<!-- Map Icon -->
-						<div><i class="fas fa-map-marker-alt"></i></div>
+						<!-- <div><i class="fas fa-map-marker-alt"></i></div> -->
 
-						<!-- Location Info Wrap -->
 						<div>
 
 							<?php
@@ -63,17 +57,13 @@
 							?>
 
 						</div>
-						<!-- End Location Info Wrap -->
 
 					</li>
-					<!-- End Each Location -->
 
 				<?php endwhile; ?>
 				</ul>
 			<?php endif; ?>
-			<!-- End Locations Repeater -->
 
-			<!-- Footer Social Repeater -->
 			<?php if( have_rows('social_buttons', 'option')): ?>
 
 				<div class="f-social">
@@ -84,7 +74,7 @@
 						$name = get_sub_field('social_name');
 						$link = get_sub_field('social_link');
 
-						if( $name ) echo '<a href="' . $link . '" aria-label="' . $name . '" rel="nofollow noopener" target="_blank">' . $icon . '</a>';
+						if( $name ) echo '<a href="' . $link . '" aria-label="' . $name . '" rel="nofollow noopener" target="_blank">' . $icon . '<span>' . $name . '</span></a>';
 
 					endwhile;
 				?>
@@ -92,39 +82,28 @@
 				</div>
 
 			<?php endif; ?>
-			<!-- End Footer Social Repeater -->
 
+
+		<div class="footer-map">
+			<!-- NEEDS ADDRESS URL -->
+			<a href="#"></a>
+		</div>
 			
 
 		</section>
-		<!-- End of Upper Footer -->
 
 
-		<!-- Lower Footer -->
 		<section class="lower-footer">
 
 			
 
-
-			<!-- Footer Nav -->
-		<!-- 	<div class="footer-nav">
-				<?php //wp_nav_menu(array('menu' => 'Main'));?>
-			</div> -->
-			<!-- End Footer Nav -->
-
-
-			<!-- Copyright Info -->
 			<div class="copyright">Copyright &copy; <?php echo date("Y"); ?> <?bloginfo('title');?>. All rights reserved | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a></div>
-			<!-- End Copyright Info -->
 
 
-			<!-- Sig -->
 			<div class="rm-sig"><a href="<?php the_field('portfolio_link', 'option'); ?>" target="_blank" rel="noopener"><?php the_field('portfolio_label', 'option'); ?></a> by
 			<a href="https://www.silvragency.com/" target="_blank" rel="noopener" aria-label="Silvr Agency"><?php //echo inline_svg('rm-logo'); ?></a></div>
-			<!-- End Sig -->
 
 		</section>
-		<!-- End of Lower Footer -->
 
 
 		<?php
@@ -138,7 +117,6 @@
 
 	</footer>
 
-	<!-- Enqueued JavaScript at the bottom for fast page loading -->
 	<?php wp_footer();?>
 
 <?php

@@ -1,39 +1,62 @@
 
-/*------------- Footer Nav --------------*/
-
-// .footer-nav {
-// 	margin: 30px 0;
-// 	.menu {
-// 		display: none;
-// 		list-style: none;
-// 		margin: 0;
-// 		@include media($tablet) {
-// 			display: flex;
-// 			justify-content: center;
-// 			flex-wrap: wrap;
-// 			align-items: center;
-// 		}
-// 		li {
-// 			margin: 0 10px;
-// 			ul {
-// 				display: none;
-// 			}
-// 		}
-// 	}
-// }
-
-/*------------- copyright --------------*/
-
+.footer-map {
+	margin: 0 auto;
+	width: 82vw;
+	height: 82vw;
+	border-radius: 50px;
+	box-shadow:0px 20px 30px rgba(#000, .2);
+	position: relative;
+	z-index: 1000;
+	background-color: grey;
+}
 
 .f-locations {
 	background: #fff;
+	border: 1px solid pink;
 }
 
+.f-social {
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+	a {
+		text-align: left;
+		text-decoration: none;
+		color: $secondaryColor;
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px
+
+	}
+	span {
+		padding-left: 35px;
+		font-size: 14px;
+	}
+	i {	
+		width: 40px;
+		height: 40px;
+		font-size: 38px;
+		position: relative;
+	}
+	.fa-facebook-f {
+		left: 10px;
+		font-size: 35px;
+	}
+	.fa-instagram {
+		left: 4px;
+		font-size: 40px;
+
+	}
+}
+
+
 .lower-footer {
-	@include font(16px);
+	@include font(18px);
+	line-height: 28px;
 	position: relative;
-	padding-bottom: 100px;
-	padding-top: 100px;
+	padding-top: 70vw;
+	padding-bottom: 150px;
 	background: $primaryColor;
 	color: $lightColor;
 
@@ -48,7 +71,7 @@
 		}
 	}
 	.rm-sig {
-		padding-top: 30px;
+		padding-top: 20px;
 		svg {
 			margin-left: 8px;
 			path {
