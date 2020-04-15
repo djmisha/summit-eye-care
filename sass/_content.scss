@@ -1,0 +1,169 @@
+.content {
+	width: 100%;
+	@include media($desktop) {
+		width: calc(100% - #{$sidebar});
+		padding-right: 50px;
+		padding-bottom: 20px;
+	}
+}
+
+.site-crumbs {
+	text-align: left;
+	.salacious-crumb {
+		@include font(12px);
+		margin: 0 0 36px;
+		font-style: italic;
+		a {
+			text-decoration: none;
+		}
+		.crumb-sep {
+			margin: 0 8px;
+		}
+		.current-crumb-item {
+			a {
+				color: $darkAlt;
+			}
+		}
+	}
+}
+
+.interior {
+	display: block;
+	text-align: left;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	@include media($desktop) {
+		display: flex;
+	}
+	h1 {
+	}
+	.content {
+		h2 {
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		p {
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		ul {
+			margin: 2em 40px;
+			list-style: none;
+			li {
+				position: relative;
+				padding-left: 20px;
+				&:before {
+					content: "";
+					background: $primaryColor;
+					font-weight: $bold;
+					position: absolute;
+					left: 0;
+					top: 0.75em;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+				}
+			}
+		}
+		ol {
+			counter-reset: item;
+			margin: 2em 40px;
+			> li {
+				display: block;
+				margin-left: 0;
+				&:before {
+					content: counter(item) ". ";
+					counter-increment: item;
+					color: $primaryColor;
+				}
+			}
+		}
+
+		blockquote {
+			@include font(20px, 1.5em);
+			position: relative;
+			margin-top: 100px;
+			font-family: $highlightFont;
+			@include media($tablet) {
+				margin-left: 50px;
+				padding-left: 40px;
+				border-color: $primaryColor;
+			}
+			footer {
+				@include font(24px, 1em);
+				color: $primaryColor;
+				&:before {
+					content: "~ ";
+				}
+			}
+		}
+
+		.memberships-sc-wrap {
+			svg {
+				height: 200px;
+				width: auto;
+			}
+		}
+	} // End Content
+
+	.full-width {
+		position: relative;
+		width: 100vw;
+		left: -20px;
+		@include media($desktop) {
+			left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
+		}
+		@include media($full) {
+			left: calc(((40px + (50vw - (#{$full} / 2)))) * -1);
+		}
+	}
+
+	.gallery-columns-0 {
+		@include media($tablet) {
+			display: flex !important;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.gallery-item {
+			@include media($tablet) {
+				width: 48% !important;
+			}
+			@include media($desktop) {
+				width: 32% !important;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+} // End Interior
+
+/*=================================================
+=            Wordpress Default Gallery            =
+=================================================*/
+
+.gallery-size-medium {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	.gallery-item {
+		float: none !important;
+		margin-right: 5px;
+		margin-left: 5px;
+		width: 45% !important;
+		@include media($tablet) {
+			margin-right: 10px;
+			margin-left: 10px;
+			width: 19% !important;
+		}
+		img {
+			border: none !important;
+			width: 100%;
+			height: auto;
+		}
+	}
+}

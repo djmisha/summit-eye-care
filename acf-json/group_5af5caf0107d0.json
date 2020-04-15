@@ -1,0 +1,43 @@
+{
+    "key": "group_5af5caf0107d0",
+    "title": "Menu Duplicate",
+    "fields": [
+        {
+            "key": "field_5af5cafbc9241",
+            "label": "Duplicate?",
+            "name": "duplicate",
+            "type": "true_false",
+            "instructions": "Check if this is a duplicate subnav item",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1580419183
+}

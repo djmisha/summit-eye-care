@@ -1,0 +1,197 @@
+/****************************************************************/
+/* --------------------- Utility Classes  -------------------- */
+/**************************************************************/
+
+.clear	{ //apply to elements besides div to clear previous content
+	clear:both;
+}
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+div.clear { //hackery
+	height:.01em;
+	overflow:hidden;
+}
+
+.no-clear { clear: none; }
+
+.inline-block { display: inline-block; }
+
+body.lt-ie9 .inline-block{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+// .alignleft {
+// 	float:left;
+// }
+
+// .alignright {
+// 	float:right;
+// }
+
+.aligncenter {
+	display: block;
+}
+
+.no-frame {
+	border: 0!important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
+
+.textcenter { text-align: center; }
+.textleft { text-align: left; }
+.textright { text-align: right; }
+
+.italic { font-style: italic; }
+
+p.break {
+	min-height: 1rem;
+	visibility: hidden;
+}
+.is--underline { text-decoration: underline; }
+
+body .disableLink {
+	pointer-events: none;
+	cursor: default;
+}
+
+.smoothie { //text rendering fix stuff
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:focus {
+	outline: none;
+}
+
+/*Yottie Video Description Fix*/
+div.yottie-widget-video-info div.yottie-widget-video-info-caption{
+  display: block!important;
+}
+
+/* ***************************************** */
+/* ----------- MODELS TAG ------------------ */
+/* ***************************************** */
+
+span.model_tag,span.models_tag, div.model_tag {
+	position: relative;
+	display: block;
+	margin:1.25em auto 1em;
+	max-width: 100%;
+	visibility: visible;
+	@include media($tablet) {
+		&.alignleft{
+			float:left;
+			margin: 0.5em 1em 1em 0px;
+		}
+		&.alignright{
+			float:right;
+			margin: 0.5em 0px 1em 1em;
+		}
+	}
+
+	img.alignleft , img.alignright , img.aligncenter{
+		float:none;
+		margin:0;
+		border:0;
+		max-width: 100%;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	&.alignleft , &.alignright{
+		float:none;
+		margin: 0 auto 1.5em;
+	}
+	&:before{
+		position: absolute;
+		right:0;
+		content:"model";
+		font-size: 0.85em;
+		padding-right:10px;
+		color:#ffffff;
+		text-align: right;
+		bottom: 20px;
+		text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+
+	}
+}
+span.models_tag {
+	&:before{
+		content:"models";
+	}
+}
+
+section.models_tag, div.models_tag {
+	position: relative;
+	&:before{
+		position: absolute;
+		right:0;
+		content:"models";
+		font-size: 0.85em;
+		padding-right:10px;
+		color:#ffffff;
+		text-align: right;
+		bottom: 20px;
+		text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+
+	}
+}
+
+
+section.model_tag {
+	&:before{
+		position: absolute;
+		right:0;
+		content:"model";
+		font-size: 0.85em;
+		padding-right:10px;
+		color:#ffffff;
+		text-align: right;
+		bottom: 20px;
+		text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+
+	}
+}
+
+li.model_ast {
+	position: relative;
+	&:before{
+		position: absolute;
+		right:0;
+		content:"*";
+		font-size: 0.85em;
+		padding-right:10px;
+		color:#ffffff;
+		text-align: right;
+		top: 0;
+		text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+
+	}
+}
+
+
+/****************************************************************/
+/* ----------------- Classes for Hiding ---------------------- */
+/**************************************************************/
+
+@include media($tablet max) {
+	.hidden-phone { display: none; }
+}
+
+
+@include media($tablet, $desktop) {
+	.hidden-tablet { display: none; }
+}
+
+
+@include media($desktop) {
+	.hidden-desktop { display: none; }
+}
+

@@ -1,0 +1,255 @@
+// Category Archive
+
+.tmpl_type_rmg_archive {
+	text-align: left;
+	h1 {
+		text-transform: uppercase;
+	}
+	h2 {
+		@include font(40px);
+		color: $darkColor;
+	}
+	.content {
+		justify-content: space-between;
+		@include media($tablet) {
+			display: flex;
+		}
+	}
+	.interior {
+		display: block;
+	}
+	.gallery-section {
+		border-top: 14px solid $primaryColor;
+		padding: 0 20px 150px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin: 0;
+		margin-bottom: 20px;
+		@include media($tablet) {
+			width: 32%;
+		}
+		// h2 {
+		// 	@include font(40px);
+		// 	color: $darkColor;
+		// }
+		ul {
+			margin-left: 0;
+			li {
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	.gallery-content {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	.gallery-vid {
+		text-align: center;
+		padding: 40px 0;
+	}
+}
+
+
+// Category Child
+
+.tmpl_type_rmg_category_child {
+	.gallery-cat-wrap {
+		@include media($tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	.bna-group {
+		border-top: 14px solid $primaryColor;
+		padding: 0 20px 40px;
+		margin-bottom: 40px;
+		position: relative;
+		@include media($tablet) {
+			width: 48%;
+		}
+		&:hover {
+			@include media($desktop) {
+				.hover-overlay {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+		.hover-overlay {
+			display: none;
+			.button {
+				color: $darkColor;
+				border: none;
+				&:hover {
+					color: $darkColor!important;
+				}
+			}
+		}
+	}
+	.img-set {
+		@include media($tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			> a {
+				display: block;
+				width: 49%;
+			}
+			a {
+				&:nth-last-of-type(2),
+				&:nth-last-of-type(1) {
+					.bna-label {
+						display: block;
+					}
+				}
+				.bna-label {
+					display: none;
+				}
+			}
+		}
+		img {
+			width: 96%;
+			margin-bottom: 10px;
+		}
+	}
+
+	.details-hdng {
+		text-align: left;
+		font-weight: $normal;
+		margin-top: 20px;
+	}
+	.patient-details {
+		text-align: left;
+	}
+}
+
+// Single Case
+
+.tmpl_type_rmg_single_case {
+	h2 {
+		text-align: left;
+	}
+	.case-wrap {
+		border-top: 12px solid $primaryColor;
+		padding: 20px;
+		margin-bottom: 50px;
+	}
+	.img-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		> div {
+			width: 49.5%;
+			margin-bottom: 8px;
+			img {
+				width: 100%;
+			}
+			&:nth-last-of-type(2),
+			&:nth-last-of-type(1) {
+				.bna-label {
+					display: block;
+				}
+			}
+		}
+		.bna-label {
+			display: none;
+		}
+	}
+	.details-hdng {
+		text-align: left;
+		font-weight: $normal;
+		margin-top: 20px;
+	}
+	.patient-details {
+		text-align: left;
+	}
+}
+
+.notice-body-everything {
+	h2, p {
+		color: $darkAlt;
+	}
+}
+.bna-label {
+	color: $darkColor;
+	font-weight: $normal;
+}
+
+.back-btn {
+	text-align: left;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	@include media($tablet) {
+		display: flex;
+		justify-content: space-between;
+	}
+	.button {
+		position: relative;
+		@include icon('images/svg/arrow.svg', $width: 14px, $height: 24px, $paddingLeft: 70px, $top: calc(50% - 12px), $left: 30px );
+		&:before {
+			transform: rotate(180deg);
+		}
+	}
+	.gallery-nav {
+		display: flex;
+		.button {
+			&.case-next {
+				&:before {
+					transform: none;
+				}
+			}
+		}
+	}
+	.button-rmg {
+		padding: 26px;
+		&:before {
+			left: 18px;
+		}
+	}
+}
+
+/*==============================
+=            Pop Up            =
+==============================*/
+
+#notice-body {
+	display:inline-block;
+}
+
+#notice-body-everything {
+	max-width: 500px;
+	height: auto;
+	padding:20px;
+	display:inline-block;
+}
+
+#notice-body-everything h2 {
+	text-transform: uppercase;
+	font-size: 40px;
+	margin:20px 0 30px 0;
+	// color: #ffffff;
+}
+
+#notice-body p {
+	margin:0 0 30px 0;
+	// color: #ffffff;
+}
+
+#notice-body-everything #buttons {
+	display: block;
+	text-align: center;
+	box-shadow: none;
+}
+
+#notice-body-everything #buttons a{
+	box-shadow:1px 1px 1px 0px #333;
+}

@@ -1,0 +1,124 @@
+.blog,
+.tmpl_type_category,
+.tmpl_type_archive {
+	h2 {
+		margin-top: 0;
+		margin-bottom: 0;
+		@include media($desktop) {
+			@include font(40px, 120%);
+		}
+		a {
+			text-decoration: none;
+			color: $darkColor;
+		}
+	}
+	.post-snippet {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 60px;
+		border-bottom: 1px solid $primaryColor;
+		margin-bottom: 60px;
+		@include media($tablet) {
+			flex-direction: row;
+		}
+		.thumb {
+			display: none;
+			width: 152px;
+			padding-top: 10px;
+			@include media($tablet) {
+				display: block;
+			}
+		}
+		.excerpt {
+
+			padding-left: 20px;
+			@include media($desktop) {
+				width: calc(100% - 150px);
+			}
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+	.date {
+		@include font(21px);
+		text-transform: uppercase;
+		color: $primaryColor;
+		text-align: right;
+		margin-bottom: 16px;
+	}
+	.meta-data {
+		@include font(13px);
+		margin-bottom: 10px;
+		font-style: italic;
+		color: $tertiaryAlt;
+		a {
+			color: $tertiaryAlt;
+		}
+	}
+	.button {
+		text-decoration: none;
+	}
+}
+
+.tmpl_type_single {
+	.button {
+		text-decoration: none;
+	}
+}
+
+
+.search-bar {
+	@include media($tablet) {
+		display: flex;
+		justify-content: space-between;
+	}
+	form {
+		display: flex;
+	}
+	.search-input {
+		height: 60px;
+		border: 1px solid #dfdfdf;
+	}
+}
+.cat-select {
+	position: relative;
+	.cat-options {
+		background: $primaryColor;
+		height: 60px;
+		color: $lightColor;
+		padding: 17px 24px;
+		text-transform: uppercase;
+		// display: inline-block;
+		margin-bottom: 10px;
+		@include iconafter('images/svg/arrow.svg', $width: 19px, $height: 30px, $paddingRight: 90px, $bottom: 14px, $right: 30px );
+		@include media($tablet) {
+			margin-bottom: 0;
+		}
+		&:after {
+			transform: rotate(90deg);
+		}
+	}
+	.cats {
+		position: absolute;
+		display: none;
+		width: 210px;
+		z-index: 100;
+		background: lighten($primaryColor, 42%);
+		margin: 0;
+		list-style: none;
+		padding: 20px 0;
+		margin-top: -10px;
+		text-align: left;
+		@include media($tablet) {
+			margin-top: 0;
+		}
+		li {
+			padding: 5px 20px;
+			a {
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+		}
+	}
+}

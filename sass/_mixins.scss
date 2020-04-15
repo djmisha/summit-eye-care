@@ -1,0 +1,142 @@
+/* ------------------------
+   Mixins
+------------------------ */
+
+@mixin smoothie(){
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin disablelink{
+  pointer-events: none;
+  cursor: default;
+}
+
+
+// Media Query Mixin
+
+@function calculateMqSize($size) {
+  $maxSize : $size - 1px;
+  @return $maxSize;
+}
+
+
+@mixin media($args...) {
+  @if (length($args) > 1) {
+    @if nth($args, 2) == 'max' {
+      $max : nth($args, 1);
+      @media only screen and (max-width: calculateMqSize($max)) {
+        @content;
+      }
+    }
+    @else if nth($args, 2) == 'notdevice' {
+      @media only screen and (min-width: nth($args, 1)) {
+        .not--device & {
+          @content;
+        }
+      }
+    }
+    @else {
+      @media only screen and (min-width: nth($args, 1)) and (max-width: nth($args, 2)) {
+        @content;
+      }
+    }
+  }
+  @else {
+    @media only screen and (min-width: nth($args, 1)) {
+      @content;
+    }
+  }
+}
+
+
+// (50% - (#{$desktop} / 2)
+
+@mixin contain($size: $desktop, $paddingTop : null, $paddingBottom : null) {
+  padding-right: calc(40px + (50vw - (#{$size} / 2)));
+  padding-left: calc(40px + (50vw - (#{$size} / 2)));
+
+  @if ( $paddingTop ) {
+    padding-top: $paddingTop;
+    padding-bottom: $paddingTop;
+    @if( $paddingBottom) {
+      padding-top: $paddingTop;
+      padding-bottom: $paddingBottom;
+    }
+  }
+}
+
+
+// Font Mixin
+
+// rem font conversion mixin
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+// continue working on this. maybe change the order?
+
+// @mixin font($style: normal, $variant: normal, $weight: $normal, $size: 16px, $height: 150%, $family: $primaryFont) {
+//   font: $style $variant $weight #{calculateRem($size)}/#{$height} $family;
+// }
+
+// update? with this:
+
+// font: font-style font-variant font-weight font-size/line-height font-family;
+// in use:
+// font: italic small-caps normal 13px/150% Arial, Helvetica, sans-serif;
+
+// You need to supply at least font-size and font-family for the shorthand to work, otherwise it'll just be a syntax error and do nothing.
+
+
+
+// current one
+
+@mixin font($size: 16px, $height: null, $weight: null ) {
+  font-size: $size;
+  font-size: calculateRem($size);
+  line-height: $height;
+  font-weight: $weight;
+}
+
+// usage:
+// @include font(16px);
+// -- or --
+// @include font(20px, 125%, $bold);
+
+
+// Adding an icon to the left of a div (e.g. location icon to the left of an address)
+
+@mixin icon ($url, $width, $height, $paddingLeft : ($width + 20px), $top : 0, $left : 0) {
+  position: relative;
+  padding-left: $paddingLeft;
+  &:before {
+    content: '';
+    background: url($url);
+    background-size: $width $height;
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: $top;
+    left: $left;
+  }
+}
+
+@mixin iconafter ($url, $width, $height, $paddingRight : ($width + 20px), $bottom : 0, $right : 0) {
+  position: relative;
+  padding-right: $paddingRight;
+  &:after {
+    content: '';
+    background: url($url);
+    background-size: $width $height;
+    width: $width;
+    height: $height;
+    position: absolute;
+    bottom: $bottom;
+    right: $right;
+  }
+}
+
+

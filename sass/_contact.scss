@@ -1,0 +1,212 @@
+
+.contact, .contact-us {
+	aside {
+		display: none;
+	}
+
+	.contact-content {
+		width: 100%;
+		padding-bottom: 50px;
+		text-align: left;
+		@include media($tablet) {
+			display: flex;
+		}
+		section {
+			@include media($tablet) {
+				display: flex;
+				max-width: 100%;
+			}
+		}
+	}
+	.contact-form {
+		@include media($tablet) {
+			width: 50%;
+			padding-right: 50px;
+		}
+	}
+	.office-info {
+		@include media($tablet) {
+			width: 50%;
+		}
+	}
+	h2 {
+		@include font(28px);
+		text-transform: none;
+		// margin-top: 70px;
+	}
+	// .type-radiobuttons > label,
+	// .type-textarea label {
+	// 	@include font(18px, 150%, $bold);
+	// 	font-family: $secondaryFont;
+	// 	padding-bottom: 10px;
+	// }
+	.gmaps {
+	width: 100%;
+	margin-bottom: 16px;
+		iframe {
+			width: 100%;
+			height: 400px;
+		}
+	}
+	.contact-information {
+		@include media($tablet) {
+			display: flex;
+		}
+		> div,
+		> address {
+			@include media($tablet) {
+				@include font(14px);
+				width: 50%;
+			}
+			@include media($desktop) {
+				@include font(16px);
+			}
+		}
+	}
+	.location-details {
+		width: 100%;
+		padding-bottom: 20px;
+		span {
+			display: block;
+		}
+	}
+	.location-hours {
+		.hours-each {
+			display: flex;
+			> div {
+				width: 50%;
+			}
+		}
+	}
+}
+
+.gmaps {
+	width: 100%;
+	margin-bottom: 16px;
+	border: 1px solid rgba($darkColor, .2);
+	iframe {
+		display: block;
+		width: 100%;
+		height: 200px;
+	}
+}
+
+
+form {
+	.text-inputtype,
+	.email-inputtype,
+	.tel-inputtype {
+		width: 100%;
+		height: 48px;
+		padding-left: 10px;
+		background: $lightColor;
+
+	}
+	select {
+		width: 100%;
+		height: 38px;
+		appearance: none;
+		padding-left: 10px;
+		border-radius: 0;
+		margin-bottom: 16px;
+
+		background: url('images/svg/select-arrow.svg');
+		background-position: right 18px center;
+		background-repeat: no-repeat;
+		background-size: 17px 11px;
+		background-color: #f9f9f9;
+		border: 1px solid #c9c9c9;
+	}
+	textarea {
+		width: 100%;
+		margin-bottom: 16px;
+		padding-left: 10px;
+		padding-top: 10px;
+		border: 1px solid #c9c9c9;
+	}
+	input[type="radio"] {
+		margin-right: 10px;
+	}
+	.submit-btn  {
+		padding: 10px 30px;
+		// border: none;
+	}
+	.type-text {
+		@include font(12px);
+		// color: $secondaryHighlight;
+	}
+	.button {
+		border: none;
+	}
+	.type-singlelinetext,
+	.type-textarea {
+		label {
+		display: block;
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+
+		}
+		input {
+		margin-bottom: 1em;
+		padding: 1em;
+		}
+	}
+	.stopyenoh {
+		position: absolute;
+	}
+}
+
+.disclaimer {
+	@include font(12px, 1.5em);
+	font-style: italic;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(4px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-8px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(8px, 0, 0);
+  }
+}
+
+$red: #E74C3C;
+.field-wrap {
+	position: relative;
+}
+.error{
+	border: 1px solid $red!important;
+	outline: none !important;
+	box-shadow: 0 0 10px $red!important;
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+span.error{
+	border: none!important;
+	box-shadow: none!important;
+	font-size: 0;
+	top: 28px;
+	right: 0;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-image: url(images/svg/error.svg);
+	background-size: 7px 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+}

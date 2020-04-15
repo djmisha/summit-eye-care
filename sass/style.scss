@@ -1,0 +1,16 @@
+/*
+Theme Name: RM Base Theme
+Theme URI: http://www.rosemontdev.com/
+Description: A custom theme built by the team at Rosemont Media.
+Author: Rosemont Media
+Version: 2.0
+Tags:
+*/
+
+@import 'utils/reset';
+@import 'variables';
+@import 'mixins';
+@import 'utils/utility';
+@import 'common';
+@import 'base';
+@import 'utils/print';

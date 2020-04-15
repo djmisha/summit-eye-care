@@ -1,0 +1,24 @@
+/* ACF "repeat-horizontal" class, display repeaters in horizontal columns */
+.repeat-horizontal .acf-repeater tbody {
+    display: flex;
+    flex-direction: row;
+}
+.repeat-horizontal .acf-repeater tr.acf-row:not(.acf-clone) {
+    width: 100%;
+}
+.repeat-horizontal .acf-repeater tr.acf-row:not(.acf-clone) td.acf-fields {
+    width: 100% !important; /* important is necessary because it gets overwritten on drag&drop  */
+}
+
+
+.repeat-horizontal .acf-repeater tr.acf-row:hover {
+    z-index: 10 !important;
+}
+
+.repeat-horizontal .acf-repeater .acf-row-handle.remove {
+    border-right: 1px solid #E1E1E1;
+}
+
+.acf-flexible-content .layout .acf-fc-layout-handle {
+	background-color: #008EC2;
+}

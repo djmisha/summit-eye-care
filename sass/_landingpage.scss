@@ -1,0 +1,634 @@
+/*=================================================
+=            Landing Page Styles Begin            =
+=================================================*/
+
+
+.tmpl_type_page_landing {
+	// text-align: left;
+	.page-full {
+		text-align: left;
+	}
+	.landing-section {
+		padding: 0;
+		background-size: cover;
+		background-position: center;
+	}
+	.landing-row {
+		width: 100%;
+		@include media($tablet) {
+			display: flex;
+			align-items: center;
+		}
+		.landing-column {
+			flex-basis: 0;
+			flex-grow: 1;
+			background-size: cover;
+			background-position: center;
+		}
+		.landing-column-content {
+			@include media($tablet, max) {
+				padding: 20px!important;
+			}
+			// padding: 20px;
+			@include media($tablet) {
+				padding: 60px 20px 80px;
+			}
+		}
+	}
+
+	/*----------  Heading Specific  ----------*/
+
+	.int-header {
+		.page-title {
+			display: block;
+			position: relative;
+		}
+		.title-crumbs {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.title-image {
+			width: 100%;
+			height: 55vw;
+		}
+		.title-crumbs {
+			background: rgba($primaryColor, .8);
+		}
+	}
+
+	/*----------  Section Contain  ----------*/
+	.landing-contain {
+		.landing-row {
+			padding: 0;
+		}
+	}
+
+	/*----------  Landing Anchor Links Styling  ----------*/
+
+
+	// .list-borders {
+	// 	list-style-type: none;
+	// 	width: 100%;
+	// 	li {
+	// 		border-bottom: 1px solid;
+	// 		border-top: 1px solid;
+	// 		margin-bottom: -1px;
+	// 		// list-style-position: outside;
+	// 		page-break-inside: avoid;
+	// 		break-inside: avoid-column;
+	// 	}
+	// }
+
+	.landing-anchor-links {
+		list-style-type: none;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		li {
+			// margin: 0;
+			// margin-bottom: -1px;
+			// position: relative;
+			// display: inline-block;
+			position: relative;
+			width: auto;
+			&:last-of-type {
+				a {
+					&:after {
+						display: none;
+					}
+				}
+			}
+			&.remove-sep {
+				a {
+					&:after {
+						display: none;
+					}
+				}
+			}
+			a {
+				display: inline-block;
+				width: 100%;
+				position: relative;
+				text-decoration: none;
+				padding: 4px 20px;
+				color: $lightColor;
+				&:after {
+					// content: '';
+					// position: absolute;
+					// width: 100%;
+					// top: 0;
+					// left: 0;
+					content: '';
+					height: 14px;
+					border-right: 1px solid;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&:hover {
+					background: rgba($lightColor, .04);
+					color: $lightColor;
+				}
+			}
+		}
+	}
+
+	/*----------  Landing Unordered List Styles  ----------*/
+
+	ul {
+		&.dark-list {
+			margin: 1em 30px;
+			list-style: none;
+			li {
+				position: relative;
+				padding-left: 20px;
+				&:before {
+					content: '';
+					background: $darkColor;
+					font-weight: $bold;
+					position: absolute;
+					left: 0;
+					top: .75em;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+				}
+			}
+		}
+		&.light-list {
+			margin: 1em 30px;
+			list-style: none;
+			li {
+				position: relative;
+				padding-left: 20px;
+				&:before {
+					content: '';
+					background: $lightColor;
+					font-weight: $bold;
+					position: absolute;
+					left: 0;
+					top: .75em;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+				}
+			}
+		}
+		&.list-margin-bottom {
+			li {
+				margin-bottom: 1em;
+			}
+		}
+	}
+
+
+	/*========================================================
+	=            Specific Landing Section Classes            =
+	========================================================*/
+
+	/*----------  Padding Styles  ----------*/
+
+	.pt-10 {
+		padding-top: 10px;
+	}
+	.pt-20 {
+		padding-top: 20px;
+	}
+	.pt-30 {
+		padding-top: 30px;
+	}
+	.pt-40 {
+		padding-top: 40px;
+	}
+	.pt-50 {
+		padding-top: 50px;
+	}
+	.pt-60 {
+		padding-top: 60px;
+	}
+	.pt-70 {
+		padding-top: 70px;
+	}
+	.pt-80 {
+		padding-top: 80px;
+	}
+	.pt-90 {
+		padding-top: 90px;
+	}
+	.pt-100 {
+		padding-top: 100px;
+	}
+
+
+	.pb-0 {
+		padding-bottom: 0px;
+	}
+	.pb-10 {
+		padding-bottom: 10px;
+	}
+	.pb-20 {
+		padding-bottom: 20px;
+	}
+	.pb-30 {
+		padding-bottom: 30px;
+	}
+	.pb-40 {
+		padding-bottom: 40px;
+	}
+	.pb-50 {
+		padding-bottom: 50px;
+	}
+	.pb-60 {
+		padding-bottom: 60px;
+	}
+	.pb-70 {
+		padding-bottom: 70px;
+	}
+	.pb-80 {
+		padding-bottom: 80px;
+	}
+	.pb-90 {
+		padding-bottom: 90px;
+	}
+	.pb-100 {
+		padding-bottom: 100px;
+	}
+
+	/*----------  Split Width with alternating rows  ----------*/
+	.landing-split {
+		.landing-row {
+			align-items: stretch;
+			display: flex;
+			flex-direction: column-reverse;
+			@include media($tablet) {
+				flex-direction: row;
+			}
+			&:nth-of-type(even) {
+				@include media($tablet) {
+					flex-direction: row-reverse;
+				}
+			}
+			.landing-column {
+				@include media($tablet, max) {
+					min-height: 50vw;
+					flex: auto;
+				}
+				@include media($tablet) {
+					min-height: 30vw;
+				}
+				&.height-auto {
+					min-height: auto;
+				}
+			}
+		}
+		&.split-reverse {
+			.landing-row {
+				&:nth-of-type(even) {
+					@include media($tablet) {
+						flex-direction: row;
+					}
+				}
+				&:nth-of-type(odd) {
+					@include media($tablet) {
+						flex-direction: row-reverse;
+					}
+				}
+			}
+		}
+	}
+
+
+	/*----------  Split Width Alternating rows CONTAINED  ----------*/
+
+	.landing-split-contain {
+		.landing-row {
+			display: flex;
+			align-items: stretch;
+			flex-direction: column-reverse;
+			@include media($tablet) {
+				flex-direction: row;
+			}
+			&:nth-of-type(even) {
+				@include media($tablet) {
+					flex-direction: row-reverse;
+				}
+				.landing-column {
+					@include media($desktop) {
+						padding-left: 0;
+						padding-right: calc(50% - 615px);
+						text-align: right;
+					}
+					&:nth-of-type(even) {
+						@include media($desktop) {
+							padding-left: calc(50% - 615px);
+							padding-right: 0;
+							text-align: left;
+						}
+					}
+				}
+			}
+			.landing-column {
+				@include media($tablet, max) {
+					min-height: 50vw;
+					flex: auto;
+				}
+				@include media($desktop) {
+					padding-left: calc(50% - 615px);
+				}
+				&:nth-of-type(even) {
+					@include media($desktop) {
+						padding-left: 0;
+						padding-right: calc(50% - 615px);
+						text-align: right;
+					}
+				}
+				.landing-column-content {
+					@include media($desktop) {
+						text-align: left;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+
+	/*----------  Center the Text  ----------*/
+
+	.landing-center {
+		text-align: center;
+	}
+
+	.landing-top {
+		.landing-row {
+			align-items: flex-start;
+		}
+	}
+
+	/*----------  Border  ----------*/
+	.landing-border {
+		&.landing-column {
+			padding: 20px;
+		}
+		.landing-column-content {
+			border: 1px solid;
+		}
+	}
+
+	/*----------  Specific Widths and padding  ----------*/
+
+	.landing-column {
+		&.landing-10 {
+			flex-basis: 10%;
+		}
+		&.landing-20 {
+			flex-basis: 20%;
+		}
+		&.landing-30 {
+			flex-basis: 30%;
+		}
+		&.landing-40 {
+			flex-basis: 40%;
+		}
+		&.landing-50 {
+			flex-basis: 50%;
+		}
+		&.landing-60 {
+			flex-basis: 60%;
+		}
+		&.landing-70 {
+			flex-basis: 70%;
+		}
+		&.landing-80 {
+			flex-basis: 80%;
+		}
+		&.landing-90 {
+			flex-basis: 90%;
+		}
+
+		&.pr-10 {
+			padding-right: 10%;
+		}
+		&.pr-20 {
+			padding-right: 20%;
+		}
+		&.pr-30 {
+			padding-right: 30%;
+		}
+		&.pr-40 {
+			padding-right: 40%;
+		}
+		&.pr-50 {
+			padding-right: 50%;
+		}
+		&.pr-60 {
+			padding-right: 60%;
+		}
+		&.pr-70 {
+			padding-right: 70%;
+		}
+		&.pr-80 {
+			padding-right: 80%;
+		}
+		&.pr-90 {
+			padding-right: 90%;
+		}
+
+
+	}
+}
+
+
+/*=============================================
+=            Site Specific Classes            =
+=============================================*/
+
+.tmpl_type_page_landing {
+	.landing-title {
+		text-align: center;
+		width: 100%;
+		@include media($desktop) {
+			margin-top: 100px;
+		}
+		* {
+			color: $lightColor;
+		}
+		h1 {
+			margin-bottom: 0;
+			@include media($desktop) {
+				@include font(57px);
+			}
+		}
+	}
+	.landing-text-light {
+		color: #fff;
+		h1, h2, h3, h4 {
+			color: $lightColor;
+		}
+		a {
+			color: $lightColor;
+			text-decoration: underline;
+			&.button {
+				text-decoration: none;
+				border-color: $lightColor;
+			}
+		}
+	}
+
+	.flex-align-top {
+		.landing-row {
+			align-items: flex-start;
+		}
+	}
+
+	.padding-bottom-0 {
+		.landing-column-content {
+			padding-bottom: 0;
+		}
+	}
+	.padding-top-bottom-0 {
+		.landing-column-content {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	ol {
+		counter-reset: item;
+		margin: 1em 40px;
+		> li {
+			display: block;
+			margin-left: 0;
+			&:before {
+				content: counter(item) ". ";
+				counter-increment: item;
+				color: $secondaryAlt;
+			}
+		}
+	}
+}
+
+// .incision-icons {
+// 	.landing-icon {
+// 		@include media($tablet) {
+// 			height: 24vw;
+// 			display: flex;
+// 			align-items: flex-end;
+// 		}
+// 		img {
+// 			width: 100%;
+// 			height: auto;
+// 		}
+// 	}
+// }
+
+.short-p {
+	p {
+		@include media($tablet) {
+			max-width: 60%;
+			margin: 1em auto;
+		}
+	}
+}
+
+.bg-left {
+	background-position: left center!important;
+}
+
+.bg-mobile-none {
+	@include media($tablet, max) {
+		background-image: none!important;
+	}
+}
+
+.tmpl_type_page_landing .home-bnas {
+	background: none;
+}
+
+.landing-stars {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30px;
+	i {
+		@include font(23px);
+		color: $primaryColor;
+		margin: 2px;
+	}
+}
+
+.landing-testimonial {
+	@include font(19px, 1.8em);
+	font-family: $highlightFont;
+	font-style: italic;
+	padding-bottom: 2em;
+	@include media($tablet) {
+		@include font(25px);
+	}
+}
+
+.landing-author {
+	@include font(21px, 1em, $light);
+	text-align: center;
+	i {
+		@include font(30px);
+		margin-bottom: 20px;
+	}
+}
+
+.dr-quote {
+	blockquote {
+		line-height: 1.8em;
+	}
+	footer {
+		@include font(21px, 1em, $light);
+		display: flex;
+		align-items: center;
+		font-family: $primaryFont;
+		img {
+			margin: 0 20px 0 0;
+		}
+	}
+}
+
+.landing-icon {
+	margin-bottom: 1em;
+	.warranty-icons & {
+		height: 75px;
+		display: flex;
+		align-items: center;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.heading-top-0 {
+	h2, h3, h4 {
+		margin-top: 0;
+	}
+}
+
+.areola-img {
+	@include media($tablet) {
+		padding-top: 140px;
+	}
+	@include media($desktop) {
+		padding-top: 190px;
+	}
+}
+
+/*----------  Anchor Links styling  ----------*/
+
+.mele-anchors {
+	.landing-column-content {
+		padding-top: 20px!important;
+		padding-bottom: 20px!important;
+	}
+}
+/*===============================================
+=            Landing Page Styles End            =
+===============================================*/
+
+

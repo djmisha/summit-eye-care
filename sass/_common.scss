@@ -1,0 +1,211 @@
+/* ------------------------
+Common/UI elements (images, video, buttons, etc)
+------------------------ */
+
+
+video{
+	max-width: 100%;
+	height: auto;
+}
+
+.back-to-top {
+	text-align: right;
+	display: block;
+}
+
+img.alignright , img.alignleft, img.aligncenter, img.alignnone, .caption {
+    display: block;
+    height: auto;
+    margin: 0 auto 1em;
+    max-width: 100%;
+}
+
+// .content {
+	img.alignright, img.alignleft {
+		float: none;
+		@include media($tablet) {
+			margin-bottom: 1em;
+			max-width: 50%;
+		}
+	}
+	img.alignleft {
+		@include media($tablet) {
+			float: left;
+			margin-right: 1em;
+		}
+	}
+	img.alignright {
+		@include media($tablet) {
+			float: right;
+			margin-left: 1em;
+		}
+	}
+// }
+
+.wp-caption{
+	max-width: 95%;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+img.alignleft, img.alignright, img.aligncenter, .yes-frame{
+	visibility: visible;
+}
+
+
+.button, .buttons a {
+	cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  font-family: $secondaryFont;
+  border: 1px solid $lightColor;
+  background: $primaryColor;
+  color: $lightColor;
+  padding: 12px 30px;
+  &:hover {
+  	background: $secondaryColor;
+  	color: $lightColor!important;
+  }
+}
+
+
+
+.disclaimer {
+	font-size: 11px;
+	font-style: italic;
+}
+
+.two-column {
+	@include media($tablet) {
+		column-count: 2;
+		column-gap: 40px;
+	}
+}
+.spaced-list {
+	li {
+		margin-bottom: 1.5em;
+		padding-left: 30px!important;
+	}
+}
+
+.b-lazy {
+	transition: opacity 500ms ease-in-out;
+	max-width: 100%;
+	opacity: 0;}
+
+.b-lazy.b-loaded {
+	opacity: 1;
+}
+
+::selection {
+	background: $primaryColor;
+}
+
+
+// For jump links on a site with fixed header
+
+// :target:before {
+// 	@include media($desktop) {
+// 		content:"";
+// 		display:block;
+// 		height:70px; /* fixed header height*/
+// 		margin:-70px 0 0; /* negative fixed header height */
+// 	}
+// }
+
+/* Responsive iframes  and */
+/*=====================================================================
+=            Responsive iFrames and wysiwyg Youtube videos            =
+=====================================================================*/
+
+.ytvideo {
+
+	background-size: cover;
+
+}
+
+.iframe-container,
+.ytvideo {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+    iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    min-height: 0;
+  }
+}
+
+/* 16x9 Aspect Ratio */
+.iframe-container-16x9,
+.ytvideo {
+  padding-bottom: 56.25%;
+}
+
+/* 4x3 Aspect Ratio */
+.iframe-container-4x3 {
+  padding-bottom: 75%;
+}
+
+.custom-placeholder {
+	position: relative;
+}
+
+.ytvideo.clicked {
+  background: none !important;
+}
+
+.ytvideo.clicked:after,
+.custom-placeholder.clicked:after {
+  display: none;
+}
+
+.ytvideo:after,
+.custom-placeholder:after {
+  content: '\f144';
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  position: absolute;
+  font-size: 100px;
+  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-placeholder {
+	img {
+		max-width: 100%;
+	}
+}
+
+
+/*=====  End of Responsive iFrames and wysiwyg Youtube videos  ======*/
+
+
+
+
+/* Owl Carousel Styling */
+
+// .owl-carousel {
+// 	display:none;
+// 	overflow: hidden
+// }
+
+// .owl-carousel.owl-loaded {
+// 	display: block;
+// }
+
+

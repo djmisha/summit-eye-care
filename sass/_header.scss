@@ -1,0 +1,86 @@
+.site-header {
+	// position: fixed;
+	top: 0;
+	padding: 10px 0;
+	width: 100%;
+	background: $primaryColor;
+
+	.nav {
+		a {
+			color: #1e3e59;
+		}
+
+	}
+}
+
+/* Naviagation bar */
+
+.nav-bar {
+	width: 100%;
+	padding: 0 1em !important;
+	nav {
+		@include media($desktop) {
+			width: 100%;
+		}
+		a {
+		}
+	}
+}
+
+
+.is--device {
+	.nav-bar {
+		nav {
+			padding: 0 20px;
+		}
+	}
+}
+
+.menu-buttons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	@include media($desktop, notdevice) {
+		display: none;
+	}
+	a {
+		color: $secondaryColor;
+		text-decoration: none;
+	}
+	span {
+		@include font(18px, 100%, $light);
+		font-family: $secondaryFont;
+		display: block;
+	}
+	.menu-trigger {
+		display: flex;
+	}
+	.menu-contact {
+		display: flex;
+	}
+	.menu-location {
+		span {
+			margin-right: 0;
+		}
+	}
+}
+
+// Ipad Pro
+
+.is--device {
+	.menu-buttons {
+		@include media($desktop) {
+			display: block;
+		}
+	}
+}
+
+
+/*-------------- Logo Area -------------*/
+
+
+
+
+/*--------------  Header Banner  -------------*/
+
+

@@ -1,0 +1,38 @@
+aside {
+	width: $sidebar;
+	margin: 0 auto;
+	position: relative;
+	@include media($tablet) {
+		left: 0;
+	}
+	ul {
+		list-style: none;
+	}
+	li {
+		width: 100%;
+	}
+}
+
+.sidebar-block {
+	margin-bottom: 23px;
+	padding: 20px 0;
+	.hdng {
+		@include font(28px, 1.25em);
+		margin-bottom: 20px;
+		a {
+			text-decoration: none;
+		}
+	}
+	li {
+		border-bottom: 1px solid rgba($darkColor, .1);
+		a {
+			text-decoration: none;
+			width: 100%;
+			display: block;
+			padding: 8px 30px;
+		}
+		&.current_page_item {
+			// Style this to differentiate (or remove);
+		}
+	}
+}

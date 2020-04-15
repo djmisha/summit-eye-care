@@ -1,0 +1,92 @@
+header,
+.footer-contact-form 
+
+{
+	display: none;
+}
+
+/* ------------------------
+   Variables
+------------------------ */
+
+// Colors
+
+$aqua : #126abf;
+$lightAqua : #c2f2f7;
+$lightAquaAlt : #95e1e8;
+$mediumAqua : #12939f;
+$darkAqua : #3e8493;
+
+$blueGreen : #368c94;
+
+$blueGray : #f1fbff;
+
+$lightGray : #f2f2f2;
+$darkGray : #393939;
+$textGray : #565759;
+
+
+// ---------------
+
+$primaryColor : $aqua; // link color, buttons, nav, footer, etc
+$primaryAlt : $mediumAqua; //link hover
+$primaryHighlight : $lightAqua;
+$primaryHighlightAlt : $lightAquaAlt;
+$primaryAccent : $darkAqua;
+
+$secondaryColor : $blueGreen;
+$secondaryAlt : $blueGray;
+
+$tertiaryColor : $lightGray;
+$tertiaryAlt : $textGray;
+
+
+
+$lightColor : #ffffff;
+$darkColor : #000000;
+$lightAlt : $lightGray;
+$darkAlt : $darkGray;
+
+// Font Family
+
+$primaryFont : 'Lato', sans-serif;
+$secondaryFont : 'EB Garamond', serif;
+$highlightFont : 'Cormorant Garamond', serif;
+
+
+// Font Weight
+
+$thin : 100;
+$light : 300;
+$normal : 400;
+$regular : 400;
+$medium : 500;
+$semiBold : 600;
+$bold : 700;
+$extraBold : 800;
+$heavy : 900;
+
+// Sizing
+
+@function updateSize($size) {
+  $newSize : $size + 80px;
+  @return $newSize;
+}
+
+$tablet : 768px;
+$ogDesktop : 980px;
+$ogFull : 1380px;
+
+$desktop : updateSize($ogDesktop);
+$full : updateSize($ogFull);
+
+$sidebar : 300px;
+
+// Increasing color
+
+$step: 1;
+
+// Defaults
+
+$defaultfont : $primaryFont;
+$defaultcolor : $darkColor;

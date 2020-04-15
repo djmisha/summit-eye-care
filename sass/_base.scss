@@ -1,0 +1,209 @@
+
+
+/* ------------------------
+   Typography (and primary body style)
+------------------------ */
+html {
+	font: 16px/24px $defaultfont;
+}
+
+body {
+	color: $defaultcolor;
+	font: 16px/24px $defaultfont;
+	font-weight: $light;
+	line-height: 1.9em;
+	min-width: 320px;
+	text-align:center;
+	// -moz-osx-font-smoothing: grayscale;
+	// -webkit-font-smoothing: antialiased;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+ul, ol, dl {
+
+}
+
+li {
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $secondaryFont;
+	color: $primaryColor;
+	font-weight: $thin;
+}
+
+h2, h3, h4, h5, h6 {
+	margin-top: 1em;
+	margin-bottom: .5em;
+	line-height: 100%;
+}
+
+.hdng {
+	font-family: $secondaryFont;
+}
+
+h1 {
+	@include font(40px, 1.1em);
+	@include media($desktop) {
+		@include font(50px);
+	}
+}
+
+h2 {
+	@include font(32px);
+	@include media($desktop) {
+		@include font(40px, 1.45em);
+	}
+}
+
+h3 {
+	@include media($desktop) {
+		@include font(34px, 1.25em);
+	}
+}
+
+h4, h5, h6 {
+	@include media($desktop) {
+		@include font(26px);
+	}
+}
+
+a {
+	color: $primaryColor;
+	text-decoration: underline;
+	&:focus {
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+
+
+blockquote {
+	font-family: $highlightFont;
+	font-style: italic;
+	@include media($desktop) {
+		@include font(25px, 110%)
+	}
+	footer {
+		font-style: normal;
+	}
+}
+
+section,
+main,
+.contain {
+	padding: 20px;
+	@include media($desktop) {
+		padding: 20px 40px;
+	}
+	@include media($full) {
+		@include contain($full, 20px);
+	}
+}
+// .is--device {
+// 	section,
+// 	main,
+// 	.contain {
+// 		@include media($desktop) {
+// 			padding: 0 20px;
+// 		}
+// 	}
+// }
+
+
+/* ***************************************** */
+/* --------------- Layouts ----------------- */
+/* ***************************************** */
+
+
+/* -----------------------
+	Basic layout
+----------------------- */
+
+.container, .container-full { position: relative; }
+
+.container {
+	max-width: $desktop;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+
+/* ------------------------
+	Header
+------------------------ */
+
+@import 'header';
+
+/* ------------------------
+	Nav
+------------------------ */
+
+@import 'menu_touch';
+@import 'menu_hover';
+
+/* ------------------------
+	Content
+------------------------ */
+
+@import 'content';
+
+/* ------------------------
+	Aside
+------------------------ */
+
+@import 'sidebar';
+
+/* ------------------------
+	Footer Layout
+------------------------ */
+
+@import 'footer';
+
+/* ------------------------
+	Forms & Form Elements
+------------------------ */
+
+@import 'contact';
+
+/* ***************************************** */
+/* ---------- Specific Templates ----------- */
+/* ***************************************** */
+
+/* ------------------------
+	Home Page
+------------------------ */
+
+@import 'front';
+
+/* ------------------------
+	Blog/Category/Archives
+------------------------ */
+
+@import 'blog';
+
+/* ------------------------
+	Gallery
+------------------------ */
+
+@import 'gallery';
+
+/* ------------------------
+	Landing Page Builder
+------------------------ */
+
+@import 'landingpage';
+
+
+/* ------------------------
+	Random Internal Pages
+------------------------ */
+
+@import 'table';

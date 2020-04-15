@@ -1,0 +1,87 @@
+/* ------------------------
+	Data Tables
+------------------------ */
+
+.flexible-table {
+	padding-top: 0!important;
+	padding-bottom: 0!important;
+	text-align: left;
+}
+
+th, td {
+	border-bottom: 1px solid #dcd5c0;
+}
+
+table {
+	// font-family: $secondaryFont;
+	border-collapse: collapse;
+	width: 100%;
+	margin: 2.5em 0;
+	thead {
+		display: none;
+		@include media($tablet) {
+			display: table-header-group;
+		}
+	}
+	tr {
+		margin-bottom: 20px;
+		display: block;
+		@include media($tablet) {
+			margin-bottom: 0;
+			display: table-row;
+		}
+	}
+	th {
+		@include font(16px);
+		background: $darkColor;
+		color: $lightColor;
+		padding: 20px;
+		&:nth-of-type(2) {
+			// background: $primaryHighlight;
+		}
+		&:nth-of-type(3) {
+			// background: #f3efe2;
+		}
+	}
+	td {
+		@include font(14px, 130%);
+		// background: $lightColor;
+		padding: 5px 20px;
+		display: block;
+		position: relative;
+		padding-left: calc(50% + 20px);
+		@include media($tablet) {
+			display: table-cell;
+			// padding-left: 20px;
+			padding: 5px 20px;
+		}
+		&:nth-of-type(2) {
+			// background: $primaryHighlight;
+		}
+		&:nth-of-type(3) {
+			// background: #f3efe2;
+		}
+		span {
+			color: $primaryColor;
+			font-weight: $semiBold;
+			display: block;
+		}
+	}
+	td[data-title]:before {
+		content: attr(data-title);
+		// float: left;
+		font-size: .8em;
+		color: $lightColor;
+		background: black;
+		position: absolute;
+		height: 100%;
+		width: calc(50% - 20px);
+		top: 0;
+		left: 0;
+		padding-left: 20px;
+		padding-top: 6px;
+		@include media($tablet) {
+			display: none;
+		}
+	}
+}
