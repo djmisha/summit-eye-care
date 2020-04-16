@@ -12,7 +12,7 @@
 
 
 		<div class="footer-logo"><?php echo inline_svg('logo'); ?></div>
-
+			
 			<?php if( have_rows('locations', 'option')): ?>
 
 				<ul class="f-locations">
@@ -94,21 +94,20 @@
 			<?php endif; ?>
 
 
-		<div class="footer-map">
-			<!-- NEEDS ADDRESS URL -->
-			<a href="#"></a>
-		</div>
+			<div class="footer-map">
+				<?php if( have_rows('locations', 'option')): ?>
+					<?php while( have_rows('locations', 'option')): the_row(); $gmb = get_sub_field('gmb'); ?> 
+						<a href="<?php echo $gmb; ?>" aria-label="Map"></a>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</div>
 			
-
 		</section>
 
 
 		<section class="lower-footer">
 
-			
-
 			<div class="copyright">Copyright &copy; <?php echo date("Y"); ?> <?bloginfo('title');?>. All rights reserved | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a></div>
-
 
 			<div class="rm-sig"><a href="<?php the_field('portfolio_link', 'option'); ?>" target="_blank" rel="noopener"><?php the_field('portfolio_label', 'option'); ?></a> by
 			<a href="https://www.silvragency.com/" target="_blank" rel="noopener" aria-label="Silvr Agency">SILVR <?php echo inline_svg('sig-logo'); ?></a></div>
@@ -122,27 +121,18 @@
 			$stickyContact = get_field('sticky_contact', 'options');
 			if( $stickyContact ) echo '<section class="sticky-contact">' . $stickyContact . '</section>';
 		}
-		/*=====  End of Sticky Contact  ======*/
 		?>
 
 	</footer>
 
 	<?php wp_footer();?>
 
-<?php
-	// if($_SERVER['SERVER_NAME'] == 'rosemontdev.com'):
-		// $bsPort 					= 35732;
-		// $browserSync 			= 'http://rosemontdev.com:'.$bsPort;
-		// $browserSyncHdrs 		= @get_headers($browserSync);
-		// if($browserSyncHdrs):
-			?>
-			<script id="__bs_script__">//<![CDATA[
-			    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
-			//]]></script>
-			<?php
-		// endif;
-	// endif;
-?>
+
+<?php if($_SERVER['SERVER_NAME'] == 'gandola-eye.local'): ?>
+	<script id="__bs_script__">//<![CDATA[
+	    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+	//]]></script>
+	<?php endif; ?>
 
 </body>
 </html>
