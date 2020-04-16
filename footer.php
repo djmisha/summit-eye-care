@@ -2,12 +2,16 @@
 
 		<section class="upper-footer">
 
+		
+
 		<?php if(!is_page(array('contact', 'contact-us'))): ?>
 		<div class="footer-contact-form">
 			<?php echo do_shortcode( '[seaforms name="footer-contact"]' ); ?>
 		</div>
 		<?php endif; ?>
 
+
+		<div class="footer-logo"><?php echo inline_svg('logo'); ?></div>
 
 			<?php if( have_rows('locations', 'option')): ?>
 
@@ -107,7 +111,7 @@
 
 
 			<div class="rm-sig"><a href="<?php the_field('portfolio_link', 'option'); ?>" target="_blank" rel="noopener"><?php the_field('portfolio_label', 'option'); ?></a> by
-			<a href="https://www.silvragency.com/" target="_blank" rel="noopener" aria-label="Silvr Agency"><?php //echo inline_svg('rm-logo'); ?></a></div>
+			<a href="https://www.silvragency.com/" target="_blank" rel="noopener" aria-label="Silvr Agency">SILVR <?php echo inline_svg('sig-logo'); ?></a></div>
 
 		</section>
 
