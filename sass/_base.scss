@@ -34,7 +34,7 @@ li {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $secondaryFont;
 	color: $primaryColor;
-	font-weight: $thin;
+	font-weight: $semiBold;
 }
 
 h2, h3, h4, h5, h6 {
@@ -98,6 +98,7 @@ blockquote {
 section,
 main,
 .contain {
+	// border: 1px solid pink;
 	padding: 20px;
 	@include media($desktop) {
 		padding: 20px 40px;

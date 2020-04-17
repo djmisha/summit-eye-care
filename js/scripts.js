@@ -147,6 +147,7 @@
 		// Triggers
 		$('.menu-trigger').click(function(){
 			$(this).find('.nav-hamburger').toggleClass('open');
+			$(this).find('.menu-button-text').toggleClass('open');
 		});
 
 			//Add/Remove Off-Canvas Menu Classes

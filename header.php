@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 
 <html class="no-js" lang="en">
-<?php
-/*=================================================================
-				  === Site Head: Meta, Fonts, Tracking etc. ===
-=================================================================*/
-?>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content=" maximum-scale=5.0, user-scalable=yes, width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
-	<!-- Site Title -->
 	<title><?php wp_title(""); ?></title>
 
-	<!-- Device Check -->
 	<script> /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)?(document.getElementsByTagName("html")[0].className+=" is--device",/iPad/i.test(navigator.userAgent)&&(document.getElementsByTagName("html")[0].className+=" is--ipad")):document.getElementsByTagName("html")[0].className+=" not--device";</script>
 
 
-	<!-- Fonts -->
 	<?php if(!is_404()): ?>
-		<!-- Google Fonts -->
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700' ); ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=EB+Garamond' ); ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:500i' ); ?>
+		<link rel="stylesheet" href="https://use.typekit.net/gps6lee.css">
+		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700' ); ?>
+		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=EB+Garamond' ); ?>
+		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:500i' ); ?>
 	<?php endif; ?>
 
-	<!-- wp loads all css -->
 	<?php wp_head()?>
 
 	<?php // Setting up Google Analytics - could include more than just Google: Site settings > Admin
@@ -50,79 +41,137 @@
 	<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?> has-webp"
 		<?php header_images(); ?>
 	>
+		<section class="header-top">
+			
+			<div class="header-logo"><?php echo inline_svg('logo'); ?></div>
 
-		<!-- Nav Bar -->
-		<div class="nav-bar">
+			<?php // HEADER LOCATIONS  ?>
+			
+			<div class="header-locations">
+				
+				<?php if( have_rows('locations', 'option')): ?>
 
-			<!-- Menu Buttons -->
-			<div class="menu-buttons">
+					<ul class="header-locations">
 
-				<!-- Menu Hamburger - Trigger -->
-				<div class="menu-trigger">
-					<div class="nav-hamburger">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<div class="menu-button-text">Menu</div>
-				</div>
-				<!-- End Menu Hamburger - Trigger -->
+					<?php while( have_rows('locations', 'option')): the_row();
+						$locationName = get_sub_field('locationName');
+						$tag = get_sub_field('location_tag');
+						$street = get_sub_field('street');
+						$suite = get_sub_field('suite');
+						$city = get_sub_field('city');
+						$state = get_sub_field('state');
+						$zip = get_sub_field('zip');
+			    		$phone = get_sub_field('phone');
+						$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
+						$map = get_sub_field('map');
+						$gmb = get_sub_field('gmb');
+					?>
 
-				<!-- Menu Contact - Locations info Repeater -->
-				<div class="menu-contact">
+						<li>
 
-					<!-- Phone -->
-					<div class="menu-phone">
-						<?php
-							$phone_number = get_field('phone', 'options');
-							$tel_number = str_replace(array('.', ',', '-', '(', ')'), '' , $phone_number);
-						?>
+							<!-- <div><i class="fas fa-map-marker-alt"></i></div> -->
 
-						<a href="tel:1<?php echo $tel_number; ?>" data-label="Header - Phone number" class="track-outbound">
-							<span class="touch-button-icon"><?php inline_svg('icon-contact'); ?></span>
-							<span class="touch-button-text">Contact Us</span>
-						</a>
+							<div>
 
-					</div>
-					<!-- End Phone -->
+								<?php
+									// phone
+									if($phone) echo '<div class="phone">
+									<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
 
-					<!-- Location -->
-					<div class="menu-location">
+									// Tag
+									if($tag) echo '<div class="tag"> Appointments</div>';
 
-						<?php if(have_rows('office_location', 'option')): ?>
-							<?php while(have_rows('office_location', 'option')): the_row(); ?>
+									// Directions wrap open
+									if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Header  Contact - Address" class="track-outbound">';
 
-								<a href="<?php the_sub_field('gmap'); ?>" target="_blank">
-									<span class="touch-button-icon"><?php inline_svg('icon-directions'); ?></span>
-									<span class="touch-button-text">Location</span>
-								</a>
+										// locationName
+										if($locationName) echo '<div class="name">' . $locationName . '</div>';
 
-							<?php endwhile; ?>
-						<?php endif; ?>
+										// Address
+										if( $street ) {
+											echo '<div class="street">' . $street;
+											if ($suite) echo ', ' . $suite. ' ' . $city . ', ' . $state . ' ' . $zip;
+											echo '</div>'; // Street Address
+										}
 
-					</div>
-					<!-- End Location -->
+									if($gmb) echo '</a></div>';
+									// Directions wrap close/end
+								?>
 
-				</div>
-				<!-- End Menu Contact - Locations info Repeater -->
+							</div>
+
+						</li>
+
+					<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
 
 			</div>
-			<!-- End Menu Buttons -->
 
-			<!-- Main Nav -->
-			<nav>
-				<?php wp_nav_menu( array(
-					'menu' 		=> 'Main',
-					'container_class' => 'menu-wrap',
-					'menu_id'	=> 'menu-main',
-					'menu_class' => 'main-menu',
-				)); ?>
-			</nav>
-			<!-- Main Nav -->
+			<?php // HEADER END  ?>
 
+			
+		</section>
+		<div class="nav-bar">
+			<div class="nav-wrap">
+				
+				<div class="menu-buttons">
+
+					<div class="menu-trigger">
+						<div class="nav-hamburger">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="menu-button-text">Menu</div>
+					</div>
+
+					<div class="menu-contact">
+
+						<div class="menu-phone">
+							<?php
+								$phone_number = get_field('phone', 'options');
+								$tel_number = str_replace(array('.', ',', '-', '(', ')'), '' , $phone_number);
+							?>
+
+							<a href="tel:1<?php echo $tel_number; ?>" data-label="Header - Phone number" class="track-outbound">
+								<div class="touch-button-icon"><?php echo inline_svg('icon-phone'); ?></div>
+								<span class="touch-button-text">Contact Us</span>
+							</a>
+
+						</div>
+
+						<div class="menu-location">
+
+							<?php if(have_rows('locations', 'option')): ?>
+								<?php while(have_rows('locations', 'option')): the_row(); ?>
+
+									<a href="<?php the_sub_field('gmap'); ?>" target="_blank">
+										<div class="touch-button-icon"><?php echo inline_svg('icon-map'); ?></div>
+										<span class="touch-button-text">Location</span>
+									</a>
+
+								<?php endwhile; ?>
+							<?php endif; ?>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<nav>
+					<?php wp_nav_menu( array(
+						'menu' 		=> 'Main',
+						'container_class' => 'menu-wrap',
+						'menu_id'	=> 'menu-main',
+						'menu_class' => 'main-menu',
+					)); ?>
+				</nav>
+			
+			</div>
+			
 		</div>
-	  <!-- End Nav Bar  -->
-
 
 	</header>
