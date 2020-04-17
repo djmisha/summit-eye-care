@@ -1,4 +1,38 @@
 
+.upper-footer {
+	padding-left: 0;
+	padding-right: 0;
+	@include media($tablet) {
+		background: $primaryColor;
+	}
+}
+
+.footer-locations-wrapper {
+	@include media($tablet) {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		> div {
+			width: 50%;
+		}
+			overflow: hidden;
+
+		.locations-info-wrapper {
+			background: #fff;
+			padding: 80px;
+			border-radius: 50px;
+			position: relative;
+			right: -40px;
+		}
+		.footer-map {
+			width: 100%;
+			max-height: 500px;
+			position: relative;
+			left: -40px
+		}
+	}
+}
+
 .footer-logo {
 	margin-left: 20px;
 	margin-right: 20px;
@@ -138,7 +172,6 @@
 	}
 }
 
-
 .lower-footer {
 	@include font(18px);
 	line-height: 28px;
@@ -148,6 +181,10 @@
 	background: $primaryColor;
 	color: $lightColor;
 	margin-top: -180px;
+	@include media($tablet) {
+		padding-top: 180px;
+		
+	}
 
 	@include media($desktop) {
 		padding-bottom: 150px;

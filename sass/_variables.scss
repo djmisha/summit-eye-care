@@ -1,5 +1,5 @@
-// header,
-footer,
+header,
+// footer,
 .footer-contact-form 
 
 {
@@ -12,11 +12,11 @@ footer,
 
 // Colors
 
-$aqua : #126abf;
+$blue : #126abf;
 $lightAqua : #c2f2f7;
 $lightAquaAlt : #95e1e8;
-$mediumAqua : #12939f;
-$darkAqua : #3e8493;
+$mediumBlue : #105CA5;
+$darkBlue : #105598;
 
 $blueGreen : #368c94;
 
@@ -29,11 +29,11 @@ $textGray : #575757;
 
 // ---------------
 
-$primaryColor : $aqua; // link color, buttons, nav, footer, etc
-$primaryAlt : $mediumAqua; //link hover
+$primaryColor : $blue; // link color, buttons, nav, footer, etc
+$primaryAlt : $mediumBlue; //link hover
 $primaryHighlight : $lightAqua;
 $primaryHighlightAlt : $lightAquaAlt;
-$primaryAccent : $darkAqua;
+$primaryAccent : $darkBlue;
 
 $secondaryColor : $darkGray;
 $secondaryAlt : $blueGray;

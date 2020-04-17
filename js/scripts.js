@@ -144,10 +144,16 @@
 		=            RM Menu            =
 		===============================*/
 
+		duplicate =  $('ul.header-locations');
 		// Triggers
 		$('.menu-trigger').click(function(){
 			$(this).find('.nav-hamburger').toggleClass('open');
 			$(this).find('.menu-button-text').toggleClass('open');
+
+			duplicate.toggleClass('header-locations');
+			duplicate.toggleClass('nav-locations');
+			duplicate.clone().appendTo('.touch-menu .main-menu');
+			// console.log(duplicate);
 		});
 
 			//Add/Remove Off-Canvas Menu Classes
@@ -197,6 +203,13 @@
 					$(".menu-wrap").removeClass("touch-menu");
 					$(".menu-wrap").addClass("hover-menu");
 
+					// kill = ;
+					// console.log(kill);
+					// $('.menu-wrap ul.header-locations').remove();
+					// $('.menu-wrap ul.header-locations').empty();
+
+					/*remove duplicate nav items*/
+
 				}
 
 				if ($("html").hasClass("is--device") || $(window).width() < $desktop) {
@@ -211,6 +224,7 @@
 					});
 				}
 				else{
+
 					$('.menu > li.menu-item-has-children > a, .menu .sub-menu > li.menu-item-has-children > a').unbind('click');
 					$('ul.sub-menu, .menu').removeAttr('style');
 				}

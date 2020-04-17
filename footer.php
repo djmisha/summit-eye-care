@@ -10,96 +10,101 @@
 		</div>
 		<?php endif; ?>
 
+		
+			<div class="footer-locations-wrapper">
+				<div class="locations-info-wrapper">
+					<div class="footer-logo"><?php echo inline_svg('logo'); ?></div>
+					
+					<?php if( have_rows('locations', 'option')): ?>
 
-		<div class="footer-logo"><?php echo inline_svg('logo'); ?></div>
-			
-			<?php if( have_rows('locations', 'option')): ?>
+						<ul class="f-locations">
 
-				<ul class="f-locations">
+						<?php while( have_rows('locations', 'option')): the_row();
+							$locationName = get_sub_field('locationName');
+							$tag = get_sub_field('location_tag');
+							$street = get_sub_field('street');
+							$suite = get_sub_field('suite');
+							$city = get_sub_field('city');
+							$state = get_sub_field('state');
+							$zip = get_sub_field('zip');
+				    		$phone = get_sub_field('phone');
+							$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
+							$map = get_sub_field('map');
+							$gmb = get_sub_field('gmb');
+						?>
 
-				<?php while( have_rows('locations', 'option')): the_row();
-					$locationName = get_sub_field('locationName');
-					$tag = get_sub_field('location_tag');
-					$street = get_sub_field('street');
-					$suite = get_sub_field('suite');
-					$city = get_sub_field('city');
-					$state = get_sub_field('state');
-					$zip = get_sub_field('zip');
-		    		$phone = get_sub_field('phone');
-					$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
-					$map = get_sub_field('map');
-					$gmb = get_sub_field('gmb');
-				?>
+							<li>
 
-					<li>
+								<!-- <div><i class="fas fa-map-marker-alt"></i></div> -->
 
-						<!-- <div><i class="fas fa-map-marker-alt"></i></div> -->
+								<div>
 
-						<div>
+									<?php
+										// phone
+										if($phone) echo '<div class="phone">
+										<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
 
-							<?php
-								// phone
-								if($phone) echo '<div class="phone">
-								<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
+										// Tag
+										if($tag) echo '<div class="tag">' . $tag . '</div>';
 
-								// Tag
-								if($tag) echo '<div class="tag">' . $tag . '</div>';
+										// Directions wrap open
+										if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Footer Contact - Address" class="track-outbound">';
 
-								// Directions wrap open
-								if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Footer Contact - Address" class="track-outbound">';
-
-									// locationName
-									if($locationName) echo '<div class="name">' . $locationName . '</div>';
-									
+											// locationName
+											if($locationName) echo '<div class="name">' . $locationName . '</div>';
+											
 
 
-									// Address
-									if( $street ) {
-										echo '<div class="street">' . $street;
-										if ($suite) echo ', ' . $suite;
-										echo '</div>'; // Street Address
-									}
-									if( $city ) echo ' <div class="city">' . $city . ', ' . $state . ' ' . $zip . '</div>'; // City, State Zip
-									// End Address
+											// Address
+											if( $street ) {
+												echo '<div class="street">' . $street;
+												if ($suite) echo ', ' . $suite;
+												echo '</div>'; // Street Address
+											}
+											if( $city ) echo ' <div class="city">' . $city . ', ' . $state . ' ' . $zip . '</div>'; // City, State Zip
+											// End Address
 
-								if($gmb) echo '</a></div>';
-								// Directions wrap close/end
-							?>
+										if($gmb) echo '</a></div>';
+										// Directions wrap close/end
+									?>
+
+								</div>
+
+							</li>
+
+						<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>
+
+					<?php if( have_rows('social_buttons', 'option')): ?>
+
+						<div class="f-social">
+
+						<?php
+							while( have_rows('social_buttons', 'option')): the_row();
+								$icon = get_sub_field('social_icon');
+								$name = get_sub_field('social_name');
+								$link = get_sub_field('social_link');
+
+								if( $name ) echo '<a href="' . $link . '" aria-label="' . $name . '" rel="nofollow noopener" target="_blank">' . $icon . '<span>' . $name . '</span></a>';
+
+							endwhile;
+						?>
 
 						</div>
 
-					</li>
-
-				<?php endwhile; ?>
-				</ul>
-			<?php endif; ?>
-
-			<?php if( have_rows('social_buttons', 'option')): ?>
-
-				<div class="f-social">
-
-				<?php
-					while( have_rows('social_buttons', 'option')): the_row();
-						$icon = get_sub_field('social_icon');
-						$name = get_sub_field('social_name');
-						$link = get_sub_field('social_link');
-
-						if( $name ) echo '<a href="' . $link . '" aria-label="' . $name . '" rel="nofollow noopener" target="_blank">' . $icon . '<span>' . $name . '</span></a>';
-
-					endwhile;
-				?>
+					<?php endif; ?>
 
 				</div>
-
-			<?php endif; ?>
-
-
-			<div class="footer-map">
-				<?php if( have_rows('locations', 'option')): ?>
-					<?php while( have_rows('locations', 'option')): the_row(); $gmb = get_sub_field('gmb'); ?> 
-						<a href="<?php echo $gmb; ?>" aria-label="Map"></a>
-					<?php endwhile; ?>
-				<?php endif; ?>
+				<div>
+					<div class="footer-map">
+						<?php if( have_rows('locations', 'option')): ?>
+							<?php while( have_rows('locations', 'option')): the_row(); $gmb = get_sub_field('gmb'); ?> 
+								<a href="<?php echo $gmb; ?>" aria-label="Map"></a>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</div>
+				</div>
 			</div>
 			
 		</section>

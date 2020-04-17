@@ -22,6 +22,7 @@ $menuHeight : 60px;
 			height: 100%;
 			//show sub-menus on hover
 			&:hover{
+				background: $primaryAlt;
 				> .sub-menu{
 					opacity: 1;
 					visibility: visible;
@@ -47,7 +48,7 @@ $menuHeight : 60px;
 				display: block;
 				text-decoration: none;
 				// padding: 34px 20px;
-				padding: 0 5px;
+				padding: 0 20px;
 				transition: .25s ease-in-out background;
 				color: $lightColor; //set this color
 				position: relative;
@@ -65,8 +66,8 @@ $menuHeight : 60px;
 	}
 	.nav-dropdown-button {
 		// placeholder -- waiting for Seth's design
-		border-top: 2px solid $secondaryAlt;
-		border-right: 2px solid $secondaryAlt;
+		// border-top: 2px solid $secondaryAlt;
+		// border-right: 2px solid $secondaryAlt;
 		// position: absolute;
 		width: 6px;
 		height: 6px;
@@ -75,7 +76,7 @@ $menuHeight : 60px;
 		transform: rotate(45deg);
 	}
 	.sub-menu {
-		background: $secondaryColor; //set to your own background color
+		background: $primaryAlt; //set to your own background color
 		// border: 1px solid rgba(#000, .6); //for visual purposes.  can remove.
 		position: absolute;
 		top: 50px;
@@ -84,10 +85,22 @@ $menuHeight : 60px;
 		transform: translate(-50%, 0);
 		opacity: 0;
 		visibility: hidden;
-		width: 250px;
+		width: 310px;
 		z-index: -5;
 		transition: .25s ease-in-out top, .25s ease-in-out opacity;
+		padding-top: 10px; 
+
 		> li {
+			padding-left: 20px;
+			padding-right: 20px;
+			// background-color: $primaryAlt;
+			&:first-of-type {
+				padding-top: 20px; 
+			}
+			&:last-of-type {
+				padding-bottom: 20px; 
+			}
+
 			&.menu-item-has-children {
 				padding-right: 25px; //set this to the size of the arrows container
 				position: relative;
@@ -96,6 +109,7 @@ $menuHeight : 60px;
 					// 	transform: translateY(-50%) rotate(90deg);
 					// }
 					> .sub-menu{
+
 						opacity: 1;
 						visibility: visible;
 						right: inherit;
@@ -103,15 +117,21 @@ $menuHeight : 60px;
 						transform: none;
 						left: 248px;
 						top: 0;
+						padding-bottom: 10px;
 					}
 				}
 			}
 			a {
 				color: $lightColor;
+				font-weight: 400;
+				font-size: 14px;
+				text-align: center;
 			}
 			&:hover {
 				> a {
-					color: rgba($lightColor, .5);
+					// color: rgba($darkColor, .2);
+					background-color: $primaryAccent;
+
 				}
 			}
 		}
@@ -122,8 +142,9 @@ $menuHeight : 60px;
 			right: 10px;
 		}
 		a{
+			border-bottom: 1px solid rgba($lightColor, .2);
 			text-align: left;
-			padding: 10px!important;
+			padding: 20px !important;
 			color: $lightColor;
 		}
 

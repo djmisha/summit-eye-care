@@ -543,7 +543,7 @@ h3#respond {
   margin-bottom: 20px;
 }
 
-footer,
+header,
 .footer-contact-form {
   display: none;
 }
@@ -1281,6 +1281,7 @@ main,
   }
 }
 
+/* HEADER LOCATIONS INFO */
 .header-locations {
   margin: 0;
   margin-right: 30px;
@@ -1380,6 +1381,83 @@ main,
   top: 0px;
 }
 
+/* Duplicate Nav Items*/
+.nav-locations {
+  padding-top: 70px;
+  padding-left: 70px;
+  margin-bottom: 40px;
+  background: transparent;
+  text-align: left;
+  list-style: none;
+}
+
+.nav-locations li div > div {
+  margin-bottom: 35px;
+}
+
+.nav-locations a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-locations .phone, .nav-locations .tag {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.nav-locations .phone a, .nav-locations .tag a {
+  color: #ffffff;
+  font-size: 25px !important;
+}
+
+.nav-locations .phone {
+  position: relative;
+}
+
+.nav-locations .phone:before {
+  content: '';
+  position: absolute;
+  background: url("images/svg/icon-phone-white.svg");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 40px;
+  left: -70px;
+}
+
+.nav-locations .tag {
+  position: relative;
+  max-width: 230px;
+}
+
+.nav-locations .tag:before {
+  content: '';
+  position: absolute;
+  background: url("images/svg/icon-cal-white.svg");
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 42px;
+  left: -68px;
+}
+
+.nav-locations .street {
+  position: relative;
+  line-height: 26px;
+}
+
+.nav-locations .street:before {
+  content: '';
+  position: absolute;
+  background: url("images/svg/icon-map-white.svg");
+  background-repeat: no-repeat;
+  width: 28px;
+  height: 45px;
+  left: -65px;
+  top: 2px;
+}
+
 /*--------------  Header Banner  -------------*/
 /* ------------------------
 	Nav
@@ -1427,6 +1505,10 @@ main,
   display: none;
 }
 
+.touch-menu .main-menu li ul li {
+  padding: 0 0px;
+}
+
 .touch-menu .main-menu a {
   font-size: 18px;
   font-size: 1.125rem;
@@ -1464,7 +1546,7 @@ main,
   z-index: 25;
   width: 100%;
   height: 46px;
-  right: 0;
+  right: 20px;
   top: 0px;
   cursor: pointer;
   display: -webkit-box;
@@ -1614,7 +1696,7 @@ main,
 .nav-expander span {
   display: block;
   position: absolute;
-  height: 1px;
+  height: 2px;
   width: 100%;
   background: white;
   opacity: 1;
@@ -1681,6 +1763,9 @@ main,
     position: relative;
     height: 100%;
   }
+  .not--device .menu-wrap .main-menu > li:hover {
+    background: #105CA5;
+  }
   .not--device .menu-wrap .main-menu > li:hover > .sub-menu {
     opacity: 1;
     visibility: visible;
@@ -1696,7 +1781,7 @@ main,
   .not--device .menu-wrap .main-menu > li a {
     display: block;
     text-decoration: none;
-    padding: 0 5px;
+    padding: 0 20px;
     -webkit-transition: .25s ease-in-out background;
     transition: .25s ease-in-out background;
     color: #ffffff;
@@ -1713,8 +1798,6 @@ main,
     line-height: 1em;
   }
   .not--device .menu-wrap .nav-dropdown-button {
-    border-top: 2px solid #f1fbff;
-    border-right: 2px solid #f1fbff;
     width: 6px;
     height: 6px;
     right: 6px;
@@ -1724,7 +1807,7 @@ main,
             transform: rotate(45deg);
   }
   .not--device .menu-wrap .sub-menu {
-    background: #858688;
+    background: #105CA5;
     position: absolute;
     top: 50px;
     left: 50%;
@@ -1734,10 +1817,21 @@ main,
             transform: translate(-50%, 0);
     opacity: 0;
     visibility: hidden;
-    width: 250px;
+    width: 310px;
     z-index: -5;
     -webkit-transition: .25s ease-in-out top, .25s ease-in-out opacity;
     transition: .25s ease-in-out top, .25s ease-in-out opacity;
+    padding-top: 10px;
+  }
+  .not--device .menu-wrap .sub-menu > li {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .not--device .menu-wrap .sub-menu > li:first-of-type {
+    padding-top: 20px;
+  }
+  .not--device .menu-wrap .sub-menu > li:last-of-type {
+    padding-bottom: 20px;
   }
   .not--device .menu-wrap .sub-menu > li.menu-item-has-children {
     padding-right: 25px;
@@ -1753,12 +1847,16 @@ main,
             transform: none;
     left: 248px;
     top: 0;
+    padding-bottom: 10px;
   }
   .not--device .menu-wrap .sub-menu > li a {
     color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
   }
   .not--device .menu-wrap .sub-menu > li:hover > a {
-    color: rgba(255, 255, 255, 0.5);
+    background-color: #105598;
   }
   .not--device .menu-wrap .sub-menu .nav-dropdown-button {
     border-color: rgba(255, 255, 255, 0.5);
@@ -1767,8 +1865,9 @@ main,
     right: 10px;
   }
   .not--device .menu-wrap .sub-menu a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     text-align: left;
-    padding: 10px !important;
+    padding: 20px !important;
     color: #ffffff;
   }
   .not--device .menu-wrap .nav-dropdown-button .nav-expander {
@@ -2195,6 +2294,49 @@ aside li {
 /* ------------------------
 	Footer Layout
 ------------------------ */
+.upper-footer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .upper-footer {
+    background: #126abf;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-locations-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    overflow: hidden;
+  }
+  .footer-locations-wrapper > div {
+    width: 50%;
+  }
+  .footer-locations-wrapper .locations-info-wrapper {
+    background: #fff;
+    padding: 80px;
+    border-radius: 50px;
+    position: relative;
+    right: -40px;
+  }
+  .footer-locations-wrapper .footer-map {
+    width: 100%;
+    max-height: 500px;
+    position: relative;
+    left: -40px;
+  }
+}
+
 .footer-logo {
   margin-left: 20px;
   margin-right: 20px;
@@ -2369,6 +2511,12 @@ aside li {
   background: #126abf;
   color: #ffffff;
   margin-top: -180px;
+}
+
+@media only screen and (min-width: 768px) {
+  .lower-footer {
+    padding-top: 180px;
+  }
 }
 
 @media only screen and (min-width: 1060px) {

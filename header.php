@@ -44,8 +44,6 @@
 		<section class="header-top">
 			
 			<div class="header-logo"><?php echo inline_svg('logo'); ?></div>
-
-			<?php // HEADER LOCATIONS  ?>
 			
 			<div class="header-locations">
 				
@@ -66,52 +64,41 @@
 						$map = get_sub_field('map');
 						$gmb = get_sub_field('gmb');
 					?>
-
 						<li>
-
-							<!-- <div><i class="fas fa-map-marker-alt"></i></div> -->
-
 							<div>
-
 								<?php
-									// phone
-									if($phone) echo '<div class="phone">
-									<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
+								// phone
+								if($phone) echo '<div class="phone">
+								<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
 
-									// Tag
-									if($tag) echo '<div class="tag"> Appointments</div>';
+								// Tag
+								if($tag) echo '<div class="tag"> Appointments</div>';
 
-									// Directions wrap open
-									if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Header  Contact - Address" class="track-outbound">';
+								// Directions wrap open
+								if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Header  Contact - Address" class="track-outbound">';
 
-										// locationName
-										if($locationName) echo '<div class="name">' . $locationName . '</div>';
+									// locationName
+									if($locationName) echo '<div class="name">' . $locationName . '</div>';
 
-										// Address
-										if( $street ) {
-											echo '<div class="street">' . $street;
-											if ($suite) echo ', ' . $suite. ' ' . $city . ', ' . $state . ' ' . $zip;
-											echo '</div>'; // Street Address
-										}
+									// Address
+									if( $street ) {
+										echo '<div class="street">' . $street;
+										if ($suite) echo ', ' . $suite. ' ' . $city . ', ' . $state . ' ' . $zip;
+										echo '</div>'; // Street Address
+									}
 
-									if($gmb) echo '</a></div>';
-									// Directions wrap close/end
+								if($gmb) echo '</a></div>';
+								// Directions wrap close/end
 								?>
-
 							</div>
-
 						</li>
-
 					<?php endwhile; ?>
 					</ul>
 				<?php endif; ?>
-
 			</div>
-
-			<?php // HEADER END  ?>
-
-			
+			<?php // HEADER LOCATIONS END  ?>
 		</section>
+
 		<div class="nav-bar">
 			<div class="nav-wrap">
 				
