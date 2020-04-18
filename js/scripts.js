@@ -45,7 +45,8 @@
 				dots:true,
 				autoplay: true,
 				autoplayTimeout: 7000,
-				animateOut: 'fadeOut'
+				animateOut: 'fadeOut',
+				autoHeight:true
 			});
 
 
@@ -145,21 +146,23 @@
 		=            RM Menu            =
 		===============================*/
 
-		origional =  $('ul.header-locations');
-		duplicate = origional;
-		duplicate.clone().appendTo('.touch-menu .main-menu').removeClass('header-locations').addClass('nav-locations');
+		dupLocations = $('ul.header-locations').clone();
+		dupLocations.removeClass('header-locations');
+		dupLocations.addClass('nav-locations');
+		dupLocations.appendTo('.main-menu');
+		dupLocations.hide();
 
 		function hideShowMobileLocations() {
 			// if (duplicate.hasClass('nav-locations') === false) {
 			// }
 			// console.log(duplicate);
-				console.log(duplicate);
-			// if ($(window).width() < $desktop) {
-				duplicate.show();
-			// }
-			// else {
-				// duplicate.hide();
-			// }
+				// console.log(duplicate);
+			if ($(window).width() < $desktop) {
+				dupLocations.show();
+			}
+			else {
+				dupLocations.hide();
+			}
 		};
 
 		// duplicatedHeaderLocations();
@@ -249,7 +252,7 @@
 
 			$(window).on("resize", function(e){
 				menuSwitcher();
-				// duplicatedHeaderLocations();
+				hideShowMobileLocations()
 			});
 
 

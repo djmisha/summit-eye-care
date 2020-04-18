@@ -2,7 +2,6 @@
 
 
 .front-header {
-	// border: 1px solid pink;
 	min-height: 0 !important;
 	z-index: 1000;
 	position: relative;
@@ -13,30 +12,55 @@
 }
 
 
-// .home-rotator {
-// 	height: 280px;
-// 	background-color: $primaryColor;
-// 	// background-size: cover;
-// 	// max-height: 850px;
-// 	@include media($tablet) {
-// 		height: 100%;
-// 	}
-// }
+.home-rotator {
+	height: 250px;
+	background-color: $secondaryColor;
+	@include media($tablet) {
+		height: 100%;
+	}
+	.slide {
+		background-size: cover; 
+		display: block;
+		position: relative;
+		z-index: 9999;
+		width: 100vw;
+		height: 250px;
+		@include media($tablet) {
+			height: 790px;
+		}
+	}
+	.owl-dots {
+		position: relative;
+		top: -35px;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		.owl-dot {
+			margin: 0 2px;
+			border-radius: 50px;
+			position: relative;
+			border: 1px solid rgba(#fff , .2);
+			width: 10px;
+			height: 10px;
+			z-index: 9999;
+			&.active {
+				background: rgba(#fff , .6);
+			}
+		}
+	}
+}
 
 
-.welcome {
-	// border: 1px solid pink;
+.home-welcome {
 	z-index: 1;
 	position: relative;
-	// top: -40px;
-	// z-index: 1000;
 	@include media($tablet) {
-		// top: auto;
 		max-height: 650px;
 		height: 650px;
 	}
 	@include media($desktop) {
-		// max-height: 750px;
+		max-height: 790px;
 		height: calc(100vh - 200px);
 	}
 	.taglines {
@@ -47,8 +71,6 @@
 		@include media($tablet) {
 			margin-top: 0;
 			top: calc(50% - 150px);
-			// top: 0;
-			// bottom: 0;
 			position: absolute;
 		}
 	}
@@ -97,9 +119,73 @@
 		margin-bottom: 40px;
 		@include media($tablet) {
 			margin:0;
-			margin-top: 150px;
+			margin-top: 110px;
 		}
 	}
 }
 
 
+
+
+.home-whychoose {
+	background-color: $primaryHighlight;
+	padding-top: 80px;
+	padding-bottom: 60px;
+	@include media($tablet) {
+		padding-top: 120px;
+		padding-bottom: 120px;
+		
+	}
+	p {
+		font-size: 26px;
+		line-height: 30px;
+		font-family: $secondaryFont;
+		color: $primaryAccent;
+		font-weight: 400;
+		@include media($tablet) {
+			font-size: 40px;
+			line-height: 42px;
+		}
+
+	}
+}
+
+.home-reasons {
+	margin-top: 80px;
+	span {
+		display: block;
+	}
+	.headline {
+		font-family: $secondaryFont;
+		font-size: 30px;
+		color: $primaryAccent;
+		margin-top: 40px;
+		@include media($tablet) {
+			font-size: 40px;
+		}
+	}
+	.subheadline {
+		font-size: 16px;
+		color: $primaryAccent;
+		margin-top: 15px;
+	}
+	.button-white {
+		margin-top: 20px;
+		min-width: 250px;
+	}
+	.reason {
+		margin-bottom: 80px;
+		@include media($tablet) {
+			padding-left: 10px;
+			padding: 0 10px;
+			margin-bottom: 0;
+		}
+		@include media($desktop) {
+			padding: 0 20px;
+		}
+	}
+	@include media($tablet) {
+		display: flex;
+		justify-content: space-around;
+	}
+}

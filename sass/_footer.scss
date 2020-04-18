@@ -305,30 +305,51 @@
 =            Sticky Contact            =
 ======================================*/
 .sticky-contact {
-	display: none;
-	@include media($desktop) {
+	z-index: 9999;
+	display: block;
+	height: 56px;
+	border-radius: 50px;
+	transition: bottom 0.5s ease-out, background 0.15s ease-out;
+	// transition: ;
+	bottom: -200px;
+	position: fixed;
+	padding: 12px 90px 12px 50px !important;
+	right: 20px;
+	z-index: 8999;
+	background: $primaryColor;
+	border: 1px solid #fff;
+	display: block;
+	box-shadow: 0px 10px 15px rgba(#000, .16);
+	@include media($tablet) {
+		right: 40px;
+		height: auto;
 		padding-top: 12px;
 		padding-bottom: 12px;
-		bottom: -200px;
-		transition: bottom 0.5s ease-out;
-		position: fixed;
-		border-radius: 50px;
-		// left: 0;
-		right: 40px;
-		// width: 370px;
-		padding-right: 85px;
-		z-index: 100;
-		background: $primaryColor;
-		border: 1px solid #fff;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		box-shadow: 0px 10px 15px rgba(#000, .16);
+	}
+	.split-line {
+		background: rgba(#fff, .2);
+		height: 55px;
+		width: 1px;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		@include media($tablet) {
+			display: none;
+		}
+	}
+	&:hover {
+		background: darken($primaryColor, 10%);
 	}
 	a {
 		color: #fff;
 		text-decoration: none;
 		position: relative;
+		span {
+			display: none;
+			@include media($tablet) {
+				display: inline-block;
+			}
+		}
 		&.sticky-schedule {
 			&:before {
 				content: '';
@@ -337,7 +358,25 @@
 				background-repeat: no-repeat;
 				width: 35px;
 				height: 42px;
-				right: -58px;
+				right: -72px;
+				top: 15px;
+				@include media($tablet) {
+					right: -58px;
+					top: -5px;
+				}
+			}
+		}
+		&.sticky-phone-icon {
+			content: '';
+			position: absolute;
+			background: url('images/svg/icon-phone-white.svg');
+			background-repeat: no-repeat;
+			width: 35px;
+			height: 42px;
+			right: 84px;
+			top: 10px;
+			@include media($tablet) {
+				display: none;
 			}
 		}
 	}
@@ -345,7 +384,10 @@
 		@include contain(1400px, 10px);
 	}
 	&.make-sticky {
-		bottom: 40px;
+		bottom: 20px;
+		@include media($tablet) {
+			bottom: 40px;
+		}
 	}
 	.sticky-heading {
 		text-transform: uppercase;

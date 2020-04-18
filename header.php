@@ -41,7 +41,9 @@
 	>
 		<section class="header-top">
 			
-			<div class="header-logo"><?php echo inline_svg('logo'); ?></div>
+			<div class="header-logo">
+				<?php site_logo('logo.svg') ?>
+			</div>
 			
 			<div class="header-locations">
 				

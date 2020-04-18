@@ -1,7 +1,6 @@
-// header,
+header,
 footer,
-.footer-contact-form,
-// .lower-footer 
+.home-welcome
 {
 	// display: none;
 }
@@ -13,7 +12,7 @@ footer,
 // Colors
 
 $blue : #126abf;
-$lightAqua : #c2f2f7;
+$lightBlue : #F8FBFD;
 $lightAquaAlt : #95e1e8;
 $mediumBlue : #105CA5;
 $darkBlue : #105598;
@@ -24,7 +23,7 @@ $blueGray : #f1fbff;
 
 $lightGray : #f2f2f2;
 $darkGray : #858688;
-// $alsoDarkGrey :;
+$alsoDarkGrey :#696969;
 $textGray : #575757;
 
 
@@ -36,9 +35,9 @@ $textGray : #575757;
 
 $primaryColor : $blue; // link color, buttons, nav, footer, etc
 $primaryAlt : $mediumBlue; //link hover
-$primaryHighlight : $lightAqua;
+$primaryHighlight : $lightBlue;
 $primaryHighlightAlt : $lightAquaAlt;
-$primaryAccent : $darkBlue;
+$primaryAccent : $alsoDarkGrey;
 
 $secondaryColor : $darkGray;
 $secondaryAlt : $textGray;

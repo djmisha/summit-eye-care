@@ -66,16 +66,21 @@ img.alignleft, img.alignright, img.aligncenter, .yes-frame{
   border: 1px solid $lightColor;
   background: $primaryColor;
   color: $lightColor;
-  padding: 12px 50px;
+  padding: 12px 30px;
   border-radius: 50px;
   transition: all .15s ease-in;
-  font-size: 16px;
+  font-size: 14px;
   @include media($tablet) {
 	  padding: 12px 60px;
   }
   &:hover {
   	background: darken($primaryColor, 10%);
   	color: $lightColor!important;
+  }
+  &-white {
+  	background: #fff;
+  	color: $primaryAccent;
+  	border: 1px solid $primaryColor;
   }
 }
 

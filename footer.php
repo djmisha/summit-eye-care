@@ -128,10 +128,12 @@
 		// }
 		?>
 
-		<section class="sticky-contact">
+		<!--  NEEDS LINKS --><!-- FIX WITH TOP SECTION -->
+		<div class="sticky-contact">
 			<a href="" class="sticky-schedule"><span>Schedule a Consultation</span></a>
 			<a href="" class="sticky-phone-icon"></a>
-		</section>
+			<div class="split-line"></div>
+		</div>
 
 	</footer>
 
