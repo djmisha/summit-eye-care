@@ -15,8 +15,6 @@
 	<?php if(!is_404()): ?>
 		<link rel="stylesheet" href="https://use.typekit.net/gps6lee.css">
 		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700' ); ?>
-		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=EB+Garamond' ); ?>
-		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:500i' ); ?>
 	<?php endif; ?>
 
 	<?php wp_head()?>

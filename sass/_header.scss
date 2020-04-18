@@ -1,7 +1,5 @@
 .site-header {
-	// position: fixed;
 	top: 0;
-	// padding: 10px 0;
 	width: 100%;
 	background: #fff;
 	min-height: 500px;
@@ -151,10 +149,11 @@
 	}
 	svg {
 		width: 100%;
-		max-width: 332px;
-		padding-left: 20px;
-		padding-right: 20px;
+		max-width: 382px;
+		padding-left: 10px;
+		padding-right: 10px;
 		@include media($tablet) {
+			padding: 0;
 			max-width: 415px;
 			// min-width: 300px;
 		}
@@ -335,8 +334,6 @@
 
 
 /*--------------  Header Banner  -------------*/
-
-
 
 
 

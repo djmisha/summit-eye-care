@@ -543,11 +543,6 @@ h3#respond {
   margin-bottom: 20px;
 }
 
-header,
-.footer-contact-form {
-  display: none;
-}
-
 /* ------------------------
    Variables
 ------------------------ */
@@ -831,15 +826,25 @@ img.alignleft, img.alignright, img.aligncenter, .yes-frame {
   position: relative;
   text-align: center;
   text-decoration: none;
-  font-family: gill-sans-nova, sans-serif;
+  font-family: montserrat, sans-serif;
   border: 1px solid #ffffff;
   background: #126abf;
   color: #ffffff;
-  padding: 12px 30px;
+  padding: 12px 50px;
+  border-radius: 50px;
+  -webkit-transition: all .15s ease-in;
+  transition: all .15s ease-in;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .button, .buttons a {
+    padding: 12px 60px;
+  }
 }
 
 .button:hover, .buttons a:hover {
-  background: #858688;
+  background: #0e5090;
   color: #ffffff !important;
 }
 
@@ -1270,13 +1275,14 @@ main,
 
 .header-top svg {
   width: 100%;
-  max-width: 332px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 382px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .header-top svg {
+    padding: 0;
     max-width: 415px;
   }
 }
@@ -2035,8 +2041,7 @@ main,
 
 @media only screen and (min-width: 1060px) {
   .content {
-    width: calc(100% - 300px);
-    padding-right: 50px;
+    width: calc(100%);
     padding-bottom: 20px;
   }
 }
@@ -2307,6 +2312,8 @@ aside li {
 
 @media only screen and (min-width: 768px) {
   .footer-locations-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2314,26 +2321,44 @@ aside li {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     overflow: hidden;
   }
   .footer-locations-wrapper > div {
+    margin: 0;
     width: 50%;
+    padding: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
+}
+
+@media only screen and (min-width: 768px) {
   .footer-locations-wrapper .locations-info-wrapper {
     background: #fff;
-    padding: 80px;
+    padding: 40px;
     border-radius: 50px;
     position: relative;
-    right: -40px;
+    right: -18px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.16);
   }
+}
+
+@media only screen and (min-width: 1060px) {
+  .footer-locations-wrapper .locations-info-wrapper {
+    padding: 70px 80px 40px 70px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .footer-locations-wrapper .footer-map {
-    width: 100%;
-    max-height: 500px;
     position: relative;
-    left: -40px;
+    left: -18px;
   }
 }
 
@@ -2354,14 +2379,22 @@ aside li {
   width: 85vw;
   height: 75vw;
   border-radius: 50px;
-  -webkit-box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.16);
   position: relative;
   z-index: 1000;
   background: #858688 url("images/map.jpg") center center no-repeat;
   background-size: 240%;
   background-position-x: calc(55% - 50px);
   position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-map {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .footer-map a {
@@ -2466,7 +2499,37 @@ aside li {
   margin-bottom: 40px;
 }
 
+@media only screen and (min-width: 768px) {
+  .f-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1220px) {
+  .f-social {
+    display: block;
+    position: absolute;
+    left: 480px;
+    top: 230px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .f-social {
+    left: 490px;
+  }
+}
+
 .f-social a {
+  display: block;
   text-align: left;
   text-decoration: none;
   color: #858688;
@@ -2482,6 +2545,36 @@ aside li {
 .f-social span {
   padding-left: 35px;
   font-size: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .f-social span {
+    margin-right: 40px;
+    margin-left: -55px;
+    padding-left: 0;
+    top: 40px;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 1220px) {
+  .f-social span {
+    margin: 0;
+    top: 0;
+    padding-left: 35px;
+  }
+}
+
+@media only screen and (min-width: 1220px) {
+  .f-social span {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .f-social span {
+    display: block;
+  }
 }
 
 .f-social i {
@@ -2515,7 +2608,8 @@ aside li {
 
 @media only screen and (min-width: 768px) {
   .lower-footer {
-    padding-top: 180px;
+    padding-top: 40px;
+    margin-top: 0;
   }
 }
 
@@ -2534,11 +2628,11 @@ aside li {
   text-decoration: underline;
 }
 
-.lower-footer .rm-sig {
+.lower-footer .sig {
   padding-top: 20px;
 }
 
-.lower-footer .rm-sig svg {
+.lower-footer .sig svg {
   width: 25px;
   height: 25px;
   position: relative;
@@ -2546,7 +2640,7 @@ aside li {
   margin-left: 8px;
 }
 
-.lower-footer .rm-sig svg path {
+.lower-footer .sig svg path {
   fill: #ffffff;
 }
 
@@ -2602,17 +2696,18 @@ aside li {
 
 @media only screen and (min-width: 1060px) {
   .sticky-contact {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     bottom: -200px;
-    -webkit-transition: bottom 0.3s linear;
-    transition: bottom 0.3s linear;
+    -webkit-transition: bottom 0.5s ease-out;
+    transition: bottom 0.5s ease-out;
     position: fixed;
-    left: 0;
-    right: 0;
-    width: 100%;
+    border-radius: 50px;
+    right: 40px;
+    padding-right: 85px;
     z-index: 100;
-    background: #858688;
+    background: #126abf;
+    border: 1px solid #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2622,7 +2717,25 @@ aside li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.16);
   }
+}
+
+.sticky-contact a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+.sticky-contact a.sticky-schedule:before {
+  content: '';
+  position: absolute;
+  background: url("images/svg/icon-cal-white.svg");
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 42px;
+  right: -58px;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -2635,7 +2748,7 @@ aside li {
 }
 
 .sticky-contact.make-sticky {
-  bottom: 0;
+  bottom: 40px;
 }
 
 .sticky-contact .sticky-heading {
@@ -2657,71 +2770,6 @@ aside li {
 
 .sticky-contact .sticky-heading span {
   color: #126abf;
-}
-
-.sticky-contact form.seaforms {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-left: 10px;
-}
-
-.sticky-contact form.seaforms .field-wrap {
-  margin: 0 5px;
-  margin-bottom: 0 !important;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  height: 40px;
-}
-
-.sticky-contact form.seaforms .field-wrap input {
-  height: 40px;
-  width: 100%;
-}
-
-.sticky-contact form.seaforms .field-wrap select {
-  height: 40px;
-}
-
-.sticky-contact form.seaforms .field-wrap label {
-  display: block;
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.sticky-contact form.seaforms .type-submitbutton {
-  margin: 0 0 0 5px;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  line-height: 100%;
-}
-
-.sticky-contact form.seaforms .type-submitbutton input {
-  border: 2px solid #126abf;
-  color: #ffffff;
-  background: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.sticky-contact form.seaforms .type-submitbutton input:hover {
-  background: #126abf;
 }
 
 /*=====  End of Sticky Contact  ======*/
@@ -3000,6 +3048,126 @@ span.error {
 /* ------------------------
 	Home Page
 ------------------------ */
+.front-header {
+  min-height: 0 !important;
+  z-index: 1000;
+  position: relative;
+  height: 160px;
+}
+
+@media only screen and (min-width: 768px) {
+  .front-header {
+    height: 210px;
+  }
+}
+
+.welcome {
+  z-index: 1;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome {
+    max-height: 650px;
+    height: 650px;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  .welcome {
+    height: calc(100vh - 200px);
+  }
+}
+
+.welcome .taglines {
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .taglines {
+    margin-top: 0;
+    top: calc(50% - 150px);
+    position: absolute;
+  }
+}
+
+.welcome span {
+  display: block;
+}
+
+.welcome .taglines {
+  color: #575757;
+  padding: 0 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .taglines {
+    padding: 0 20px;
+    color: #fff;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  .welcome .taglines {
+    padding: 0;
+  }
+}
+
+.welcome .taglines-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .taglines-title {
+    font-size: 60px;
+    line-height: 67px;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  .welcome .taglines-title {
+    font-size: 80px;
+    line-height: 97px;
+  }
+}
+
+.welcome .taglines-subtitle {
+  font-size: 18px;
+  line-height: 20px;
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .taglines-subtitle {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  .welcome .taglines-subtitle {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.welcome .button {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .button {
+    margin: 0;
+    margin-top: 150px;
+  }
+}
+
 /* ------------------------
 	Blog/Category/Archives
 ------------------------ */
@@ -4127,7 +4295,7 @@ span.error {
 .tmpl_type_page_landing ol > li:before {
   content: counter(item) ". ";
   counter-increment: item;
-  color: #f1fbff;
+  color: #575757;
 }
 
 @media only screen and (min-width: 768px) {

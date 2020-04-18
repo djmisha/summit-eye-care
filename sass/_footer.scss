@@ -9,26 +9,39 @@
 
 .footer-locations-wrapper {
 	@include media($tablet) {
+		padding-top: 80px;
+		padding-bottom: 80px;
 		display: flex;
 		flex-direction: row-reverse;
-		justify-content: space-between;
+		justify-content: center;
+		overflow: hidden;
 		> div {
+			margin: 0;
 			width: 50%;
+			padding: 0;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0; 
 		}
-			overflow: hidden;
-
-		.locations-info-wrapper {
+	}
+	.locations-info-wrapper {
+		@include media($tablet) {
 			background: #fff;
-			padding: 80px;
+			padding: 40px;
 			border-radius: 50px;
 			position: relative;
-			right: -40px;
+			right: -18px;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			box-shadow: 0px 10px 15px rgba(#000, .16);
 		}
-		.footer-map {
-			width: 100%;
-			max-height: 500px;
+		@include media($desktop) {
+			padding: 70px 80px 40px 70px;
+		}
+	}
+	.footer-map {
+		@include media($tablet) {
 			position: relative;
-			left: -40px
+			left: -18px;
 		}
 	}
 }
@@ -49,7 +62,7 @@
 	width: 85vw;
 	height: 75vw;
 	border-radius: 50px;
-	box-shadow: 0px 20px 15px rgba(#000, .16);
+	box-shadow: 0px 10px 15px rgba(#000, .16);
 	position: relative;
 	z-index: 1000;
 	// top: 30vw;
@@ -57,6 +70,12 @@
 	background-size: 240%;
 	background-position-x: calc(55% - 50px;);
 	position: relative;
+	@include media($tablet) {
+		// width: 50%;
+		height: auto;
+		background-size: cover;
+		background-position: center;
+	}
 	a {
 		width: 100%;
 		height: 100%;
@@ -142,18 +161,52 @@
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 40px;
-	a {
+	@include media($tablet) {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
+	@include media(1220px) {
+		display: block;
+		position: absolute;
+		left: 480px;
+		top: 230px;
+	}
+	@include media(1400px) {
+		left: 490px;
+		// position: fixed;
+		// left: calc(50% - 200px);
+	}
+	a { display: block;
 		text-align: left;
 		text-decoration: none;
 		color: $secondaryColor;
 		display: flex;
 		align-items: center;
 		margin-bottom: 15px
-
 	}
 	span {
 		padding-left: 35px;
 		font-size: 15px;
+		@include media($tablet) {
+			margin-right: 40px;
+			margin-left: -55px;
+			padding-left: 0;
+			top: 40px;
+			position: relative;
+		}
+		@include media(1220px) {
+			margin: 0;
+			top: 0;
+			padding-left: 35px;
+		}
+		@include media(1220px) {
+			display: none;
+		}
+		@include media(1441px) {
+			display: block;
+			// visibility: visible;
+		}
 	}
 	i {	
 		width: 40px;
@@ -182,7 +235,8 @@
 	color: $lightColor;
 	margin-top: -180px;
 	@include media($tablet) {
-		padding-top: 180px;
+		padding-top: 40px;
+		margin-top: 0;
 		
 	}
 
@@ -196,7 +250,7 @@
 			text-decoration: underline;
 		}
 	}
-	.rm-sig {
+	.sig {
 		padding-top: 20px;
 		svg {
 			width: 25px;
@@ -253,25 +307,45 @@
 .sticky-contact {
 	display: none;
 	@include media($desktop) {
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 12px;
+		padding-bottom: 12px;
 		bottom: -200px;
-		transition: bottom 0.3s linear;
+		transition: bottom 0.5s ease-out;
 		position: fixed;
-		left: 0;
-		right: 0;
-		width: 100%;
+		border-radius: 50px;
+		// left: 0;
+		right: 40px;
+		// width: 370px;
+		padding-right: 85px;
 		z-index: 100;
-		background: $darkGray;
+		background: $primaryColor;
+		border: 1px solid #fff;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		box-shadow: 0px 10px 15px rgba(#000, .16);
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+		position: relative;
+		&.sticky-schedule {
+			&:before {
+				content: '';
+				position: absolute;
+				background: url('images/svg/icon-cal-white.svg');
+				background-repeat: no-repeat;
+				width: 35px;
+				height: 42px;
+				right: -58px;
+			}
+		}
 	}
 	@include media(1400px) {
 		@include contain(1400px, 10px);
 	}
 	&.make-sticky {
-		bottom: 0;
+		bottom: 40px;
 	}
 	.sticky-heading {
 		text-transform: uppercase;
@@ -285,50 +359,50 @@
 			color: $primaryColor;
 		}
 	}
-	form.seaforms {
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: center;
-		flex: 1;
-		margin-left: 10px;
-		.field-wrap {
-			margin: 0 5px;
-			margin-bottom: 0 !important;
-			flex-grow: 1;
-			flex-basis: 0;
-			height: 40px;
-			input {
-				height: 40px;
-				width: 100%;
-			}
-			select {
-				height: 40px;
-			}
-			label {
-				display: block;
-				position: absolute;
-				left: -10000px;
-				top: auto;
-				width: 1px;
-				height: 1px;
-				overflow: hidden;
-			}
-		}
-		.type-submitbutton {
-			margin: 0 0 0 5px;
-			flex-grow: 0;
-			line-height: 100%;
-			input {
-				border: 2px solid $primaryColor;
-				color: $lightColor;
-				background: none;
-				transition: all 0.2s;
-				&:hover {
-					background: $primaryColor;
-				}
-			}
-		}
-	}
+	// form.seaforms {
+	// 	display: flex;
+	// 	flex-wrap: nowrap;
+	// 	align-items: center;
+	// 	flex: 1;
+	// 	margin-left: 10px;
+	// 	.field-wrap {
+	// 		margin: 0 5px;
+	// 		margin-bottom: 0 !important;
+	// 		flex-grow: 1;
+	// 		flex-basis: 0;
+	// 		height: 40px;
+	// 		input {
+	// 			height: 40px;
+	// 			width: 100%;
+	// 		}
+	// 		select {
+	// 			height: 40px;
+	// 		}
+	// 		label {
+	// 			display: block;
+	// 			position: absolute;
+	// 			left: -10000px;
+	// 			top: auto;
+	// 			width: 1px;
+	// 			height: 1px;
+	// 			overflow: hidden;
+	// 		}
+	// 	}
+	// 	.type-submitbutton {
+	// 		margin: 0 0 0 5px;
+	// 		flex-grow: 0;
+	// 		line-height: 100%;
+	// 		input {
+	// 			border: 2px solid $primaryColor;
+	// 			color: $lightColor;
+	// 			background: none;
+	// 			transition: all 0.2s;
+	// 			&:hover {
+	// 				background: $primaryColor;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 /*=====  End of Sticky Contact  ======*/
 

@@ -1,0 +1,105 @@
+
+
+
+.front-header {
+	// border: 1px solid pink;
+	min-height: 0 !important;
+	z-index: 1000;
+	position: relative;
+	height: 160px;
+	@include media($tablet) {
+		height: 210px;
+	}
+}
+
+
+// .home-rotator {
+// 	height: 280px;
+// 	background-color: $primaryColor;
+// 	// background-size: cover;
+// 	// max-height: 850px;
+// 	@include media($tablet) {
+// 		height: 100%;
+// 	}
+// }
+
+
+.welcome {
+	// border: 1px solid pink;
+	z-index: 1;
+	position: relative;
+	// top: -40px;
+	// z-index: 1000;
+	@include media($tablet) {
+		// top: auto;
+		max-height: 650px;
+		height: 650px;
+	}
+	@include media($desktop) {
+		// max-height: 750px;
+		height: calc(100vh - 200px);
+	}
+	.taglines {
+		z-index: 9999;
+		left: 0;
+		right: 0;
+		margin-top: 40px;
+		@include media($tablet) {
+			margin-top: 0;
+			top: calc(50% - 150px);
+			// top: 0;
+			// bottom: 0;
+			position: absolute;
+		}
+	}
+	span {
+		display: block;
+	}
+	.taglines {
+		color: $secondaryAlt;
+		padding: 0 40px;
+		@include media($tablet) {
+			padding: 0 20px;
+			color: #fff;
+		}
+		@include media($desktop) {
+			padding: 0;
+		}
+		&-title{
+			font-weight: 600;
+			font-size: 40px;
+			line-height: 40px;
+			@include media($tablet) {
+				font-size: 60px;
+				line-height: 67px;
+			}
+			@include media($desktop) {
+				font-size: 80px;
+				line-height: 97px;
+			}
+		}
+		&-subtitle{
+			font-size: 18px;
+			line-height: 20px;
+			padding-top: 10px;
+			@include media($tablet) {
+				font-size: 25px;
+				line-height: 35px;
+			}
+			@include media($desktop) {
+				font-size: 30px;
+				line-height: 40px;
+			}
+		}
+	}
+	.button {
+		margin-top: 20px;
+		margin-bottom: 40px;
+		@include media($tablet) {
+			margin:0;
+			margin-top: 150px;
+		}
+	}
+}
+
+

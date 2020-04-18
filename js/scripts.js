@@ -37,15 +37,16 @@
 		/* --------------------------------------------------
 			Owl Carousel
 		-------------------------------------------------- */
-			// $('.owl-carousel').owlCarousel({
-			// 	items:1,
-			// 	lazyLoad:true,
-			// 	loop:true,
-			// 	nav:true,
-			// 	dots:true,
-			// 	autoplay: true,
-			// 	autoplayTimeout: 5000,
-			// });
+			$('.home-rotator').owlCarousel({
+				items:1,
+				lazyLoad:true,
+				loop:true,
+				nav:false,
+				dots:true,
+				autoplay: true,
+				autoplayTimeout: 7000,
+				animateOut: 'fadeOut'
+			});
 
 
 		/* --------------------------------------------------
@@ -144,16 +145,30 @@
 		=            RM Menu            =
 		===============================*/
 
-		duplicate =  $('ul.header-locations');
+		origional =  $('ul.header-locations');
+		duplicate = origional;
+		duplicate.clone().appendTo('.touch-menu .main-menu').removeClass('header-locations').addClass('nav-locations');
+
+		function hideShowMobileLocations() {
+			// if (duplicate.hasClass('nav-locations') === false) {
+			// }
+			// console.log(duplicate);
+				console.log(duplicate);
+			// if ($(window).width() < $desktop) {
+				duplicate.show();
+			// }
+			// else {
+				// duplicate.hide();
+			// }
+		};
+
+		// duplicatedHeaderLocations();
+
 		// Triggers
 		$('.menu-trigger').click(function(){
 			$(this).find('.nav-hamburger').toggleClass('open');
 			$(this).find('.menu-button-text').toggleClass('open');
-
-			duplicate.toggleClass('header-locations');
-			duplicate.toggleClass('nav-locations');
-			duplicate.clone().appendTo('.touch-menu .main-menu');
-			// console.log(duplicate);
+			hideShowMobileLocations();
 		});
 
 			//Add/Remove Off-Canvas Menu Classes
@@ -234,6 +249,7 @@
 
 			$(window).on("resize", function(e){
 				menuSwitcher();
+				// duplicatedHeaderLocations();
 			});
 
 

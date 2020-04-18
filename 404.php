@@ -16,8 +16,8 @@
 		}
 
 		html {
-			background: #464545; /* DARK color */
-			color: #fff; /* BODY text color */
+			background: #fff; /* DARK color */
+			color: #126abf; /* BODY text color */
 			font-family: Helvetica, Arial, Verdana, sans-serif;
 			font-size: 36px;
 			line-height: 1em;
@@ -32,7 +32,7 @@
 		}
 
 		a {
-			color: #fff; /* BODY LINK text color */
+			color: #126abf; /* BODY LINK text color */
 		}
 
 		h1, h2, h3, h4, h5, p {
@@ -127,6 +127,6 @@
 		</footer>
 	</div>
 	<p class="copy">Copyright &copy; <?php echo date("Y")?> <?bloginfo('name');?><br/>
-		Website Developed by <a href="http://www.rosemontmedia.com/" target="_blank">Rosemont Media</a></p>
+		Website Developed by <a href="https://www.silvragency.com/" target="_blank">SILVR</a></p>
 </body>
 </html>

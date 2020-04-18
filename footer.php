@@ -6,12 +6,13 @@
 
 		<?php if(!is_page(array('contact', 'contact-us'))): ?>
 		<div class="footer-contact-form">
-			<?php echo do_shortcode( '[seaforms name="footer-contact"]' ); ?>
+			<?php //echo do_shortcode( '[seaforms name="footer-contact"]' ); ?>
 		</div>
 		<?php endif; ?>
 
 		
 			<div class="footer-locations-wrapper">
+
 				<div class="locations-info-wrapper">
 					<div class="footer-logo"><?php echo inline_svg('logo'); ?></div>
 					
@@ -94,17 +95,16 @@
 						</div>
 
 					<?php endif; ?>
+				</div>
+			
+				<div class="footer-map">
+					<?php if( have_rows('locations', 'option')): ?>
+						<?php while( have_rows('locations', 'option')): the_row(); $gmb = get_sub_field('gmb'); ?> 
+							<a href="<?php echo $gmb; ?>" aria-label="Map"></a>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</div>
 
-				</div>
-				<div>
-					<div class="footer-map">
-						<?php if( have_rows('locations', 'option')): ?>
-							<?php while( have_rows('locations', 'option')): the_row(); $gmb = get_sub_field('gmb'); ?> 
-								<a href="<?php echo $gmb; ?>" aria-label="Map"></a>
-							<?php endwhile; ?>
-						<?php endif; ?>
-					</div>
-				</div>
 			</div>
 			
 		</section>
@@ -114,7 +114,7 @@
 
 			<div class="copyright">Copyright &copy; <?php echo date("Y"); ?> <?bloginfo('title');?>. All rights reserved | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a></div>
 
-			<div class="rm-sig"><a href="<?php the_field('portfolio_link', 'option'); ?>" target="_blank" rel="noopener"><?php the_field('portfolio_label', 'option'); ?></a> by
+			<div class="sig"><a href="<?php the_field('portfolio_link', 'option'); ?>" target="_blank" rel="noopener"><?php the_field('portfolio_label', 'option'); ?></a> by
 			<a href="https://www.silvragency.com/" target="_blank" rel="noopener" aria-label="Silvr Agency">SILVR <?php echo inline_svg('sig-logo'); ?></a></div>
 
 		</section>
@@ -122,11 +122,16 @@
 
 		<?php
 		// Sticky Contact 
-		if(!is_page(array('contact', 'contact-us'))) {
-			$stickyContact = get_field('sticky_contact', 'options');
-			if( $stickyContact ) echo '<section class="sticky-contact">' . $stickyContact . '</section>';
-		}
+		// if(!is_page(array('contact', 'contact-us'))) {
+		// 	$stickyContact = get_field('sticky_contact', 'options');
+		// 	if( $stickyContact ) echo '<section class="sticky-contact">' . $stickyContact . '</section>';
+		// }
 		?>
+
+		<section class="sticky-contact">
+			<a href="" class="sticky-schedule"><span>Schedule a Consultation</span></a>
+			<a href="" class="sticky-phone-icon"></a>
+		</section>
 
 	</footer>
 
