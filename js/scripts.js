@@ -50,6 +50,19 @@
 			});
 
 
+			$('.testi-slider').owlCarousel({
+				items:1,
+				lazyLoad:true,
+				loop:true,
+				nav:false,
+				dots:true,
+				autoplay: true,
+				autoplayTimeout: 5000,
+				smartSpeed:1200,
+				autoHeight:true
+			});
+			
+
 		/* --------------------------------------------------
 			Wow
 		-------------------------------------------------- */

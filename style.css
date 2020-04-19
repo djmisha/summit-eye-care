@@ -1118,7 +1118,6 @@ main,
   top: 0;
   width: 100%;
   background: #fff;
-  min-height: 500px;
 }
 
 .site-header .nav a {
@@ -1277,6 +1276,11 @@ main,
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+.header-top h1.site-logo {
+  margin: 0 !important;
+  padding: 0;
 }
 
 .header-top svg {
@@ -1793,9 +1797,9 @@ main,
   .not--device .menu-wrap .main-menu > li a {
     display: block;
     text-decoration: none;
-    padding: 0 20px;
-    -webkit-transition: .25s ease-in-out background;
-    transition: .25s ease-in-out background;
+    padding: 22px 20px;
+    -webkit-transition: background .25s ease-in-out;
+    transition: background .25s ease-in-out;
     color: #ffffff;
     position: relative;
     text-transform: uppercase;
@@ -1868,7 +1872,7 @@ main,
     text-align: center;
   }
   .not--device .menu-wrap .sub-menu > li:hover > a {
-    background-color: #696969;
+    background-color: rgba(255, 255, 255, 0.05);
   }
   .not--device .menu-wrap .sub-menu .nav-dropdown-button {
     border-color: rgba(255, 255, 255, 0.5);
@@ -3146,6 +3150,7 @@ span.error {
 @media only screen and (min-width: 768px) {
   .home-rotator .slide {
     height: 790px;
+    height: calc(100vh - 200px);
   }
 }
 
@@ -3167,8 +3172,8 @@ span.error {
   border-radius: 50px;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   z-index: 9999;
 }
 
@@ -3183,14 +3188,12 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-welcome {
-    max-height: 650px;
     height: 650px;
   }
 }
 
 @media only screen and (min-width: 1060px) {
   .home-welcome {
-    max-height: 790px;
     height: calc(100vh - 200px);
   }
 }
@@ -3369,6 +3372,285 @@ span.error {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+}
+
+.home-surgery {
+  padding-top: 60px;
+  padding-bottom: 260px;
+  background: url("images/bg-mountains-divider.jpg") bottom center no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-surgery {
+    padding-top: 80px;
+    padding-bottom: 440px;
+  }
+}
+
+.home-surgery h2 {
+  margin-top: 0;
+  color: #565759;
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-surgery h2 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home-surgery .surgery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.home-surgery .surgery-single {
+  position: relative;
+  padding: 20px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-surgery .surgery-single {
+    padding: 20px;
+  }
+}
+
+.home-surgery .surgery-single img {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.home-surgery .surgery-single:before {
+  content: '';
+  background: #82B0E2;
+  width: 160px;
+  height: 1px;
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 80px);
+}
+
+.home-surgery .surgery-single:after {
+  content: '';
+  background: #82B0E2;
+  width: 80px;
+  height: 1px;
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 40px);
+}
+
+.home-doctors {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 260px;
+  background: url("images/bg-doctors.jpg") top right no-repeat;
+  background-position-x: -1100px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-doctors {
+    background: url("images/bg-doctors.jpg") top center no-repeat;
+    text-align: left;
+    padding-bottom: 440px;
+  }
+}
+
+.home-doctors h2 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-doctors h2 {
+    font-size: 60px;
+  }
+}
+
+.home-doctors h3, .home-doctors p {
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-doctors .surgery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.home-doctors .button-transparent {
+  border: 1px solid #fff;
+  background: transparent;
+}
+
+.home-doctors .button-transparent:hover {
+  background: #fff;
+  color: #126abf !important;
+}
+
+.home-doctors .doctor {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-doctors .doctor {
+    margin-bottom: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.home-doctors .doc-bio {
+  max-width: 600px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-doctors .doc-bio {
+    text-align: left;
+  }
+}
+
+.home-doctors .doc-bio p {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-doctors .doc-bio p {
+    display: block;
+  }
+}
+
+.home-doctors .doc-pic {
+  text-align: center;
+}
+
+.home-doctors .doc-pic img {
+  border-radius: 50%;
+  width: 180px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-doctors .doc-pic img {
+    width: 230px;
+    margin-right: 60px;
+  }
+}
+
+.home-doctors .doc-button {
+  margin-top: 20px;
+}
+
+.home-doctors .doc-button a {
+  min-width: 250px;
+}
+
+@media only screen and (min-width: 1250px) {
+  .home-doctors .doc-button {
+    position: absolute;
+    right: 0;
+    top: 100px;
+  }
+}
+
+.home-testis {
+  text-align: center;
+  padding-top: 160px;
+  padding-bottom: 60px;
+  background: url("images/icon-quote.svg") top center no-repeat;
+}
+
+.home-testis .testi-slider {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-testis strong {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 22px;
+  display: block;
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-testis strong {
+    font-size: 25px;
+  }
+}
+
+.testi-slider .testi-slider-squote {
+  font-style: italic;
+}
+
+@media only screen and (min-width: 768px) {
+  .testi-slider .testi-slider-squote {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}
+
+.testi-slider .owl-nav {
+  display: none;
+}
+
+.testi-slider .owl-dots {
+  position: relative;
+  top: 35px;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testi-slider .owl-dots .owl-dot {
+  margin: 0 2px;
+  border-radius: 50px;
+  position: relative;
+  background: #E3E3E3;
+  width: 11px;
+  height: 11px;
+  z-index: 9999;
+}
+
+.testi-slider .owl-dots .owl-dot.active {
+  background: #397bc7;
+}
+
+.home-with-image {
+  background: url("images/bg-exam.jpg") center center no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-with-image {
+    height: 550px;
   }
 }
 

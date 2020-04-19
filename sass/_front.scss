@@ -27,6 +27,7 @@
 		height: 250px;
 		@include media($tablet) {
 			height: 790px;
+			height: calc(100vh - 200px);
 		}
 	}
 	.owl-dots {
@@ -41,8 +42,8 @@
 			border-radius: 50px;
 			position: relative;
 			border: 1px solid rgba(#fff , .2);
-			width: 10px;
-			height: 10px;
+			width: 11px;
+			height: 11px;
 			z-index: 9999;
 			&.active {
 				background: rgba(#fff , .6);
@@ -56,11 +57,9 @@
 	z-index: 1;
 	position: relative;
 	@include media($tablet) {
-		max-height: 650px;
 		height: 650px;
 	}
 	@include media($desktop) {
-		max-height: 790px;
 		height: calc(100vh - 200px);
 	}
 	.taglines {
@@ -187,5 +186,221 @@
 	@include media($tablet) {
 		display: flex;
 		justify-content: space-around;
+	}
+}
+
+
+
+.home-surgery {
+	padding-top: 60px;
+	padding-bottom: 260px;
+	background: url('images/bg-mountains-divider.jpg') bottom center no-repeat;
+	@include media($tablet) {
+		padding-top: 80px;
+		padding-bottom: 440px;
+	}
+	h2{
+		margin-top: 0;
+		color: #565759;
+		font-size: 30px;
+		@include media($tablet) {
+			font-size: 60px;
+		}
+	}
+	.surgery {
+		// margin-top: 40px;
+		@include media($tablet) {
+			display: flex;
+			justify-content: space-around;
+		}
+	}
+	.surgery-single {
+		position: relative;
+		padding: 20px 0;
+
+		@include media($tablet) {
+			padding: 20px;
+		}
+		img {
+			margin-top: 25px;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+		&:before {
+			content: '';
+			background: #82B0E2;
+			width: 160px;
+			height: 1px;
+			position: absolute;
+			top: 20px;
+			left: calc(50% - 80px;)
+		}
+		&:after {
+			content: '';
+			background: #82B0E2;
+			width: 80px;
+			height: 1px;
+			position: absolute;
+			top: 30px;
+			left: calc(50% - 40px;)
+		}
+	}
+}	
+
+
+
+.home-doctors {
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 260px;
+	background: url('images/bg-doctors.jpg') top right no-repeat;
+	background-position-x: -1100px; 
+	@include media($tablet) {
+		background: url('images/bg-doctors.jpg') top center no-repeat;
+		text-align: left;
+		padding-bottom: 440px;
+	}
+	h2 {
+		margin-top: 0;
+		color: #fff;
+		font-size: 30px;
+		@include media($tablet) {
+			font-size: 60px;
+		}
+	}
+	h3, p {
+		color: #fff;
+	}
+	.surgery {
+		// margin-top: 40px;
+		@include media($tablet) {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+	}
+	.button-transparent {
+		border: 1px solid #fff;
+		background: transparent;
+		&:hover {
+			background: #fff;
+			color: $primaryColor !important;
+		}
+	}
+	.doctor {
+		margin-bottom: 50px;
+		position: relative;
+		@include media($tablet) {
+			margin-bottom: 80px;
+			display: flex;
+			justify-content: flex-start;
+		}
+	}
+	.doc-bio {
+		max-width: 600px;
+		text-align: center;
+		@include media($tablet) {
+			text-align: left;
+		}
+		p {
+			display: none;
+			@include media($tablet) {
+				display: block;
+			}
+		}
+	}
+	.doc-pic {
+		text-align: center;
+	}
+	.doc-pic img {
+		border-radius: 50%;
+		width: 180px;
+		// margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		@include media($tablet) {
+			width: 230px;
+			margin-right: 60px;
+		}
+	}
+	.doc-button {
+		margin-top: 20px;
+		@include media($tablet) {
+			// margin-top: 0;
+		}
+		a {
+			min-width: 250px;
+		}
+		@include media(1250px) {
+			position: absolute;
+			right: 0;
+			top: 100px;
+		}
+	}
+}
+
+
+.home-testis {
+	text-align: center;
+	padding-top: 160px;
+	padding-bottom: 60px;
+	background: url('images/icon-quote.svg') top center no-repeat;
+	.testi-slider {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+	strong {
+		font-weight: normal;
+		font-style: normal;
+		font-size: 22px;
+		display: block;
+		margin-top: 40px;
+		@include media($tablet) {
+			font-size: 25px;
+		}
+	}
+}
+
+
+.testi-slider {
+	.testi-slider-squote {
+		font-style: italic;
+		@include media($tablet) {
+			font-size: 22px;
+			line-height: 40px;
+		}
+	}
+	.owl-nav {
+		display: none
+	}
+	.owl-dots {
+		position: relative;
+		top: 35px;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		.owl-dot {
+			margin: 0 2px;
+			border-radius: 50px;
+			position: relative;
+			background: #E3E3E3;
+			width: 11px;
+			height: 11px;
+			z-index: 9999;
+			&.active {
+				background: rgba(#397BC7 , 1);
+			}
+		}
+	}
+}
+
+
+.home-with-image {
+	background: url('images/bg-exam.jpg') center center no-repeat;
+	background-size: cover;
+	height: 300px;
+	@include media($tablet) {
+		height: 550px;
 	}
 }

@@ -48,8 +48,8 @@ $menuHeight : 60px;
 				display: block;
 				text-decoration: none;
 				// padding: 34px 20px;
-				padding: 0 20px;
-				transition: .25s ease-in-out background;
+				padding: 22px 20px;
+				transition: background .25s ease-in-out ;
 				color: $lightColor; //set this color
 				position: relative;
 				text-transform: uppercase;
@@ -130,7 +130,7 @@ $menuHeight : 60px;
 			&:hover {
 				> a {
 					// color: rgba($darkColor, .2);
-					background-color: $primaryAccent;
+					background-color: rgba(#fff, .05);
 
 				}
 			}
