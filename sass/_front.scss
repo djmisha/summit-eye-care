@@ -252,13 +252,13 @@
 .home-doctors {
 	text-align: center;
 	padding-top: 60px;
-	padding-bottom: 260px;
+	padding-bottom: 60px;
 	background: url('images/bg-doctors.jpg') top right no-repeat;
 	background-position-x: -1100px; 
 	@include media($tablet) {
 		background: url('images/bg-doctors.jpg') top center no-repeat;
 		text-align: left;
-		padding-bottom: 440px;
+		// padding-bottom: 440px;
 	}
 	h2 {
 		margin-top: 0;

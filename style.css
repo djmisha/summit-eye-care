@@ -3450,7 +3450,7 @@ span.error {
 .home-doctors {
   text-align: center;
   padding-top: 60px;
-  padding-bottom: 260px;
+  padding-bottom: 60px;
   background: url("images/bg-doctors.jpg") top right no-repeat;
   background-position-x: -1100px;
 }
@@ -3459,7 +3459,6 @@ span.error {
   .home-doctors {
     background: url("images/bg-doctors.jpg") top center no-repeat;
     text-align: left;
-    padding-bottom: 440px;
   }
 }
 
