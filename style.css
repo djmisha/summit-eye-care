@@ -3388,6 +3388,12 @@ span.error {
   }
 }
 
+@media only screen and (min-width: 1900px) {
+  .home-surgery {
+    background-size: cover;
+  }
+}
+
 .home-surgery h2 {
   margin-top: 0;
   color: #565759;
@@ -3425,6 +3431,7 @@ span.error {
   margin-top: 25px;
   margin-bottom: 20px;
   width: 100%;
+  border-radius: 20px;
 }
 
 .home-surgery .surgery-single:before {
@@ -3459,6 +3466,7 @@ span.error {
   .home-doctors {
     background: url("images/bg-doctors.jpg") top center no-repeat;
     text-align: left;
+    background-size: cover;
   }
 }
 

@@ -199,6 +199,9 @@
 		padding-top: 80px;
 		padding-bottom: 440px;
 	}
+	@include media(1900px) {
+		background-size: cover;
+	}
 	h2{
 		margin-top: 0;
 		color: #565759;
@@ -225,6 +228,7 @@
 			margin-top: 25px;
 			margin-bottom: 20px;
 			width: 100%;
+			border-radius: 20px;
 		}
 		&:before {
 			content: '';
@@ -258,6 +262,7 @@
 	@include media($tablet) {
 		background: url('images/bg-doctors.jpg') top center no-repeat;
 		text-align: left;
+		background-size: cover;
 		// padding-bottom: 440px;
 	}
 	h2 {

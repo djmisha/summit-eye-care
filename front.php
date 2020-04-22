@@ -6,58 +6,50 @@
 
 <div class="home-welcome">
 	<div class="owl-carousel home-rotator">
-		<div class="slide" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/hero1.jpg');"></div>
-		<div class="slide" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/hero2.jpg');"></div>
-		<div class="slide" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/hero3.jpg');"></div>
+		<?php if(have_rows('slide_show')): ?>
+			<?php while(have_rows('slide_show')): the_row(); ?>
+				<div class="slide" style="background-image: url('<?php the_sub_field('image'); ?>');">
+				</div>
+			<?php endwhile; ?>
+		<?php endif; ?>
 	</div>
 	<div class="taglines">
-		<span class="taglines-title">Experience<br> Your World in Focus</span>
-		<span class="taglines-subtitle">Milwaukee’s Leading Providers of Cataract Surgery</span>
-		<a href="" class="button" rel="nofolloq">Schedule a Consultation</a>
+		<span class="taglines-title"><?php the_field('headline'); ?></span>
+		<span class="taglines-subtitle"><?php the_field('subheadline'); ?></span>
+		<a href="<?php bloginfo('url'); ?>/contact/" class="button" rel="nofollow">Schedule a Consultation</a>
 	</div>
 </div>
 
 
 <section class="home-whychoose">
-	<p>
-		At Summit Eye, our experienced eye doctors are dedicated to providing high-quality vision care, specializing in cataract treatment, lens replacement and ICL surgery.  
-	</p>
+	<p><?php the_field('about_headline'); ?></p>
 	<div class="home-reasons">
-		<div class="reason">
-			<img src="<?php bloginfo('template_directory'); ?>/images/svg/icon-experience.png" alt="">
-			<span class="headline">Experience</span>
-			<span class="subheadline">Dr. Vukich has performed more than 22,000 cataract procedures</span>
-			<a href="" class="button button-white">Button Text</a>
-		</div>
-		<div class="reason">
-			<img src="<?php bloginfo('template_directory'); ?>/images/svg/icon-experience.png" alt="">
-			<span class="headline">Experience</span>
-			<span class="subheadline">Dr. Vukich has performed more than 22,000 cataract procedures</span>
-			<a href="" class="button button-white">Button Text</a>
-		</div>
-		<div class="reason">
-			<img src="<?php bloginfo('template_directory'); ?>/images/svg/icon-experience.png" alt="">
-			<span class="headline">Experience</span>
-			<span class="subheadline">Dr. Vukich has performed more than 22,000 cataract procedures</span>
-			<a href="" class="button button-white">Button Text</a>
-		</div>
+		<?php if(have_rows('about_items')): ?>
+				<?php while(have_rows('about_items')): the_row(); ?>
+					<div class="reason">
+						<img src="<?php the_sub_field('image'); ?>" alt="">
+						<span class="headline"><?php the_sub_field('headline'); ?></span>
+						<span class="subheadline"><?php the_sub_field('content'); ?></span>
+						<a href="<?php the_sub_field('link'); ?>" class="button button-white" rel="nofollow"><?php the_sub_field('link_text'); ?></a>
+					</div>
+				<?php endwhile; ?>
+		<?php endif; ?>
 	</div>
 </section>
 
 
 <section class="home-surgery">
-	<h2>Cataract & Vision Correction Surgery</h2>
+	<h2><?php the_field('surgery_headline'); ?></h2>
 	<div class="surgery">
-		<div class="surgery-single">
-			<div class="lines"></div>		
-			<a href=""><img src="<?php bloginfo('template_directory'); ?>/images/surgery-1.jpg" alt=""></a>
-			<a href="" rel="nofollow" class="button button-white">Cataract Surgery</a>
-		</div> 	
-		<div class="surgery-single">
-			<div class="lines"></div>		
-			<a href=""><img src="<?php bloginfo('template_directory'); ?>/images/surgery-2.jpg" alt=""></a>
-			<a href="" rel="nofollow" class="button button-white">Cataract Surgery</a>
-		</div> 	
+		<?php if(have_rows('surgery_items')): ?>
+			<?php while(have_rows('surgery_items')): the_row(); ?>
+				<div class="surgery-single">
+					<div class="lines"></div>		
+					<a href="<?php the_sub_field('link'); ?>"><img src="<?php the_sub_field('image'); ?>" alt="icon"></a>
+					<a href="<?php the_sub_field('link'); ?>" rel="nofollow" class="button button-white"><?php the_sub_field('headline'); ?></a>
+				</div> 	
+			<?php endwhile; ?>
+		<?php endif; ?>
 	</div>
 </section>
 
