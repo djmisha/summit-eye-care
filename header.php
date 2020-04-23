@@ -37,9 +37,8 @@
 
 
 	<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?> has-webp"
-		<?php header_images(); ?>
 	>
-		<section class="header-top">
+		<div class="header-top">
 			
 			<div class="header-logo">
 				<?php site_logo('logo.svg') ?>
@@ -63,6 +62,7 @@
 						$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
 						$map = get_sub_field('map');
 						$gmb = get_sub_field('gmb');
+						$applink = Get_bloginfo('url') .'/contact/';
 					?>
 						<li>
 							<div>
@@ -72,7 +72,7 @@
 								<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
 
 								// Tag
-								if($tag) echo '<div class="tag"> Appointments</div>';
+								if($tag) echo '<div class="tag"><a href="' . $applink . '">Appointments</a></div>';
 
 								// Directions wrap open
 								if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Header  Contact - Address" class="track-outbound">';
@@ -97,7 +97,7 @@
 				<?php endif; ?>
 			</div>
 			<?php // HEADER LOCATIONS END  ?>
-		</section>
+		</div>
 
 		<div class="nav-bar">
 			<div class="nav-wrap">
@@ -162,3 +162,16 @@
 		</div>
 
 	</header>
+
+
+	<?php if (!is_front_page()) { ?>
+		<div class="internal-header-images"  <?php header_images() ?> >
+			<section class="page-title">
+			    <h1><?php the_title();?></h1>
+			    <div class="site-crumbs"><?php echo __salaciouscrumb(); ?></div>
+			</section>
+		</div>
+
+	<? } ?>
+
+	<?php  ?>

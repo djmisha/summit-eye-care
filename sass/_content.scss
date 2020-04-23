@@ -13,19 +13,27 @@
 	.salacious-crumb {
 		@include font(12px);
 		margin: 0 0 36px;
-		font-style: italic;
+		border: 1px solid pink;
+		font-style: normal;
 		a {
 			text-decoration: none;
+			color: #fff;
 		}
 		.crumb-sep {
+			color: #fff;
 			margin: 0 8px;
 		}
 		.current-crumb-item {
+			color: #fff;
 			a {
-				color: $darkAlt;
+				color: #fff;
 			}
 		}
 	}
+}
+
+.page-title h1 {
+	color: #fff;
 }
 
 .interior {

@@ -25,14 +25,14 @@
 	<p><?php the_field('about_headline'); ?></p>
 	<div class="home-reasons">
 		<?php if(have_rows('about_items')): ?>
-				<?php while(have_rows('about_items')): the_row(); ?>
-					<div class="reason">
-						<img src="<?php the_sub_field('image'); ?>" alt="">
-						<span class="headline"><?php the_sub_field('headline'); ?></span>
-						<span class="subheadline"><?php the_sub_field('content'); ?></span>
-						<a href="<?php the_sub_field('link'); ?>" class="button button-white" rel="nofollow"><?php the_sub_field('link_text'); ?></a>
-					</div>
-				<?php endwhile; ?>
+			<?php while(have_rows('about_items')): the_row(); ?>
+				<div class="reason">
+					<img src="<?php the_sub_field('image'); ?>" alt="">
+					<span class="headline"><?php the_sub_field('headline'); ?></span>
+					<span class="subheadline"><?php the_sub_field('content'); ?></span>
+					<a href="<?php the_sub_field('link'); ?>" class="button button-white" rel="nofollow"><?php the_sub_field('link_text'); ?></a>
+				</div>
+			<?php endwhile; ?>
 		<?php endif; ?>
 	</div>
 </section>
@@ -55,52 +55,35 @@
 
 
 <section class="home-doctors">
-	<h2>Our Doctors</h2>
-	<div class="doctor">
-		<div class="doc-pic">
-			<img src="<?php bloginfo('template_directory'); ?>/images/doc-1.jpg" alt="">
-		</div>
-		<div class="doc-bio">
-			<h3>John Vukich, M.D.</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero nunc consequat interdum varius sit amet mattis vulputate. Interdum consectetur libero id faucibus nisl. Tempor id eu nisl nunc mi. Aliquet sagittis id consectetur purus ut faucibus pulvinar. </p>
-			<div class="doc-button">
-				<a href="" rel="nofollow" class="button button-transparent">View Bio</a>
+	<h2><?php the_field('doctor_headline'); ?></h2>
+	<?php if(have_rows('doctor_items')): ?>
+		<?php while(have_rows('doctor_items')): the_row(); ?>
+			<div class="doctor">
+				<div class="doc-pic">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('headline'); ?>">
+				</div>
+				<div class="doc-bio">
+					<h3><?php the_sub_field('headline'); ?></h3>
+					<?php the_sub_field('content'); ?>
+					<div class="doc-button">
+						<a href="<?php the_sub_field('link'); ?>" rel="nofollow" class="button button-transparent">View Bio</a>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-	<div class="doctor">
-		<div class="doc-pic">
-			<img src="<?php bloginfo('template_directory'); ?>/images/doc-2.jpg" alt="">
-		</div>
-		<div class="doc-bio">
-			<h3>John Vukich, M.D.</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero nunc consequat interdum varius sit amet mattis vulputate. Interdum consectetur libero id faucibus nisl. Tempor id eu nisl nunc mi. Aliquet sagittis id consectetur purus ut faucibus pulvinar. </p>
-			<div class="doc-button">
-				<a href="" rel="nofollow" class="button button-transparent">View Bio</a>
-			</div>
-		</div>
-	</div>
+		<?php endwhile; ?>
+	<?php endif; ?>
 </section>
-
 
 
 <section class="home-testis">
 	<div class="owl-carousel testi-slider">
-		<div class="testi-slider-squote">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero nunc consequat interdum varius sit amet mattis vulputate. Interdum consectetur libero id faucibus nisl.
-
-			<strong>-Patient Name</strong>
-		</div>
-		<div class="testi-slider-squote">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero nunc consequat interdum varius sit amet mattis vulputate. Interdum consectetur libero id faucibus nisl.
-
-			<strong>-Patient Name</strong>
-		</div>
-		<div class="testi-slider-squote">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero nunc consequat interdum varius sit amet mattis vulputate. Interdum consectetur libero id faucibus nisl.
-
-			<strong>-Patient Name</strong>
-		</div>
+		<?php if(have_rows('testimonials')): ?>
+			<?php while(have_rows('testimonials')): the_row(); ?>
+				<div class="testi-slider-squote">
+					<?php the_sub_field('content'); ?>
+				</div>
+			<?php endwhile; ?>
+		<?php endif; ?>
 	</div>
 </section>
 

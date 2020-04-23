@@ -2,13 +2,11 @@
 
 		<section class="upper-footer">
 
-		
-
-		<?php if(!is_page(array('contact', 'contact-us'))): ?>
-		<div class="footer-contact-form">
-			<?php //echo do_shortcode( '[seaforms name="footer-contact"]' ); ?>
-		</div>
-		<?php endif; ?>
+			<?php if(!is_page(array('contact', 'contact-us'))): ?>
+			<div class="footer-contact-form">
+				<?php //echo do_shortcode( '[seaforms name="footer-contact"]' ); ?>
+			</div>
+			<?php endif; ?>
 
 		
 			<div class="footer-locations-wrapper">
@@ -32,6 +30,8 @@
 							$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
 							$map = get_sub_field('map');
 							$gmb = get_sub_field('gmb');
+							$applink = Get_bloginfo('url') .'/contact/';
+
 						?>
 
 							<li>
@@ -46,7 +46,7 @@
 										<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
 
 										// Tag
-										if($tag) echo '<div class="tag">' . $tag . '</div>';
+										if($tag) echo '<div class="tag"><a href="' . $applink . '">' . $tag . '</a></div>';
 
 										// Directions wrap open
 										if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Footer Contact - Address" class="track-outbound">';
@@ -120,20 +120,24 @@
 		</section>
 
 
-		<?php
-		// Sticky Contact 
-		// if(!is_page(array('contact', 'contact-us'))) {
-		// 	$stickyContact = get_field('sticky_contact', 'options');
-		// 	if( $stickyContact ) echo '<section class="sticky-contact">' . $stickyContact . '</section>';
-		// }
-		?>
-
-		<!--  NEEDS LINKS --><!-- FIX WITH TOP SECTION -->
+		<?php // Sticky Button
+		if(!is_page(array('contact', 'contact-us'))) { ?>
 		<div class="sticky-contact">
-			<a href="" class="sticky-schedule"><span>Schedule a Consultation</span></a>
-			<a href="" class="sticky-phone-icon"></a>
-			<div class="split-line"></div>
+			<?php if(have_rows('locations', 'option')): ?>
+				<?php while(have_rows('locations', 'option')): the_row();
+		    		$phone = get_sub_field('phone');
+					$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
+					$map = get_sub_field('map');
+					$gmb = get_sub_field('gmb');
+					$applink = Get_bloginfo('url') .'/contact/';
+				?>
+					<a href="<?php echo $applink; ?>" class="sticky-schedule"><span>Schedule a Consultation</span></a>
+					<a href="<?php echo $tel; ?>" class="sticky-phone-icon"></a>
+					<div class="split-line"></div>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
+		<?php } ?>
 
 	</footer>
 
@@ -144,7 +148,7 @@
 	<script id="__bs_script__">//<![CDATA[
 	    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
 	//]]></script>
-	<?php endif; ?>
+<?php endif; ?>
 
 </body>
 </html>

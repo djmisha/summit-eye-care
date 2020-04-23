@@ -1131,18 +1131,18 @@ main,
   margin-top: -30px;
 }
 
+@media only screen and (min-width: 1060px) {
+  .nav-bar {
+    max-width: 1380px;
+  }
+}
+
 @media only screen and (min-width: 1460px) {
   .nav-bar {
     padding-right: calc(40px + (50vw - (1460px / 2)));
     padding-left: calc(40px + (50vw - (1460px / 2)));
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-}
-
-@media only screen and (min-width: 1060px) {
-  .nav-bar {
-    max-width: 1380px;
   }
 }
 
@@ -1254,13 +1254,8 @@ main,
 
 @media only screen and (min-width: 768px) {
   .header-top {
-    padding-top: 50px;
+    padding-top: 48px;
     padding-bottom: 70px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .header-top {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1275,6 +1270,15 @@ main,
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  .header-top {
+    max-width: 1380px;
+    padding-left: 20px;
+    padding-right: 30px;
   }
 }
 
@@ -1475,6 +1479,28 @@ main,
 }
 
 /*--------------  Header Banner  -------------*/
+.internal-header-images {
+  z-index: 1;
+  position: relative;
+  top: -25px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 305px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media only screen and (min-width: 768px) {
+  .internal-header-images {
+    min-height: 485px;
+  }
+}
+
 /* ------------------------
 	Nav
 ------------------------ */
@@ -2064,19 +2090,30 @@ main,
   font-size: 12px;
   font-size: 0.75rem;
   margin: 0 0 36px;
-  font-style: italic;
+  border: 1px solid pink;
+  font-style: normal;
 }
 
 .site-crumbs .salacious-crumb a {
   text-decoration: none;
+  color: #fff;
 }
 
 .site-crumbs .salacious-crumb .crumb-sep {
+  color: #fff;
   margin: 0 8px;
 }
 
+.site-crumbs .salacious-crumb .current-crumb-item {
+  color: #fff;
+}
+
 .site-crumbs .salacious-crumb .current-crumb-item a {
-  color: #858688;
+  color: #fff;
+}
+
+.page-title h1 {
+  color: #fff;
 }
 
 .interior {
@@ -3419,6 +3456,7 @@ span.error {
 .home-surgery .surgery-single {
   position: relative;
   padding: 20px 0;
+  max-width: 680px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3583,8 +3621,8 @@ span.error {
 
 .home-testis {
   text-align: center;
-  padding-top: 160px;
-  padding-bottom: 60px;
+  padding-top: 180px;
+  padding-bottom: 80px;
   background: url("images/icon-quote.svg") top center no-repeat;
 }
 
@@ -3593,12 +3631,17 @@ span.error {
   margin: 0 auto;
 }
 
+.home-testis .testi-slider-squote p {
+  color: #2F2F2F;
+}
+
 .home-testis strong {
   font-weight: normal;
   font-style: normal;
   font-size: 22px;
   display: block;
   margin-top: 40px;
+  color: #717171;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3650,14 +3693,17 @@ span.error {
 }
 
 .home-with-image {
+  margin-top: 40px;
   background: url("images/bg-exam.jpg") center center no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 250px;
+  -webkit-box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.16);
 }
 
 @media only screen and (min-width: 768px) {
   .home-with-image {
-    height: 550px;
+    height: 420px;
   }
 }
 
