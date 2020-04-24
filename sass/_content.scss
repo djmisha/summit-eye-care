@@ -13,8 +13,10 @@
 	.salacious-crumb {
 		@include font(12px);
 		margin: 0 0 36px;
-		border: 1px solid pink;
 		font-style: normal;
+		@include media($tablet) {
+			@include font(17px);
+		}
 		a {
 			text-decoration: none;
 			color: #fff;
@@ -32,8 +34,11 @@
 	}
 }
 
-.page-title h1 {
-	color: #fff;
+.page-title {
+	// border: 1px solid pink;
+	h1 {
+		color: #fff;
+	}
 }
 
 .interior {
@@ -47,6 +52,9 @@
 	h1 {
 	}
 	.content {
+		h2, h3, h4, h5, h6 {
+			color: #565759;
+		}
 		h2 {
 			&:first-child {
 				margin-top: 0;
@@ -59,8 +67,11 @@
 		}
 
 		ul {
-			margin: 2em 40px;
 			list-style: none;
+			margin: 4em 0px;
+			@include media($tablet) {
+				margin: 4em 40px;
+			}
 			li {
 				position: relative;
 				padding-left: 20px;
@@ -79,7 +90,10 @@
 		}
 		ol {
 			counter-reset: item;
-			margin: 2em 40px;
+			margin: 4em 0px;
+			@include media($tablet) {
+				margin: 4em 40px;
+			}
 			> li {
 				display: block;
 				margin-left: 0;
@@ -91,23 +105,39 @@
 			}
 		}
 
+			
 		blockquote {
-			@include font(20px, 1.5em);
+			@include font(22px, 2.2em);
 			position: relative;
-			margin-top: 100px;
+			margin: 0;
 			font-family: $highlightFont;
+			text-align: center;
+			padding: 180px 20px 80px 20px;
+			background: #F8FBFD url('images/icon-quote.svg') top center no-repeat;
+			background-position-y: 20px;
+			margin-top: 60px;
+			margin-bottom: 40px;
 			@include media($tablet) {
-				margin-left: 50px;
-				padding-left: 40px;
-				border-color: $primaryColor;
+				margin-top: 100px;
+				margin-bottom: 40px;
+				padding: 190px 40px 120px 40px;
 			}
-			footer {
-				@include font(24px, 1em);
-				color: $primaryColor;
-				&:before {
-					content: "~ ";
-				}
+			p, cite {
+				max-width: 900px;
+				margin: 0 auto;
+				color: #2F2F2F;
 			}
+			cite {
+				font-style: normal;
+				margin-top: 40px;
+				display: block;
+				font-size: 1.3em;
+			}
+		}
+		blockquote.stars {
+			background: #F8FBFD url('images/icon-stars.svg') top center no-repeat;
+			background-position-y: 90px;
+	
 		}
 
 		.memberships-sc-wrap {
@@ -123,7 +153,8 @@
 		width: 100vw;
 		left: -20px;
 		@include media($desktop) {
-			left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
+		left: -40px;
+			// left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
 		}
 		@include media($full) {
 			left: calc(((40px + (50vw - (#{$full} / 2)))) * -1);
@@ -149,6 +180,34 @@
 			}
 		}
 	}
+
+	/* Guttenber Overrides */
+	.wp-block-columns.full-width {
+		.wp-block-column:first-child  {
+			background: #F8FBFD;
+			// display: flex;
+			// align-items: center;
+			// padding-top: 40px;
+			// padding-bottom: 40px;
+			padding: 40px 20px;
+			@include media($desktop) {
+			padding: 100px 40px;
+				p {
+					margin: 0 auto;
+					max-width: 600px;
+					padding-bottom: 20px;
+
+				}
+			}
+		}
+
+	}
+
+	.wp-block-column:not(:first-child)  {
+		margin-left: 0;
+	}
+
+
 } // End Interior
 
 /*=================================================

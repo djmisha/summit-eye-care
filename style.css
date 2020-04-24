@@ -543,6 +543,7 @@ h3#respond {
   margin-bottom: 20px;
 }
 
+/* nav overlappung header*/
 /* ------------------------
    Variables
 ------------------------ */
@@ -820,6 +821,7 @@ img.alignleft, img.alignright, img.aligncenter, .yes-frame {
   visibility: visible;
 }
 
+.wp-block-button__link,
 .button, .buttons a {
   cursor: pointer;
   display: inline-block;
@@ -830,7 +832,7 @@ img.alignleft, img.alignright, img.aligncenter, .yes-frame {
   border: 1px solid #ffffff;
   background: #126abf;
   color: #ffffff;
-  padding: 12px 30px;
+  padding: 12px 30px !important;
   border-radius: 50px;
   -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;
@@ -838,20 +840,42 @@ img.alignleft, img.alignright, img.aligncenter, .yes-frame {
 }
 
 @media only screen and (min-width: 768px) {
+  .wp-block-button__link,
   .button, .buttons a {
-    padding: 12px 60px;
+    padding: 12px 60px !important;
   }
 }
 
+.wp-block-button__link:hover,
 .button:hover, .buttons a:hover {
   background: #0e5090;
   color: #ffffff !important;
 }
 
+.wp-block-button__link-white,
 .button-white, .buttons a-white {
   background: #fff;
   color: #696969;
   border: 1px solid #126abf;
+}
+
+/* Guttenberg Buttons */
+.wp-block-button__link {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .wp-block-button__link {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+.is-style-outline a {
+  color: #126abf !important;
+  border: 1px solid #126abf;
+  border-radius: 50px !important;
 }
 
 .disclaimer {
@@ -986,7 +1010,7 @@ p {
   margin: 0 0 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .headline {
   font-family: gill-sans-nova, sans-serif;
   color: #126abf;
   font-weight: 600;
@@ -1003,29 +1027,34 @@ h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 40px;
-  font-size: 2.5rem;
+  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 1.1em;
 }
 
 @media only screen and (min-width: 1060px) {
   h1 {
-    font-size: 50px;
-    font-size: 3.125rem;
+    font-size: 70px;
+    font-size: 4.375rem;
   }
 }
 
-h2 {
+h2, .headline {
   font-size: 32px;
   font-size: 2rem;
 }
 
 @media only screen and (min-width: 1060px) {
-  h2 {
-    font-size: 40px;
-    font-size: 2.5rem;
+  h2, .headline {
+    font-size: 50px;
+    font-size: 3.125rem;
     line-height: 1.45em;
   }
+}
+
+h3 {
+  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 @media only screen and (min-width: 1060px) {
@@ -1034,6 +1063,11 @@ h2 {
     font-size: 2.125rem;
     line-height: 1.25em;
   }
+}
+
+h4, h5, h6 {
+  font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 @media only screen and (min-width: 1060px) {
@@ -2090,8 +2124,14 @@ main,
   font-size: 12px;
   font-size: 0.75rem;
   margin: 0 0 36px;
-  border: 1px solid pink;
   font-style: normal;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-crumbs .salacious-crumb {
+    font-size: 17px;
+    font-size: 1.0625rem;
+  }
 }
 
 .site-crumbs .salacious-crumb a {
@@ -2121,6 +2161,7 @@ main,
   text-align: left;
   margin-bottom: 40px;
   margin-top: 40px;
+  /* Guttenber Overrides */
 }
 
 @media only screen and (min-width: 1060px) {
@@ -2129,6 +2170,10 @@ main,
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.interior .content h2, .interior .content h3, .interior .content h4, .interior .content h5, .interior .content h6 {
+  color: #565759;
 }
 
 .interior .content h2:first-child {
@@ -2140,8 +2185,14 @@ main,
 }
 
 .interior .content ul {
-  margin: 2em 40px;
   list-style: none;
+  margin: 4em 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .interior .content ul {
+    margin: 4em 40px;
+  }
 }
 
 .interior .content ul li {
@@ -2163,7 +2214,13 @@ main,
 
 .interior .content ol {
   counter-reset: item;
-  margin: 2em 40px;
+  margin: 4em 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .interior .content ol {
+    margin: 4em 40px;
+  }
 }
 
 .interior .content ol > li {
@@ -2178,31 +2235,44 @@ main,
 }
 
 .interior .content blockquote {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.5em;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 2.2em;
   position: relative;
-  margin-top: 100px;
+  margin: 0;
   font-family: montserrat, sans-serif;
+  text-align: center;
+  padding: 180px 20px 80px 20px;
+  background: #F8FBFD url("images/icon-quote.svg") top center no-repeat;
+  background-position-y: 20px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content blockquote {
-    margin-left: 50px;
-    padding-left: 40px;
-    border-color: #126abf;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    padding: 190px 40px 120px 40px;
   }
 }
 
-.interior .content blockquote footer {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1em;
-  color: #126abf;
+.interior .content blockquote p, .interior .content blockquote cite {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #2F2F2F;
 }
 
-.interior .content blockquote footer:before {
-  content: "~ ";
+.interior .content blockquote cite {
+  font-style: normal;
+  margin-top: 40px;
+  display: block;
+  font-size: 1.3em;
+}
+
+.interior .content blockquote.stars {
+  background: #F8FBFD url("images/icon-stars.svg") top center no-repeat;
+  background-position-y: 90px;
 }
 
 .interior .content .memberships-sc-wrap svg {
@@ -2218,7 +2288,7 @@ main,
 
 @media only screen and (min-width: 1060px) {
   .interior .full-width {
-    left: calc(((40px + (50vw - (1060px / 2)))) * -1);
+    left: -40px;
   }
 }
 
@@ -2256,6 +2326,26 @@ main,
 .interior .gallery-columns-0 .gallery-item img {
   width: 100%;
   height: auto;
+}
+
+.interior .wp-block-columns.full-width .wp-block-column:first-child {
+  background: #F8FBFD;
+  padding: 40px 20px;
+}
+
+@media only screen and (min-width: 1060px) {
+  .interior .wp-block-columns.full-width .wp-block-column:first-child {
+    padding: 100px 40px;
+  }
+  .interior .wp-block-columns.full-width .wp-block-column:first-child p {
+    margin: 0 auto;
+    max-width: 600px;
+    padding-bottom: 20px;
+  }
+}
+
+.interior .wp-block-column:not(:first-child) {
+  margin-left: 0;
 }
 
 /*=================================================
@@ -2349,16 +2439,17 @@ aside li {
 .upper-footer {
   padding-left: 0;
   padding-right: 0;
+  background: #126abf;
 }
 
-@media only screen and (min-width: 768px) {
-  .upper-footer {
-    background: #126abf;
-  }
+.footer-locations-wrapper {
+  background: #fff;
+  padding-top: 40px;
 }
 
 @media only screen and (min-width: 768px) {
   .footer-locations-wrapper {
+    background: #126abf;
     padding-top: 80px;
     padding-bottom: 80px;
     display: -webkit-box;
@@ -2694,12 +2785,33 @@ aside li {
 /*===========================================
 =            Footer Contact Form            =
 ===========================================*/
+.footer-contact-form {
+  max-width: 1060px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-contact-form {
+    padding: 0;
+    margin-top: 70px;
+  }
+}
+
+.footer-contact-form .headline {
+  color: #fff;
+}
+
 .footer-contact-form form {
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
   .footer-contact-form form {
+    margin-top: 60px;
     margin-bottom: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2714,7 +2826,7 @@ aside li {
 
 @media only screen and (min-width: 768px) {
   .footer-contact-form form .field-wrap {
-    width: 49%;
+    width: 46%;
   }
 }
 
@@ -2731,6 +2843,95 @@ aside li {
 .footer-contact-form form .type-submitbutton {
   width: 100%;
   text-align: center;
+}
+
+.footer-contact-form form .type-singlelinetext input, .footer-contact-form form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: #fff;
+}
+
+.footer-contact-form form textarea {
+  height: 50px;
+}
+
+.footer-contact-form form .type-singlelinetext input,
+.footer-contact-form form .type-singlelinetext textarea,
+.footer-contact-form form .type-textarea input,
+.footer-contact-form form .type-textarea textarea {
+  padding: 8px 10px;
+  margin-bottom: 45px;
+}
+
+.footer-contact-form form .type-singlelinetext ::-webkit-input-placeholder,
+.footer-contact-form form .type-textarea ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: white;
+  font-family: montserrat, sans-serif;
+  font-weight: normal;
+}
+
+.footer-contact-form form .type-singlelinetext :-moz-placeholder,
+.footer-contact-form form .type-textarea :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: white;
+  font-family: montserrat, sans-serif;
+  font-weight: normal;
+  opacity: 1;
+}
+
+.footer-contact-form form .type-singlelinetext ::-moz-placeholder,
+.footer-contact-form form .type-textarea ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: white;
+  font-family: montserrat, sans-serif;
+  font-weight: normal;
+  opacity: 1;
+}
+
+.footer-contact-form form .type-singlelinetext :-ms-input-placeholder,
+.footer-contact-form form .type-textarea :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+  font-family: montserrat, sans-serif;
+  font-weight: normal;
+}
+
+.footer-contact-form form .submit-btn {
+  margin-top: 20px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  font-family: montserrat, sans-serif;
+  border: 1px solid #ffffff !important;
+  background: #126abf;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  -webkit-transition: all .15s ease-in;
+  transition: all .15s ease-in;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-contact-form form .submit-btn {
+    padding: 12px 60px;
+  }
+}
+
+.footer-contact-form form .submit-btn:hover {
+  background: #0e5090;
+  color: #ffffff !important;
+}
+
+.footer-contact-form form input.error {
+  border: 1px solid yellow !important;
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
 }
 
 /*=====  End of Footer Contact Form  ======*/

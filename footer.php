@@ -4,11 +4,11 @@
 
 			<?php if(!is_page(array('contact', 'contact-us'))): ?>
 			<div class="footer-contact-form">
-				<?php //echo do_shortcode( '[seaforms name="footer-contact"]' ); ?>
+			<span class="headline">Request a Consultation</span>
+				<?php echo do_shortcode( '[aform name="contact-us"]' ); ?>
 			</div>
 			<?php endif; ?>
 
-		
 			<div class="footer-locations-wrapper">
 
 				<div class="locations-info-wrapper">

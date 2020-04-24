@@ -2,13 +2,16 @@
 .upper-footer {
 	padding-left: 0;
 	padding-right: 0;
+	background: $primaryColor;
 	@include media($tablet) {
-		background: $primaryColor;
 	}
 }
 
 .footer-locations-wrapper {
+	background: #fff;
+	padding-top: 40px;
 	@include media($tablet) {
+		background: $primaryColor;
 		padding-top: 80px;
 		padding-bottom: 80px;
 		display: flex;
@@ -270,9 +273,24 @@
 ===========================================*/
 
 .footer-contact-form {
+	max-width: $desktop;
+	margin: 0 auto;
+	margin-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	@include media($tablet) {
+		padding: 0;
+		margin-top: 70px;
+		
+	}
+	.headline {
+		color: #fff;
+	}
 	form {
+		margin-top: 40px;
 		margin-bottom: 40px;
 		@include media($tablet) {
+			margin-top: 60px;
 			margin-bottom: 80px;
 			display: flex;
 			flex-wrap: wrap;
@@ -280,7 +298,7 @@
 		}
 		.field-wrap {
 			@include media($tablet) {
-				width: 49%;
+				width: 46%;
 			}
 		}
 		.type-textarea {
@@ -294,6 +312,89 @@
 		.type-submitbutton {
 			width: 100%;
 			text-align: center;
+		}
+		.type-singlelinetext input, textarea {
+			background: transparent;
+			border: none;
+			border-bottom: 1px solid rgba(#fff,1);
+			color: #fff;
+		}
+		textarea {
+			height: 50px;
+		}
+		.type-singlelinetext,
+			.type-textarea {
+				input,
+				textarea {
+					// font-size: 14px;
+					padding: 8px 10px;
+					margin-bottom: 45px;
+				}
+				::-webkit-input-placeholder {
+					/* WebKit, Blink, Edge */
+					color: rgba(#fff, 1);
+					font-family: $primaryFont;
+					// font-size: 14px;
+					// text-transform: uppercase;
+					font-weight: normal;
+					
+				}
+				:-moz-placeholder {
+					/* Mozilla Firefox 4 to 18 */
+					color: rgba(#fff, 1);
+					font-family: $primaryFont;
+					// font-size: 14px;
+					// text-transform: uppercase;
+					font-weight: normal;
+					opacity: 1;
+					
+				}
+				::-moz-placeholder {
+					/* Mozilla Firefox 19+ */
+					color: rgba(#fff, 1);
+					font-family: $primaryFont;
+					// font-size: 14px;
+					// text-transform: uppercase;
+					font-weight: normal;
+					opacity: 1;
+					
+				}
+				:-ms-input-placeholder {
+					/* Internet Explorer 10-11 */
+					color: rgba(#fff, 1);
+					font-family: $primaryFont;
+					// font-size: 14px;
+					// text-transform: uppercase;
+					font-weight: normal;
+				}
+			}
+		.submit-btn {
+			margin-top: 20px;
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			text-align: center;
+			text-decoration: none;
+			font-family: $primaryFont;
+			border: 1px solid $lightColor !important;
+			background: $primaryColor;
+			color: $lightColor;
+			padding: 12px 30px;
+			border-radius: 50px;
+			transition: all .15s ease-in;
+			font-size: 14px;
+			text-transform: uppercase;
+			@include media($tablet) {
+				padding: 12px 60px;
+			}
+			&:hover {
+				background: darken($primaryColor, 10%);
+				color: $lightColor!important;
+			}
+		}
+		input.error{
+			border: 1px solid yellow!important;
+			box-shadow: 0 0 10px rgba( $lightColor, .3)!important;
 		}
 	}
 }
