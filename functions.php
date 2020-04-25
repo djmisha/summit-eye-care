@@ -18,14 +18,13 @@ endif;
 ===================================*/
 
 include TMPL_DIR . '/inc/functions.php';  //Inclide RM Functions in inc/functions.php (must be included before anything else)
-include TMPL_DIR . '/pagebuilder/pb-acf-styles.php';  //Inclide RM Functions in inc/functions.php (must be included before anything else)
+// include TMPL_DIR . '/pagebuilder/pb-acf-styles.php';  //Inclide RM Functions in inc/functions.php (must be included before anything else)
 
 // Nav Walker
 if(file_exists(TMPL_DIR . '/inc/walkers/walkerpagecustom.php')):
 	include TMPL_DIR . '/inc/walkers/walkerpagecustom.php';
 endif;
 
-include 'nofollow/nofollow.php';
 
 function __themesetup(){
 	add_theme_support('post-thumbnails'); // Add thumbnail functionality
@@ -70,7 +69,7 @@ function __themejs(){
 	wp_register_script('rm-owl', TMPL_DIR_URI . '/js/libs/owl-carousel/owl.carousel.js', array('jquery','modernizr'), '1.0', true );
 
 	wp_register_script('rm-wow', TMPL_DIR_URI . '/js/libs/wow/wow.min.js', array('jquery','modernizr'), '1.0', true );
-	wp_register_script('rm-harvey', TMPL_DIR_URI . '/js/libs/harvey.min.js', array('jquery','modernizr'), '1.0', true );
+	// wp_register_script('rm-harvey', TMPL_DIR_URI . '/js/libs/harvey.min.js', array('jquery','modernizr'), '1.0', true );
 	//RM Scripts
 	wp_register_script('rm-menu', TMPL_DIR_URI . '/js/rm-menu.js', array('jquery','modernizr'), '1.0', true );
 	wp_register_script('theme-js', TMPL_DIR_URI . '/js/scripts.js', array('jquery','modernizr'), '1.0', true );

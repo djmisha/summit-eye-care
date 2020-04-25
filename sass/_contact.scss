@@ -41,8 +41,8 @@
 	// 	padding-bottom: 10px;
 	// }
 	.gmaps {
-	width: 100%;
-	margin-bottom: 16px;
+		width: 100%;
+		margin-bottom: 16px;
 		iframe {
 			width: 100%;
 			height: 400px;
@@ -69,6 +69,11 @@
 		span {
 			display: block;
 		}
+	}
+	.practice {
+		font-weight: bold;
+		font-size: 1.2em;
+		color: $primaryColor;
 	}
 	.location-hours {
 		.hours-each {
@@ -141,18 +146,97 @@ form {
 	.type-singlelinetext,
 	.type-textarea {
 		label {
-		display: block;
-		position: absolute;
-		left: -10000px;
-		top: auto;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
+			display: block;
+			position: absolute;
+			left: -10000px;
+			top: auto;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
 
 		}
 		input {
-		margin-bottom: 1em;
-		padding: 1em;
+			margin-bottom: 1em;
+			padding: 1em;
+		}
+		input, textarea {
+			border: none;
+			border-bottom: 2px solid $primaryColor;
+			border: 1px solid $primaryColor;
+		}
+
+	}
+	.type-singlelinetext,
+		.type-textarea {
+			input,
+			textarea {
+				// font-size: 14px;
+				padding: 8px 10px;
+				@include media($tablet) {
+					// margin-bottom: 45px;
+					
+				}
+			}
+			::-webkit-input-placeholder {
+				/* WebKit, Blink, Edge */
+				color: rgba($secondaryColor, 1);
+				font-family: $primaryFont;
+				// font-size: 14px;
+				// text-transform: uppercase;
+				font-weight: normal;
+				
+			}
+			:-moz-placeholder {
+				/* Mozilla Firefox 4 to 18 */
+				color: rgba($secondaryColor, 1);
+				font-family: $primaryFont;
+				// font-size: 14px;
+				// text-transform: uppercase;
+				font-weight: normal;
+				opacity: 1;
+				
+			}
+			::-moz-placeholder {
+				/* Mozilla Firefox 19+ */
+				color: rgba($secondaryColor, 1);
+				font-family: $primaryFont;
+				// font-size: 14px;
+				// text-transform: uppercase;
+				font-weight: normal;
+				opacity: 1;
+				
+			}
+			:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
+				color: rgba($secondaryColor, 1);
+				font-family: $primaryFont;
+				// font-size: 14px;
+				// text-transform: uppercase;
+				font-weight: normal;
+			}
+		}
+	.submit-btn {
+		// margin-top: 20px;
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		font-family: $primaryFont;
+		border: 1px solid $lightColor !important;
+		background: $primaryColor;
+		color: $lightColor;
+		padding: 12px 30px;
+		border-radius: 50px;
+		transition: all .15s ease-in;
+		font-size: 14px;
+		text-transform: uppercase;
+		@include media($tablet) {
+			padding: 12px 60px;
+		}
+		&:hover {
+			background: darken($primaryColor, 10%);
+			color: $lightColor!important;
 		}
 	}
 	.stopyenoh {
@@ -166,21 +250,21 @@ form {
 }
 
 @keyframes shake {
-  10%, 90% {
-    transform: translate3d(-3px, 0, 0);
-  }
+	10%, 90% {
+		transform: translate3d(-3px, 0, 0);
+	}
 
-  20%, 80% {
-    transform: translate3d(4px, 0, 0);
-  }
+	20%, 80% {
+		transform: translate3d(4px, 0, 0);
+	}
 
-  30%, 50%, 70% {
-    transform: translate3d(-8px, 0, 0);
-  }
+	30%, 50%, 70% {
+		transform: translate3d(-8px, 0, 0);
+	}
 
-  40%, 60% {
-    transform: translate3d(8px, 0, 0);
-  }
+	40%, 60% {
+		transform: translate3d(8px, 0, 0);
+	}
 }
 
 $red: #E74C3C;

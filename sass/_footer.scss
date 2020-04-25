@@ -328,7 +328,10 @@
 				textarea {
 					// font-size: 14px;
 					padding: 8px 10px;
-					margin-bottom: 45px;
+					@include media($tablet) {
+						margin-bottom: 45px;
+						
+					}
 				}
 				::-webkit-input-placeholder {
 					/* WebKit, Blink, Edge */

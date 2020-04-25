@@ -4,7 +4,11 @@
 	background: #fff;
 	// min-height: 500px;
 	// border: 1px solid pink;
+	// position: relative;
+	// z-index: -2;
 	.nav {
+	position: relative;
+	z-index: 1000;
 		a {
 			color: #1e3e59;
 		}
@@ -18,6 +22,8 @@
 /* Naviagation bar */
 
 .nav-bar {
+	position: relative;
+	z-index: 9999;
 	// border: 1px solid pink;
 	padding: 0 20px !important;
 	margin: 0 auto;
@@ -26,9 +32,9 @@
 		// padding: 20px 40px;
 	}
 	@include media($desktop) {
-		max-width: $ogFull;
 	}
 	@include media($full) {
+		max-width: $full;
 		@include contain($full, 20px);
 	}
 	.nav-wrap {
@@ -136,7 +142,7 @@
 	padding-bottom: 50px;
 	// border: 1px solid pink;
 	@include media($tablet) {
-		padding-top: 48px;
+		padding-top: 46px;
 		padding-bottom: 70px;
 		display: flex;
 		justify-content: center;
@@ -145,13 +151,16 @@
 		justify-content: space-between;
 		// max-width: 1350px;
 		margin: 0 auto;
+		padding-left: 40px;
+		padding-right: 50px;
+		// @include contain($desktop, 20px);
 	}
 	@include media($desktop) {
-		max-width: $ogFull;
-		padding-left: 20px;
-		padding-right: 30px;
 	}
 	@include media($full) {
+		padding-left: 0px;
+		padding-right: 0px;
+		max-width: $ogFull;
 		// @include contain($full, 20px);
 	}
 	h1.site-logo {
@@ -346,7 +355,7 @@
 }
 
 .internal-header-images {
-	z-index: 1;
+	// z-index: -1;
 	position: relative;
 	top: -25px;
 	background-position: center center;

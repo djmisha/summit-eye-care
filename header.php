@@ -9,9 +9,6 @@
 
 	<title><?php wp_title(""); ?></title>
 
-	<script> /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)?(document.getElementsByTagName("html")[0].className+=" is--device",/iPad/i.test(navigator.userAgent)&&(document.getElementsByTagName("html")[0].className+=" is--ipad")):document.getElementsByTagName("html")[0].className+=" not--device";</script>
-
-
 	<?php if(!is_404()): ?>
 		<link rel="stylesheet" href="https://use.typekit.net/gps6lee.css">
 		<?php //miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700' ); ?>

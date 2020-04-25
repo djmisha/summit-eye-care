@@ -161,6 +161,7 @@
 		margin-top: 40px;
 		@include media($tablet) {
 			font-size: 40px;
+			line-height: 40px;
 		}
 	}
 	.subheadline {

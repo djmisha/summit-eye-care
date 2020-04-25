@@ -14,7 +14,7 @@ $navBar : 60px;
 	display: block;
 	&.menu-wrap{
 		width: 100%;
-		position: absolute;
+		position: fixed;
 		top: 0px; // Height of the nav bar
 		right: 0;
 		height: calc(100vh - #{$navBar});
@@ -184,7 +184,7 @@ $navBar : 60px;
 	}
 // 	open
 	&.open {
-		position: absolute;
+		position: fixed;
 		right: 10px;
 		top: 10px;
 		z-index: 9999;

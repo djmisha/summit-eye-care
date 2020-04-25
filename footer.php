@@ -132,7 +132,7 @@
 					$applink = Get_bloginfo('url') .'/contact/';
 				?>
 					<a href="<?php echo $applink; ?>" class="sticky-schedule"><span>Schedule a Consultation</span></a>
-					<a href="<?php echo $tel; ?>" class="sticky-phone-icon"></a>
+					<a href="tel:+1<?php echo $tel; ?>" class="sticky-phone-icon"></a>
 					<div class="split-line"></div>
 				<?php endwhile; ?>
 			<?php endif; ?>

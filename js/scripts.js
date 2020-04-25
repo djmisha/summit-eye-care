@@ -156,7 +156,7 @@
 
 
 		/*===============================
-		=            RM Menu            =
+		=             Menu            =
 		===============================*/
 
 		dupLocations = $('ul.header-locations').clone();
@@ -360,24 +360,24 @@
 		});
 
 
-		// Front page Smile tranformations
-		function checkWidth() {
-			var $window = $(window);
-		  var windowsize = $window.width();
-		  if (windowsize >= 1090) {
-		  	// rearange footer on mobile
-				$('.home-smile-trans-header').prependTo('.home-examples .transformations');
-		  }
-		  else {
-		  	// rearange footer on mobile
-				$('.home-smile-trans-header').prependTo('.home-examples');
+		// // Front page Smile tranformations
+		// function checkWidth() {
+		// 	var $window = $(window);
+		//   var windowsize = $window.width();
+		//   if (windowsize >= 1090) {
+		//   	// rearange footer on mobile
+		// 		$('.home-smile-trans-header').prependTo('.home-examples .transformations');
+		//   }
+		//   else {
+		//   	// rearange footer on mobile
+		// 		$('.home-smile-trans-header').prependTo('.home-examples');
 
-		  }
-		}
-		// Execute on load
-		checkWidth();
-		// Bind event listener
-		$(window).resize(checkWidth);
+		//   }
+		// }
+		// // Execute on load
+		// checkWidth();
+		// // Bind event listener
+		// $(window).resize(checkWidth);
 
 
 		// Blog Categories dropdown
@@ -397,65 +397,64 @@
 		// This script will only run on browsers that don't support webp
 		// Any inline background image element must use the clase '.has-webp'
 
-		var noWebp = document.querySelector('.no-webp');
-		if( noWebp) {
-			var webpImage = document.querySelectorAll('.no-webp .has-webp');
-			webpImage.forEach(function(img) {
-				img.style.backgroundImage = img.style.backgroundImage.replace('webp', 'jpg');
-			});
-		}
+		// var noWebp = document.querySelector('.no-webp');
+		// if( noWebp) {
+		// 	var webpImage = document.querySelectorAll('.no-webp .has-webp');
+		// 	webpImage.forEach(function(img) {
+		// 		img.style.backgroundImage = img.style.backgroundImage.replace('webp', 'jpg');
+		// 	});
+		// }
 
 
 		/*======================================
 		=            Gallery Pop Up            =
 		======================================*/
 
-		/* HEY THERE POPUP*/
-			if( $('body.rmgallery-child').length ){
-				//$.removeCookie('gallerypop', { path: '/' });
-				if( $.cookie('gallerypop') == null ) {
-						// var theme_path = rm_data.tmplDirUri;
-						console.log(theme_path);
-						$.fancybox.open({
+			// if( $('body.rmgallery-child').length ){
+			// 	//$.removeCookie('gallerypop', { path: '/' });
+			// 	if( $.cookie('gallerypop') == null ) {
+			// 			// var theme_path = rm_data.tmplDirUri;
+			// 			console.log(theme_path);
+			// 			$.fancybox.open({
 
-							src: theme_path +'/popup.php',
-							type: 'ajax',
-							opts: {
-								scrolling : 'no',
-								transitionEffect : 'fade',
-								modal : true,
-								helpers : {
-										overlay : {
-												css : {
-														'background' : 'rgba(0, 0, 0, 0.92)'
-												}
-										}
-								},
-								live : true,
-								afterClose : function(){
-										$.cookie('gallerypop', 'rmg', { expires: 1, path: '/' });
-								}
-							}
-								// type: 'ajax',
-								// href : theme_path +'/popup.php',
-								// padding : 5,
-								// scrolling : 'no',
-								// transitionIn : 'fade',
-								// transitionOut : 'fade',
-								// modal : true,
-								// helpers : {
-								// 		overlay : {
-								// 				css : {
-								// 						'background' : 'rgba(0, 0, 0, 0.92)'
-								// 				}
-								// 		}
-								// },
-								// live : true,
+			// 				src: theme_path +'/popup.php',
+			// 				type: 'ajax',
+			// 				opts: {
+			// 					scrolling : 'no',
+			// 					transitionEffect : 'fade',
+			// 					modal : true,
+			// 					helpers : {
+			// 							overlay : {
+			// 									css : {
+			// 											'background' : 'rgba(0, 0, 0, 0.92)'
+			// 									}
+			// 							}
+			// 					},
+			// 					live : true,
+			// 					afterClose : function(){
+			// 							$.cookie('gallerypop', 'rmg', { expires: 1, path: '/' });
+			// 					}
+			// 				}
+			// 					// type: 'ajax',
+			// 					// href : theme_path +'/popup.php',
+			// 					// padding : 5,
+			// 					// scrolling : 'no',
+			// 					// transitionIn : 'fade',
+			// 					// transitionOut : 'fade',
+			// 					// modal : true,
+			// 					// helpers : {
+			// 					// 		overlay : {
+			// 					// 				css : {
+			// 					// 						'background' : 'rgba(0, 0, 0, 0.92)'
+			// 					// 				}
+			// 					// 		}
+			// 					// },
+			// 					// live : true,
 
-						});
-				}//end cookies check
+			// 			});
+			// 	}//end cookies check
 
-			}
+			// }
 
 		});// end of doc.ready
 
@@ -465,50 +464,50 @@
 =            Analytics click tracking            =
 ================================================*/
 
-function trackOutboundLink( event ) {
+// function trackOutboundLink( event ) {
 
-	// prevent the default behavior
-	event.preventDefault();
+// 	// prevent the default behavior
+// 	event.preventDefault();
 
-	// get necessary info
-	var url		= this.href;
-	var label	= this.dataset.label !== 'undefined' ? this.dataset.label : url; // Fallback to URL just in case no label was set. Safety first kids
-	var target	= ( this.target !== '' && this.target == '_blank' ) ? 'new' : 'self';
+// 	// get necessary info
+// 	var url		= this.href;
+// 	var label	= this.dataset.label !== 'undefined' ? this.dataset.label : url; // Fallback to URL just in case no label was set. Safety first kids
+// 	var target	= ( this.target !== '' && this.target == '_blank' ) ? 'new' : 'self';
 
-	// Just making sure this exists
-	if ( typeof gtag !== 'undefined' ) {
+// 	// Just making sure this exists
+// 	if ( typeof gtag !== 'undefined' ) {
 
-		gtag( 'event', 'click', {
-			'event_category': 'outbound',
-			'event_label': label,
-			'transport_type': 'beacon',
-			'event_callback': function(){
-				if ( target == 'new' ) {
-					window.open( url );
-				} else {
-					document.location = url
-				}
-			}
-		} );
+// 		gtag( 'event', 'click', {
+// 			'event_category': 'outbound',
+// 			'event_label': label,
+// 			'transport_type': 'beacon',
+// 			'event_callback': function(){
+// 				if ( target == 'new' ) {
+// 					window.open( url );
+// 				} else {
+// 					document.location = url
+// 				}
+// 			}
+// 		} );
 
-	} else { // trigger default behavior as fallback in case the gtag was omitted
-		if ( target == 'new' ) {
-			window.open( url );
-		} else {
-			document.location = url
-		}
+// 	} else { // trigger default behavior as fallback in case the gtag was omitted
+// 		if ( target == 'new' ) {
+// 			window.open( url );
+// 		} else {
+// 			document.location = url
+// 		}
 
-	}
+// 	}
 
-} // end tarckOutboundLink()
+// } // end tarckOutboundLink()
 
-// Grab all our links
-var linksToTrack	= document.querySelectorAll('.track-outbound');
+// // Grab all our links
+// var linksToTrack	= document.querySelectorAll('.track-outbound');
 
-// Add click event to all of our tracked links
-for ( var i = 0; i < linksToTrack.length; i++ ) {
-	linksToTrack[i].addEventListener( 'click', trackOutboundLink, false );
-}
+// // Add click event to all of our tracked links
+// for ( var i = 0; i < linksToTrack.length; i++ ) {
+// 	linksToTrack[i].addEventListener( 'click', trackOutboundLink, false );
+// }
 
 /*=====  End of Analytics click tracking  ======*/
 
@@ -517,38 +516,38 @@ for ( var i = 0; i < linksToTrack.length; i++ ) {
 =           WYSIWYG YouTube Button - WP Editor                     =
 ==================================================================*/
 
-const youTubeWraps = document.querySelectorAll('.ytvideo');
+// const youTubeWraps = document.querySelectorAll('.ytvideo');
 
-if (youTubeWraps.length > 0) {
+// if (youTubeWraps.length > 0) {
 
-  function loadAndPlayYouTube(e) {
-    e.preventDefault;
-    const id = this.getAttribute('id');
-    this.classList.add('clicked');
-    if (this.classList.contains('custom-placeholder')) {
-      //Add responsive iframe styles
-      this.classList.add('ytvideo');
-    }
+//   function loadAndPlayYouTube(e) {
+//     e.preventDefault;
+//     const id = this.getAttribute('id');
+//     this.classList.add('clicked');
+//     if (this.classList.contains('custom-placeholder')) {
+//       //Add responsive iframe styles
+//       this.classList.add('ytvideo');
+//     }
 
-    this.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + id + '?&autoplay=1" frameborder="0" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-    console.log(this);
-  }
+//     this.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + id + '?&autoplay=1" frameborder="0" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+//     console.log(this);
+//   }
 
-  youTubeWraps.forEach(function (youTubeWrap) {
-    const ytId = youTubeWrap.getAttribute('id');
+//   youTubeWraps.forEach(function (youTubeWrap) {
+//     const ytId = youTubeWrap.getAttribute('id');
 
-    if (youTubeWrap.innerHTML === 'Video Image Placeholder') {
-      youTubeWrap.innerText = '';
-      youTubeWrap.style.backgroundImage = 'url(https://i3.ytimg.com/vi/' + ytId + '/maxresdefault.jpg)';
-    } else {
-      youTubeWrap.classList.remove('ytvideo');
-      youTubeWrap.classList.add('custom-placeholder');
-    }
+//     if (youTubeWrap.innerHTML === 'Video Image Placeholder') {
+//       youTubeWrap.innerText = '';
+//       youTubeWrap.style.backgroundImage = 'url(https://i3.ytimg.com/vi/' + ytId + '/maxresdefault.jpg)';
+//     } else {
+//       youTubeWrap.classList.remove('ytvideo');
+//       youTubeWrap.classList.add('custom-placeholder');
+//     }
 
-    youTubeWrap.addEventListener('click', loadAndPlayYouTube);
-  });
+//     youTubeWrap.addEventListener('click', loadAndPlayYouTube);
+//   });
 
-}
+// }
 
 /*=====  End of Add YouTube Button to WP Dashboard WYSIWYG  ======*/
 
