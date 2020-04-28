@@ -2165,6 +2165,7 @@ main,
   margin-bottom: 40px;
   margin-top: 40px;
   /* Guttenber Overrides */
+  /* Cover with Background Image*/
 }
 
 @media only screen and (min-width: 1060px) {
@@ -2349,6 +2350,31 @@ main,
 
 .interior .wp-block-column:not(:first-child) {
   margin-left: 0;
+}
+
+.interior .wp-block-cover.full-width {
+  height: auto;
+}
+
+.interior .wp-block-cover {
+  margin-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  .interior .wp-block-cover {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.interior .wp-block-cover h2, .interior .wp-block-cover h3, .interior .wp-block-cover h4, .interior .wp-block-cover h5, .interior .wp-block-cover h6 {
+  color: #fff;
+}
+
+.interior .wp-block-cover .wp-block-cover__inner-container {
+  max-width: 1380px;
 }
 
 /*=================================================
