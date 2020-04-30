@@ -14,6 +14,10 @@ body {
 	line-height: 1.9em;
 	min-width: 320px;
 	text-align:center;
+	@include media($tablet) {
+		font: 20px/34px $defaultfont;
+		
+	}
 	// -moz-osx-font-smoothing: grayscale;
 	// -webkit-font-smoothing: antialiased;
 }
@@ -198,17 +202,17 @@ main,
 	Gallery
 ------------------------ */
 
-@import 'gallery';
+// @import 'gallery';
 
 /* ------------------------
 	Landing Page Builder
 ------------------------ */
 
-@import 'landingpage';
+// @import 'landingpage';
 
 
 /* ------------------------
 	Random Internal Pages
 ------------------------ */
 
-@import 'table';
+// @import 'table';
