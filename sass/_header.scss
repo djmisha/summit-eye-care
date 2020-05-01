@@ -2,17 +2,12 @@
 	top: 0;
 	width: 100%;
 	background: #fff;
-	// min-height: 500px;
-	// border: 1px solid pink;
-	// position: relative;
-	// z-index: -2;
 	.nav {
-	position: relative;
-	z-index: 1000;
+		position: relative;
+		z-index: 1000;
 		a {
 			color: #1e3e59;
 		}
-
 	}
 }
 
@@ -24,7 +19,6 @@
 .nav-bar {
 	position: relative;
 	z-index: 9999;
-	// border: 1px solid pink;
 	padding: 0 20px !important;
 	margin: 0 auto;
 	margin-top: -25px;
@@ -33,9 +27,6 @@
 	}
 	@include media($desktop) {
 		margin-top: -35px;
-		// padding: 20px 40px;
-	}
-	@include media($desktop) {
 	}
 	@include media($full) {
 		max-width: $full;
@@ -46,7 +37,6 @@
 		border-radius: 50px;
 		padding-left: 30px;
 		padding-right: 30px;
-
 	}
 	nav {
 		@include media($desktop) {
@@ -126,6 +116,8 @@
 	}
 }
 
+
+
 // Ipad Pro
 
 .is--device {
@@ -135,6 +127,8 @@
 		}
 	}
 }
+
+
 
 
 /*-------------- Logo Area -------------*/
@@ -359,7 +353,6 @@
 }
 
 .internal-header-images {
-	// z-index: -1;
 	position: relative;
 	top: -35px;
 	background-position: center center;
@@ -372,6 +365,7 @@
 		min-height: 485px;
 	}
 }
+
 
 
 .from-blog .internal-header-images {
