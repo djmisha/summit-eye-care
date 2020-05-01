@@ -66,10 +66,10 @@ img.alignleft, img.alignright, img.aligncenter, .yes-frame{
   border: 1px solid $lightColor;
   background: $primaryColor;
   color: $lightColor;
-  padding: 12px 30px !important;
   border-radius: 50px;
   transition: all .15s ease-in;
   font-size: 14px;
+  padding: 12px 30px !important;
   @include media($tablet) {
 	  padding: 12px 60px !important;
   }

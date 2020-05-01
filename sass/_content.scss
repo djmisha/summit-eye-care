@@ -25,10 +25,13 @@
 			color: #fff;
 			margin: 0 8px;
 		}
+		span {
+			color: #fff !important;
+		}
 		.current-crumb-item {
-			color: #fff;
+			color: #fff !important;
 			a {
-				color: #fff;
+				color: #fff !important;
 			}
 		}
 	}

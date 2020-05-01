@@ -61,16 +61,34 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
 		<article class="post-snippet">
-		<?php if(!empty(get_the_post_thumbnail())): ?>
-			<div class="thumb">
-				<?php the_post_thumbnail('thumbnail'); ?>
-			</div>
-		<?php endif; ?>
+			
+			<?php if(!empty(get_the_post_thumbnail())): ?>
+				<a href="<?php the_permalink(); ?>">
+				<div class="thumb">
+					<?php the_post_thumbnail(''); ?>
+				</div>
+				</a>
+			<?php endif; ?>
+
 			<div class="excerpt">
 				<h2 class="blog-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-				<div class="meta-data">Posted on <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> in <?php the_category(', '); ?></div>
-				<?php my_excerpt(30); ?>
-				<a href="<?php the_permalink(); ?>" class="more button">Read More</a>
+				<div class="the-time">
+					<div>
+				<?php the_time('M');?> 
+					</div>
+					<div class="the-date">
+							<?php the_time('j');?> 
+					</div>
+				</div>
+
+				<!-- <div class="meta-data"> -->
+					<span class="the-cat">
+						<?php the_category(', '); ?>
+					</span>
+
+				<!-- </div> -->
+				<?php //my_excerpt(30); ?>
+				<!-- <a href="<?php the_permalink(); ?>" class="more button">Read More</a> -->
 			</div>
 
 		</article>
