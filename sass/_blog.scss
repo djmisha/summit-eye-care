@@ -124,7 +124,37 @@
 }
 
 .tmpl_type_single {
+	.content {
+		margin-top: -60px;
+	}
+	h1 {
+		color: $secondaryAlt;
+		position: relative;
+		@include media($tablet) {
+			font-size: 50px;
+			margin-bottom: 80px;
+		}
+		&:before {
+			content: '';
+			background: #82B0E2;
+			width: 160px;
+			height: 1px;
+			position: absolute;
+			top: 90px;
+			left: 0;
+		}
+		&:after {
+			content: '';
+			background: #82B0E2;
+			width: 90px;
+			height: 1px;
+			position: absolute;
+			top: 100px;
+			left: 0;
+		}
+	}
 	.button {
+		margin-top: 80px;
 		text-decoration: none;
 	}
 }

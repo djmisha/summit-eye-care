@@ -2,9 +2,9 @@
 <main class="interior">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 	<article class="content">
-
-		<?php //the_post_thumbnail(); ?>
 		<p class="meta-data"><?php the_time('F j, Y');?></p>
+		<h1><?php the_title(); ?></h1>
+		<?php //the_post_thumbnail(); ?>
 		<?php the_content();?>
 
 		<?php edit_post_link( $link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id ); ?>

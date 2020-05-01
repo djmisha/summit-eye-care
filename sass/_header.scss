@@ -27,8 +27,12 @@
 	// border: 1px solid pink;
 	padding: 0 20px !important;
 	margin: 0 auto;
-	margin-top: -30px;
+	margin-top: -25px;
+	@include media($tablet) {
+		margin-top: -20px;
+	}
 	@include media($desktop) {
+		margin-top: -35px;
 		// padding: 20px 40px;
 	}
 	@include media($desktop) {
@@ -170,8 +174,8 @@
 	svg {
 		width: 100%;
 		max-width: 382px;
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-left: 30px;
+		padding-right: 30px;
 		@include media($tablet) {
 			padding: 0;
 			max-width: 415px;
@@ -207,7 +211,7 @@
 	a {
 		color: $secondaryColor;
 		text-decoration: none;
-		font-size: 20px;
+		font-size: 18px;
 	}
 	.phone, .tag {
 		color: $primaryColor;
@@ -357,7 +361,7 @@
 .internal-header-images {
 	// z-index: -1;
 	position: relative;
-	top: -25px;
+	top: -35px;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -366,5 +370,16 @@
 	align-items: flex-end;
 	@include media($tablet) {
 		min-height: 485px;
+	}
+}
+
+
+.from-blog .internal-header-images {
+	background: url('images/header-blog.jpg') center center !important;
+	height: 260px;
+	min-height: 0;
+	h1 {
+		margin-top: 120px;
+		margin-bottom: 0px;
 	}
 }

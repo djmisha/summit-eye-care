@@ -15,7 +15,7 @@
 		margin: 0 0 36px;
 		font-style: normal;
 		@include media($tablet) {
-			@include font(17px);
+			@include font(16px);
 		}
 		a {
 			text-decoration: none;
@@ -38,11 +38,12 @@
 }
 
 .page-title {
-	// border: 1px solid pink;
-	h1 {
+	h1, .headline {
 		color: #fff;
 	}
 }
+
+
 
 .interior {
 	display: block;
