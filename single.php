@@ -2,10 +2,34 @@
 <main class="interior">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 	<article class="content">
-		<p class="meta-data"><?php the_time('F j, Y');?></p>
+	<?php 
+		$u_time = get_the_time('U'); 
+		$u_modified_time = get_the_modified_time('U'); 
+		echo "<p class=\"meta-data\">Last Updated: <span> "; 
+		the_modified_time('F jS, Y'); 
+		echo " at "; 
+		the_modified_time(); 
+		echo "</span></p> "; 
+	?>
+
+
 		<h1><?php the_title(); ?></h1>
+		<div class="the-time">
+			<div>
+				<?php the_time('M');?> 
+			</div>
+			<div class="the-date">
+				<?php the_time('j');?> 
+			</div>
+		</div>
+		<span class="the-cat">
+			<?php the_category(', '); ?>
+		</span>
 		<?php //the_post_thumbnail(); ?>
+		<div class="the-content">
+			
 		<?php the_content();?>
+		</div>
 
 		<?php edit_post_link( $link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id ); ?>
 		<?php

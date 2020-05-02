@@ -462,43 +462,23 @@ if (!is_admin()) {
 }
 
 
-/*==================================================================
-=            Add YouTube Button to WP Dashboard WYSIWYG            =
-==================================================================*/
 
-add_action('media_buttons','add_sc_select',11);
-function add_sc_select(){
-	// echo '&nbsp;<a href="#" id="yt_button" class="button"><span class="dashicons dashicons-video-alt3"></span> Add Video</a>';
-	echo '<button type="button" id="yt_button" class="button add_yt_btn"><span class="wp-media-buttons-icon dashicons dashicons-video-alt3"></span> Add Video</button>';
-	echo '<input type="text" id="yt_id" value="" class="text-inputtype" style="width: auto;" placeholder="YouTube ID">';
+
+/*==================================================
+=            Display Last Publish Date             =
+==================================================*/
+
+
+function wpb_last_updated_date( $content ) {
+$u_time = get_the_time('U'); 
+$u_modified_time = get_the_modified_time('U'); 
+if ($u_modified_time >= $u_time + 86400) { 
+$updated_date = get_the_modified_time('F jS, Y');
+$updated_time = get_the_modified_time('h:i a'); 
+$custom_content .= '<p class="last-updated">Last updated on '. $updated_date . ' at '. $updated_time .'</p>';  
+} 
+ 
+    $custom_content .= $content;
+    return $custom_content;
 }
-
-add_action('admin_head', 'button_js');
-function button_js() {
-    echo '<script type="text/javascript">
-						document.addEventListener("DOMContentLoaded", function() {
-				      var ytButtons = document.querySelectorAll("#yt_button.button");
-							if(ytButtons.length > 0) {
-
-								document.addEventListener("click", addVideo);
-
-								function addVideo(e) {
-									if(e.target.classList.contains("add_yt_btn")) {
-
-									var parent = e.target.parentNode;
-									var x = parent.querySelector("#yt_id");
-									console.log(x.value);
-									if(x.value == "") {
-										alert("You must enter a YouTube ID");
-										return;
-									}
-
-									send_to_editor("<div class=\"ytvideo\" id=\"" + x.value + "\">Video Image Placeholder</div>");
-									x.value="";
-									return false;
-								}
-							}
-							}
-						});
-		    </script>';
-}
+add_filter( 'the_content', 'wpb_last_updated_date' );

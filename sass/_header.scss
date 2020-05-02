@@ -357,12 +357,14 @@
 	top: -35px;
 	background-position: center center;
 	background-repeat: no-repeat;
+	// background-position-x: -400px; 
 	background-size: cover;
 	min-height: 305px;
 	display: flex;
 	align-items: flex-end;
 	@include media($tablet) {
-		min-height: 485px;
+		background-position: center center;
+		min-height: 675px;
 	}
 }
 
@@ -370,6 +372,7 @@
 
 .from-blog .internal-header-images {
 	background: url('images/header-blog.jpg') center center !important;
+	background-size: cover !important;
 	height: 260px;
 	min-height: 0;
 	h1 {

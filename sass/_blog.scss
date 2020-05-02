@@ -125,14 +125,17 @@
 
 .tmpl_type_single {
 	.content {
-		margin-top: -60px;
+		margin-top: -80px;
 	}
 	h1 {
 		color: $secondaryAlt;
 		position: relative;
 		@include media($tablet) {
 			font-size: 50px;
-			margin-bottom: 80px;
+			// margin-top: 40px;
+			padding-top: 20px;
+			margin-bottom: 100px;
+			// padding-bottom: 40px;
 		}
 		&:before {
 			content: '';
@@ -140,7 +143,7 @@
 			width: 160px;
 			height: 1px;
 			position: absolute;
-			top: 90px;
+			top: 120px;
 			left: 0;
 		}
 		&:after {
@@ -149,9 +152,47 @@
 			width: 90px;
 			height: 1px;
 			position: absolute;
-			top: 100px;
+			top: 130px;
 			left: 0;
 		}
+	}
+	.meta-data {
+		@include font(14px);
+		// margin-bottom: 10px;
+		font-style: normal;
+		color: $secondaryColor;
+		span {
+			color: $primaryColor;
+		}
+	}
+
+	.the-time {
+		float: left;
+		margin-right: 40px;
+		border-radius: 6px;
+		width: 50px;
+		height: 50px;
+		background: $primaryColor;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 8px;
+		font-size: 14px;
+		line-height: 16px;
+		.the-date {
+			font-size: 20px;
+		}
+	}
+	.the-cat {
+		font-family: $secondaryFont;
+		a {
+			text-decoration: none;
+		}
+	}
+	.the-content {
+		clear: both;
+		margin-top: 80px;
 	}
 	.button {
 		margin-top: 80px;
@@ -227,4 +268,7 @@
 		}
 	}
 }
+
+
+
 

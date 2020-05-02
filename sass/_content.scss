@@ -16,6 +16,7 @@
 		font-style: normal;
 		@include media($tablet) {
 			@include font(16px);
+			margin-bottom: 60px;
 		}
 		a {
 			text-decoration: none;
@@ -40,6 +41,7 @@
 .page-title {
 	h1, .headline {
 		color: #fff;
+		margin-bottom: 30px;
 	}
 }
 
@@ -58,7 +60,8 @@
 	.content {
 		h2, h3, h4, h5, h6 {
 			color: #565759;
-			margin-top: 50px;
+			margin-top: 80px;
+			margin-bottom: 30px;
 		}
 		h2 {
 			&:first-child {
@@ -113,7 +116,7 @@
 
 			
 		blockquote {
-			@include font(22px, 2.2em);
+			@include font(18px, 2em);
 			position: relative;
 			margin: 0;
 			font-family: $highlightFont;
@@ -124,6 +127,8 @@
 			margin-top: 60px;
 			margin-bottom: 40px;
 			@include media($tablet) {
+				@include font(22px, 2.2em);
+
 				margin-top: 100px;
 				margin-bottom: 40px;
 				padding: 190px 40px 120px 40px;
@@ -154,7 +159,7 @@
 		}
 	} // End Content
 
-	.full-width {
+	.full-width, .full-width-text, .full-width-image {
 		position: relative;
 		width: 100vw;
 		left: -20px;
@@ -197,10 +202,10 @@
 		// padding: 60px 60px 20px 60px;
 		border-radius: 20px;
 		background: #F8FBFD;
-		margin-bottom: -60px;
+		margin-bottom: -140px;
 		color: #696969;
 		position: relative;
-		top: -120px;
+		top: -200px;
 		min-height: 250px;
 		font-size: 15px;
 		line-height: 22px;
@@ -244,19 +249,20 @@
 		}
 	}
 
-	/* TWO COLUMN COLORS and Fonts*/
+	/* Full Width Text */
 
-	.wp-block-columns.full-width {
-		margin-top: 60px;
-		margin-bottom: 40px;
+	.wp-block-columns.full-width-text {
+
+		margin-top: 80px;
+		margin-bottom: 80px;
 		.wp-block-column:first-child  {
 			background: #F8FBFD;
-			padding: 100px 40px;
 		}
 		.wp-block-column:last-child  {
 			background: #F0F6FA;
 		}
 		.wp-block-column {
+			padding: 100px 40px;
 			background: #F8FBFD;
 			// padding: 60px 20px 40px 20px;
 			@include media($desktop) {
@@ -278,6 +284,47 @@
 				}
 			}
 		}
+
+		.wp-block-image {
+			margin-bottom: 0;
+		}
+	}
+
+
+	/* Full Width Text */
+
+	.wp-block-columns.full-width-image {
+
+		margin-top: 80px;
+		margin-bottom: 80px;
+		.wp-block-column:first-child  {
+			padding: 100px 40px;
+			background: #F8FBFD;
+		}
+		.wp-block-column:last-child  {
+			background: #F0F6FA;
+		}
+		.wp-block-column {
+			background: #F8FBFD;
+			@include media($desktop) {
+				h2,
+				h3, 
+				h4,
+				p {
+					margin: 0 auto;
+			// max-width: 620px;
+					max-width: 600px;
+					padding-bottom: 20px;
+				}
+			}
+
+			
+		}
+		.wp-block-cover {
+			margin: 0;
+		} 
+		.wp-block-cover {}
+
 		.wp-block-image {
 			margin-bottom: 0;
 		}
@@ -295,7 +342,7 @@
 		height: auto;
 	}
 	.wp-block-cover {
-		// margin-top: 60px;
+		margin-top: 80px;
 		margin-bottom: 80px;
 		padding-top: 60px;
 		padding-bottom: 60px;
@@ -333,6 +380,8 @@
 	padding-top: 60px;
 	padding-bottom: 60px;
 	margin-bottom: -100px;
+	padding-left: 20px;
+	padding-right: 20px;
 	@include media($tablet) {
 		padding-top: 80px;
 		padding-bottom: 100px;
