@@ -1,7 +1,6 @@
 'use strict';
 
 /* main modules are stored here: */
-// const modulesPath = '/Volumes/Dev/gulp-req/node_modules/';
 const modulesPath = './node_modules/';
 
 /** Uses the following libraries
@@ -42,8 +41,7 @@ newer         = require('gulp-newer');
 
 
 /* BrowserSync */
-// const myPort  = 35732; //update this to your port
-// const myHost  = 'rosemontdev.com';
+
 
 /* src paths*/
 const _src_ = {

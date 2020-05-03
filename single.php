@@ -32,6 +32,7 @@
 		</div>
 
 		<?php edit_post_link( $link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id ); ?>
+	<!-- 
 		<?php
 			prevnext__modify( get_previous_post_link('%link', 'Previous Post') ,
 				$attributes = array(
@@ -44,6 +45,8 @@
 					'class' => 'button alignright next-blog-button',
 					));
 		?>
+ -->
+
 	</article>
 <?php endwhile; endif;?>
 

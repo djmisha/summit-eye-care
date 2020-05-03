@@ -1,8 +1,8 @@
 /*
-Theme Name: RM Base Theme
-Theme URI: http://www.rosemontdev.com/
-Description: A custom theme built by the team at Rosemont Media.
-Author: Rosemont Media
+Theme Name: Silvr Agency Base Theme
+Theme URI: http://www.silvragency.com/
+Description: A custom theme built by the team at Silvr Agency.
+Author: Silvr Agency
 Version: 2.0
 Tags:
 */
@@ -1035,7 +1035,7 @@ h1 {
   line-height: 1.1em;
 }
 
-@media only screen and (min-width: 1060px) {
+@media only screen and (min-width: 768px) {
   h1 {
     font-size: 70px;
     font-size: 4.375rem;
@@ -3264,7 +3264,7 @@ aside li {
 
 @media only screen and (min-width: 768px) {
   .sticky-contact {
-    right: 40px;
+    right: 0px;
     width: 310px !important;
     max-width: 310px !important;
     background: transparent;
