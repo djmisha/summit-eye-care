@@ -417,7 +417,9 @@
 	// transition: ;
 	bottom: -200px;
 	position: fixed;
-	padding: 12px 90px 12px 50px !important;
+	// padding: 12px 90px 12px 50px !important;
+	width: 140px;
+	border: 1px solid pink;
 	right: 20px;
 	z-index: 8999;
 	background: $primaryColor;
@@ -426,7 +428,14 @@
 	box-shadow: 0px 10px 15px rgba(#000, .16);
 	@include media($tablet) {
 		right: 40px;
-		height: auto;
+		width: 310px !important;
+		max-width: 310px !important;
+
+		background: transparent;
+		box-shadow: none;
+		border: none;
+
+		// height: auto;
 		padding-top: 12px;
 		padding-bottom: 12px;
 	}
@@ -442,12 +451,16 @@
 		}
 	}
 	&:hover {
-		background: darken($primaryColor, 10%);
+		// background: darken($primaryColor, 10%);
 	}
 	a {
 		color: #fff;
 		text-decoration: none;
 		position: relative;
+		// border: 1px solid pink;
+		display: block;
+		// width: 40px;
+		// height: 40px;
 		span {
 			display: none;
 			@include media($tablet) {
@@ -455,6 +468,43 @@
 			}
 		}
 		&.sticky-schedule {
+			width: 40px;
+			// height: 40px;
+			// position: absolute;
+			@include media($tablet) {
+				// width: 400px;
+				// display: none;
+				// height: auto;
+				z-index: 9999;
+				display: block;
+				height: 56px;
+				border-radius: 50px;
+				position: relative;
+				border: 1px solid pink;
+				width: 320px;
+				// height: 40px;
+				right: 40px;
+				background: $primaryColor;
+				border: 1px solid #fff;
+				display: block;
+				box-shadow: 0px 10px 15px rgba(#000, .16);
+				padding-top: 12px;
+				padding-bottom: 12px;
+				transition: bottom 0.5s ease-out, background 0.15s ease-out;
+
+				&:hover {
+					background: darken($primaryColor, 10%);
+				}
+			}
+			span {
+				margin-right: 40px;
+				// text-align: left;
+				// position: absolute;
+				// left: -100px;
+				// display: block;
+				// width: 300px;
+				// border: 1px solid pink;
+			}
 			&:before {
 				content: '';
 				position: absolute;
@@ -462,11 +512,11 @@
 				background-repeat: no-repeat;
 				width: 35px;
 				height: 42px;
-				right: -72px;
-				top: 15px;
+				right: -75px;
+				top: 10px;
 				@include media($tablet) {
-					right: -58px;
-					top: -5px;
+					right: 20px;
+					top: 10px;
 				}
 			}
 		}
@@ -477,7 +527,7 @@
 			background-repeat: no-repeat;
 			width: 35px;
 			height: 42px;
-			right: 84px;
+			right: 80px;
 			top: 10px;
 			@include media($tablet) {
 				display: none;

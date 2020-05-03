@@ -15,7 +15,7 @@ body {
 	min-width: 320px;
 	text-align:center;
 	@include media($tablet) {
-		font: 20px/34px $defaultfont;
+		// font: 20px/34px $defaultfont;
 		
 	}
 	// -moz-osx-font-smoothing: grayscale;

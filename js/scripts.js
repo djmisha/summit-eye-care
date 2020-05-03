@@ -25,7 +25,7 @@
 		/* --------------------------------------------------
 			Blazy
 		-------------------------------------------------- */
-			var bLazy = new Blazy();
+			// var bLazy = new Blazy();
 
 
 
@@ -343,7 +343,7 @@
 			if($('.faq-sc-wrap')) {
 				$('.faq-sc-wrap ul li span.answer').hide();
 				$('.faq-sc-wrap ul li').click(function() {
-					$(this.lastElementChild).toggle();
+					$(this.lastElementChild).slideToggle();
 					$(this.firstElementChild).toggleClass('active');
 				});
 			}

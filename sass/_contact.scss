@@ -226,13 +226,13 @@ form {
 		border: 1px solid $lightColor !important;
 		background: $primaryColor;
 		color: $lightColor;
-		padding: 12px 30px;
+		// padding: 12px 30px;
 		border-radius: 50px;
 		transition: all .15s ease-in;
 		font-size: 14px;
 		text-transform: uppercase;
 		@include media($tablet) {
-			padding: 12px 60px;
+			// padding: 12px 60px;
 		}
 		&:hover {
 			background: darken($primaryColor, 10%);

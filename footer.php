@@ -36,7 +36,6 @@
 
 							<li>
 
-								<!-- <div><i class="fas fa-map-marker-alt"></i></div> -->
 
 								<div>
 
@@ -100,7 +99,7 @@
 				<div class="footer-map">
 					<?php if( have_rows('locations', 'option')): ?>
 						<?php while( have_rows('locations', 'option')): the_row(); $gmb = get_sub_field('gmb'); ?> 
-							<a href="<?php echo $gmb; ?>" aria-label="Map"></a>
+							<a href="<?php echo $gmb; ?>" aria-label="Map" target="_blank" rel="nofollow noopener"></a>
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
@@ -114,8 +113,12 @@
 
 			<div class="copyright">Copyright &copy; <?php echo date("Y"); ?> <?bloginfo('title');?>. All rights reserved | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a></div>
 
-			<div class="sig"><a href="<?php the_field('portfolio_link', 'option'); ?>" target="_blank" rel="noopener"><?php the_field('portfolio_label', 'option'); ?></a> by
-			<a href="https://www.silvragency.com/" target="_blank" rel="noopener" aria-label="Silvr Agency">SILVR <?php echo inline_svg('sig-logo'); ?></a></div>
+			<div class="sig">
+				<a href="https://www.silvragency.com/website-design-and-development/" target="_blank" rel="nofollow noopener">Design</a>
+				<a href="https://www.silvragency.com/digital-marketing/" target="_blank" rel="nofollow noopener">Marketing</a>
+				by
+				<a href="https://www.silvragency.com/" target="_blank" rel="nofollow noopener" aria-label="Silvr Agency">SILVR <?php echo inline_svg('sig-logo'); ?></a>
+			</div>
 
 		</section>
 
