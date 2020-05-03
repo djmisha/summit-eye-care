@@ -2368,8 +2368,6 @@ main,
   color: #696969;
   position: relative;
   min-height: 250px;
-  font-size: 15px;
-  line-height: 22px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3783,7 +3781,7 @@ span.error {
 }
 
 .home-rotator {
-  height: 250px;
+  height: 220px;
   background-color: #858688;
 }
 
@@ -3799,7 +3797,7 @@ span.error {
   position: relative;
   z-index: 9999;
   width: 100vw;
-  height: 250px;
+  height: 220px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3944,7 +3942,7 @@ span.error {
 
 .home-whychoose {
   background-color: #F8FBFD;
-  padding-top: 80px;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 

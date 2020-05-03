@@ -391,43 +391,43 @@ add_shortcode( 'sitemap', 'sitemap_function' );
 
 
 
-// /*=========================================
-// =            Nav Menu Dropdown            =
-// =========================================*/
+/*=========================================
+=            Nav Menu Dropdown            =
+=========================================*/
 
-// function custom_start_el( $item_output, $item, $depth, $args ) {
+function custom_start_el( $item_output, $item, $depth, $args ) {
 
-// 	if ( $args->menu_id == 'menu-main' && in_array( 'menu-item-has-children', $item->classes ) ) {
-// 		$item_output = $item_output .'<div class="nav-dropdown-button"><div class="nav-expander"><span></span><span></span></div></div>';
-// 	}
+	if ( $args->menu_id == 'menu-main' && in_array( 'menu-item-has-children', $item->classes ) ) {
+		$item_output = $item_output .'<div class="nav-dropdown-button"><div class="nav-expander"><span></span><span></span></div></div>';
+	}
 
-// 	return $item_output;
+	return $item_output;
 
-// }
-// add_filter( 'walker_nav_menu_start_el', 'custom_start_el', 10, 4 );
+}
+add_filter( 'walker_nav_menu_start_el', 'custom_start_el', 10, 4 );
 
-// add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2 );
+add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2 );
 
-// function my_wp_nav_menu_objects( $items, $args ) {
+function my_wp_nav_menu_objects( $items, $args ) {
 
-// 	// loop
-// 	foreach( $items as &$item ) {
+	// loop
+	foreach( $items as &$item ) {
 
-// 		// vars
-// 		$duplicate = get_field('duplicate', $item);
+		// vars
+		$duplicate = get_field('duplicate', $item);
 
-// 		// append duplicate
-// 		if ( !empty( $duplicate ) ) {
-// 			$item->classes[]	= 'duplicate-item';
-// 		}
+		// append duplicate
+		if ( !empty( $duplicate ) ) {
+			$item->classes[]	= 'duplicate-item';
+		}
 
-// 	}
+	}
 
 
-// 	// return
-// 	return $items;
+	// return
+	return $items;
 
-// }
+}
 
 /*==========================================================
 =            Disable the WordPress Core Emoji's            =
@@ -450,15 +450,15 @@ add_action( 'init', 'disable_emojis' );
 =            Exclude pages from Wordpress Search            =
 ===========================================================*/
 
-// if (!is_admin()) {
-// 	function wpb_search_filter($query) {
-// 		if ($query->is_search) {
-// 			$query->set('post_type', 'post');
-// 		}
-// 		return $query;
-// 	}
-// 	add_filter('pre_get_posts','wpb_search_filter');
-// }
+if (!is_admin()) {
+	function wpb_search_filter($query) {
+		if ($query->is_search) {
+			$query->set('post_type', 'post');
+		}
+		return $query;
+	}
+	add_filter('pre_get_posts','wpb_search_filter');
+}
 
 
 
