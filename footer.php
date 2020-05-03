@@ -114,7 +114,7 @@
 			<div class="copyright">Copyright &copy; <?php echo date("Y"); ?> <?bloginfo('title');?>. All rights reserved | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a></div>
 
 			<div class="sig">
-				<a href="https://www.silvragency.com/website-design-and-development/" target="_blank" rel="nofollow noopener">Design</a>
+				<a href="https://www.silvragency.com/website-design-and-development/" target="_blank" rel="nofollow noopener">Design</a> and
 				<a href="https://www.silvragency.com/digital-marketing/" target="_blank" rel="nofollow noopener">Marketing</a>
 				by
 				<a href="https://www.silvragency.com/" target="_blank" rel="nofollow noopener" aria-label="Silvr Agency">SILVR <?php echo inline_svg('sig-logo'); ?></a>
