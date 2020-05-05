@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
 	<title>Page Not Found</title>
 	<?php wp_head()?>
 
@@ -53,8 +53,8 @@
 		}
 
 		#footerwrap {
-			border-top: 20px solid #202020;  /* LIGHT color */
-			border-bottom: 20px solid #202020;  /* LIGHT color */
+			border-top: 20px solid #126abf;  /* LIGHT color */
+			border-bottom: 20px solid #126abf;  /* LIGHT color */
 			text-align:center;
 			width:100%;
 			background: #D7D8D4; /* LINKS background color */
@@ -77,7 +77,7 @@
 
 		footer ul {
 			display:block;
-			border-top: 1px solid #464545; /* DARK color */
+			/*border-top: 1px solid #464545; /* DARK color */*/
 			text-align: left;
 			padding:0;
 			margin: 20px 15px;
@@ -86,7 +86,7 @@
 		footer ul li {
 			display:block;
 			height:auto;
-			border-bottom: 1px solid #464545; /* DARK color */
+			/*border-bottom: 1px solid #464545; /* DARK color */*/
 			list-style: none;
 			font-size:26px;
 			line-height:1em;
@@ -100,9 +100,14 @@
 		}
 
 		footer ul li a:hover {
-			background: #464545;  /* DARK color */
+			background: #126abf;  /* DARK color */
 			color: #fff; /* LINKS text hover color */
 		}
+
+		footer ul li ul {
+			display: none;
+		}
+
 
 		.copy {
 			font-size: 14px;

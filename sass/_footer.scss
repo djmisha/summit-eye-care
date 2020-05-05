@@ -76,8 +76,12 @@
 	@include media($tablet) {
 		// width: 50%;
 		height: auto;
+		// background-size: cover;
 		background-size: cover;
 		background-position: center;
+	}
+	@include media($desktop) {
+		background-size: auto 100%;
 	}
 	a {
 		width: 100%;
@@ -318,6 +322,7 @@
 			border: none;
 			border-bottom: 1px solid rgba(#fff,1);
 			color: #fff;
+			border-radius: 0;
 		}
 		textarea {
 			height: 50px;
@@ -475,14 +480,15 @@
 				// width: 400px;
 				// display: none;
 				// height: auto;
-				z-index: 9999;
-				display: block;
-				height: 56px;
+				// z-index: 9999;
+				// display: block;
+				// height: 56px;
 				border-radius: 50px;
 				position: relative;
-				border: 1px solid pink;
+				// border: 1px solid pink;
 				width: 320px;
 				// height: 40px;
+				// top: 0;
 				right: 40px;
 				background: $primaryColor;
 				border: 1px solid #fff;
@@ -497,7 +503,15 @@
 				}
 			}
 			span {
-				margin-right: 40px;
+				margin-right: 20px;
+				display: none;
+				@include media($tablet) {
+					display: block;
+					
+				}
+				// width: 320px;
+				// t
+				
 				// text-align: left;
 				// position: absolute;
 				// left: -100px;
@@ -535,7 +549,7 @@
 		}
 	}
 	@include media(1400px) {
-		@include contain(1400px, 10px);
+		// @include contain(1400px, 10px);
 	}
 	&.make-sticky {
 		bottom: 20px;

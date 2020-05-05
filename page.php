@@ -8,6 +8,11 @@
 
 		<?php the_content(); ?>
 
+		<div class="the-author">
+			Authored by: <span><?php the_author(); ?></span>
+		</div>
+
+
 		<?php edit_post_link( $link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id ); ?>
 
 	</article>

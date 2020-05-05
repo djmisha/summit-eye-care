@@ -1791,6 +1791,7 @@ main,
   width: 16px;
   height: 16px;
   position: relative;
+  right: -15px;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -2194,6 +2195,8 @@ main,
   display: block;
   text-align: left;
   margin-bottom: 40px;
+  /* Last Updated*/
+  /*Full Width Classes*/
   /* Guttenber Overrides */
   /* INTRO On Pages*/
   /* Full Width Text */
@@ -2314,6 +2317,22 @@ main,
   width: auto;
 }
 
+.interior .last-updated {
+  top: -30px;
+  position: relative;
+}
+
+.interior .last-updated, .interior .the-author {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-style: normal;
+  color: #858688;
+}
+
+.interior .last-updated span, .interior .the-author span {
+  color: #126abf;
+}
+
 .interior .full-width, .interior .full-width-text, .interior .full-width-image {
   position: relative;
   width: 100vw;
@@ -2372,8 +2391,8 @@ main,
 
 @media only screen and (min-width: 768px) {
   .interior .wp-block-columns.intro {
-    margin-bottom: -60px;
-    top: -100px;
+    margin-bottom: -80px;
+    top: -140px;
     font-size: 30px;
     line-height: 52px;
   }
@@ -2555,20 +2574,27 @@ main,
 ========================================*/
 .faq-sc-wrap {
   background: #126abf url("images/bg-mountians.jpg") top center;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   color: #fff;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-bottom: -100px;
+  margin-bottom: -120px;
   padding-left: 20px;
   padding-right: 20px;
+  height: auto;
 }
 
 @media only screen and (min-width: 768px) {
   .faq-sc-wrap {
     padding-top: 80px;
     padding-bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .faq-sc-wrap {
+    background-size: cover;
   }
 }
 
@@ -2826,6 +2852,12 @@ aside li {
     height: auto;
     background-size: cover;
     background-position: center;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  .footer-map {
+    background-size: auto 100%;
   }
 }
 
@@ -3144,6 +3176,7 @@ aside li {
   border: none;
   border-bottom: 1px solid white;
   color: #fff;
+  border-radius: 0;
 }
 
 .footer-contact-form form textarea {
@@ -3312,12 +3345,8 @@ aside li {
 
 @media only screen and (min-width: 768px) {
   .sticky-contact a.sticky-schedule {
-    z-index: 9999;
-    display: block;
-    height: 56px;
     border-radius: 50px;
     position: relative;
-    border: 1px solid pink;
     width: 320px;
     right: 40px;
     background: #126abf;
@@ -3336,7 +3365,14 @@ aside li {
 }
 
 .sticky-contact a.sticky-schedule span {
-  margin-right: 40px;
+  margin-right: 20px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .sticky-contact a.sticky-schedule span {
+    display: block;
+  }
 }
 
 .sticky-contact a.sticky-schedule:before {
@@ -3371,15 +3407,6 @@ aside li {
 @media only screen and (min-width: 768px) {
   .sticky-contact a.sticky-phone-icon {
     display: none;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .sticky-contact {
-    padding-right: calc(40px + (50vw - (1400px / 2)));
-    padding-left: calc(40px + (50vw - (1400px / 2)));
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 }
 
@@ -3609,9 +3636,9 @@ form .type-textarea input {
 form .type-singlelinetext input, form .type-singlelinetext textarea,
 form .type-textarea input,
 form .type-textarea textarea {
+  border-radius: 0;
   border: none;
   border-bottom: 2px solid #126abf;
-  border: 1px solid #126abf;
 }
 
 form .type-singlelinetext input,
@@ -3792,6 +3819,7 @@ span.error {
 }
 
 .home-rotator .slide {
+  background-position: center center;
   background-size: cover;
   display: block;
   position: relative;
@@ -4520,10 +4548,6 @@ span.error {
   text-decoration: none;
 }
 
-.tmpl_type_single .content {
-  margin-top: -80px;
-}
-
 .tmpl_type_single h1 {
   color: #575757;
   position: relative;
@@ -4558,6 +4582,8 @@ span.error {
 }
 
 .tmpl_type_single .meta-data {
+  position: relative;
+  top: -30px;
   font-size: 14px;
   font-size: 0.875rem;
   font-style: normal;
@@ -4614,12 +4640,14 @@ span.error {
 }
 
 .search-bar {
-  margin-top: -20px;
   background-color: #F8FBFD;
+  margin-top: -20px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .search-bar {
+    margin-top: -40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4633,13 +4661,46 @@ span.error {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-bar label {
+  margin-right: 15px;
+  display: none;
+}
+
+@media only screen and (min-width: 1060px) {
+  .search-bar label {
+    display: block;
+    font-size: 22px;
+    line-height: 20px;
+    font-family: gill-sans-nova, sans-serif;
+  }
 }
 
 .search-bar .search-input {
-  border: 1px solid #dfdfdf;
-  background: white;
+  border: none;
+  background: transparent;
   margin-right: 10px;
   border-radius: 10px;
+  border-radius: 0;
+  border-bottom: 1px solid #858688;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1060px) {
+  .search-bar .search-input {
+    width: 250px;
+  }
+}
+
+.search-bar .button {
+  text-transform: uppercase;
 }
 
 .cat-select {
@@ -4648,12 +4709,10 @@ span.error {
 
 .cat-select .cat-options {
   cursor: pointer;
-  background: #126abf;
-  border-radius: 50px;
-  font-size: 18px;
-  color: #ffffff;
+  background: transparent;
+  text-transform: uppercase;
+  color: #126abf;
   padding: 12px 40px;
-  text-transform: none;
   margin-bottom: 10px;
   position: relative;
   padding-right: 90px;
@@ -4661,7 +4720,7 @@ span.error {
 
 .cat-select .cat-options:after {
   content: '';
-  background: url("images/svg/arrow.svg");
+  background: url("images/svg/arrow-down.svg");
   background-size: 19px 30px;
   width: 19px;
   height: 30px;
@@ -4676,18 +4735,13 @@ span.error {
   }
 }
 
-.cat-select .cat-options:after {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 .cat-select .cats {
-  border-radius: 50px;
   position: absolute;
   display: none;
+  width: 250px;
   z-index: 100;
-  background: #126abf;
+  background: #F8FBFD;
+  border: 1px solid #d0e4f2;
   margin: 0;
   list-style: none;
   padding: 10px;
@@ -4706,9 +4760,13 @@ span.error {
 }
 
 .cat-select .cats li a {
-  color: #fff;
+  color: #126abf;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.cat-select .cats li a:hover {
+  text-decoration: underline;
 }
 
 /* ------------------------

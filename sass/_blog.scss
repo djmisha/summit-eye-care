@@ -110,6 +110,7 @@
 		margin-bottom: 16px;
 	}
 	.meta-data {
+
 		@include font(13px);
 		margin-bottom: 10px;
 		font-style: italic;
@@ -125,7 +126,7 @@
 
 .tmpl_type_single {
 	.content {
-		margin-top: -80px;
+		// margin-top: -80px;
 	}
 	h1 {
 		color: $secondaryAlt;
@@ -157,6 +158,8 @@
 		}
 	}
 	.meta-data {
+		position: relative;
+		top: -30px;
 		@include font(14px);
 		// margin-bottom: 10px;
 		font-style: normal;
@@ -202,54 +205,83 @@
 
 
 .search-bar {
-	margin-top: -20px;
+
 	background-color: #F8FBFD;
+	margin-top: -20px;
+	margin-bottom: 20px;
 	@include media($tablet) {
+		margin-top: -40px;
+		// border: 1px solid pink;
 		display: flex;
 		justify-content: space-between;
 	}
 	form {
+		// min-width: 600px;
 		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		// border: 1px solid pink;
+	}
+	label {
+		margin-right: 15px;
+		display: none;
+		@include media($desktop) {
+			display: block;
+			font-size: 22px;
+			line-height: 20px;
+			font-family: $secondaryFont;
+		}
 	}
 	.search-input {
-		border: 1px solid #dfdfdf;
-		background: rgba(#fff, 1);
+		border: none;
+		background: transparent;
 		margin-right: 10px;
 		border-radius: 10px;
+		border-radius: 0;
+		border-bottom: 1px solid $secondaryColor;
+		width: 100%;
+		@include media($desktop) {
+			width: 250px;
 		}
+	}
+	.button {
+		text-transform: uppercase;
+	}
 }
 .cat-select {
 	position: relative;
+	// max-width: 250px;
+	// border: 1px solid pink;
 	.cat-options {
 		cursor: pointer;
-		background: $primaryColor;
-		border-radius: 50px;
-		font-size: 18px;
-		// height: 60px;
-		color: $lightColor;
-		// padding: 17px 44px;
-		  padding: 12px 40px;
+		background: transparent;
+		// border-radius: 50px;
+		// font-size: 18px;
+		text-transform: uppercase;
+		color: $primaryColor;
+		padding: 12px 40px;
 
-		text-transform: none;
-		// display: inline-block;
 		margin-bottom: 10px;
+		// border: 1px solid pink;
 
-		@include iconafter('images/svg/arrow.svg', $width: 19px, $height: 30px, $paddingRight: 90px, $bottom: 14px, $right: 30px );
+		@include iconafter('images/svg/arrow-down.svg', $width: 19px, $height: 30px, $paddingRight: 90px, $bottom: 14px, $right: 30px );
 		@include media($tablet) {
 			margin-bottom: 0;
 		}
 		&:after {
-			transform: rotate(90deg);
+			// transform: rotate(90deg);
 		}
 	}
 	.cats {
-		border-radius: 50px;
-
+		// border-radius: 50px;
+		// border: 1px solid pink;
 		position: absolute;
 		display: none;
-		// width: 210px;
+		width: 250px;
 		z-index: 100;
-		background: lighten($primaryColor, 0%);
+		// background: lighten($primaryColor, 0%);
+		background: #F8FBFD;
+		border: 1px solid darken(#F8FBFD, 10%);
 		margin: 0;
 		list-style: none;
 		padding: 10px;
@@ -261,9 +293,12 @@
 		li {
 			padding: 5px 20px;
 			a {
-				color:#fff;
+				color:$primaryColor;
 				text-transform: uppercase;
 				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}

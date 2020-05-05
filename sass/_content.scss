@@ -158,6 +158,25 @@
 		}
 	} // End Content
 
+	
+	/* Last Updated*/
+	.last-updated {
+		top: -30px;
+		position: relative;
+	}
+	.last-updated, .the-author {
+		@include font(14px);
+		// margin-bottom: 10px;
+		font-style: normal;
+		color: $secondaryColor;
+		span {
+			color: $primaryColor;
+		}
+	}
+
+	
+	/*Full Width Classes*/
+
 	.full-width, .full-width-text, .full-width-image {
 		position: relative;
 		width: 100vw;
@@ -207,8 +226,8 @@
 		// font-size: 15px;
 		// line-height: 22px;
 		@include media($tablet) {
-			margin-bottom: -60px;
-			top: -100px;
+			margin-bottom: -80px;
+			top: -140px;
 			font-size: 30px;
 			line-height: 52px;
 		}
@@ -388,17 +407,21 @@
 
 .faq-sc-wrap{
 	background: $primaryColor url('images/bg-mountians.jpg') top center;
-	background-size: cover;
+	background-size: auto;
 	background-repeat: no-repeat;
 	color: #fff;
 	padding-top: 60px;
 	padding-bottom: 60px;
-	margin-bottom: -100px;
+	margin-bottom: -120px;
 	padding-left: 20px;
 	padding-right: 20px;
+	height: auto;
 	@include media($tablet) {
 		padding-top: 80px;
 		padding-bottom: 100px;
+	}
+	@include media(1700px) {
+		background-size: cover;
 	}
 	.headline {
 		color: #fff;

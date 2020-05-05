@@ -19,6 +19,7 @@
 		height: 100%;
 	}
 	.slide {
+		background-position: center center;
 		background-size: cover; 
 		display: block;
 		position: relative;
@@ -172,6 +173,7 @@
 	.button-white {
 		margin-top: 20px;
 		min-width: 250px;
+		// line-height: 26px;
 	}
 	.reason {
 		margin-bottom: 80px;

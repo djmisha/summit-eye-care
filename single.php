@@ -2,6 +2,7 @@
 <main class="interior">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 	<article class="content">
+	
 	<?php 
 		$u_time = get_the_time('U'); 
 		$u_modified_time = get_the_modified_time('U'); 
@@ -29,7 +30,14 @@
 		<div class="the-content">
 			
 		<?php the_content();?>
+
+		<div class="the-author">
+			Authored by: <span><?php the_author(); ?></span>
 		</div>
+
+
+		</div>
+
 
 		<?php edit_post_link( $link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id ); ?>
 	<!-- 

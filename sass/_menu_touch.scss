@@ -228,9 +228,12 @@ $navBar : 60px;
 /* Nav Expander (Plus button) */
 
 .nav-expander {
+	// border: 1px solid pink;
+	// position: relative;
   width: 16px;
   height: 16px;
   position: relative;
+	right: -15px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;

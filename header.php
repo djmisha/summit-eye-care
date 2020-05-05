@@ -129,9 +129,13 @@
 						<div class="menu-location">
 
 							<?php if(have_rows('locations', 'option')): ?>
-								<?php while(have_rows('locations', 'option')): the_row(); ?>
+								<?php while(have_rows('locations', 'option')): the_row(); 
+									$applink = Get_bloginfo('url') .'/contact/';
 
-									<a href="<?php the_sub_field('gmap'); ?>" target="_blank">
+
+									?>
+
+									<a href="<?php echo $applink; ?>">
 										<div class="touch-button-icon"><?php echo inline_svg('icon-map'); ?></div>
 										<span class="touch-button-text">Location</span>
 									</a>

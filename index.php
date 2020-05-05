@@ -47,7 +47,9 @@
 	?>
 
 	<!-- Search Form -->
-	<form action="<?php bloginfo('url'); ?>" id="search-form" method="get"><input type="text" placeholder="" name="s" id="s" class="search-input"><input type="submit" value="Search" class="button">
+	<form action="<?php bloginfo('url'); ?>" id="search-form" method="get">
+		<label for="s">Search Articles</label>
+		<input type="text" placeholder="" name="s" id="s" class="search-input"><input type="submit" value="Search" class="button">
 	</form>
 
 </section> 
