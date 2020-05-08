@@ -9,7 +9,7 @@
 		<?php the_content(); ?>
 
 		<div class="the-author">
-			Authored by: <span><?php the_author(); ?></span>
+			The <a href="<?php bloginfo('url'); ?>/about">Doctors at Summit Eye Care of Wisconsin</a> have either authored or reviewed and approved this content.
 		</div>
 
 
