@@ -3269,6 +3269,10 @@ aside li {
           box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
 }
 
+.footer-contact-form .aforms_confirmation_message {
+  margin-bottom: 40px;
+}
+
 .footer-contact-form .aforms_confirmation_message h2, .footer-contact-form .aforms_confirmation_message p {
   color: #fff;
 }
