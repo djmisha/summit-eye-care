@@ -405,6 +405,11 @@
 			box-shadow: 0 0 10px rgba( $lightColor, .3)!important;
 		}
 	}
+	.aforms_confirmation_message {
+		h2, p {
+			color: #fff;
+		}
+	}
 }
 
 /*=====  End of Footer Contact Form  ======*/
