@@ -222,6 +222,8 @@
     .wp-block-cover.full-width {
         a.wp-block-button__link {
             color: $primaryColor;
+            margin-top: 0;
+            margin-bottom: 0;
             &:hover {
                 color: $primaryColor;
             }
@@ -412,7 +414,7 @@
     color: #fff;
     padding-top: 60px;
     padding-bottom: 60px;
-    margin-bottom: -120px;
+    // margin-bottom: -120px;
     padding-left: 20px;
     padding-right: 20px;
     height: auto;
