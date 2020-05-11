@@ -218,6 +218,17 @@
 
     /* INTRO On Pages*/
 
+    /* Light Buttons */
+    .wp-block-cover.full-width {
+        a.wp-block-button__link {
+            color: $primaryColor;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+
+    /* Intro Section */
     .wp-block-columns.intro {
         border-radius: 20px;
         background: #f8fbfd;
@@ -312,15 +323,6 @@
 
         .wp-block-image {
             margin-bottom: 0;
-        }
-    }
-
-    .wp-block-cover.full-width {
-        a.wp-block-button__link {
-            color: $primaryColor;
-            &:hover {
-                color: $primaryColor;
-            }
         }
     }
 

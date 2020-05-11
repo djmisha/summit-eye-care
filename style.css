@@ -2200,6 +2200,8 @@ main,
   /*Full Width Classes*/
   /* Guttenber Overrides */
   /* INTRO On Pages*/
+  /* Light Buttons */
+  /* Intro Section */
   /* Full Width Text */
   /* Full Width Text */
   /* Cover with Background Image*/
@@ -2395,6 +2397,14 @@ main,
   height: auto;
 }
 
+.interior .wp-block-cover.full-width a.wp-block-button__link {
+  color: #126abf;
+}
+
+.interior .wp-block-cover.full-width a.wp-block-button__link:hover {
+  color: #126abf;
+}
+
 .interior .wp-block-columns.intro {
   border-radius: 20px;
   background: #f8fbfd;
@@ -2501,14 +2511,6 @@ main,
 
 .interior .wp-block-columns.full-width-text .wp-block-image {
   margin-bottom: 0;
-}
-
-.interior .wp-block-cover.full-width a.wp-block-button__link {
-  color: #126abf;
-}
-
-.interior .wp-block-cover.full-width a.wp-block-button__link:hover {
-  color: #126abf;
 }
 
 .interior .wp-block-columns.full-width-image {
