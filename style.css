@@ -2399,8 +2399,8 @@ main,
 
 .interior .wp-block-cover.full-width a.wp-block-button__link {
   color: #126abf;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .interior .wp-block-cover.full-width a.wp-block-button__link:hover {
@@ -2925,14 +2925,16 @@ aside li {
   font-size: 20px;
 }
 
-.f-locations .phone, .f-locations .tag {
+.f-locations .phone,
+.f-locations .tag {
   color: #126abf;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 25px;
 }
 
-.f-locations .phone a, .f-locations .tag a {
+.f-locations .phone a,
+.f-locations .tag a {
   color: #126abf;
 }
 
@@ -2941,7 +2943,7 @@ aside li {
 }
 
 .f-locations .phone:before {
-  content: '';
+  content: "";
   position: absolute;
   background: url("images/svg/icon-phone.svg");
   background-repeat: no-repeat;
@@ -2956,7 +2958,7 @@ aside li {
 }
 
 .f-locations .tag:before {
-  content: '';
+  content: "";
   position: absolute;
   background: url("images/svg/icon-cal.svg");
   background-repeat: no-repeat;
@@ -2970,7 +2972,7 @@ aside li {
 }
 
 .f-locations .street:before {
-  content: '';
+  content: "";
   position: absolute;
   background: url("images/svg/icon-map.svg");
   background-repeat: no-repeat;
@@ -3200,7 +3202,8 @@ aside li {
   text-align: center;
 }
 
-.footer-contact-form form .type-singlelinetext input, .footer-contact-form form .type-textarea textarea {
+.footer-contact-form form .type-singlelinetext input,
+.footer-contact-form form .type-textarea textarea {
   background: transparent;
   border: none;
   border-bottom: 1px solid white;
@@ -3275,8 +3278,8 @@ aside li {
   color: #ffffff;
   padding: 12px 30px;
   border-radius: 50px;
-  -webkit-transition: all .15s ease-in;
-  transition: all .15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -3302,7 +3305,12 @@ aside li {
   margin-bottom: 40px;
 }
 
-.footer-contact-form .aforms_confirmation_message h2, .footer-contact-form .aforms_confirmation_message p, .footer-contact-form .aforms_confirmation_message span {
+.footer-contact-form .aforms_confirmation_message h2,
+.footer-contact-form .aforms_confirmation_message p,
+.footer-contact-form .aforms_confirmation_message span {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
   color: #fff;
 }
 
@@ -3413,7 +3421,7 @@ aside li {
 }
 
 .sticky-contact a.sticky-schedule:before {
-  content: '';
+  content: "";
   position: absolute;
   background: url("images/svg/icon-cal-white.svg");
   background-repeat: no-repeat;
@@ -3431,7 +3439,7 @@ aside li {
 }
 
 .sticky-contact a.sticky-phone-icon {
-  content: '';
+  content: "";
   position: absolute;
   background: url("images/svg/icon-phone-white.svg");
   background-repeat: no-repeat;
