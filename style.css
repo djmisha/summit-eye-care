@@ -2404,7 +2404,7 @@ main,
 }
 
 .interior .wp-block-cover.full-width a.wp-block-button__link:hover {
-  color: #126abf;
+  color: #126abf !important;
 }
 
 .interior .wp-block-columns.intro {

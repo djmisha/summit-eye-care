@@ -225,7 +225,7 @@
             margin-top: 0;
             margin-bottom: 0;
             &:hover {
-                color: $primaryColor;
+                color: $primaryColor !important;
             }
         }
     }
