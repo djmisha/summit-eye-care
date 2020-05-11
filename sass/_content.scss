@@ -1,513 +1,504 @@
 .content {
-	width: 100%;
-	@include media($desktop) {
-		width: calc(100%);
-		// width: calc(100% - #{$sidebar});
-		// padding-right: 50px;
-		padding-bottom: 20px;
-	}
+    width: 100%;
+    @include media($desktop) {
+        width: calc(100%);
+        // width: calc(100% - #{$sidebar});
+        // padding-right: 50px;
+        padding-bottom: 20px;
+    }
 }
 
 .site-crumbs {
-	text-align: left;
-	.salacious-crumb {
-		@include font(12px);
-		// margin: 0 0 36px;
-		font-style: normal;
-		@include media($tablet) {
-			@include font(16px);
-			margin-bottom: 60px;
-		}
-		a {
-			text-decoration: none;
-			color: #fff;
-		}
-		.crumb-sep {
-			color: #fff;
-			margin: 0 8px;
-		}
-		span {
-			color: #fff !important;
-		}
-		.current-crumb-item {
-			color: #fff !important;
-			a {
-				color: #fff !important;
-			}
-		}
-	}
+    text-align: left;
+    .salacious-crumb {
+        @include font(12px);
+        // margin: 0 0 36px;
+        font-style: normal;
+        @include media($tablet) {
+            @include font(16px);
+            margin-bottom: 60px;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .crumb-sep {
+            color: #fff;
+            margin: 0 8px;
+        }
+        span {
+            color: #fff !important;
+        }
+        .current-crumb-item {
+            color: #fff !important;
+            a {
+                color: #fff !important;
+            }
+        }
+    }
 }
 
 .page-title {
-	h1, .headline {
-		color: #fff;
-		@include media($tablet) {
-			// margin-bottom: 30px;
-			
-		}
-	}
+    h1,
+    .headline {
+        color: #fff;
+        @include media($tablet) {
+            // margin-bottom: 30px;
+        }
+    }
 }
-
-
 
 .interior {
-	display: block;
-	text-align: left;
-	margin-bottom: 40px;
-	h1 {
-	}
-	.content {
-		h2, h3, h4, h5, h6 {
-			color: #565759;
-			margin-top: 80px;
-			margin-bottom: 30px;
-		}
-		h2 {
-			&:first-child {
-				margin-top: 0;
-			}
-		}
-		p {
-			// font-size: 20px;
-			&:first-child {
-				margin-top: 0;
-			}
-		}
+    display: block;
+    text-align: left;
+    margin-bottom: 40px;
+    h1 {
+    }
+    .content {
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #565759;
+            margin-top: 80px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        p {
+            // font-size: 20px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
 
-		ul {
-			list-style: none;
-			margin: 4em 0px;
-			@include media($tablet) {
-				margin: 4em 40px;
-			}
-			li {
-				position: relative;
-				padding-left: 20px;
-				&:before {
-					content: "";
-					background: $primaryColor;
-					font-weight: $bold;
-					position: absolute;
-					left: 0;
-					top: 0.75em;
-					width: 8px;
-					height: 8px;
-					border-radius: 50%;
-				}
-			}
-		}
-		ol {
-			counter-reset: item;
-			margin: 4em 0px;
-			@include media($tablet) {
-				margin: 4em 40px;
-			}
-			> li {
-				display: block;
-				margin-left: 0;
-				&:before {
-					content: counter(item) ". ";
-					counter-increment: item;
-					color: $primaryColor;
-				}
-			}
-		}
+        ul {
+            list-style: none;
+            margin: 4em 0px;
+            @include media($tablet) {
+                margin: 4em 40px;
+            }
+            li {
+                position: relative;
+                padding-left: 20px;
+                &:before {
+                    content: "";
+                    background: $primaryColor;
+                    font-weight: $bold;
+                    position: absolute;
+                    left: 0;
+                    top: 0.75em;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        ol {
+            counter-reset: item;
+            margin: 4em 0px;
+            @include media($tablet) {
+                margin: 4em 40px;
+            }
+            > li {
+                display: block;
+                margin-left: 0;
+                &:before {
+                    content: counter(item) ". ";
+                    counter-increment: item;
+                    color: $primaryColor;
+                }
+            }
+        }
 
-		
-		blockquote {
-			@include font(18px, 2em);
-			position: relative;
-			margin: 0;
-			font-family: $highlightFont;
-			text-align: center;
-			padding: 180px 20px 80px 20px;
-			background: #F8FBFD url('images/icon-quote.svg') top center no-repeat;
-			background-position-y: 20px;
-			margin-top: 60px;
-			margin-bottom: 40px;
-			@include media($tablet) {
-				@include font(22px, 2.2em);
+        blockquote {
+            @include font(18px, 2em);
+            position: relative;
+            margin: 0;
+            font-family: $highlightFont;
+            text-align: center;
+            padding: 180px 20px 80px 20px;
+            background: #f8fbfd url("images/icon-quote.svg") top center
+                no-repeat;
+            background-position-y: 20px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            @include media($tablet) {
+                @include font(22px, 2.2em);
 
-				margin-top: 100px;
-				margin-bottom: 40px;
-				padding: 190px 40px 120px 40px;
-			}
-			p, cite {
-				max-width: 900px;
-				margin: 0 auto;
-				color: #2F2F2F;
-			}
-			cite {
-				font-style: normal;
-				margin-top: 40px;
-				display: block;
-				font-size: 1.3em;
-			}
-		}
-		blockquote.stars {
-			background: #F8FBFD url('images/icon-stars.svg') top center no-repeat;
-			background-position-y: 90px;
-			
-		}
+                margin-top: 100px;
+                margin-bottom: 40px;
+                padding: 190px 40px 120px 40px;
+            }
+            p,
+            cite {
+                max-width: 900px;
+                margin: 0 auto;
+                color: #2f2f2f;
+            }
+            cite {
+                font-style: normal;
+                margin-top: 40px;
+                display: block;
+                font-size: 1.3em;
+            }
+        }
+        blockquote.stars {
+            background: #f8fbfd url("images/icon-stars.svg") top center
+                no-repeat;
+            background-position-y: 90px;
+        }
 
-		.memberships-sc-wrap {
-			svg {
-				height: 200px;
-				width: auto;
-			}
-		}
-	} // End Content
+        .memberships-sc-wrap {
+            svg {
+                height: 200px;
+                width: auto;
+            }
+        }
+    } // End Content
 
-	
-	/* Last Updated*/
-	.last-updated {
-		top: -30px;
-		position: relative;
-	}
-	.last-updated, .the-author {
-		@include font(14px);
-		// margin-bottom: 10px;
-		font-style: normal;
-		color: $secondaryColor;
-		span {
-			color: $primaryColor;
-		}
-	}
+    /* Last Updated*/
+    .last-updated {
+        top: -30px;
+        position: relative;
+    }
+    .last-updated,
+    .the-author {
+        @include font(14px);
+        // margin-bottom: 10px;
+        font-style: normal;
+        color: $secondaryColor;
+        span {
+            color: $primaryColor;
+        }
+    }
 
-	
-	/*Full Width Classes*/
+    /*Full Width Classes*/
 
-	.full-width, .full-width-text, .full-width-image {
-		position: relative;
-		width: 100vw;
-		left: -20px;
-		@include media($desktop) {
-			left: -40px;
-			// left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
-		}
-		@include media($full) {
-			left: calc(((40px + (50vw - (#{$full} / 2)))) * -1);
-		}
-	}
+    .full-width,
+    .full-width-text,
+    .full-width-image {
+        position: relative;
+        width: 100vw;
+        left: -20px;
+        @include media($desktop) {
+            left: -40px;
+            // left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
+        }
+        @include media($full) {
+            left: calc(((40px + (50vw - (#{$full} / 2)))) * -1);
+        }
+    }
 
-	.gallery-columns-0 {
-		@include media($tablet) {
-			display: flex !important;
-			flex-wrap: wrap;
-			justify-content: space-between;
-		}
-		.gallery-item {
-			@include media($tablet) {
-				width: 48% !important;
-			}
-			@include media($desktop) {
-				width: 32% !important;
-			}
-			img {
-				width: 100%;
-				height: auto;
-			}
-		}
-	}
+    .gallery-columns-0 {
+        @include media($tablet) {
+            display: flex !important;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gallery-item {
+            @include media($tablet) {
+                width: 48% !important;
+            }
+            @include media($desktop) {
+                width: 32% !important;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
 
-	/* Guttenber Overrides */
+    /* Guttenber Overrides */
 
-	
-	/* INTRO On Pages*/
+    /* INTRO On Pages*/
 
-	.wp-block-columns.intro {
-		border-radius: 20px;
-		background: #F8FBFD;
-		color: #696969;
-		position: relative;
-		// top: -100px;
-		// margin-bottom: -40px;
-		min-height: 250px;
-		// font-size: 15px;
-		// line-height: 22px;
-		@include media($tablet) {
-			margin-bottom: -80px;
-			top: -140px;
-			font-size: 30px;
-			line-height: 52px;
-		}
-		.wp-block-column:first-child  {
-			// background: #F0F6FA;
-			// margin-left: 20px;
-				// margin: 20px 20px 20px 20px; 
-				margin: 40px;
-				margin-bottom: 20px;
-				@include media($tablet) {
-					margin: 40px 60px 20px 60px; 
-					
-				}
-			}
-			.wp-block-column:last-child  {
-				background: #F0F6FA;
-				text-align: center;
-				border-bottom-left-radius: 20px;
-				border-top-right-radius: 20px;
-				@include media($tablet) {
-					border-bottom-right-radius: 20px;
-					border-top-right-radius: 20px;
-					
-				}
+    .wp-block-columns.intro {
+        border-radius: 20px;
+        background: #f8fbfd;
+        color: #696969;
+        position: relative;
+        // top: -100px;
+        // margin-bottom: -40px;
+        min-height: 250px;
+        // font-size: 15px;
+        // line-height: 22px;
+        @include media($tablet) {
+            margin-bottom: -80px;
+            top: -140px;
+            font-size: 30px;
+            line-height: 52px;
+        }
+        .wp-block-column:first-child {
+            // background: #F0F6FA;
+            // margin-left: 20px;
+            // margin: 20px 20px 20px 20px;
+            margin: 40px;
+            margin-bottom: 20px;
+            @include media($tablet) {
+                margin: 40px 60px 20px 60px;
+            }
+        }
+        .wp-block-column:last-child {
+            background: #f0f6fa;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            @include media($tablet) {
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+            }
 
-				.wp-block-image {
-					margin: 0 auto;
-				}
-				img {
-					min-width: 220px;
-					padding-left: 20px;
-					padding-right: 20px;
-					padding-top: 40px;
-					padding-bottom: 40px;
-				// margin: 0 auto;
-			}
-		}
-	}
+            .wp-block-image {
+                margin: 0 auto;
+            }
+            img {
+                min-width: 220px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                // margin: 0 auto;
+            }
+        }
+    }
 
-	/* Full Width Text */
+    /* Full Width Text */
 
-	.wp-block-columns.full-width-text {
+    .wp-block-columns.full-width-text {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @include media($tablet) {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        .wp-block-column:first-child {
+            background: #f8fbfd;
+        }
+        .wp-block-column:last-child {
+            background: #f0f6fa;
+        }
+        .wp-block-column {
+            padding: 40px 40px;
+            background: #f8fbfd;
+            // padding: 60px 20px 40px 20px;
+            @include media($tablet) {
+                padding: 100px 40px;
+            }
+            @include media($desktop) {
+                h2,
+                h3,
+                h4,
+                p {
+                    margin: 0 auto;
+                    // max-width: 620px;
+                    max-width: 600px;
+                    padding-bottom: 20px;
+                }
+            }
+            @include media($full) {
+                ul {
+                    max-width: 500px;
+                    margin: 0 auto;
+                    margin-top: 40px;
+                }
+            }
+        }
 
-		margin-top: 40px;
-		margin-bottom: 40px;
-		@include media($tablet) {
-			margin-top: 80px;
-			margin-bottom: 80px;
-		}
-		.wp-block-column:first-child  {
-			background: #F8FBFD;
-		}
-		.wp-block-column:last-child  {
-			background: #F0F6FA;
-		}
-		.wp-block-column {
-			padding: 40px 40px;
-			background: #F8FBFD;
-			// padding: 60px 20px 40px 20px;
-			@include media($tablet) {
-				padding: 100px 40px;
-			}
-			@include media($desktop) {
-				h2,
-				h3, 
-				h4,
-				p {
-					margin: 0 auto;
-			// max-width: 620px;
-			max-width: 600px;
-			padding-bottom: 20px;
-		}
-	}
-	@include media($full) {
-		ul {
-			max-width: 500px;
-			margin: 0 auto;
-			margin-top: 40px;
-		}
-	}
-}
+        .wp-block-image {
+            margin-bottom: 0;
+        }
+    }
 
-.wp-block-image {
-	margin-bottom: 0;
-}
-}
+    .wp-block-cover.full-width {
+        a.wp-block-button__link {
+            color: $primaryColor;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
 
+    /* Full Width Text */
 
-/* Full Width Text */
+    .wp-block-columns.full-width-image {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @include media($tablet) {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        .wp-block-column:first-child {
+            background: #f8fbfd;
+            padding: 40px 40px;
+            @include media($tablet) {
+                padding: 100px 40px;
+            }
+        }
+        .wp-block-column:last-child {
+            background: #f0f6fa;
+        }
+        .wp-block-column {
+            background: #f8fbfd;
+            @include media($desktop) {
+                h2,
+                h3,
+                h4,
+                p {
+                    margin: 0 auto;
+                    // max-width: 620px;
+                    max-width: 600px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+        .wp-block-cover {
+            margin: 0;
+        }
+        .wp-block-cover {
+        }
 
-.wp-block-columns.full-width-image {
+        .wp-block-image {
+            margin-bottom: 0;
+        }
+    }
 
-	margin-top: 40px;
-	margin-bottom: 40px;
-	@include media($tablet) {
-		margin-top: 80px;
-		margin-bottom: 80px;
-	}
-	.wp-block-column:first-child  {
-		background: #F8FBFD;
-		padding: 40px 40px;
-		@include media($tablet) {
-			padding: 100px 40px;
-			
-		}
-	}
-	.wp-block-column:last-child  {
-		background: #F0F6FA;
-	}
-	.wp-block-column {
-		background: #F8FBFD;
-		@include media($desktop) {
-			h2,
-			h3, 
-			h4,
-			p {
-				margin: 0 auto;
-			// max-width: 620px;
-			max-width: 600px;
-			padding-bottom: 20px;
-		}
-	}
+    .wp-block-column:not(:first-child) {
+        margin-left: 0;
+    }
 
-	
-}
-.wp-block-cover {
-	margin: 0;
-} 
-.wp-block-cover {}
+    /* Cover with Background Image*/
 
-.wp-block-image {
-	margin-bottom: 0;
-}
-}
-
-.wp-block-column:not(:first-child)  {
-	margin-left: 0;
-}
-
-
-
-/* Cover with Background Image*/
-
-.wp-block-cover.full-width {
-	height: auto;
-}
-.wp-block-cover {
-	margin-top: 80px;
-	margin-bottom: 80px;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	@include media($tablet) {
-		padding-top: 140px;
-		padding-bottom: 140px;
-	}
-	h2, h3, h4, h5, h6 {
-		color: #fff;
-	}
-	.wp-block-cover__inner-container {
-		max-width: $ogFull;
-
-	}
-}
-
-
+    .wp-block-cover.full-width {
+        height: auto;
+    }
+    .wp-block-cover {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        @include media($tablet) {
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+        }
+        .wp-block-cover__inner-container {
+            max-width: $ogFull;
+        }
+    }
 } // End Interior
-
-
-
-
-
 
 /*========================================
 =            ShortCode Styles            =
 ========================================*/
 
-
-.faq-sc-wrap{
-	background: $primaryColor url('images/bg-mountians.jpg') top center;
-	background-size: auto;
-	background-repeat: no-repeat;
-	color: #fff;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	margin-bottom: -120px;
-	padding-left: 20px;
-	padding-right: 20px;
-	height: auto;
-	@include media($tablet) {
-		padding-top: 80px;
-		padding-bottom: 100px;
-	}
-	@include media(1700px) {
-		background-size: cover;
-	}
-	.headline {
-		color: #fff;
-		text-align: center;
-		display: block;
-		margin-bottom: 60px;
-		font-size: 40px;
-	}
-	ul {
-		max-width: $ogFull;
-		margin: 0 auto !important;
-		li {
-			background: rgba( #204B7C, .67);
-			margin-bottom: 20px;
-			padding: 40px !important;
-			border-radius: 20px;
-			@include media($tablet) {
-				padding: 40px 60px !important;
-			}
-			&:hover {
-				cursor: pointer;
-			}
-		}
-		li:before {
-			display: none;
-			margin-bottom: 20px;
-		}
-		span {
-			display: block;
-		}
-		.question {
-			// font-weight: 600;
-			font-size: 20px;
-			margin-bottom: 30px;
-			padding-right: 30px;
-			@include media($tablet) {
-				padding-right: 100px;
-				font-size: 25px;
-			}
-			&:before {
-				content: '+';
-				font-size: 60px;
-				position: absolute;
-				top: 50px;
-				right: 20px;
-				@include media($tablet) {
-					// top: 70px;
-					right: 40px;
-				}
-			}
-			&.active:before {
-				content: '-';
-			}
-		}
-	}
+.faq-sc-wrap {
+    background: $primaryColor url("images/bg-mountians.jpg") top center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: -120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+    @include media($tablet) {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+    @include media(1700px) {
+        background-size: cover;
+    }
+    .headline {
+        color: #fff;
+        text-align: center;
+        display: block;
+        margin-bottom: 60px;
+        font-size: 40px;
+    }
+    ul {
+        max-width: $ogFull;
+        margin: 0 auto !important;
+        li {
+            background: rgba(#204b7c, 0.67);
+            margin-bottom: 20px;
+            padding: 40px !important;
+            border-radius: 20px;
+            @include media($tablet) {
+                padding: 40px 60px !important;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        li:before {
+            display: none;
+            margin-bottom: 20px;
+        }
+        span {
+            display: block;
+        }
+        .question {
+            // font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 30px;
+            padding-right: 30px;
+            @include media($tablet) {
+                padding-right: 100px;
+                font-size: 25px;
+            }
+            &:before {
+                content: "+";
+                font-size: 60px;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                @include media($tablet) {
+                    // top: 70px;
+                    right: 40px;
+                }
+            }
+            &.active:before {
+                content: "-";
+            }
+        }
+    }
 }
-
-
-
-
 
 /*=================================================
 =            Wordpress Default Gallery            =
 =================================================*/
 
 .gallery-size-medium {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	.gallery-item {
-		float: none !important;
-		margin-right: 5px;
-		margin-left: 5px;
-		width: 45% !important;
-		@include media($tablet) {
-			margin-right: 10px;
-			margin-left: 10px;
-			width: 19% !important;
-		}
-		img {
-			border: none !important;
-			width: 100%;
-			height: auto;
-		}
-	}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .gallery-item {
+        float: none !important;
+        margin-right: 5px;
+        margin-left: 5px;
+        width: 45% !important;
+        @include media($tablet) {
+            margin-right: 10px;
+            margin-left: 10px;
+            width: 19% !important;
+        }
+        img {
+            border: none !important;
+            width: 100%;
+            height: auto;
+        }
+    }
 }
-
-
-
