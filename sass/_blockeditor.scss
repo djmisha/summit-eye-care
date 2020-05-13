@@ -1,0 +1,260 @@
+/* Block Eitor  */
+
+.interior {
+    /*Full Width Classes*/
+    .full-width,
+    .full-width-text,
+    .full-width-image {
+        position: relative;
+        width: 100vw;
+        left: -20px;
+        @include media($desktop) {
+            left: -40px;
+            // left: calc(((40px + (50vw - (#{$desktop} / 2)))) * -1);
+        }
+        @include media($full) {
+            left: calc(((40px + (50vw - (#{$full} / 2)))) * -1);
+        }
+    }
+
+    /* What Is This?  */
+    .gallery-columns-0 {
+        @include media($tablet) {
+            display: flex !important;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gallery-item {
+            @include media($tablet) {
+                width: 48% !important;
+            }
+            @include media($desktop) {
+                width: 32% !important;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    /* Block Editor Custom Blocks */
+
+    /* Intro Section */
+    .wp-block-columns.intro {
+        border-radius: 20px;
+        background: #f8fbfd;
+        color: #696969;
+        position: relative;
+        // top: -100px;
+        // margin-bottom: -40px;
+        min-height: 250px;
+        // font-size: 15px;
+        // line-height: 22px;
+        @include media($tablet) {
+            margin-bottom: -80px;
+            top: -140px;
+            font-size: 30px;
+            line-height: 52px;
+        }
+        .wp-block-column:first-child {
+            // background: #F0F6FA;
+            // margin-left: 20px;
+            // margin: 20px 20px 20px 20px;
+            margin: 40px;
+            margin-bottom: 20px;
+            @include media($tablet) {
+                margin: 40px 60px 20px 60px;
+            }
+        }
+        .wp-block-column:last-child {
+            background: #f0f6fa;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            @include media($tablet) {
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            .wp-block-image {
+                margin: 0 auto;
+            }
+            img {
+                min-width: 220px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                // margin: 0 auto;
+            }
+        }
+    }
+
+    /* Full Width Text */
+
+    .wp-block-columns.full-width-text {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @include media($tablet) {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        .wp-block-column:first-child {
+            background: #f8fbfd;
+        }
+        .wp-block-column:last-child {
+            background: #f0f6fa;
+        }
+        .wp-block-column {
+            padding: 40px 40px;
+            background: #f8fbfd;
+            // padding: 60px 20px 40px 20px;
+            @include media($tablet) {
+                padding: 100px 40px;
+            }
+            @include media($desktop) {
+                h2,
+                h3,
+                h4,
+                p {
+                    margin: 0 auto;
+                    // max-width: 620px;
+                    max-width: 600px;
+                    padding-bottom: 20px;
+                }
+            }
+            @include media($full) {
+                ul {
+                    max-width: 500px;
+                    margin: 0 auto;
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        .wp-block-image {
+            margin-bottom: 0;
+        }
+    }
+
+    /* Full Width Image */
+
+    .wp-block-columns.full-width-image {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @include media($tablet) {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        .wp-block-column:first-child {
+            background: #f8fbfd;
+            padding: 40px 40px;
+            @include media($tablet) {
+                padding: 100px 40px;
+            }
+        }
+        .wp-block-column:last-child {
+            background: #f0f6fa;
+        }
+        .wp-block-column {
+            background: #f8fbfd;
+            @include media($desktop) {
+                h2,
+                h3,
+                h4,
+                p {
+                    margin: 0 auto;
+                    // max-width: 620px;
+                    max-width: 600px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+        .wp-block-cover {
+            margin: 0;
+        }
+        .wp-block-cover {
+        }
+
+        .wp-block-image {
+            margin-bottom: 0;
+        }
+    }
+
+    .wp-block-column:not(:first-child) {
+        margin-left: 0;
+    }
+
+    /* Cover with Background Image*/
+
+    .wp-block-cover.full-width {
+        height: auto;
+    }
+
+    .wp-block-cover {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        @include media($tablet) {
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+        }
+        .wp-block-cover__inner-container {
+            max-width: $ogFull;
+        }
+    }
+
+    /* Light Buttons for Cover with Background */
+
+    .wp-block-cover.full-width {
+        a.wp-block-button__link {
+            color: $primaryColor;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            &:hover {
+                color: $primaryColor !important;
+            }
+        }
+    }
+
+    /* <hr> subtle styling */
+
+    hr.wp-block-separator {
+        border-top: 1px solid rgb(227, 226, 226);
+    }
+
+    /*=================================================
+    =            Wordpress Default Gallery            =
+    =================================================*/
+
+    .gallery-size-medium {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .gallery-item {
+            float: none !important;
+            margin-right: 5px;
+            margin-left: 5px;
+            width: 45% !important;
+            @include media($tablet) {
+                margin-right: 10px;
+                margin-left: 10px;
+                width: 19% !important;
+            }
+            img {
+                border: none !important;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

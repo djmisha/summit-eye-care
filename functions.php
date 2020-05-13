@@ -375,14 +375,14 @@ function get_my_excerpt($excerpt_length = 55, $id = false, $echo = false) {
 function sitemap_function( $atts ){
 ob_start();  ?>
 
-	<ul>
-	<?php wp_list_pages(
+<ul>
+    <?php wp_list_pages(
 		array(
 		 'title_li' => '',
 		 'exclude' => $atts['omit'],
 		 'depth' => $atts['depth']
 	 ) ); ?>
-	</ul>
+</ul>
 <?php
 $sitemap = ob_get_clean();
 return $sitemap;

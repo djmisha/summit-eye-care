@@ -1,383 +1,370 @@
 .site-header {
-	top: 0;
-	width: 100%;
-	background: #fff;
-	.nav {
-		position: relative;
-		z-index: 1000;
-		a {
-			color: #1e3e59;
-		}
-	}
+    top: 0;
+    width: 100%;
+    background: #fff;
+    .nav {
+        position: relative;
+        z-index: 1000;
+        a {
+            color: #1e3e59;
+        }
+    }
 }
-
-
-
 
 /* Naviagation bar */
 
 .nav-bar {
-	position: relative;
-	z-index: 9999;
-	padding: 0 20px !important;
-	margin: 0 auto;
-	margin-top: -25px;
-	@include media($tablet) {
-		margin-top: -20px;
-	}
-	@include media($desktop) {
-		margin-top: -35px;
-	}
-	@include media($full) {
-		max-width: $full;
-		@include contain($full, 20px);
-	}
-	.nav-wrap {
-		background: $primaryColor;
-		border-radius: 50px;
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	nav {
-		@include media($desktop) {
-			width: 100%;
-		}
-		a {
-		}
-	}
+    position: relative;
+    z-index: 9999;
+    padding: 0 20px !important;
+    margin: 0 auto;
+    margin-top: -25px;
+    @include media($tablet) {
+        margin-top: -20px;
+    }
+    @include media($desktop) {
+        margin-top: -35px;
+    }
+    @include media($full) {
+        max-width: $full;
+        @include contain($full, 20px);
+    }
+    .nav-wrap {
+        background: $primaryColor;
+        border-radius: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    nav {
+        @include media($desktop) {
+            width: 100%;
+        }
+        a {
+        }
+    }
 }
 
-
 .is--device {
-	.nav-bar {
-		nav {
-			padding: 0 20px;
-		}
-	}
+    .nav-bar {
+        nav {
+            padding: 0 20px;
+        }
+    }
 }
 
 .menu-buttons {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	@include media($desktop, notdevice) {
-		display: none;
-	}
-	a {
-		color: $lightColor;
-		text-decoration: none;
-	}
-	span {
-		@include font(18px, 100%, $light);
-		font-family: $secondaryFont;
-		display: block;
-		display: none;
-	}
-	.menu-trigger {
-		display: flex;
-	}
-	.menu-contact {
-		// border: 1px solid pink;
-		display: flex;
-		// align-items: center;
-		// width: 80px;
-		justify-content: flex-end;
-		height: 45px;
-		position: relative;
-		right: -10px;
-		> div {
-			// border: 1px solid pink;
-			width: 40px !important;
-			margin-left: 5px;
-			position: relative;
-			top: 7px;
-		}
-	}
-	.menu-location {
-
-		span {
-			margin-right: 0;
-		}
-	}
-	.menu-phone{
-		svg {
-			width: 33px;
-			// height: 40px;
-			path {fill: #fff;}
-		}
-	}
-	.menu-location {
-		// width: 40px;
-		svg {
-			width: 26px;
-			// height: 50px;
-			path {fill: #fff;}
-		}
-	}
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include media($desktop, notdevice) {
+        display: none;
+    }
+    a {
+        color: $lightColor;
+        text-decoration: none;
+    }
+    span {
+        @include font(18px, 100%, $light);
+        font-family: $secondaryFont;
+        display: block;
+        display: none;
+    }
+    .menu-trigger {
+        display: flex;
+    }
+    .menu-contact {
+        // border: 1px solid pink;
+        display: flex;
+        // align-items: center;
+        // width: 80px;
+        justify-content: flex-end;
+        height: 45px;
+        position: relative;
+        right: -10px;
+        > div {
+            // border: 1px solid pink;
+            width: 40px !important;
+            margin-left: 5px;
+            position: relative;
+            top: 7px;
+        }
+    }
+    .menu-location {
+        span {
+            margin-right: 0;
+        }
+    }
+    .menu-phone {
+        svg {
+            width: 33px;
+            // height: 40px;
+            path {
+                fill: #fff;
+            }
+        }
+    }
+    .menu-location {
+        // width: 40px;
+        svg {
+            width: 26px;
+            // height: 50px;
+            path {
+                fill: #fff;
+            }
+        }
+    }
 }
-
-
 
 // Ipad Pro
 
 .is--device {
-	.menu-buttons {
-		@include media($desktop) {
-			display: block;
-		}
-	}
+    .menu-buttons {
+        @include media($desktop) {
+            display: block;
+        }
+    }
 }
-
-
-
 
 /*-------------- Logo Area -------------*/
 
-
 .header-top {
-	background: #fff;
-	padding-top: 20px;
-	padding-bottom: 50px;
-	// border: 1px solid pink;
-	@include media($tablet) {
-		padding-top: 46px;
-		padding-bottom: 70px;
-		display: flex;
-		justify-content: center;
-	}
-	@include media($desktop) {
-		justify-content: space-between;
-		// max-width: 1350px;
-		margin: 0 auto;
-		padding-left: 40px;
-		padding-right: 50px;
-		// @include contain($desktop, 20px);
-	}
-	@include media($desktop) {
-	}
-	@include media($full) {
-		padding-left: 0px;
-		padding-right: 0px;
-		max-width: $ogFull;
-		// @include contain($full, 20px);
-	}
-	h1.site-logo {
-		margin:0 !important;
-		padding:0;
-	}
-	svg {
-		width: 100%;
-		max-width: 382px;
-		padding-left: 30px;
-		padding-right: 30px;
-		@include media($tablet) {
-			padding: 0;
-			max-width: 415px;
-			// min-width: 300px;
-		}
-		@include media($desktop) {
-		}
-	}
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    // border: 1px solid pink;
+    @include media($tablet) {
+        padding-top: 46px;
+        padding-bottom: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    @include media($desktop) {
+        justify-content: space-between;
+        // max-width: 1350px;
+        margin: 0 auto;
+        padding-left: 40px;
+        padding-right: 50px;
+        // @include contain($desktop, 20px);
+    }
+    @include media($desktop) {
+    }
+    @include media($full) {
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: $ogFull;
+        // @include contain($full, 20px);
+    }
+    h1.site-logo {
+        margin: 0 !important;
+        padding: 0;
+    }
+    svg {
+        width: 100%;
+        max-width: 382px;
+        padding-left: 30px;
+        padding-right: 30px;
+        @include media($tablet) {
+            padding: 0;
+            max-width: 415px;
+            // min-width: 300px;
+        }
+        @include media($desktop) {
+        }
+    }
 }
-
 
 /* HEADER LOCATIONS INFO */
 
 .header-locations {
-	margin: 0;
-	margin-right: 30px;
-	background: #fff;
-	text-align: right;
-	list-style: none;
-	display: none;
-	@include media($desktop) {
-		max-width: 500px;
-		display: block;
-	}
-	li {
-		> div {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: flex-end;
-			
-		}
-	}
-	a {
-		color: $secondaryColor;
-		text-decoration: none;
-		font-size: 18px;
-	}
-	.phone, .tag {
-		color: $primaryColor;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 17px;
-		a {
-			color: $primaryColor;
-		}
-	}
-	.phone {
-		padding-right: 40px;
-		position: relative;
-		&:before {
-			content: '';
-			position: absolute;
-			background: url('images/svg/icon-phone.svg');
-			background-repeat: no-repeat;
-			width: 30px;
-			height: 40px;
-			right: 0px;
-			top: -2px;
-		}
-	}
-	.tag {
-		width: 200px;
-		position: relative;
-		&:before {
-			content: '';
-			position: absolute;
-			background: url('images/svg/icon-cal.svg');
-			background-repeat: no-repeat;
-			width: 35px;
-			height: 42px;
-			right: -68px;
-		}
-	}
-	.street {
-		position: relative;
-		font-size: 17px;
-		line-height: 20px;
-		margin-top: 20px;
-		@include media($tablet) {
-			line-height: 30px;
-		}
-		&:before {
-			content: '';
-			position: absolute;
-			background: url('images/svg/icon-map.svg');
-			background-repeat: no-repeat;
-			width: 28px;
-			height: 45px;
-			right: -65px;
-			top: 0px;
-		}
-	}
+    margin: 0;
+    margin-right: 30px;
+    background: #fff;
+    text-align: right;
+    list-style: none;
+    display: none;
+    @include media($desktop) {
+        max-width: 500px;
+        display: block;
+    }
+    li {
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+    }
+    a {
+        color: $secondaryColor;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .phone,
+    .tag {
+        color: $primaryColor;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 17px;
+        a {
+            color: $primaryColor;
+        }
+    }
+    .phone {
+        padding-right: 40px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("images/svg/icon-phone.svg");
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 40px;
+            right: 0px;
+            top: -2px;
+        }
+    }
+    .tag {
+        width: 200px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("images/svg/icon-cal.svg");
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 42px;
+            right: -68px;
+        }
+    }
+    .street {
+        position: relative;
+        font-size: 17px;
+        line-height: 20px;
+        margin-top: 20px;
+        @include media($tablet) {
+            line-height: 30px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("images/svg/icon-map.svg");
+            background-repeat: no-repeat;
+            width: 28px;
+            height: 45px;
+            right: -65px;
+            top: 0px;
+        }
+    }
 }
-
 
 /* Duplicate Nav Items*/
 
 .nav-locations {
-	padding-top: 70px;
-	padding-left: 70px;
-	margin-bottom: 40px;
-	background: transparent;
-	text-align: left;
-	list-style: none;
-	li {
-		// padding-left: 80px;
-		div > div {
-			margin-bottom: 35px;
-			&:nth-of-type(2) {
-				// margin-bottom: 15px;
-			}
-		}
-	}
-	a {
-		color: $lightColor;
-		text-decoration: none;
-		font-size: 20px;
-	}
-	.phone, .tag {
-		color: $lightColor;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 25px;
-		a {
-			color: $lightColor;
-			font-size: 25px !important;
-		}
-	}
-	.phone {
-		position: relative;
-		&:before {
-			content: '';
-			position: absolute;
-			background: url('images/svg/icon-phone-white.svg');
-			background-repeat: no-repeat;
-			width: 30px;
-			height: 40px;
-			left: -70px;
-		}
-	}
-	.tag {
-		position: relative;
-		max-width: 230px;
-		&:before {
-			content: '';
-			position: absolute;
-			background: url('images/svg/icon-cal-white.svg');
-			background-repeat: no-repeat;
-			width: 35px;
-			height: 42px;
-			left: -68px;
-		}
-	}
-	.street {
-		position: relative;
-		line-height: 26px;
-		&:before {
-			content: '';
-			position: absolute;
-			background: url('images/svg/icon-map-white.svg');
-			background-repeat: no-repeat;
-			width: 28px;
-			height: 45px;
-			left: -65px;
-			top: 2px;
-
-		}
-	}
+    padding-top: 70px;
+    padding-left: 70px;
+    margin-bottom: 40px;
+    background: transparent;
+    text-align: left;
+    list-style: none;
+    li {
+        // padding-left: 80px;
+        div > div {
+            margin-bottom: 35px;
+            &:nth-of-type(2) {
+                // margin-bottom: 15px;
+            }
+        }
+    }
+    a {
+        color: $lightColor;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .phone,
+    .tag {
+        color: $lightColor;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 25px;
+        a {
+            color: $lightColor;
+            font-size: 25px !important;
+        }
+    }
+    .phone {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("images/svg/icon-phone-white.svg");
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 40px;
+            left: -70px;
+        }
+    }
+    .tag {
+        position: relative;
+        max-width: 230px;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("images/svg/icon-cal-white.svg");
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 42px;
+            left: -68px;
+        }
+    }
+    .street {
+        position: relative;
+        line-height: 26px;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("images/svg/icon-map-white.svg");
+            background-repeat: no-repeat;
+            width: 28px;
+            height: 45px;
+            left: -65px;
+            top: 2px;
+        }
+    }
 }
-
-
 
 /*--------------  Header Banner  -------------*/
 
-
-
-
 .int-header {
-	// margin-top: 250px;
-	// border: 1px solid pink;
+    // margin-top: 250px;
+    // border: 1px solid pink;
 }
 
 .internal-header-images {
-	position: relative;
-	top: -25px;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 205px;
-	display: flex;
-	align-items: flex-end;
-	@include media($tablet) {
-	top: -35px;
+    position: relative;
+    top: -25px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 205px;
+    display: flex;
+    align-items: flex-end;
+    @include media($tablet) {
+        top: -35px;
 
-		background-position: center center;
-		min-height: 482px;
-	}
+        background-position: center center;
+        min-height: 482px;
+    }
 }
 
-
-
 .from-blog .internal-header-images {
-	background: url('images/header-blog.jpg') center center !important;
-	background-size: cover !important;
-	height: 260px;
-	min-height: 0;
-	h1 {
-		margin-top: 120px;
-		margin-bottom: 0px;
-	}
+    background: url("images/header-blog.jpg") center center !important;
+    background-size: cover !important;
+    min-height: 0;
+    height: 300px;
+    h1 {
+        margin-top: 120px;
+    }
+    .page-title h1,
+    .page-title .headline {
+        margin-bottom: 0px !important;
+    }
 }

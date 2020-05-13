@@ -3,117 +3,129 @@
 ------------------------ */
 
 html {
-	font: 16px/24px $defaultfont;
+    font: 16px/24px $defaultfont;
 }
 
 body {
-	color: $defaultcolor;
-	font: 16px/24px $defaultfont;
-	font-weight: $light;
-	line-height: 1.9em;
-	min-width: 320px;
-	text-align:center;
-	@include media($tablet) {
-		// font: 20px/34px $defaultfont;
-		
-	}
-	// -moz-osx-font-smoothing: grayscale;
-	// -webkit-font-smoothing: antialiased;
+    color: $defaultcolor;
+    font: 16px/24px $defaultfont;
+    font-weight: $light;
+    line-height: 1.9em;
+    min-width: 320px;
+    text-align: center;
+    @include media($tablet) {
+        // font: 20px/34px $defaultfont;
+    }
+    // -moz-osx-font-smoothing: grayscale;
+    // -webkit-font-smoothing: antialiased;
 }
 
 p {
-	margin: 0 0 1em;
+    margin: 0 0 1em;
 }
 
-ul, ol, dl {
-
+ul,
+ol,
+dl {
 }
 
 li {
-
 }
 
-
-h1, h2, h3, h4, h5, h6, .headline {
-	font-family: $secondaryFont;
-	color: $primaryColor;
-	font-weight: $semiBold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.headline {
+    font-family: $secondaryFont;
+    color: $primaryColor;
+    font-weight: $semiBold;
 }
 
-h2, h3, h4, h5, h6 {
-	margin-top: 1em;
-	margin-bottom: .5em;
-	line-height: 100%;
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 100%;
 }
 
 .hdng {
-	font-family: $secondaryFont;
+    font-family: $secondaryFont;
 }
 
 h1 {
-	@include font(30px, 1.1em);
-	@include media($tablet) {
-		@include font(70px);
-	}
+    @include font(30px, 1.1em);
+    @include media($tablet) {
+        @include font(70px);
+    }
 }
 
-h2, .headline {
-	@include font(32px);
-	@include media($desktop) {
-		@include font(50px, 1.45em);
-	}
+h2,
+.headline {
+    @include font(32px);
+    @include media($desktop) {
+        @include font(50px, 1.45em);
+    }
 }
 
 h3 {
-	@include font(28px);
+    @include font(28px);
 
-	@include media($desktop) {
-		@include font(34px, 1.25em);
-	}
+    @include media($desktop) {
+        @include font(34px, 1.25em);
+    }
 }
 
-h4, h5, h6 {
-	@include font(25px);
+h4,
+h5,
+h6 {
+    @include font(25px);
 
-	@include media($desktop) {
-		@include font(26px);
-	}
+    @include media($desktop) {
+        @include font(26px);
+    }
 }
 
 a {
-	color: $primaryColor;
-	text-decoration: underline;
-	&:focus {
-		outline: none;
-		text-decoration: none;
-	}
+    color: $primaryColor;
+    text-decoration: underline;
+    &:focus {
+        outline: none;
+        text-decoration: none;
+    }
 }
 
-
-
 blockquote {
-	font-family: $highlightFont;
-	font-style: italic;
-	@include media($desktop) {
-		@include font(25px, 110%)
-	}
-	footer {
-		font-style: normal;
-	}
+    font-family: $highlightFont;
+    font-style: italic;
+    @include media($desktop) {
+        @include font(25px, 110%);
+    }
+    footer {
+        font-style: normal;
+    }
 }
 
 section,
 main,
 .contain {
-	// border: 1px solid pink;
-	padding: 20px;
-	@include media($desktop) {
-		padding: 20px 40px;
-	}
-	@include media($full) {
-		@include contain($full, 20px);
-	}
+    // border: 1px solid pink;
+    padding: 20px;
+    @include media($desktop) {
+        padding: 20px 40px;
+        padding: 20px 40px;
+    }
+    @include media($full) {
+        @include contain($full, 20px);
+    }
 }
+
+/* For Devices - still needed ?  */
 // .is--device {
 // 	section,
 // 	main,
@@ -124,62 +136,67 @@ main,
 // 	}
 // }
 
-
 /* ***************************************** */
 /* --------------- Layouts ----------------- */
 /* ***************************************** */
-
 
 /* -----------------------
 	Basic layout
 ----------------------- */
 
-.container, .container-full { position: relative; }
-
-.container {
-	max-width: $desktop;
-	margin: 0 auto;
-	text-align: left;
+.container,
+.container-full {
+    position: relative;
 }
 
-
+.container {
+    max-width: $desktop;
+    margin: 0 auto;
+    text-align: left;
+}
 
 /* ------------------------
 	Header
 ------------------------ */
 
-@import 'header';
+@import "header";
 
 /* ------------------------
 	Nav
 ------------------------ */
 
-@import 'menu_touch';
-@import 'menu_hover';
+@import "menu_touch";
+@import "menu_hover";
 
 /* ------------------------
 	Content
 ------------------------ */
 
-@import 'content';
+@import "content";
+
+/* ------------------------
+	Guttenberg
+------------------------ */
+
+@import "blockeditor";
 
 /* ------------------------
 	Aside
 ------------------------ */
 
-@import 'sidebar';
+@import "sidebar";
 
 /* ------------------------
 	Footer Layout
 ------------------------ */
 
-@import 'footer';
+@import "footer";
 
 /* ------------------------
 	Forms & Form Elements
 ------------------------ */
 
-@import 'contact';
+@import "contact";
 
 /* ***************************************** */
 /* ---------- Specific Templates ----------- */
@@ -189,13 +206,13 @@ main,
 	Home Page
 ------------------------ */
 
-@import 'front';
+@import "front";
 
 /* ------------------------
 	Blog/Category/Archives
 ------------------------ */
 
-@import 'blog';
+@import "blog";
 
 /* ------------------------
 	Gallery
@@ -204,14 +221,7 @@ main,
 // @import 'gallery';
 
 /* ------------------------
-	Landing Page Builder
+	Custom Page
 ------------------------ */
 
-// @import 'landingpage';
-
-
-/* ------------------------
-	Random Internal Pages
------------------------- */
-
-// @import 'table';
+// @import 'custompages';
