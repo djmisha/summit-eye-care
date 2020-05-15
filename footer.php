@@ -30,7 +30,7 @@
 							$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
 							$map = get_sub_field('map');
 							$gmb = get_sub_field('gmb');
-							$applink = Get_bloginfo('url') .'/contact/';
+							$applink = Get_bloginfo('url') .'/contact-us/';
 
 						?>
 
@@ -137,7 +137,7 @@
 					$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
 					$map = get_sub_field('map');
 					$gmb = get_sub_field('gmb');
-					$applink = Get_bloginfo('url') .'/contact/';
+					$applink = Get_bloginfo('url') .'/contact-us/';
 				?>
 	        <a href="<?php echo $applink; ?>" class="sticky-schedule"><span>Schedule a Consultation</span></a>
 	        <a href="tel:+1<?php echo $tel; ?>" class="sticky-phone-icon"></a>

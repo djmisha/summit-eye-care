@@ -2219,6 +2219,7 @@ main,
 .page-title h1,
 .page-title .headline {
   color: #fff;
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2493,77 +2494,13 @@ main,
   content: "-";
 }
 
-/* Cataract Quiz */
-.cataract-candidacy-quiz .content form {
-  margin-bottom: 40px;
-}
-
-.cataract-candidacy-quiz .content form > div.field-required {
-  background-color: #f8fbfd;
-  padding: 40px;
-  padding-bottom: 100px;
-  margin-bottom: 40px;
-  min-height: 400px;
-}
-
-@media only screen and (min-width: 1060px) {
-  .cataract-candidacy-quiz .content form > div.field-required {
-    padding-left: 440px;
-  }
-}
-
-.cataract-candidacy-quiz .content form label {
-  color: #565759;
-  font-size: 20px;
-}
-
-.cataract-candidacy-quiz .content form input[type="checkbox"] {
-  background: transparent !important;
-  border: 1px solid #858688 !important;
-}
-
-.cataract-candidacy-quiz .field-6,
-.cataract-candidacy-quiz .field-7,
-.cataract-candidacy-quiz .field-8,
-.cataract-candidacy-quiz .field-9,
-.cataract-candidacy-quiz .field-10,
-.cataract-candidacy-quiz .field-11,
-.cataract-candidacy-quiz .field-12,
-.cataract-candidacy-quiz .field-13,
-.cataract-candidacy-quiz .field-6 {
-  position: relative;
-}
-
-.cataract-candidacy-quiz .field-6:before,
-.cataract-candidacy-quiz .field-7:before,
-.cataract-candidacy-quiz .field-8:before,
-.cataract-candidacy-quiz .field-9:before,
-.cataract-candidacy-quiz .field-10:before,
-.cataract-candidacy-quiz .field-11:before,
-.cataract-candidacy-quiz .field-12:before,
-.cataract-candidacy-quiz .field-13:before,
-.cataract-candidacy-quiz .field-6:before {
-  content: "";
-  top: 20px;
-  left: 20px;
-  position: absolute;
-  background: url("images/cataract-quiz/question-1.png");
-  width: 348px;
-  height: 348px;
-}
-
-.cataract-candidacy-quiz .footer-contact-form,
-.cataract-candidacy-quiz .sticky-contact {
-  display: none;
-}
-
 /* ------------------------
 	Guttenberg
 ------------------------ */
 /* Block Eitor  */
 .interior {
   /*Full Width Classes*/
-  /* What Is This?  */
+  /*  Padding for Content inslide a columns  */
   /* Block Editor Custom Blocks */
   /* Intro Section */
   /* Full Width Text */
@@ -2574,6 +2511,7 @@ main,
   /*=================================================
     =            Wordpress Default Gallery            =
     =================================================*/
+  /* Gallery Styling to Check  */
 }
 
 .interior .full-width,
@@ -2601,33 +2539,23 @@ main,
 }
 
 @media only screen and (min-width: 768px) {
-  .interior .gallery-columns-0 {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .interior .gallery-columns-0 .gallery-item {
-    width: 48% !important;
+  .interior .wp-block-columns .wp-block-columns h2,
+  .interior .wp-block-columns .wp-block-columns h3,
+  .interior .wp-block-columns .wp-block-columns h4,
+  .interior .wp-block-columns .wp-block-columns h5,
+  .interior .wp-block-columns .wp-block-columns p {
+    padding-left: 40px;
   }
 }
 
 @media only screen and (min-width: 1060px) {
-  .interior .gallery-columns-0 .gallery-item {
-    width: 32% !important;
+  .interior .wp-block-columns .wp-block-columns h2,
+  .interior .wp-block-columns .wp-block-columns h3,
+  .interior .wp-block-columns .wp-block-columns h4,
+  .interior .wp-block-columns .wp-block-columns h5,
+  .interior .wp-block-columns .wp-block-columns p {
+    padding-left: 80px;
   }
-}
-
-.interior .gallery-columns-0 .gallery-item img {
-  width: 100%;
-  height: auto;
 }
 
 .interior .wp-block-columns.intro {
@@ -3339,6 +3267,7 @@ aside li {
 }
 
 .footer-contact-form form .type-singlelinetext input,
+.footer-contact-form form .type-selectbox select,
 .footer-contact-form form .type-textarea textarea {
   background: transparent;
   border: none;
@@ -3626,18 +3555,21 @@ aside li {
 /* ------------------------
 	Forms & Form Elements
 ------------------------ */
-.contact aside, .contact-us aside {
+.contact aside,
+.contact-us aside {
   display: none;
 }
 
-.contact .contact-content, .contact-us .contact-content {
+.contact .contact-content,
+.contact-us .contact-content {
   width: 100%;
   padding-bottom: 50px;
   text-align: left;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .contact-content, .contact-us .contact-content {
+  .contact .contact-content,
+  .contact-us .contact-content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3645,7 +3577,8 @@ aside li {
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .contact-content section, .contact-us .contact-content section {
+  .contact .contact-content section,
+  .contact-us .contact-content section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3654,36 +3587,42 @@ aside li {
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .contact-form, .contact-us .contact-form {
+  .contact .contact-form,
+  .contact-us .contact-form {
     width: 50%;
     padding-right: 50px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .office-info, .contact-us .office-info {
+  .contact .office-info,
+  .contact-us .office-info {
     width: 50%;
   }
 }
 
-.contact h2, .contact-us h2 {
+.contact h2,
+.contact-us h2 {
   font-size: 28px;
   font-size: 1.75rem;
   text-transform: none;
 }
 
-.contact .gmaps, .contact-us .gmaps {
+.contact .gmaps,
+.contact-us .gmaps {
   width: 100%;
   margin-bottom: 16px;
 }
 
-.contact .gmaps iframe, .contact-us .gmaps iframe {
+.contact .gmaps iframe,
+.contact-us .gmaps iframe {
   width: 100%;
   height: 400px;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .contact-information, .contact-us .contact-information {
+  .contact .contact-information,
+  .contact-us .contact-information {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3692,7 +3631,8 @@ aside li {
 
 @media only screen and (min-width: 768px) {
   .contact .contact-information > div,
-  .contact .contact-information > address, .contact-us .contact-information > div,
+  .contact .contact-information > address,
+  .contact-us .contact-information > div,
   .contact-us .contact-information > address {
     font-size: 14px;
     font-size: 0.875rem;
@@ -3702,35 +3642,41 @@ aside li {
 
 @media only screen and (min-width: 1060px) {
   .contact .contact-information > div,
-  .contact .contact-information > address, .contact-us .contact-information > div,
+  .contact .contact-information > address,
+  .contact-us .contact-information > div,
   .contact-us .contact-information > address {
     font-size: 16px;
     font-size: 1rem;
   }
 }
 
-.contact .location-details, .contact-us .location-details {
+.contact .location-details,
+.contact-us .location-details {
   width: 100%;
   padding-bottom: 20px;
 }
 
-.contact .location-details span, .contact-us .location-details span {
+.contact .location-details span,
+.contact-us .location-details span {
   display: block;
 }
 
-.contact .practice, .contact-us .practice {
+.contact .practice,
+.contact-us .practice {
   font-weight: bold;
   font-size: 1.2em;
   color: #126abf;
 }
 
-.contact .location-hours .hours-each, .contact-us .location-hours .hours-each {
+.contact .location-hours .hours-each,
+.contact-us .location-hours .hours-each {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contact .location-hours .hours-each > div, .contact-us .location-hours .hours-each > div {
+.contact .location-hours .hours-each > div,
+.contact-us .location-hours .hours-each > div {
   width: 50%;
 }
 
@@ -3756,20 +3702,21 @@ form .tel-inputtype {
 }
 
 form select {
+  font-family: montserrat, sans-serif;
+  font-weight: normal;
   width: 100%;
-  height: 38px;
+  height: 42px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  padding-left: 10px;
   border-radius: 0;
+  padding: 8px 6px;
+  color: #858688;
   margin-bottom: 16px;
   background: url("images/svg/select-arrow.svg");
   background-position: right 18px center;
   background-repeat: no-repeat;
   background-size: 17px 11px;
-  background-color: #f9f9f9;
-  border: 1px solid #c9c9c9;
 }
 
 form textarea {
@@ -3798,6 +3745,7 @@ form .button {
 }
 
 form .type-singlelinetext label,
+form .type-selectbox label,
 form .type-textarea label {
   display: block;
   position: absolute;
@@ -3809,14 +3757,21 @@ form .type-textarea label {
 }
 
 form .type-singlelinetext input,
+form .type-selectbox input,
 form .type-textarea input {
   margin-bottom: 1em;
   padding: 1em;
 }
 
-form .type-singlelinetext input, form .type-singlelinetext textarea,
+form .type-singlelinetext input,
+form .type-singlelinetext textarea,
+form .type-singlelinetext select,
+form .type-selectbox input,
+form .type-selectbox textarea,
+form .type-selectbox select,
 form .type-textarea input,
-form .type-textarea textarea {
+form .type-textarea textarea,
+form .type-textarea select {
   border-radius: 0;
   border: none;
   border-bottom: 2px solid #126abf;
@@ -3824,12 +3779,15 @@ form .type-textarea textarea {
 
 form .type-singlelinetext input,
 form .type-singlelinetext textarea,
+form .type-selectbox input,
+form .type-selectbox textarea,
 form .type-textarea input,
 form .type-textarea textarea {
   padding: 8px 10px;
 }
 
 form .type-singlelinetext ::-webkit-input-placeholder,
+form .type-selectbox ::-webkit-input-placeholder,
 form .type-textarea ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #858688;
@@ -3838,6 +3796,7 @@ form .type-textarea ::-webkit-input-placeholder {
 }
 
 form .type-singlelinetext :-moz-placeholder,
+form .type-selectbox :-moz-placeholder,
 form .type-textarea :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #858688;
@@ -3847,6 +3806,7 @@ form .type-textarea :-moz-placeholder {
 }
 
 form .type-singlelinetext ::-moz-placeholder,
+form .type-selectbox ::-moz-placeholder,
 form .type-textarea ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #858688;
@@ -3856,6 +3816,7 @@ form .type-textarea ::-moz-placeholder {
 }
 
 form .type-singlelinetext :-ms-input-placeholder,
+form .type-selectbox :-ms-input-placeholder,
 form .type-textarea :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #858688;
@@ -3874,8 +3835,8 @@ form .submit-btn {
   background: #126abf;
   color: #ffffff;
   border-radius: 50px;
-  -webkit-transition: all .15s ease-in;
-  transition: all .15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -3897,38 +3858,48 @@ form .stopyenoh {
 }
 
 @-webkit-keyframes shake {
-  10%, 90% {
+  10%,
+  90% {
     -webkit-transform: translate3d(-3px, 0, 0);
             transform: translate3d(-3px, 0, 0);
   }
-  20%, 80% {
+  20%,
+  80% {
     -webkit-transform: translate3d(4px, 0, 0);
             transform: translate3d(4px, 0, 0);
   }
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     -webkit-transform: translate3d(-8px, 0, 0);
             transform: translate3d(-8px, 0, 0);
   }
-  40%, 60% {
+  40%,
+  60% {
     -webkit-transform: translate3d(8px, 0, 0);
             transform: translate3d(8px, 0, 0);
   }
 }
 
 @keyframes shake {
-  10%, 90% {
+  10%,
+  90% {
     -webkit-transform: translate3d(-3px, 0, 0);
             transform: translate3d(-3px, 0, 0);
   }
-  20%, 80% {
+  20%,
+  80% {
     -webkit-transform: translate3d(4px, 0, 0);
             transform: translate3d(4px, 0, 0);
   }
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     -webkit-transform: translate3d(-8px, 0, 0);
             transform: translate3d(-8px, 0, 0);
   }
-  40%, 60% {
+  40%,
+  60% {
     -webkit-transform: translate3d(8px, 0, 0);
             transform: translate3d(8px, 0, 0);
   }
@@ -3939,10 +3910,10 @@ form .stopyenoh {
 }
 
 .error {
-  border: 1px solid #E74C3C !important;
+  border: 1px solid #e74c3c !important;
   outline: none !important;
-  -webkit-box-shadow: 0 0 10px #E74C3C !important;
-          box-shadow: 0 0 10px #E74C3C !important;
+  -webkit-box-shadow: 0 0 10px #e74c3c !important;
+          box-shadow: 0 0 10px #e74c3c !important;
   -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
           animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   -webkit-transform: translate3d(0, 0, 0);
@@ -4956,6 +4927,283 @@ span.error {
 /* ------------------------
 	Custom Page
 ------------------------ */
+/* Cataract Quiz */
+.cataract-candidacy-quiz .content form {
+  margin-bottom: 40px;
+}
+
+.cataract-candidacy-quiz .content form .field-6,
+.cataract-candidacy-quiz .content form .field-7,
+.cataract-candidacy-quiz .content form .field-8,
+.cataract-candidacy-quiz .content form .field-9,
+.cataract-candidacy-quiz .content form .field-10,
+.cataract-candidacy-quiz .content form .field-11,
+.cataract-candidacy-quiz .content form .field-12,
+.cataract-candidacy-quiz .content form .field-13,
+.cataract-candidacy-quiz .content form .field-6 {
+  padding: 10px;
+  padding-top: 380px;
+  background-color: #f8fbfd;
+  padding-bottom: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .content form .field-6,
+  .cataract-candidacy-quiz .content form .field-7,
+  .cataract-candidacy-quiz .content form .field-8,
+  .cataract-candidacy-quiz .content form .field-9,
+  .cataract-candidacy-quiz .content form .field-10,
+  .cataract-candidacy-quiz .content form .field-11,
+  .cataract-candidacy-quiz .content form .field-12,
+  .cataract-candidacy-quiz .content form .field-13,
+  .cataract-candidacy-quiz .content form .field-6 {
+    background-color: #f8fbfd;
+    padding: 40px;
+    padding-bottom: 100px;
+    padding-top: 80px;
+    margin-bottom: 40px;
+    min-height: 400px;
+    padding-left: 440px;
+  }
+}
+
+.cataract-candidacy-quiz .content form .type-checkboxgroup > div {
+  padding-top: 20px;
+}
+
+.cataract-candidacy-quiz .content form .type-checkboxgroup div label {
+  font-size: 22px;
+}
+
+.cataract-candidacy-quiz .content form input[type="checkbox"] {
+  background: transparent !important;
+  border: 2px solid #858688 !important;
+  position: relative;
+  top: 3px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.cataract-candidacy-quiz .field-6,
+.cataract-candidacy-quiz .field-7,
+.cataract-candidacy-quiz .field-8,
+.cataract-candidacy-quiz .field-9,
+.cataract-candidacy-quiz .field-10,
+.cataract-candidacy-quiz .field-11,
+.cataract-candidacy-quiz .field-12,
+.cataract-candidacy-quiz .field-13,
+.cataract-candidacy-quiz .field-6 {
+  position: relative;
+}
+
+.cataract-candidacy-quiz .field-6:before,
+.cataract-candidacy-quiz .field-7:before,
+.cataract-candidacy-quiz .field-8:before,
+.cataract-candidacy-quiz .field-9:before,
+.cataract-candidacy-quiz .field-10:before,
+.cataract-candidacy-quiz .field-11:before,
+.cataract-candidacy-quiz .field-12:before,
+.cataract-candidacy-quiz .field-13:before,
+.cataract-candidacy-quiz .field-6:before {
+  content: "";
+  top: 20px;
+  left: 0px;
+  position: absolute;
+  width: 348px;
+  height: 348px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .field-6:before,
+  .cataract-candidacy-quiz .field-7:before,
+  .cataract-candidacy-quiz .field-8:before,
+  .cataract-candidacy-quiz .field-9:before,
+  .cataract-candidacy-quiz .field-10:before,
+  .cataract-candidacy-quiz .field-11:before,
+  .cataract-candidacy-quiz .field-12:before,
+  .cataract-candidacy-quiz .field-13:before,
+  .cataract-candidacy-quiz .field-6:before {
+    left: 20px;
+  }
+}
+
+.cataract-candidacy-quiz .field-6 label,
+.cataract-candidacy-quiz .field-7 label,
+.cataract-candidacy-quiz .field-8 label,
+.cataract-candidacy-quiz .field-9 label,
+.cataract-candidacy-quiz .field-10 label,
+.cataract-candidacy-quiz .field-11 label,
+.cataract-candidacy-quiz .field-12 label,
+.cataract-candidacy-quiz .field-13 label,
+.cataract-candidacy-quiz .field-6 label {
+  font-size: 30px;
+}
+
+.cataract-candidacy-quiz .field-6 label div,
+.cataract-candidacy-quiz .field-7 label div,
+.cataract-candidacy-quiz .field-8 label div,
+.cataract-candidacy-quiz .field-9 label div,
+.cataract-candidacy-quiz .field-10 label div,
+.cataract-candidacy-quiz .field-11 label div,
+.cataract-candidacy-quiz .field-12 label div,
+.cataract-candidacy-quiz .field-13 label div,
+.cataract-candidacy-quiz .field-6 label div {
+  border: 1px solid pink;
+  padding-left: 20px;
+}
+
+.cataract-candidacy-quiz .field-6::before {
+  background: url("images/cataract-quiz/question-1.png");
+}
+
+.cataract-candidacy-quiz .field-7::before {
+  background: url("images/cataract-quiz/question-2.png");
+}
+
+.cataract-candidacy-quiz .field-8::before {
+  background: url("images/cataract-quiz/question-3.png");
+}
+
+.cataract-candidacy-quiz .field-9::before {
+  background: url("images/cataract-quiz/question-4.png");
+}
+
+.cataract-candidacy-quiz .field-10::before {
+  background: url("images/cataract-quiz/question-5.png");
+}
+
+.cataract-candidacy-quiz .field-11::before {
+  background: url("images/cataract-quiz/question-6.png");
+}
+
+.cataract-candidacy-quiz .field-12::before {
+  background: url("images/cataract-quiz/question-7.png");
+}
+
+.cataract-candidacy-quiz .field-13::before {
+  background: url("images/cataract-quiz/question-8.png");
+}
+
+.cataract-candidacy-quiz .field-6::before {
+  background: url("images/cataract-quiz/question-1.png");
+}
+
+.cataract-candidacy-quiz .field-6::after {
+  content: "Question 1";
+  position: absolute;
+  top: 345px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .field-6::after {
+    top: 30px;
+  }
+}
+
+.cataract-candidacy-quiz .field-7::after {
+  content: "Question 2";
+  position: absolute;
+  top: 345px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .field-7::after {
+    top: 30px;
+  }
+}
+
+.cataract-candidacy-quiz .field-8::after {
+  content: "Question 3";
+  position: absolute;
+  top: 345px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .field-8::after {
+    top: 30px;
+  }
+}
+
+.cataract-candidacy-quiz .field-9::after {
+  content: "Question 4";
+  position: absolute;
+  top: 345px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .field-9::after {
+    top: 30px;
+  }
+}
+
+.cataract-candidacy-quiz .field-10::after {
+  content: "Question 5";
+  position: absolute;
+  top: 345px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .field-10::after {
+    top: 30px;
+  }
+}
+
+.cataract-candidacy-quiz .field-11::after {
+  content: "Question 6";
+  position: absolute;
+  top: 345px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .field-11::after {
+    top: 30px;
+  }
+}
+
+.cataract-candidacy-quiz .field-12::after {
+  content: "Question 7";
+  position: absolute;
+  top: 345px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .field-12::after {
+    top: 30px;
+  }
+}
+
+.cataract-candidacy-quiz .field-13::after {
+  content: "Question 8";
+  position: absolute;
+  top: 345px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cataract-candidacy-quiz .field-13::after {
+    top: 30px;
+  }
+}
+
+.cataract-candidacy-quiz .field-14 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cataract-candidacy-quiz .field-15,
+.cataract-candidacy-quiz .field-16,
+.cataract-candidacy-quiz .field-17,
+.cataract-candidacy-quiz .type-submitbutton {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cataract-candidacy-quiz .footer-contact-form,
+.cataract-candidacy-quiz .the-author,
+.cataract-candidacy-quiz .sticky-contact {
+  display: none;
+}
+
 /* ==|== print styles =======================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r

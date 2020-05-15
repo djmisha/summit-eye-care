@@ -17,23 +17,18 @@
         }
     }
 
-    /* What Is This?  */
-    .gallery-columns-0 {
-        @include media($tablet) {
-            display: flex !important;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .gallery-item {
+    /*  Padding for Content inslide a columns  */
+    .wp-block-columns .wp-block-columns {
+        h2,
+        h3,
+        h4,
+        h5,
+        p {
             @include media($tablet) {
-                width: 48% !important;
+                padding-left: 40px;
             }
             @include media($desktop) {
-                width: 32% !important;
-            }
-            img {
-                width: 100%;
-                height: auto;
+                padding-left: 80px;
             }
         }
     }
@@ -257,4 +252,25 @@
             }
         }
     }
+
+    /* Gallery Styling to Check  */
+    //  .gallery-columns-0 {
+    //     @include media($tablet) {
+    //         display: flex !important;
+    //         flex-wrap: wrap;
+    //         justify-content: space-between;
+    //     }
+    //     .gallery-item {
+    //         @include media($tablet) {
+    //             width: 48% !important;
+    //         }
+    //         @include media($desktop) {
+    //             width: 32% !important;
+    //         }
+    //         img {
+    //             width: 100%;
+    //             height: auto;
+    //         }
+    //     }
+    // }
 }

@@ -1,0 +1,200 @@
+/* Cataract Quiz */
+
+.cataract-candidacy-quiz {
+    .content form {
+        margin-bottom: 40px;
+
+        .field-6,
+        .field-7,
+        .field-8,
+        .field-9,
+        .field-10,
+        .field-11,
+        .field-12,
+        .field-13,
+        .field-6 {
+            padding: 10px;
+            padding-top: 380px;
+            background-color: #f8fbfd;
+            padding-bottom: 80px;
+            @include media($tablet) {
+                background-color: #f8fbfd;
+                padding: 40px;
+                padding-bottom: 100px;
+                padding-top: 80px;
+                margin-bottom: 40px;
+                min-height: 400px;
+                padding-left: 440px;
+            }
+        }
+        label {
+            // div label {
+            // font-size: 25px !important;
+            // }
+            @include media($tablet) {
+                // font-size: 30px;
+            }
+        }
+        .type-checkboxgroup {
+            > div {
+                padding-top: 20px;
+            }
+            div label {
+                font-size: 22px;
+            }
+        }
+        input[type="checkbox"] {
+            background: transparent !important;
+            border: 2px solid $secondaryColor !important;
+            // border-radius: 0 !important;
+            position: relative;
+            top: 3px;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+    }
+
+    .field-6,
+    .field-7,
+    .field-8,
+    .field-9,
+    .field-10,
+    .field-11,
+    .field-12,
+    .field-13,
+    .field-6 {
+        position: relative;
+        &:before {
+            content: "";
+            top: 20px;
+            left: 0px;
+            position: absolute;
+            width: 348px;
+            height: 348px;
+            @include media($tablet) {
+                left: 20px;
+            }
+        }
+        label {
+            font-size: 30px;
+            div {
+                border: 1px solid pink;
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .field-6::before {
+        background: url("images/cataract-quiz/question-1.png");
+    }
+    .field-7::before {
+        background: url("images/cataract-quiz/question-2.png");
+    }
+    .field-8::before {
+        background: url("images/cataract-quiz/question-3.png");
+    }
+    .field-9::before {
+        background: url("images/cataract-quiz/question-4.png");
+    }
+    .field-10::before {
+        background: url("images/cataract-quiz/question-5.png");
+    }
+    .field-11::before {
+        background: url("images/cataract-quiz/question-6.png");
+    }
+    .field-12::before {
+        background: url("images/cataract-quiz/question-7.png");
+    }
+    .field-13::before {
+        background: url("images/cataract-quiz/question-8.png");
+    }
+    .field-6::before {
+        background: url("images/cataract-quiz/question-1.png");
+    }
+
+    .field-6::after {
+        content: "Question 1";
+        position: absolute;
+        top: 345px;
+        @include media($tablet) {
+            top: 30px;
+        }
+    }
+    .field-7::after {
+        content: "Question 2";
+        position: absolute;
+        top: 345px;
+        @include media($tablet) {
+            top: 30px;
+        }
+    }
+    .field-8::after {
+        content: "Question 3";
+        position: absolute;
+        top: 345px;
+        @include media($tablet) {
+            top: 30px;
+        }
+    }
+    .field-9::after {
+        content: "Question 4";
+        position: absolute;
+        top: 345px;
+        @include media($tablet) {
+            top: 30px;
+        }
+    }
+    .field-10::after {
+        content: "Question 5";
+        position: absolute;
+        top: 345px;
+        @include media($tablet) {
+            top: 30px;
+        }
+    }
+    .field-11::after {
+        content: "Question 6";
+        position: absolute;
+        top: 345px;
+        @include media($tablet) {
+            top: 30px;
+        }
+    }
+    .field-12::after {
+        content: "Question 7";
+        position: absolute;
+        top: 345px;
+        @include media($tablet) {
+            top: 30px;
+        }
+    }
+    .field-13::after {
+        content: "Question 8";
+        position: absolute;
+        top: 345px;
+        @include media($tablet) {
+            top: 30px;
+        }
+    }
+
+    .field-14 {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .field-15,
+    .field-16,
+    .field-17,
+    .type-submitbutton {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .footer-contact-form,
+    // .page-435
+    .the-author,
+    .sticky-contact {
+        display: none;
+    }
+}

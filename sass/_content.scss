@@ -46,6 +46,7 @@
     h1,
     .headline {
         color: #fff;
+        margin-bottom: 10px;
         @include media($tablet) {
             margin-bottom: 30px;
         }
@@ -282,59 +283,5 @@
                 content: "-";
             }
         }
-    }
-}
-
-/* Cataract Quiz */
-
-.cataract-candidacy-quiz {
-    .content form {
-        margin-bottom: 40px;
-        > div.field-required {
-            background-color: #f8fbfd;
-            padding: 40px;
-            padding-bottom: 100px;
-            margin-bottom: 40px;
-            min-height: 400px;
-            @include media($desktop) {
-                padding-left: 440px;
-            }
-        }
-        label {
-            color: #565759;
-            font-size: 20px;
-            @include media($tablet) {
-                // font-size: 30px;
-            }
-        }
-        input[type="checkbox"] {
-            background: transparent !important;
-            border: 1px solid $secondaryColor !important;
-        }
-    }
-    .field-6,
-    .field-7,
-    .field-8,
-    .field-9,
-    .field-10,
-    .field-11,
-    .field-12,
-    .field-13,
-    .field-6 {
-        position: relative;
-        &:before {
-            content: "";
-            top: 20px;
-            left: 20px;
-            position: absolute;
-            background: url("images/cataract-quiz/question-1.png");
-            width: 348px;
-            height: 348px;
-        }
-    }
-
-    .footer-contact-form,
-    .sticky-contact {
-        display: none;
     }
 }

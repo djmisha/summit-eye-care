@@ -16,7 +16,7 @@
     <div class="taglines">
         <span class="taglines-title"><?php the_field('headline'); ?></span>
         <span class="taglines-subtitle"><?php the_field('subheadline'); ?></span>
-        <a href="<?php bloginfo('url'); ?>/contact/" class="button" rel="nofollow">Schedule a Consultation</a>
+        <a href="<?php bloginfo('url'); ?>/contact-us/" class="button" rel="nofollow">Schedule a Consultation</a>
     </div>
 </div>
 
