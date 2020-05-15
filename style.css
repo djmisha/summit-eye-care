@@ -2539,21 +2539,21 @@ main,
 }
 
 @media only screen and (min-width: 768px) {
-  .interior .wp-block-columns .wp-block-columns h2,
-  .interior .wp-block-columns .wp-block-columns h3,
-  .interior .wp-block-columns .wp-block-columns h4,
-  .interior .wp-block-columns .wp-block-columns h5,
-  .interior .wp-block-columns .wp-block-columns p {
+  .interior .wp-block-columns .wp-block-column h2,
+  .interior .wp-block-columns .wp-block-column h3,
+  .interior .wp-block-columns .wp-block-column h4,
+  .interior .wp-block-columns .wp-block-column h5,
+  .interior .wp-block-columns .wp-block-column p {
     padding-left: 40px;
   }
 }
 
 @media only screen and (min-width: 1060px) {
-  .interior .wp-block-columns .wp-block-columns h2,
-  .interior .wp-block-columns .wp-block-columns h3,
-  .interior .wp-block-columns .wp-block-columns h4,
-  .interior .wp-block-columns .wp-block-columns h5,
-  .interior .wp-block-columns .wp-block-columns p {
+  .interior .wp-block-columns .wp-block-column h2,
+  .interior .wp-block-columns .wp-block-column h3,
+  .interior .wp-block-columns .wp-block-column h4,
+  .interior .wp-block-columns .wp-block-column h5,
+  .interior .wp-block-columns .wp-block-column p {
     padding-left: 80px;
   }
 }
