@@ -131,7 +131,7 @@
 
                             <?php if(have_rows('locations', 'option')): ?>
                             <?php while(have_rows('locations', 'option')): the_row(); 
-									$applink = Get_bloginfo('url') .'/contact/';
+									$applink = Get_bloginfo('url') .'/contac-us/';
 
 
 									?>
