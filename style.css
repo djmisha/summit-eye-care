@@ -2544,7 +2544,7 @@ main,
   .interior .wp-block-columns .wp-block-column h4,
   .interior .wp-block-columns .wp-block-column h5,
   .interior .wp-block-columns .wp-block-column p {
-    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -2554,7 +2554,7 @@ main,
   .interior .wp-block-columns .wp-block-column h4,
   .interior .wp-block-columns .wp-block-column h5,
   .interior .wp-block-columns .wp-block-column p {
-    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
