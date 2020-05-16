@@ -4928,19 +4928,19 @@ span.error {
 	Custom Page
 ------------------------ */
 /* Cataract Quiz */
-.cataract-candidacy-quiz .content form {
+.page-435 .content form {
   margin-bottom: 40px;
 }
 
-.cataract-candidacy-quiz .content form .field-6,
-.cataract-candidacy-quiz .content form .field-7,
-.cataract-candidacy-quiz .content form .field-8,
-.cataract-candidacy-quiz .content form .field-9,
-.cataract-candidacy-quiz .content form .field-10,
-.cataract-candidacy-quiz .content form .field-11,
-.cataract-candidacy-quiz .content form .field-12,
-.cataract-candidacy-quiz .content form .field-13,
-.cataract-candidacy-quiz .content form .field-6 {
+.page-435 .content form .field-6,
+.page-435 .content form .field-7,
+.page-435 .content form .field-8,
+.page-435 .content form .field-9,
+.page-435 .content form .field-10,
+.page-435 .content form .field-11,
+.page-435 .content form .field-12,
+.page-435 .content form .field-13,
+.page-435 .content form .field-6 {
   padding: 10px;
   padding-top: 380px;
   background-color: #f8fbfd;
@@ -4948,15 +4948,15 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .content form .field-6,
-  .cataract-candidacy-quiz .content form .field-7,
-  .cataract-candidacy-quiz .content form .field-8,
-  .cataract-candidacy-quiz .content form .field-9,
-  .cataract-candidacy-quiz .content form .field-10,
-  .cataract-candidacy-quiz .content form .field-11,
-  .cataract-candidacy-quiz .content form .field-12,
-  .cataract-candidacy-quiz .content form .field-13,
-  .cataract-candidacy-quiz .content form .field-6 {
+  .page-435 .content form .field-6,
+  .page-435 .content form .field-7,
+  .page-435 .content form .field-8,
+  .page-435 .content form .field-9,
+  .page-435 .content form .field-10,
+  .page-435 .content form .field-11,
+  .page-435 .content form .field-12,
+  .page-435 .content form .field-13,
+  .page-435 .content form .field-6 {
     background-color: #f8fbfd;
     padding: 40px;
     padding-bottom: 100px;
@@ -4967,15 +4967,15 @@ span.error {
   }
 }
 
-.cataract-candidacy-quiz .content form .type-checkboxgroup > div {
+.page-435 .content form .type-checkboxgroup > div {
   padding-top: 20px;
 }
 
-.cataract-candidacy-quiz .content form .type-checkboxgroup div label {
+.page-435 .content form .type-checkboxgroup div label {
   font-size: 22px;
 }
 
-.cataract-candidacy-quiz .content form input[type="checkbox"] {
+.page-435 .content form input[type="checkbox"] {
   background: transparent !important;
   border: 2px solid #858688 !important;
   position: relative;
@@ -4985,27 +4985,27 @@ span.error {
   margin-right: 10px;
 }
 
-.cataract-candidacy-quiz .field-6,
-.cataract-candidacy-quiz .field-7,
-.cataract-candidacy-quiz .field-8,
-.cataract-candidacy-quiz .field-9,
-.cataract-candidacy-quiz .field-10,
-.cataract-candidacy-quiz .field-11,
-.cataract-candidacy-quiz .field-12,
-.cataract-candidacy-quiz .field-13,
-.cataract-candidacy-quiz .field-6 {
+.page-435 .field-6,
+.page-435 .field-7,
+.page-435 .field-8,
+.page-435 .field-9,
+.page-435 .field-10,
+.page-435 .field-11,
+.page-435 .field-12,
+.page-435 .field-13,
+.page-435 .field-6 {
   position: relative;
 }
 
-.cataract-candidacy-quiz .field-6:before,
-.cataract-candidacy-quiz .field-7:before,
-.cataract-candidacy-quiz .field-8:before,
-.cataract-candidacy-quiz .field-9:before,
-.cataract-candidacy-quiz .field-10:before,
-.cataract-candidacy-quiz .field-11:before,
-.cataract-candidacy-quiz .field-12:before,
-.cataract-candidacy-quiz .field-13:before,
-.cataract-candidacy-quiz .field-6:before {
+.page-435 .field-6:before,
+.page-435 .field-7:before,
+.page-435 .field-8:before,
+.page-435 .field-9:before,
+.page-435 .field-10:before,
+.page-435 .field-11:before,
+.page-435 .field-12:before,
+.page-435 .field-13:before,
+.page-435 .field-6:before {
   content: "";
   top: 20px;
   left: 0px;
@@ -5015,192 +5015,192 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .field-6:before,
-  .cataract-candidacy-quiz .field-7:before,
-  .cataract-candidacy-quiz .field-8:before,
-  .cataract-candidacy-quiz .field-9:before,
-  .cataract-candidacy-quiz .field-10:before,
-  .cataract-candidacy-quiz .field-11:before,
-  .cataract-candidacy-quiz .field-12:before,
-  .cataract-candidacy-quiz .field-13:before,
-  .cataract-candidacy-quiz .field-6:before {
+  .page-435 .field-6:before,
+  .page-435 .field-7:before,
+  .page-435 .field-8:before,
+  .page-435 .field-9:before,
+  .page-435 .field-10:before,
+  .page-435 .field-11:before,
+  .page-435 .field-12:before,
+  .page-435 .field-13:before,
+  .page-435 .field-6:before {
     left: 20px;
   }
 }
 
-.cataract-candidacy-quiz .field-6 label,
-.cataract-candidacy-quiz .field-7 label,
-.cataract-candidacy-quiz .field-8 label,
-.cataract-candidacy-quiz .field-9 label,
-.cataract-candidacy-quiz .field-10 label,
-.cataract-candidacy-quiz .field-11 label,
-.cataract-candidacy-quiz .field-12 label,
-.cataract-candidacy-quiz .field-13 label,
-.cataract-candidacy-quiz .field-6 label {
+.page-435 .field-6 label,
+.page-435 .field-7 label,
+.page-435 .field-8 label,
+.page-435 .field-9 label,
+.page-435 .field-10 label,
+.page-435 .field-11 label,
+.page-435 .field-12 label,
+.page-435 .field-13 label,
+.page-435 .field-6 label {
   font-size: 30px;
 }
 
-.cataract-candidacy-quiz .field-6 label div,
-.cataract-candidacy-quiz .field-7 label div,
-.cataract-candidacy-quiz .field-8 label div,
-.cataract-candidacy-quiz .field-9 label div,
-.cataract-candidacy-quiz .field-10 label div,
-.cataract-candidacy-quiz .field-11 label div,
-.cataract-candidacy-quiz .field-12 label div,
-.cataract-candidacy-quiz .field-13 label div,
-.cataract-candidacy-quiz .field-6 label div {
+.page-435 .field-6 label div,
+.page-435 .field-7 label div,
+.page-435 .field-8 label div,
+.page-435 .field-9 label div,
+.page-435 .field-10 label div,
+.page-435 .field-11 label div,
+.page-435 .field-12 label div,
+.page-435 .field-13 label div,
+.page-435 .field-6 label div {
   border: 1px solid pink;
   padding-left: 20px;
 }
 
-.cataract-candidacy-quiz .field-6::before {
+.page-435 .field-6::before {
   background: url("images/cataract-quiz/question-1.png");
 }
 
-.cataract-candidacy-quiz .field-7::before {
+.page-435 .field-7::before {
   background: url("images/cataract-quiz/question-2.png");
 }
 
-.cataract-candidacy-quiz .field-8::before {
+.page-435 .field-8::before {
   background: url("images/cataract-quiz/question-3.png");
 }
 
-.cataract-candidacy-quiz .field-9::before {
+.page-435 .field-9::before {
   background: url("images/cataract-quiz/question-4.png");
 }
 
-.cataract-candidacy-quiz .field-10::before {
+.page-435 .field-10::before {
   background: url("images/cataract-quiz/question-5.png");
 }
 
-.cataract-candidacy-quiz .field-11::before {
+.page-435 .field-11::before {
   background: url("images/cataract-quiz/question-6.png");
 }
 
-.cataract-candidacy-quiz .field-12::before {
+.page-435 .field-12::before {
   background: url("images/cataract-quiz/question-7.png");
 }
 
-.cataract-candidacy-quiz .field-13::before {
+.page-435 .field-13::before {
   background: url("images/cataract-quiz/question-8.png");
 }
 
-.cataract-candidacy-quiz .field-6::before {
+.page-435 .field-6::before {
   background: url("images/cataract-quiz/question-1.png");
 }
 
-.cataract-candidacy-quiz .field-6::after {
+.page-435 .field-6::after {
   content: "Question 1";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .field-6::after {
+  .page-435 .field-6::after {
     top: 30px;
   }
 }
 
-.cataract-candidacy-quiz .field-7::after {
+.page-435 .field-7::after {
   content: "Question 2";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .field-7::after {
+  .page-435 .field-7::after {
     top: 30px;
   }
 }
 
-.cataract-candidacy-quiz .field-8::after {
+.page-435 .field-8::after {
   content: "Question 3";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .field-8::after {
+  .page-435 .field-8::after {
     top: 30px;
   }
 }
 
-.cataract-candidacy-quiz .field-9::after {
+.page-435 .field-9::after {
   content: "Question 4";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .field-9::after {
+  .page-435 .field-9::after {
     top: 30px;
   }
 }
 
-.cataract-candidacy-quiz .field-10::after {
+.page-435 .field-10::after {
   content: "Question 5";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .field-10::after {
+  .page-435 .field-10::after {
     top: 30px;
   }
 }
 
-.cataract-candidacy-quiz .field-11::after {
+.page-435 .field-11::after {
   content: "Question 6";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .field-11::after {
+  .page-435 .field-11::after {
     top: 30px;
   }
 }
 
-.cataract-candidacy-quiz .field-12::after {
+.page-435 .field-12::after {
   content: "Question 7";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .field-12::after {
+  .page-435 .field-12::after {
     top: 30px;
   }
 }
 
-.cataract-candidacy-quiz .field-13::after {
+.page-435 .field-13::after {
   content: "Question 8";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .cataract-candidacy-quiz .field-13::after {
+  .page-435 .field-13::after {
     top: 30px;
   }
 }
 
-.cataract-candidacy-quiz .field-14 {
+.page-435 .field-14 {
   text-align: center;
   margin-top: 40px;
 }
 
-.cataract-candidacy-quiz .field-15,
-.cataract-candidacy-quiz .field-16,
-.cataract-candidacy-quiz .field-17,
-.cataract-candidacy-quiz .type-submitbutton {
+.page-435 .field-15,
+.page-435 .field-16,
+.page-435 .field-17,
+.page-435 .type-submitbutton {
   max-width: 700px;
   margin: 0 auto;
 }
 
-.cataract-candidacy-quiz .footer-contact-form,
-.cataract-candidacy-quiz .the-author,
-.cataract-candidacy-quiz .sticky-contact {
+.page-435 .footer-contact-form,
+.page-435 .the-author,
+.page-435 .sticky-contact {
   display: none;
 }
 
