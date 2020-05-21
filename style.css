@@ -2182,6 +2182,7 @@ main,
 .site-crumbs .salacious-crumb {
   font-size: 12px;
   font-size: 0.75rem;
+  line-height: 14px;
   font-style: normal;
 }
 
@@ -2564,6 +2565,7 @@ main,
 }
 
 .interior .wp-block-embed iframe {
+  margin-top: 40px;
   max-width: 100%;
 }
 
