@@ -2255,7 +2255,7 @@ main,
 .interior .content p ~ h5,
 .interior .content p ~ h6 {
   color: #565759;
-  margin-top: 0px;
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 
@@ -2577,6 +2577,13 @@ main,
 .interior .wp-block-embed iframe {
   margin-top: 40px;
   max-width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .interior .wp-block-embed iframe {
+    width: 640px;
+    height: 360px;
+  }
 }
 
 .interior .wp-block-columns.intro {

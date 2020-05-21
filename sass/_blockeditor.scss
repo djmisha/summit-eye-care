@@ -41,6 +41,10 @@
         iframe {
             margin-top: 40px;
             max-width: 100%;
+            @include media($tablet) {
+                width: 640px;
+                height: 360px;
+            }
         }
     }
 
