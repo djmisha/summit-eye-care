@@ -78,7 +78,7 @@
         p ~ h5,
         p ~ h6 {
             color: #565759;
-            margin-top: 60px;
+            margin-top: 80px;
             margin-bottom: 30px;
         }
         h2 {
@@ -95,9 +95,9 @@
 
         ul {
             list-style: none;
-            margin: 4em 0px;
+            margin: 40px 0px;
             @include media($tablet) {
-                margin: 4em 40px;
+                margin: 40px 40px;
             }
             li {
                 position: relative;
@@ -117,9 +117,9 @@
         }
         ol {
             counter-reset: item;
-            margin: 4em 0px;
+            margin: 40px 0px;
             @include media($tablet) {
-                margin: 4em 40px;
+                margin: 40px 40px;
             }
             > li {
                 display: block;

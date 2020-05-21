@@ -2255,7 +2255,7 @@ main,
 .interior .content p ~ h5,
 .interior .content p ~ h6 {
   color: #565759;
-  margin-top: 60px;
+  margin-top: 80px;
   margin-bottom: 30px;
 }
 
@@ -2269,12 +2269,12 @@ main,
 
 .interior .content ul {
   list-style: none;
-  margin: 4em 0px;
+  margin: 40px 0px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content ul {
-    margin: 4em 40px;
+    margin: 40px 40px;
   }
 }
 
@@ -2297,12 +2297,12 @@ main,
 
 .interior .content ol {
   counter-reset: item;
-  margin: 4em 0px;
+  margin: 40px 0px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content ol {
-    margin: 4em 40px;
+    margin: 40px 40px;
   }
 }
 
