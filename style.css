@@ -2243,7 +2243,7 @@ main,
 .interior .content h5,
 .interior .content h6 {
   color: #565759;
-  margin-top: 80px;
+  margin-top: 0px;
   margin-bottom: 30px;
 }
 
@@ -3251,6 +3251,10 @@ aside li {
   }
 }
 
+.footer-contact-form form .type-selectbox.field-18.field-wrap {
+  width: 100%;
+}
+
 .footer-contact-form form .type-textarea {
   width: 100%;
 }
@@ -3280,22 +3284,33 @@ aside li {
   height: 50px;
 }
 
+.footer-contact-form form .type-selectbox select,
+.footer-contact-form form .type-selectbox input,
+.footer-contact-form form .type-selectbox textarea,
+.footer-contact-form form .type-singlelinetext select,
 .footer-contact-form form .type-singlelinetext input,
 .footer-contact-form form .type-singlelinetext textarea,
+.footer-contact-form form .type-textarea select,
 .footer-contact-form form .type-textarea input,
 .footer-contact-form form .type-textarea textarea {
   padding: 8px 10px;
 }
 
 @media only screen and (min-width: 768px) {
+  .footer-contact-form form .type-selectbox select,
+  .footer-contact-form form .type-selectbox input,
+  .footer-contact-form form .type-selectbox textarea,
+  .footer-contact-form form .type-singlelinetext select,
   .footer-contact-form form .type-singlelinetext input,
   .footer-contact-form form .type-singlelinetext textarea,
+  .footer-contact-form form .type-textarea select,
   .footer-contact-form form .type-textarea input,
   .footer-contact-form form .type-textarea textarea {
     margin-bottom: 45px;
   }
 }
 
+.footer-contact-form form .type-selectbox ::-webkit-input-placeholder,
 .footer-contact-form form .type-singlelinetext ::-webkit-input-placeholder,
 .footer-contact-form form .type-textarea ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
@@ -3304,6 +3319,7 @@ aside li {
   font-weight: normal;
 }
 
+.footer-contact-form form .type-selectbox :-moz-placeholder,
 .footer-contact-form form .type-singlelinetext :-moz-placeholder,
 .footer-contact-form form .type-textarea :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
@@ -3313,6 +3329,7 @@ aside li {
   opacity: 1;
 }
 
+.footer-contact-form form .type-selectbox ::-moz-placeholder,
 .footer-contact-form form .type-singlelinetext ::-moz-placeholder,
 .footer-contact-form form .type-textarea ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
@@ -3322,6 +3339,7 @@ aside li {
   opacity: 1;
 }
 
+.footer-contact-form form .type-selectbox :-ms-input-placeholder,
 .footer-contact-form form .type-singlelinetext :-ms-input-placeholder,
 .footer-contact-form form .type-textarea :-ms-input-placeholder {
   /* Internet Explorer 10-11 */

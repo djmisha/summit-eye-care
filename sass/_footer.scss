@@ -302,6 +302,9 @@
                 width: 46%;
             }
         }
+        .type-selectbox.field-18.field-wrap {
+            width: 100%;
+        }
         .type-textarea {
             width: 100%;
         }
@@ -326,8 +329,10 @@
         textarea {
             height: 50px;
         }
+        .type-selectbox,
         .type-singlelinetext,
         .type-textarea {
+            select,
             input,
             textarea {
                 // font-size: 14px;
