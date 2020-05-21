@@ -2249,13 +2249,13 @@ main,
   margin-bottom: 30px;
 }
 
-.interior .content h2 ~ p,
-.interior .content h3 ~ p,
-.interior .content h4 ~ p,
-.interior .content h5 ~ p,
-.interior .content h6 ~ p {
+.interior .content p ~ h2,
+.interior .content p ~ h3,
+.interior .content p ~ h4,
+.interior .content p ~ h5,
+.interior .content p ~ h6 {
   color: #565759;
-  margin-top: 80px;
+  margin-top: 0px;
   margin-bottom: 30px;
 }
 
