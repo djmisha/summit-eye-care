@@ -2249,7 +2249,7 @@ main,
   margin-bottom: 30px;
 }
 
-.interior .content p.last-update ~ h2 {
+.interior .content p.last-updated ~ h2 {
   margin-top: 0 !important;
 }
 
