@@ -2249,14 +2249,27 @@ main,
   margin-bottom: 30px;
 }
 
+.interior .content p.last-update ~ h2 {
+  margin-top: 0 !important;
+}
+
 .interior .content p ~ h2,
 .interior .content p ~ h3,
 .interior .content p ~ h4,
 .interior .content p ~ h5,
 .interior .content p ~ h6 {
   color: #565759;
-  margin-top: 80px;
   margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .interior .content p ~ h2,
+  .interior .content p ~ h3,
+  .interior .content p ~ h4,
+  .interior .content p ~ h5,
+  .interior .content p ~ h6 {
+    margin-top: 80px;
+  }
 }
 
 .interior .content h2:first-child {

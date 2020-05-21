@@ -72,14 +72,19 @@
             margin-top: 0px;
             margin-bottom: 30px;
         }
+        p.last-update ~ h2 {
+            margin-top: 0 !important;
+        }
         p ~ h2,
         p ~ h3,
         p ~ h4,
         p ~ h5,
         p ~ h6 {
             color: #565759;
-            margin-top: 80px;
             margin-bottom: 30px;
+            @include media($tablet) {
+                margin-top: 80px;
+            }
         }
         h2 {
             &:first-child {
