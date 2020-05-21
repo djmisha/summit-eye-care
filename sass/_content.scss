@@ -61,14 +61,22 @@
     display: block;
     text-align: left;
     margin-bottom: 40px;
-    h1 {
-    }
+
     .content {
         h2,
         h3,
         h4,
         h5,
         h6 {
+            color: #565759;
+            margin-top: 0px;
+            margin-bottom: 30px;
+        }
+        h2 ~ p,
+        h3 ~ p,
+        h4 ~ p,
+        h5 ~ p,
+        h6 ~ p {
             color: #565759;
             margin-top: 0px;
             margin-bottom: 30px;

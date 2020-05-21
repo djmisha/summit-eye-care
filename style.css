@@ -2249,6 +2249,16 @@ main,
   margin-bottom: 30px;
 }
 
+.interior .content h2 ~ p,
+.interior .content h3 ~ p,
+.interior .content h4 ~ p,
+.interior .content h5 ~ p,
+.interior .content h6 ~ p {
+  color: #565759;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
 .interior .content h2:first-child {
   margin-top: 0;
 }
