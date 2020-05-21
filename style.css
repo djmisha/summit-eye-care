@@ -2220,6 +2220,7 @@ main,
 .page-title .headline {
   color: #fff;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2558,6 +2559,14 @@ main,
   }
 }
 
+.interior .aligncenter {
+  text-align: center;
+}
+
+.interior .wp-block-embed iframe {
+  max-width: 100%;
+}
+
 .interior .wp-block-columns.intro {
   border-radius: 20px;
   background: #f8fbfd;
@@ -2659,6 +2668,7 @@ main,
     max-width: 500px;
     margin: 0 auto;
     margin-top: 40px;
+    margin-bottom: 60px;
   }
 }
 
