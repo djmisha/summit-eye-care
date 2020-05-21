@@ -2260,6 +2260,7 @@ main,
 .interior .content p ~ h6 {
   color: #565759;
   margin-bottom: 30px;
+  margin-top: 60px;
 }
 
 @media only screen and (min-width: 768px) {

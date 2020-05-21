@@ -82,6 +82,7 @@
         p ~ h6 {
             color: #565759;
             margin-bottom: 30px;
+            margin-top: 60px;
             @include media($tablet) {
                 margin-top: 80px;
             }
