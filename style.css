@@ -1964,7 +1964,7 @@ main,
             transform: translate(-50%, 0);
     opacity: 0;
     visibility: hidden;
-    width: 310px;
+    width: 400px;
     z-index: -5;
     -webkit-transition: 0.25s ease-in-out top, 0.25s ease-in-out opacity;
     transition: 0.25s ease-in-out top, 0.25s ease-in-out opacity;
