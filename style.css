@@ -1067,8 +1067,8 @@ h1 {
 
 h2,
 .headline {
-  font-size: 28px;
-  font-size: 1.75rem;
+  font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 @media only screen and (min-width: 1060px) {
@@ -1081,8 +1081,8 @@ h2,
 }
 
 h3 {
-  font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 @media only screen and (min-width: 1060px) {
@@ -1096,8 +1096,8 @@ h3 {
 h4,
 h5,
 h6 {
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 1060px) {
@@ -2400,7 +2400,7 @@ main,
   position: relative;
 }
 
-.contact .interior .last-updated {
+.page-131 .interior .last-updated {
   display: none;
 }
 
