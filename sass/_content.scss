@@ -188,6 +188,9 @@
     .last-updated {
         top: -30px;
         position: relative;
+        .contact & {
+            display: none;
+        }
     }
     .last-updated,
     .the-author {
@@ -228,7 +231,6 @@
         text-align: center;
         display: block;
         margin-bottom: 60px;
-        font-size: 40px;
     }
     ul {
         max-width: $ogFull;
@@ -278,7 +280,7 @@
         .question {
             // font-weight: 600;
             font-size: 20px;
-            margin-bottom: 30px;
+            // margin-bottom: 30px;
             padding-right: 30px;
             @include media($tablet) {
                 padding-right: 100px;
@@ -288,7 +290,7 @@
                 content: "+";
                 font-size: 60px;
                 position: absolute;
-                top: 50px;
+                top: 40px;
                 right: 20px;
                 @include media($tablet) {
                     // top: 70px;
@@ -298,6 +300,9 @@
             &.active:before {
                 content: "-";
             }
+        }
+        .answer {
+            padding-top: 30px;
         }
     }
 }

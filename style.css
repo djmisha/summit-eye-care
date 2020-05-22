@@ -1060,8 +1060,8 @@ h1 {
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 60px;
-    font-size: 3.75rem;
+    font-size: 50px;
+    font-size: 3.125rem;
   }
 }
 
@@ -1074,8 +1074,8 @@ h2,
 @media only screen and (min-width: 1060px) {
   h2,
   .headline {
-    font-size: 42px;
-    font-size: 2.625rem;
+    font-size: 35px;
+    font-size: 2.1875rem;
     line-height: 1.1em;
   }
 }
@@ -1087,8 +1087,8 @@ h3 {
 
 @media only screen and (min-width: 1060px) {
   h3 {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 1.1em;
   }
 }
@@ -2400,6 +2400,10 @@ main,
   position: relative;
 }
 
+.contact .interior .last-updated {
+  display: none;
+}
+
 .interior .last-updated,
 .interior .the-author {
   font-size: 14px;
@@ -2447,7 +2451,6 @@ main,
   text-align: center;
   display: block;
   margin-bottom: 60px;
-  font-size: 40px;
 }
 
 .faq-sc-wrap ul {
@@ -2505,7 +2508,6 @@ main,
 
 .faq-sc-wrap ul .question {
   font-size: 20px;
-  margin-bottom: 30px;
   padding-right: 30px;
 }
 
@@ -2520,7 +2522,7 @@ main,
   content: "+";
   font-size: 60px;
   position: absolute;
-  top: 50px;
+  top: 40px;
   right: 20px;
 }
 
@@ -2532,6 +2534,10 @@ main,
 
 .faq-sc-wrap ul .question.active:before {
   content: "-";
+}
+
+.faq-sc-wrap ul .answer {
+  padding-top: 30px;
 }
 
 /* ------------------------
@@ -4158,8 +4164,8 @@ span.error {
 
 @media only screen and (min-width: 1060px) {
   .home-welcome .taglines-title {
-    font-size: 75px;
-    line-height: 80px;
+    font-size: 65px;
+    line-height: 70px;
   }
 }
 
@@ -4178,8 +4184,8 @@ span.error {
 
 @media only screen and (min-width: 1060px) {
   .home-welcome .taglines-subtitle {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 28px;
+    line-height: 32px;
   }
 }
 
@@ -4218,8 +4224,8 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-whychoose p {
-    font-size: 35px;
-    line-height: 43px;
+    font-size: 30px;
+    line-height: 35px;
   }
 }
 
@@ -4240,8 +4246,8 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-reasons .headline {
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 30px;
+    line-height: 32px;
   }
 }
 
@@ -4311,7 +4317,7 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-surgery h2 {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
@@ -4388,7 +4394,7 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-doctors h2 {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 

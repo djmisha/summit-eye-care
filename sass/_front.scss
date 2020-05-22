@@ -91,8 +91,8 @@
                 line-height: 57px;
             }
             @include media($desktop) {
-                font-size: 75px;
-                line-height: 80px;
+                font-size: 65px;
+                line-height: 70px;
             }
         }
         &-subtitle {
@@ -104,8 +104,8 @@
                 line-height: 35px;
             }
             @include media($desktop) {
-                font-size: 30px;
-                line-height: 40px;
+                font-size: 28px;
+                line-height: 32px;
             }
         }
     }
@@ -134,8 +134,8 @@
         color: $primaryAccent;
         font-weight: 400;
         @include media($tablet) {
-            font-size: 35px;
-            line-height: 43px;
+            font-size: 30px;
+            line-height: 35px;
         }
     }
 }
@@ -151,8 +151,8 @@
         color: $primaryAccent;
         margin-top: 40px;
         @include media($tablet) {
-            font-size: 35px;
-            line-height: 35px;
+            font-size: 30px;
+            line-height: 32px;
         }
     }
     .subheadline {
@@ -200,7 +200,7 @@
         color: #565759;
         font-size: 30px;
         @include media($tablet) {
-            font-size: 50px;
+            font-size: 40px;
         }
     }
     .surgery {
@@ -262,7 +262,7 @@
         color: #fff;
         font-size: 30px;
         @include media($tablet) {
-            font-size: 50px;
+            font-size: 40px;
         }
     }
     h3,

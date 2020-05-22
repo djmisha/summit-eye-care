@@ -7,7 +7,7 @@ function __salaciouscrumb( $settings = array() , $print = true){
 		crumbsep
 		crumbwrap
 	*/
-	$settingsDefault = array('hometext'=>'Home','crumbsep'=>"<em class=\"crumb-sep\">/</em>" , 'crumbwrap' => "<p id=\"salaciousCrumb\" class=\"rm-component salacious-crumb\">%s</p>");
+	$settingsDefault = array('hometext'=>'Home','crumbsep'=>"<em class=\"crumb-sep\">/</em>" , 'crumbwrap' => "<p id=\"salaciousCrumb\" class=\"silvr-component salacious-crumb\">%s</p>");
 	//merge default with custom
 	$settingsDefault = apply_filters( 'rmc/crumb/settings' , $settingsDefault );
 
