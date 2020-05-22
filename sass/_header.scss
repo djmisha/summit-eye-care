@@ -20,10 +20,10 @@
     margin: 0 auto;
     margin-top: -25px;
     @include media($tablet) {
-        margin-top: -20px;
+        margin-top: -25px;
     }
     @include media($desktop) {
-        margin-top: -35px;
+        margin-top: -25px;
     }
     @include media($full) {
         max-width: $full;

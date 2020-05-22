@@ -1,276 +1,278 @@
-$menuHeight : 70px;
+$menuHeight: 50px;
 .not--device {
-	@include media($desktop) {
+    @include media($desktop) {
+        .menu-wrap {
+            @include font(15px, 1em);
+            letter-spacing: 1px;
+            display: block;
+            flex-grow: 1;
+            .main-menu {
+                font-size: 0;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                height: $menuHeight;
+                > li {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    height: 100%;
+                    //show sub-menus on hover
+                    &:hover {
+                        background: $primaryAlt;
+                        > .sub-menu {
+                            opacity: 1;
+                            visibility: visible;
+                            z-index: 50;
+                            top: $menuHeight; //same as height of .main-menu
+                        }
+                        // &:after {
+                        // 	content: '';
+                        // 	position: absolute;
+                        // 	bottom: 0;
+                        // 	left: 0;
+                        // 	width: 100%;
+                        // 	border-bottom: 5px solid $secondaryColor;
+                        // }
+                        > a {
+                            color: $lightColor;
+                        }
+                    }
+                    &.mega-menu {
+                        position: static;
+                    }
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        // padding: 34px 20px;
+                        padding: 22px 20px;
+                        transition: background 0.25s ease-in-out;
+                        color: $lightColor; //set this color
+                        position: relative;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
+                .mobile-only {
+                    display: none;
+                }
+            }
 
+            a {
+                @include font(
+                    15px,
+                    1em
+                ); //reset font-size for inline-block hack
+            }
+            .nav-dropdown-button {
+                // placeholder -- waiting for Seth's design
+                // border-top: 2px solid $secondaryAlt;
+                // border-right: 2px solid $secondaryAlt;
+                // position: absolute;
+                width: 6px;
+                height: 6px;
+                right: 6px;
+                top: 6px;
+                transform: rotate(45deg);
+            }
+            .sub-menu {
+                background: $primaryAlt; //set to your own background color
+                // border: 1px solid rgba(#000, .6); //for visual purposes.  can remove.
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%, 0);
+                opacity: 0;
+                visibility: hidden;
+                width: 310px;
+                z-index: -5;
+                transition: 0.25s ease-in-out top, 0.25s ease-in-out opacity;
+                padding-top: 10px;
 
-.menu-wrap {
-	@include font(15px, 1em);
-	letter-spacing: 1px;
-	display: block;
-	flex-grow: 1;
-	.main-menu {
-		font-size: 0;
-		text-align: center;
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		height: $menuHeight;
-		> li {
-			display: flex;
-			align-items: center;
-			position: relative;
-			height: 100%;
-			//show sub-menus on hover
-			&:hover{
-				background: $primaryAlt;
-				> .sub-menu{
-					opacity: 1;
-					visibility: visible;
-					z-index: 50;
-					top: $menuHeight; //same as height of .main-menu
-				}
-				// &:after {
-				// 	content: '';
-				// 	position: absolute;
-				// 	bottom: 0;
-				// 	left: 0;
-				// 	width: 100%;
-				// 	border-bottom: 5px solid $secondaryColor;
-				// }
-				> a {
-					color: $lightColor;
-				}
-			}
-			&.mega-menu{
-				position: static;
-			}
-			a{
-				display: block;
-				text-decoration: none;
-				// padding: 34px 20px;
-				padding: 22px 20px;
-				transition: background .25s ease-in-out ;
-				color: $lightColor; //set this color
-				position: relative;
-				text-transform: uppercase;
-				font-weight: 600;
-			}
-		}
-		.mobile-only {
-			display: none;
-		}
-	}
+                > li {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    // background-color: $primaryAlt;
+                    &:first-of-type {
+                        padding-top: 20px;
+                    }
+                    &:last-of-type {
+                        padding-bottom: 20px;
+                    }
 
-	a {
-		@include font(15px, 1em); //reset font-size for inline-block hack
-	}
-	.nav-dropdown-button {
-		// placeholder -- waiting for Seth's design
-		// border-top: 2px solid $secondaryAlt;
-		// border-right: 2px solid $secondaryAlt;
-		// position: absolute;
-		width: 6px;
-		height: 6px;
-		right: 6px;
-		top: 6px;
-		transform: rotate(45deg);
-	}
-	.sub-menu {
-		background: $primaryAlt; //set to your own background color
-		// border: 1px solid rgba(#000, .6); //for visual purposes.  can remove.
-		position: absolute;
-		top: 50px;
-		left: 50%;
-		right: 50%;
-		transform: translate(-50%, 0);
-		opacity: 0;
-		visibility: hidden;
-		width: 310px;
-		z-index: -5;
-		transition: .25s ease-in-out top, .25s ease-in-out opacity;
-		padding-top: 10px; 
+                    &.menu-item-has-children {
+                        padding-right: 25px; //set this to the size of the arrows container
+                        position: relative;
+                        &:hover {
+                            //show third level sub-menu
+                            // &:after{
+                            // 	transform: translateY(-50%) rotate(90deg);
+                            // }
+                            > .sub-menu {
+                                opacity: 1;
+                                visibility: visible;
+                                right: inherit;
+                                left: inherit;
+                                transform: none;
+                                left: 248px;
+                                top: 0;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+                    a {
+                        color: $lightColor;
+                        font-weight: 400;
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                    &:hover {
+                        > a {
+                            // color: rgba($darkColor, .2);
+                            background-color: rgba(#fff, 0.05);
+                        }
+                    }
+                }
+                .nav-dropdown-button {
+                    border-color: rgba($lightColor, 0.5);
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+                a {
+                    border-bottom: 1px solid rgba($lightColor, 0.2);
+                    text-align: left;
+                    padding: 20px !important;
+                    color: $lightColor;
+                }
+            }
+            .nav-dropdown-button {
+                .nav-expander {
+                    display: none;
+                }
+            }
+            .duplicate-item {
+                display: none;
+            }
+            .mega-menu {
+                &:hover {
+                    > a {
+                        border-bottom: 5px solid $secondaryColor;
+                        position: relative;
+                        top: 5px;
+                        display: flex;
+                        height: calc(100% - 5px);
+                        align-items: center;
+                        margin-bottom: 5px;
+                    }
+                    > .sub-menu {
+                        display: flex;
+                        transform: translate(-50vw);
+                        opacity: 1;
+                    }
+                }
+                &:after {
+                    display: none;
+                }
+                > .sub-menu {
+                    @include contain($desktop, 20px);
+                    width: 100%;
+                    // display: flex;
+                    // display: none;
+                    transform: translate(-200vw);
+                    opacity: 0;
 
-		> li {
-			padding-left: 20px;
-			padding-right: 20px;
-			// background-color: $primaryAlt;
-			&:first-of-type {
-				padding-top: 20px; 
-			}
-			&:last-of-type {
-				padding-bottom: 20px; 
-			}
-
-			&.menu-item-has-children {
-				padding-right: 25px; //set this to the size of the arrows container
-				position: relative;
-				&:hover{ //show third level sub-menu
-					// &:after{
-					// 	transform: translateY(-50%) rotate(90deg);
-					// }
-					> .sub-menu{
-
-						opacity: 1;
-						visibility: visible;
-						right: inherit;
-						left: inherit;
-						transform: none;
-						left: 248px;
-						top: 0;
-						padding-bottom: 10px;
-					}
-				}
-			}
-			a {
-				color: $lightColor;
-				font-weight: 400;
-				font-size: 14px;
-				text-align: center;
-			}
-			&:hover {
-				> a {
-					// color: rgba($darkColor, .2);
-					background-color: rgba(#fff, .05);
-
-				}
-			}
-		}
-		.nav-dropdown-button {
-			border-color: rgba($lightColor, .5);
-			position: absolute;
-			top: 10px;
-			right: 10px;
-		}
-		a{
-			border-bottom: 1px solid rgba($lightColor, .2);
-			text-align: left;
-			padding: 20px !important;
-			color: $lightColor;
-		}
-
-	}
-	.nav-dropdown-button {
-		.nav-expander {
-			display: none;
-		}
-	}
-	.duplicate-item {
-		display: none;
-	}
-	.mega-menu{
-		&:hover {
-			> a {
-				border-bottom: 5px solid $secondaryColor;
-				position: relative;
-				top: 5px;
-				display: flex;
-				height: calc(100% - 5px);
-				align-items: center;
-				margin-bottom: 5px;
-			}
-			> .sub-menu {
-				display: flex;
-				transform: translate(-50vw);
-				opacity: 1;
-			}
-		}
-		&:after {
-			display: none;
-		}
-		> .sub-menu{
-			@include contain($desktop, 20px);
-			width: 100%;
-			// display: flex;
-			// display: none;
-			transform: translate(-200vw);
-			opacity: 0;
-
-			@include media($full) {
-				@include contain($full, 20px);
-			}
-			.nav-segment {
-				flex-basis: 0;
-				flex-grow: 2;
-				column-count: 2;
-				text-align: left;
-				> li {
-					display: inline-block;
-					.sub-menu {
-						visibility: visible;
-						> li {
-							display: block;
-						}
-					}
-				}
-			}
-			.social-segment {
-				flex-basis: 0;
-				flex-grow: 1;
-				color: $lightColor;
-				display: flex;
-				justify-content: space-around;
-				align-items: center;
-				flex-direction: column;
-				a {
-					padding: 0;
-				}
-				i {
-					color: $lightColor;
-				}
-				.hdng {
-					@include font(50px, 1em, $light);
-					color: $lightColor;
-					margin-bottom: 30px;
-				}
-				.button {
-					@include font(50px, 1em, $light);
-					font-family: $secondaryFont;
-					display: inline-block;
-					border: 1px solid rgba($lightColor, .2);
-					color: $lightColor;
-					text-align: center;
-				}
-			}
-			.sub-menu{ //reset styling for sub-sub-menus
-				position: relative;
-				opacity: 1;
-				// visibility: visible;
-				visibility: hidden;
-				width: 100%;
-				top: inherit;
-				left: 0!important;
-				right: inherit;
-				transform: none;
-				z-index: 50;
-				padding-left: 30px;
-				background: none;
-			}
-			li{
-				padding-right: 0;
-				&:after{
-					display: none;
-				}
-			}
-			a{
-				// color: #fff; //remove
-				&:hover {
-					color: rgba($lightColor, .8);
-				}
-			}
-			> li{
-				// width: 50%; //set this width to however many columns you need
-				display: inline-block;
-				vertical-align: top;
-				padding: 25px;
-				> a, > .sub-menu{ //set the background color of the sub-menus
-					background: none;
-				}
-			}
-		}
-	}
-	.close-menu{
-		display: none!important;
-	}
-}
-}
+                    @include media($full) {
+                        @include contain($full, 20px);
+                    }
+                    .nav-segment {
+                        flex-basis: 0;
+                        flex-grow: 2;
+                        column-count: 2;
+                        text-align: left;
+                        > li {
+                            display: inline-block;
+                            .sub-menu {
+                                visibility: visible;
+                                > li {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .social-segment {
+                        flex-basis: 0;
+                        flex-grow: 1;
+                        color: $lightColor;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        flex-direction: column;
+                        a {
+                            padding: 0;
+                        }
+                        i {
+                            color: $lightColor;
+                        }
+                        .hdng {
+                            @include font(50px, 1em, $light);
+                            color: $lightColor;
+                            margin-bottom: 30px;
+                        }
+                        .button {
+                            @include font(50px, 1em, $light);
+                            font-family: $secondaryFont;
+                            display: inline-block;
+                            border: 1px solid rgba($lightColor, 0.2);
+                            color: $lightColor;
+                            text-align: center;
+                        }
+                    }
+                    .sub-menu {
+                        //reset styling for sub-sub-menus
+                        position: relative;
+                        opacity: 1;
+                        // visibility: visible;
+                        visibility: hidden;
+                        width: 100%;
+                        top: inherit;
+                        left: 0 !important;
+                        right: inherit;
+                        transform: none;
+                        z-index: 50;
+                        padding-left: 30px;
+                        background: none;
+                    }
+                    li {
+                        padding-right: 0;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    a {
+                        // color: #fff; //remove
+                        &:hover {
+                            color: rgba($lightColor, 0.8);
+                        }
+                    }
+                    > li {
+                        // width: 50%; //set this width to however many columns you need
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 25px;
+                        > a,
+                        > .sub-menu {
+                            //set the background color of the sub-menus
+                            background: none;
+                        }
+                    }
+                }
+            }
+            .close-menu {
+                display: none !important;
+            }
+        }
+    }
 }

@@ -1,424 +1,407 @@
-
-
-
 .front-header {
-	min-height: 0 !important;
-	z-index: 1000;
-	position: relative;
-	height: 160px;
-	@include media($tablet) {
-		height: 210px;
-	}
+    min-height: 0 !important;
+    z-index: 1000;
+    position: relative;
+    height: 160px;
+    @include media($tablet) {
+        height: 210px;
+    }
 }
-
 
 .home-rotator {
-	height: 220px;
-	background-color: $secondaryColor;
-	@include media($tablet) {
-		height: 100%;
-	}
-	.slide {
-		background-position: center center;
-		background-size: cover; 
-		display: block;
-		position: relative;
-		z-index: 9999;
-		width: 100vw;
-		height: 220px;
-		@include media($tablet) {
-			height: 790px;
-			height: calc(100vh - 200px);
-		}
-	}
-	.owl-dots {
-		position: relative;
-		top: -35px;
-		left: 0;
-		right: 0;
-		display: flex;
-		justify-content: center;
-		.owl-dot {
-			margin: 0 2px;
-			border-radius: 50px;
-			position: relative;
-			border: 1px solid rgba(#fff , .2);
-			width: 11px;
-			height: 11px;
-			z-index: 9999;
-			&.active {
-				background: rgba(#fff , .6);
-			}
-		}
-	}
+    height: 220px;
+    background-color: $secondaryColor;
+    @include media($tablet) {
+        height: 100%;
+    }
+    .slide {
+        background-position: center center;
+        background-size: cover;
+        display: block;
+        position: relative;
+        z-index: 9999;
+        width: 100vw;
+        height: 220px;
+        @include media($tablet) {
+            height: 790px;
+            height: calc(100vh - 200px);
+        }
+    }
+    .owl-dots {
+        position: relative;
+        top: -35px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        .owl-dot {
+            margin: 0 2px;
+            border-radius: 50px;
+            position: relative;
+            border: 1px solid rgba(#fff, 0.2);
+            width: 11px;
+            height: 11px;
+            z-index: 9999;
+            &.active {
+                background: rgba(#fff, 0.6);
+            }
+        }
+    }
 }
-
 
 .home-welcome {
-	z-index: 1;
-	position: relative;
-	@include media($tablet) {
-		height: 650px;
-	}
-	@include media($desktop) {
-		height: calc(100vh - 200px);
-	}
-	.taglines {
-		z-index: 9999;
-		left: 0;
-		right: 0;
-		margin-top: 40px;
-		@include media($tablet) {
-			margin-top: 0;
-			top: calc(50% - 150px);
-			position: absolute;
-		}
-	}
-	span {
-		display: block;
-	}
-	.taglines {
-		color: $secondaryAlt;
-		padding: 0 40px;
-		@include media($tablet) {
-			padding: 0 20px;
-			color: #fff;
-		}
-		@include media($desktop) {
-			padding: 0;
-		}
-		&-title{
-			font-weight: 600;
-			font-size: 40px;
-			line-height: 40px;
-			@include media($tablet) {
-				font-size: 60px;
-				line-height: 67px;
-			}
-			@include media($desktop) {
-				font-size: 80px;
-				line-height: 97px;
-			}
-		}
-		&-subtitle{
-			font-size: 18px;
-			line-height: 20px;
-			padding-top: 10px;
-			@include media($tablet) {
-				font-size: 25px;
-				line-height: 35px;
-			}
-			@include media($desktop) {
-				font-size: 30px;
-				line-height: 40px;
-			}
-		}
-	}
-	.button {
-		margin-top: 20px;
-		margin-bottom: 40px;
-		@include media($tablet) {
-			margin:0;
-			margin-top: 100px;
-		}
-	}
+    z-index: 1;
+    position: relative;
+    @include media($tablet) {
+        height: 650px;
+    }
+    @include media($desktop) {
+        height: calc(100vh - 200px);
+    }
+    .taglines {
+        z-index: 9999;
+        left: 0;
+        right: 0;
+        margin-top: 40px;
+        @include media($tablet) {
+            margin-top: 0;
+            top: calc(50% - 150px);
+            position: absolute;
+        }
+    }
+    span {
+        display: block;
+    }
+    .taglines {
+        color: $secondaryAlt;
+        padding: 0 40px;
+        @include media($tablet) {
+            padding: 0 20px;
+            color: #fff;
+        }
+        @include media($desktop) {
+            padding: 0;
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 40px;
+            @include media($tablet) {
+                font-size: 50px;
+                line-height: 57px;
+            }
+            @include media($desktop) {
+                font-size: 75px;
+                line-height: 80px;
+            }
+        }
+        &-subtitle {
+            font-size: 18px;
+            line-height: 20px;
+            padding-top: 10px;
+            @include media($tablet) {
+                font-size: 25px;
+                line-height: 35px;
+            }
+            @include media($desktop) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+    }
+    .button {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        @include media($tablet) {
+            margin: 0;
+            margin-top: 100px;
+        }
+    }
 }
 
-
-
-
 .home-whychoose {
-	background-color: $primaryHighlight;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	@include media($tablet) {
-		padding-top: 120px;
-		padding-bottom: 120px;
-		
-	}
-	p {
-		font-size: 26px;
-		line-height: 30px;
-		font-family: $secondaryFont;
-		color: $primaryAccent;
-		font-weight: 400;
-		@include media($tablet) {
-			font-size: 40px;
-			line-height: 42px;
-		}
-
-	}
+    background-color: $primaryHighlight;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include media($tablet) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    p {
+        font-size: 26px;
+        line-height: 30px;
+        font-family: $secondaryFont;
+        color: $primaryAccent;
+        font-weight: 400;
+        @include media($tablet) {
+            font-size: 35px;
+            line-height: 43px;
+        }
+    }
 }
 
 .home-reasons {
-	margin-top: 80px;
-	span {
-		display: block;
-	}
-	.headline {
-		font-family: $secondaryFont;
-		font-size: 30px;
-		color: $primaryAccent;
-		margin-top: 40px;
-		@include media($tablet) {
-			font-size: 40px;
-			line-height: 40px;
-		}
-	}
-	.subheadline {
-		font-size: 16px;
-		color: $primaryAccent;
-		margin-top: 15px;
-	}
-	.button-white {
-		margin-top: 20px;
-		min-width: 250px;
-		// line-height: 26px;
-	}
-	.reason {
-		margin-bottom: 80px;
-		@include media($tablet) {
-			padding-left: 10px;
-			padding: 0 10px;
-			margin-bottom: 0;
-		}
-		@include media($desktop) {
-			padding: 0 20px;
-		}
-	}
-	@include media($tablet) {
-		display: flex;
-		justify-content: space-around;
-	}
+    margin-top: 80px;
+    span {
+        display: block;
+    }
+    .headline {
+        font-family: $secondaryFont;
+        font-size: 30px;
+        color: $primaryAccent;
+        margin-top: 40px;
+        @include media($tablet) {
+            font-size: 35px;
+            line-height: 35px;
+        }
+    }
+    .subheadline {
+        font-size: 16px;
+        color: $primaryAccent;
+        margin-top: 15px;
+    }
+    .button-white {
+        margin-top: 20px;
+        min-width: 250px;
+        // line-height: 26px;
+    }
+    .reason {
+        margin-bottom: 80px;
+        @include media($tablet) {
+            padding-left: 10px;
+            padding: 0 10px;
+            margin-bottom: 0;
+        }
+        @include media($desktop) {
+            padding: 0 20px;
+        }
+    }
+    @include media($tablet) {
+        display: flex;
+        justify-content: space-around;
+    }
 }
-
-
 
 .home-surgery {
-	padding-top: 60px;
-	padding-bottom: 260px;
-	background: url('images/bg-mountains-divider.jpg') bottom center no-repeat;
-	@include media($tablet) {
-		padding-top: 80px;
-		padding-bottom: 440px;
-	}
-	@include media(1900px) {
-		background-size: cover;
-		// padding-top: 100px;
-		// padding-bottom: 540px;
+    padding-top: 60px;
+    padding-bottom: 260px;
+    background: url("images/bg-mountains-divider.jpg") bottom center no-repeat;
+    @include media($tablet) {
+        padding-top: 80px;
+        padding-bottom: 440px;
+    }
+    @include media(1900px) {
+        background-size: cover;
+        // padding-top: 100px;
+        // padding-bottom: 540px;
+    }
+    h2 {
+        margin-top: 0;
+        color: #565759;
+        font-size: 30px;
+        @include media($tablet) {
+            font-size: 50px;
+        }
+    }
+    .surgery {
+        // margin-top: 40px;
+        @include media($tablet) {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    .surgery-single {
+        position: relative;
+        padding: 20px 0;
+        max-width: 680px;
 
-	}
-	h2{
-		margin-top: 0;
-		color: #565759;
-		font-size: 30px;
-		@include media($tablet) {
-			font-size: 60px;
-		}
-	}
-	.surgery {
-		// margin-top: 40px;
-		@include media($tablet) {
-			display: flex;
-			justify-content: space-around;
-		}
-	}
-	.surgery-single {
-		position: relative;
-		padding: 20px 0;
-		max-width: 680px;
-
-		@include media($tablet) {
-			padding: 20px;
-		}
-		img {
-			margin-top: 25px;
-			margin-bottom: 20px;
-			width: 100%;
-			border-radius: 20px;
-		}
-		&:before {
-			content: '';
-			background: #82B0E2;
-			width: 160px;
-			height: 1px;
-			position: absolute;
-			top: 20px;
-			left: calc(50% - 80px;)
-		}
-		&:after {
-			content: '';
-			background: #82B0E2;
-			width: 80px;
-			height: 1px;
-			position: absolute;
-			top: 30px;
-			left: calc(50% - 40px;)
-		}
-	}
-}	
-
-
+        @include media($tablet) {
+            padding: 20px;
+        }
+        img {
+            margin-top: 25px;
+            margin-bottom: 20px;
+            width: 100%;
+            border-radius: 20px;
+        }
+        &:before {
+            content: "";
+            background: #82b0e2;
+            width: 160px;
+            height: 1px;
+            position: absolute;
+            top: 20px;
+            left: calc(50% - 80px;);
+        }
+        &:after {
+            content: "";
+            background: #82b0e2;
+            width: 80px;
+            height: 1px;
+            position: absolute;
+            top: 30px;
+            left: calc(50% - 40px;);
+        }
+    }
+}
 
 .home-doctors {
-	text-align: center;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	background: url('images/bg-doctors.jpg') top right no-repeat;
-	background-position-x: -1100px; 
-	@include media($tablet) {
-		background: url('images/bg-doctors.jpg') top center no-repeat;
-		text-align: left;
-		background-size: cover;
-		// padding-bottom: 440px;
-	}
-	h2 {
-		margin-top: 0;
-		color: #fff;
-		font-size: 30px;
-		@include media($tablet) {
-			font-size: 60px;
-		}
-	}
-	h3, p {
-		color: #fff;
-	}
-	.surgery {
-		// margin-top: 40px;
-		@include media($tablet) {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-		}
-	}
-	.button-transparent {
-		border: 1px solid #fff;
-		background: transparent;
-		&:hover {
-			background: #fff;
-			color: $primaryColor !important;
-		}
-	}
-	.doctor {
-		margin-bottom: 50px;
-		position: relative;
-		@include media($tablet) {
-			margin-bottom: 80px;
-			display: flex;
-			justify-content: flex-start;
-		}
-	}
-	.doc-bio {
-		max-width: 600px;
-		text-align: center;
-		@include media($tablet) {
-			text-align: left;
-		}
-		p {
-			display: none;
-			@include media($tablet) {
-				display: block;
-			}
-		}
-	}
-	.doc-pic {
-		text-align: center;
-	}
-	.doc-pic img {
-		border-radius: 50%;
-		width: 180px;
-		// margin: 0 auto;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		@include media($tablet) {
-			width: 230px;
-			margin-right: 60px;
-		}
-	}
-	.doc-button {
-		margin-top: 20px;
-		@include media($tablet) {
-			// margin-top: 0;
-		}
-		a {
-			min-width: 250px;
-		}
-		@include media(1250px) {
-			position: absolute;
-			right: 0;
-			top: 100px;
-		}
-	}
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: url("images/bg-doctors.jpg") top right no-repeat;
+    background-position-x: -1100px;
+    @include media($tablet) {
+        background: url("images/bg-doctors.jpg") top center no-repeat;
+        text-align: left;
+        background-size: cover;
+        // padding-bottom: 440px;
+    }
+    h2 {
+        margin-top: 0;
+        color: #fff;
+        font-size: 30px;
+        @include media($tablet) {
+            font-size: 50px;
+        }
+    }
+    h3,
+    p {
+        color: #fff;
+    }
+    .surgery {
+        // margin-top: 40px;
+        @include media($tablet) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+    .button-transparent {
+        border: 1px solid #fff;
+        background: transparent;
+        &:hover {
+            background: #fff;
+            color: $primaryColor !important;
+        }
+    }
+    .doctor {
+        margin-bottom: 50px;
+        position: relative;
+        @include media($tablet) {
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+    .doc-bio {
+        max-width: 600px;
+        text-align: center;
+        @include media($tablet) {
+            text-align: left;
+        }
+        p {
+            display: none;
+            @include media($tablet) {
+                display: block;
+            }
+        }
+    }
+    .doc-pic {
+        text-align: center;
+    }
+    .doc-pic img {
+        border-radius: 50%;
+        width: 180px;
+        // margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include media($tablet) {
+            width: 230px;
+            margin-right: 60px;
+        }
+    }
+    .doc-button {
+        margin-top: 20px;
+        @include media($tablet) {
+            // margin-top: 0;
+        }
+        a {
+            min-width: 250px;
+        }
+        @include media(1250px) {
+            position: absolute;
+            right: 0;
+            top: 100px;
+        }
+    }
 }
-
 
 .home-testis {
-	text-align: center;
-	padding-top: 180px;
-	padding-bottom: 80px;
-	background: url('images/icon-quote.svg') top center no-repeat;
-	.testi-slider {
-		max-width: 900px;
-		margin: 0 auto;
-	}
-	.testi-slider-squote p {
-		color: #2F2F2F;
-	}
-	strong {
-		font-weight: normal;
-		font-style: normal;
-		font-size: 22px;
-		display: block;
-		margin-top: 40px;
-		color: #717171;
-		@include media($tablet) {
-			font-size: 25px;
-		}
-	}
+    text-align: center;
+    padding-top: 180px;
+    padding-bottom: 80px;
+    background: url("images/icon-quote.svg") top center no-repeat;
+    .testi-slider {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .testi-slider-squote p {
+        color: #2f2f2f;
+    }
+    strong {
+        font-weight: normal;
+        font-style: normal;
+        font-size: 22px;
+        display: block;
+        margin-top: 40px;
+        color: #717171;
+        @include media($tablet) {
+            font-size: 25px;
+        }
+    }
 }
-
 
 .testi-slider {
-	.testi-slider-squote {
-		font-style: italic;
-		@include media($tablet) {
-			font-size: 22px;
-			line-height: 40px;
-		}
-	}
-	.owl-nav {
-		display: none
-	}
-	.owl-dots {
-		position: relative;
-		top: 35px;
-		left: 0;
-		right: 0;
-		display: flex;
-		justify-content: center;
-		.owl-dot {
-			margin: 0 2px;
-			border-radius: 50px;
-			position: relative;
-			background: #E3E3E3;
-			width: 11px;
-			height: 11px;
-			z-index: 9999;
-			&.active {
-				background: rgba(#397BC7 , 1);
-			}
-		}
-	}
+    .testi-slider-squote {
+        font-style: italic;
+        @include media($tablet) {
+            font-size: 22px;
+            line-height: 40px;
+        }
+    }
+    .owl-nav {
+        display: none;
+    }
+    .owl-dots {
+        position: relative;
+        top: 35px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        .owl-dot {
+            margin: 0 2px;
+            border-radius: 50px;
+            position: relative;
+            background: #e3e3e3;
+            width: 11px;
+            height: 11px;
+            z-index: 9999;
+            &.active {
+                background: rgba(#397bc7, 1);
+            }
+        }
+    }
 }
 
-
 .home-with-image {
-	margin-top: 40px;
-	background: url('images/bg-exam.jpg') center center no-repeat;
-	background-size: cover;
-	height: 250px;
-	box-shadow: 0px 15px 25px rgba(#000, .16);
-	@include media($tablet) {
-		height: 420px;
-	}
+    margin-top: 40px;
+    background: url("images/bg-exam.jpg") center center no-repeat;
+    background-size: cover;
+    height: 250px;
+    box-shadow: 0px 15px 25px rgba(#000, 0.16);
+    @include media($tablet) {
+        height: 420px;
+    }
 }

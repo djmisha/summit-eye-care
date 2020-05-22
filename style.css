@@ -775,19 +775,25 @@ video {
   display: block;
 }
 
-img.alignright, img.alignleft, img.aligncenter, img.alignnone, .caption {
+img.alignright,
+img.alignleft,
+img.aligncenter,
+img.alignnone,
+.caption {
   display: block;
   height: auto;
   margin: 0 auto 1em;
   max-width: 100%;
 }
 
-img.alignright, img.alignleft {
+img.alignright,
+img.alignleft {
   float: none;
 }
 
 @media only screen and (min-width: 768px) {
-  img.alignright, img.alignleft {
+  img.alignright,
+  img.alignleft {
     margin-bottom: 1em;
     max-width: 50%;
   }
@@ -816,13 +822,17 @@ img.alignright, img.alignleft {
   height: auto;
 }
 
-img.alignleft, img.alignright, img.aligncenter, .yes-frame {
+img.alignleft,
+img.alignright,
+img.aligncenter,
+.yes-frame {
   visibility: visible;
 }
 
 .submit-btn,
 .wp-block-button__link,
-.button, .buttons a {
+.button,
+.buttons a {
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -833,30 +843,33 @@ img.alignleft, img.alignright, img.aligncenter, .yes-frame {
   background: #126abf;
   color: #ffffff;
   border-radius: 50px;
-  -webkit-transition: all .15s ease-in;
-  transition: all .15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
   font-size: 14px;
-  padding: 12px 30px !important;
+  padding: 10px 30px !important;
 }
 
 @media only screen and (min-width: 768px) {
   .submit-btn,
   .wp-block-button__link,
-  .button, .buttons a {
-    padding: 12px 60px !important;
+  .button,
+  .buttons a {
+    padding: 10px 60px !important;
   }
 }
 
 .submit-btn:hover,
 .wp-block-button__link:hover,
-.button:hover, .buttons a:hover {
+.button:hover,
+.buttons a:hover {
   background: #0e5090;
   color: #ffffff !important;
 }
 
 .submit-btn-white,
 .wp-block-button__link-white,
-.button-white, .buttons a-white {
+.button-white,
+.buttons a-white {
   background: #fff;
   color: #696969;
   border: 1px solid #126abf;
@@ -973,7 +986,7 @@ img.alignleft, img.alignright, img.aligncenter, .yes-frame {
 
 .ytvideo:after,
 .custom-placeholder:after {
-  content: '\f144';
+  content: "\f144";
   font-family: "Font Awesome 5 Pro";
   font-style: normal;
   position: absolute;
@@ -1047,35 +1060,35 @@ h1 {
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 70px;
-    font-size: 4.375rem;
+    font-size: 60px;
+    font-size: 3.75rem;
   }
 }
 
 h2,
 .headline {
-  font-size: 32px;
-  font-size: 2rem;
-}
-
-@media only screen and (min-width: 1060px) {
-  h2,
-  .headline {
-    font-size: 50px;
-    font-size: 3.125rem;
-    line-height: 1.1em;
-  }
-}
-
-h3 {
   font-size: 28px;
   font-size: 1.75rem;
 }
 
 @media only screen and (min-width: 1060px) {
+  h2,
+  .headline {
+    font-size: 42px;
+    font-size: 2.625rem;
+    line-height: 1.1em;
+  }
+}
+
+h3 {
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+
+@media only screen and (min-width: 1060px) {
   h3 {
-    font-size: 34px;
-    font-size: 2.125rem;
+    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.1em;
   }
 }
@@ -1083,8 +1096,8 @@ h3 {
 h4,
 h5,
 h6 {
-  font-size: 25px;
-  font-size: 1.5625rem;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 @media only screen and (min-width: 1060px) {
@@ -1196,13 +1209,13 @@ main,
 
 @media only screen and (min-width: 768px) {
   .nav-bar {
-    margin-top: -20px;
+    margin-top: -25px;
   }
 }
 
 @media only screen and (min-width: 1060px) {
   .nav-bar {
-    margin-top: -35px;
+    margin-top: -25px;
   }
 }
 
@@ -1885,7 +1898,7 @@ main,
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    height: 70px;
+    height: 50px;
   }
   .not--device .menu-wrap .main-menu > li {
     display: -webkit-box;
@@ -1904,7 +1917,7 @@ main,
     opacity: 1;
     visibility: visible;
     z-index: 50;
-    top: 70px;
+    top: 50px;
   }
   .not--device .menu-wrap .main-menu > li:hover > a {
     color: #ffffff;
@@ -1916,8 +1929,8 @@ main,
     display: block;
     text-decoration: none;
     padding: 22px 20px;
-    -webkit-transition: background .25s ease-in-out;
-    transition: background .25s ease-in-out;
+    -webkit-transition: background 0.25s ease-in-out;
+    transition: background 0.25s ease-in-out;
     color: #ffffff;
     position: relative;
     text-transform: uppercase;
@@ -1953,8 +1966,8 @@ main,
     visibility: hidden;
     width: 310px;
     z-index: -5;
-    -webkit-transition: .25s ease-in-out top, .25s ease-in-out opacity;
-    transition: .25s ease-in-out top, .25s ease-in-out opacity;
+    -webkit-transition: 0.25s ease-in-out top, 0.25s ease-in-out opacity;
+    transition: 0.25s ease-in-out top, 0.25s ease-in-out opacity;
     padding-top: 10px;
   }
   .not--device .menu-wrap .sub-menu > li {
@@ -2152,7 +2165,8 @@ main,
     vertical-align: top;
     padding: 25px;
   }
-  .not--device .menu-wrap .mega-menu > .sub-menu > li > a, .not--device .menu-wrap .mega-menu > .sub-menu > li > .sub-menu {
+  .not--device .menu-wrap .mega-menu > .sub-menu > li > a,
+  .not--device .menu-wrap .mega-menu > .sub-menu > li > .sub-menu {
     background: none;
   }
   .not--device .menu-wrap .close-menu {
@@ -4137,15 +4151,15 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-welcome .taglines-title {
-    font-size: 60px;
-    line-height: 67px;
+    font-size: 50px;
+    line-height: 57px;
   }
 }
 
 @media only screen and (min-width: 1060px) {
   .home-welcome .taglines-title {
-    font-size: 80px;
-    line-height: 97px;
+    font-size: 75px;
+    line-height: 80px;
   }
 }
 
@@ -4204,8 +4218,8 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-whychoose p {
-    font-size: 40px;
-    line-height: 42px;
+    font-size: 35px;
+    line-height: 43px;
   }
 }
 
@@ -4226,8 +4240,8 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-reasons .headline {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 35px;
   }
 }
 
@@ -4297,7 +4311,7 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-surgery h2 {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
@@ -4331,8 +4345,8 @@ span.error {
 }
 
 .home-surgery .surgery-single:before {
-  content: '';
-  background: #82B0E2;
+  content: "";
+  background: #82b0e2;
   width: 160px;
   height: 1px;
   position: absolute;
@@ -4341,8 +4355,8 @@ span.error {
 }
 
 .home-surgery .surgery-single:after {
-  content: '';
-  background: #82B0E2;
+  content: "";
+  background: #82b0e2;
   width: 80px;
   height: 1px;
   position: absolute;
@@ -4374,11 +4388,12 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-doctors h2 {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
-.home-doctors h3, .home-doctors p {
+.home-doctors h3,
+.home-doctors p {
   color: #fff;
 }
 
@@ -4490,7 +4505,7 @@ span.error {
 }
 
 .home-testis .testi-slider-squote p {
-  color: #2F2F2F;
+  color: #2f2f2f;
 }
 
 .home-testis strong {
@@ -4540,7 +4555,7 @@ span.error {
   margin: 0 2px;
   border-radius: 50px;
   position: relative;
-  background: #E3E3E3;
+  background: #e3e3e3;
   width: 11px;
   height: 11px;
   z-index: 9999;
