@@ -97,6 +97,9 @@
             &:first-child {
                 margin-top: 0;
             }
+            a {
+                word-break: break-all;
+            }
         }
 
         ul {
