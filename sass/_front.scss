@@ -163,7 +163,6 @@
     .button-white {
         margin-top: 20px;
         min-width: 250px;
-        // line-height: 26px;
         padding-left: 30px !important;
         padding-right: 30px !important;
         padding-top: 18px !important;
@@ -189,9 +188,6 @@
         }
         .button {
         }
-        img {
-            // min-height: 160px;
-        }
     }
     @include media($tablet) {
         display: flex;
@@ -209,8 +205,6 @@
     }
     @include media(1900px) {
         background-size: cover;
-        // padding-top: 100px;
-        // padding-bottom: 540px;
     }
     h2 {
         margin-top: 0;
@@ -221,7 +215,6 @@
         }
     }
     .surgery {
-        // margin-top: 40px;
         @include media($tablet) {
             display: flex;
             justify-content: space-around;
@@ -230,10 +223,10 @@
     .surgery-single {
         position: relative;
         padding: 20px 0;
-        max-width: 680px;
 
         @include media($tablet) {
             padding: 20px;
+            width: 50%;
         }
         img {
             margin-top: 25px;
