@@ -2301,12 +2301,12 @@ main,
 
 .interior .content ul {
   list-style: none;
-  margin: 40px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content ul {
-    margin: 40px 40px;
+    margin: 30px 40px 60px 40px;
   }
 }
 
@@ -2329,12 +2329,12 @@ main,
 
 .interior .content ol {
   counter-reset: item;
-  margin: 40px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .content ol {
-    margin: 40px 40px;
+    margin: 30px 40px 60px 40px;
   }
 }
 
@@ -2359,7 +2359,8 @@ main,
   text-align: center;
   padding: 180px 20px 80px 20px;
   background: #f8fbfd url("images/icon-quote.svg") top center no-repeat;
-  background-position-y: 20px;
+  background-size: 100px;
+  background-position-y: 40px;
   margin-top: 60px;
   margin-bottom: 40px;
 }
@@ -2629,15 +2630,15 @@ main,
   background: #f8fbfd;
   color: #696969;
   position: relative;
-  min-height: 250px;
+  min-height: 230px;
 }
 
 @media only screen and (min-width: 768px) {
   .interior .wp-block-columns.intro {
     margin-bottom: -80px;
     top: -140px;
-    font-size: 30px;
-    line-height: 52px;
+    font-size: 25px;
+    line-height: 42px;
   }
 }
 
@@ -2648,7 +2649,7 @@ main,
 
 @media only screen and (min-width: 768px) {
   .interior .wp-block-columns.intro .wp-block-column:first-child {
-    margin: 40px 60px 20px 60px;
+    margin: 40px 40px 20px 60px;
   }
 }
 
@@ -2674,8 +2675,8 @@ main,
   min-width: 220px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .interior .wp-block-columns.full-width-text {
@@ -2969,7 +2970,7 @@ aside li {
 
 @media only screen and (min-width: 1060px) {
   .footer-locations-wrapper .locations-info-wrapper {
-    padding: 70px 80px 40px 70px;
+    padding: 40px 80px 20px 70px;
   }
 }
 
@@ -2984,12 +2985,12 @@ aside li {
   margin-left: 20px;
   margin-right: 20px;
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .footer-logo svg {
   width: 100%;
-  max-width: 413px;
+  max-width: 330px;
 }
 
 .footer-map {
@@ -3021,6 +3022,12 @@ aside li {
   }
 }
 
+@media only screen and (min-width: 1480px) {
+  .footer-map {
+    background-size: cover;
+  }
+}
+
 .footer-map a {
   width: 100%;
   height: 100%;
@@ -3032,7 +3039,6 @@ aside li {
 
 .f-locations {
   padding-left: 20px;
-  margin-bottom: 40px;
   background: #fff;
   text-align: left;
   list-style: none;
@@ -3053,7 +3059,7 @@ aside li {
 .f-locations a {
   color: #858688;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .f-locations .phone,
@@ -3088,6 +3094,10 @@ aside li {
   max-width: 230px;
 }
 
+.f-locations .tag a {
+  font-size: 15px;
+}
+
 .f-locations .tag:before {
   content: "";
   position: absolute;
@@ -3096,6 +3106,15 @@ aside li {
   width: 35px;
   height: 42px;
   left: -68px;
+}
+
+.f-locations .directions {
+  padding-top: 10px;
+}
+
+.f-locations .directions a {
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .f-locations .street {
@@ -3110,7 +3129,7 @@ aside li {
   width: 28px;
   height: 45px;
   left: -65px;
-  top: 5px;
+  top: 0px;
 }
 
 .f-social {
@@ -3221,8 +3240,8 @@ aside li {
 }
 
 .lower-footer {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 28px;
   position: relative;
   padding-top: 280px;
@@ -4264,6 +4283,11 @@ span.error {
 .home-reasons .button-white {
   margin-top: 20px;
   min-width: 250px;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  line-height: 18px;
 }
 
 .home-reasons .reason {
@@ -4281,7 +4305,21 @@ span.error {
 @media only screen and (min-width: 1060px) {
   .home-reasons .reason {
     padding: 0 20px;
+    max-width: 380px;
   }
+}
+
+.home-reasons .reason .reason-image {
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4507,6 +4545,8 @@ span.error {
   padding-top: 180px;
   padding-bottom: 80px;
   background: url("images/icon-quote.svg") top center no-repeat;
+  background-size: 100px;
+  background-position-y: 30px;
 }
 
 .home-testis .testi-slider {

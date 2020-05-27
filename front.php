@@ -27,7 +27,10 @@
         <?php if(have_rows('about_items')): ?>
         <?php while(have_rows('about_items')): the_row(); ?>
         <div class="reason">
-            <img src="<?php the_sub_field('image'); ?>" alt="">
+            <div class="reason-image">
+                <img src="<?php the_sub_field('image'); ?>" alt="">
+
+            </div>
             <span class="headline"><?php the_sub_field('headline'); ?></span>
             <span class="subheadline"><?php the_sub_field('content'); ?></span>
             <a href="<?php the_sub_field('link'); ?>" class="button button-white"

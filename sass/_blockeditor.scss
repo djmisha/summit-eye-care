@@ -58,14 +58,15 @@
         position: relative;
         // top: -100px;
         // margin-bottom: -40px;
-        min-height: 250px;
+        min-height: 230px;
         // font-size: 15px;
         // line-height: 22px;
+        // border: 1px solid pink;
         @include media($tablet) {
             margin-bottom: -80px;
             top: -140px;
-            font-size: 30px;
-            line-height: 52px;
+            font-size: 25px;
+            line-height: 42px;
         }
         .wp-block-column:first-child {
             // background: #F0F6FA;
@@ -74,7 +75,7 @@
             margin: 40px;
             margin-bottom: 20px;
             @include media($tablet) {
-                margin: 40px 60px 20px 60px;
+                margin: 40px 40px 20px 60px;
             }
         }
         .wp-block-column:last-child {
@@ -94,8 +95,8 @@
                 min-width: 220px;
                 padding-left: 20px;
                 padding-right: 20px;
-                padding-top: 40px;
-                padding-bottom: 40px;
+                padding-top: 20px;
+                padding-bottom: 20px;
                 // margin: 0 auto;
             }
         }

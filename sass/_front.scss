@@ -164,6 +164,11 @@
         margin-top: 20px;
         min-width: 250px;
         // line-height: 26px;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+        line-height: 18px;
     }
     .reason {
         margin-bottom: 80px;
@@ -174,6 +179,18 @@
         }
         @include media($desktop) {
             padding: 0 20px;
+            max-width: 380px;
+        }
+        .reason-image {
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button {
+        }
+        img {
+            // min-height: 160px;
         }
     }
     @include media($tablet) {
@@ -342,6 +359,8 @@
     padding-top: 180px;
     padding-bottom: 80px;
     background: url("images/icon-quote.svg") top center no-repeat;
+    background-size: 100px;
+    background-position-y: 30px;
     .testi-slider {
         max-width: 900px;
         margin: 0 auto;
