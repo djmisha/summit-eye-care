@@ -2804,6 +2804,9 @@ main,
     padding-top: 140px;
     padding-bottom: 140px;
   }
+  .page-151 .interior .wp-block-cover {
+    margin-top: -80px;
+  }
 }
 
 .interior .wp-block-cover h2,
