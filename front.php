@@ -29,7 +29,6 @@
         <div class="reason">
             <div class="reason-image">
                 <img src="<?php the_sub_field('image'); ?>" alt="">
-
             </div>
             <span class="headline"><?php the_sub_field('headline'); ?></span>
             <span class="subheadline"><?php the_sub_field('content'); ?></span>
