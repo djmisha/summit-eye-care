@@ -2784,6 +2784,11 @@ main,
   margin-bottom: 0;
 }
 
+.interior .wp-block-columns.full-width-image .wp-block-buttons {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 .interior .wp-block-column:not(:first-child) {
   margin-left: 0;
 }

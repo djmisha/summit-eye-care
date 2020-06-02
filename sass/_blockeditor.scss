@@ -177,7 +177,6 @@
                 h4,
                 p {
                     margin: 0 auto;
-                    // max-width: 620px;
                     max-width: 600px;
                     padding-bottom: 20px;
                 }
@@ -191,6 +190,10 @@
 
         .wp-block-image {
             margin-bottom: 0;
+        }
+        .wp-block-buttons {
+            margin: 0 auto;
+            max-width: 600px;
         }
     }
 
