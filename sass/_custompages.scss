@@ -13,7 +13,7 @@
         .field-10,
         .field-11,
         .field-12,
-        .field-13,
+        .field-27,
         .field-6 {
             padding: 10px;
             padding-top: 380px;
@@ -69,7 +69,7 @@
     .field-10,
     .field-11,
     .field-12,
-    .field-13,
+    .field-27,
     .field-6 {
         position: relative;
         &:before {
@@ -113,7 +113,7 @@
     .field-24::before {
         background: url("images/cataract-quiz/question-7.png");
     }
-    .field-13::before {
+    .field-27::before {
         background: url("images/cataract-quiz/question-8.png");
     }
     .field-6::before {
@@ -176,7 +176,7 @@
             top: 30px;
         }
     }
-    .field-13::after {
+    .field-27::after {
         content: "Question 8";
         position: absolute;
         top: 345px;
