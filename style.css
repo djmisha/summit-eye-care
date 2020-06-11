@@ -5070,7 +5070,9 @@ span.error {
   margin-bottom: 40px;
 }
 
-.page-435 .content form .field-6,
+.page-435 .content form .field-24,
+.page-435 .content form .field-25,
+.page-435 .content form .field-26,
 .page-435 .content form .field-7,
 .page-435 .content form .field-8,
 .page-435 .content form .field-9,
@@ -5086,7 +5088,9 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
-  .page-435 .content form .field-6,
+  .page-435 .content form .field-24,
+  .page-435 .content form .field-25,
+  .page-435 .content form .field-26,
   .page-435 .content form .field-7,
   .page-435 .content form .field-8,
   .page-435 .content form .field-9,
@@ -5105,14 +5109,17 @@ span.error {
   }
 }
 
+.page-435 .content form .type-radiobuttons > div,
 .page-435 .content form .type-checkboxgroup > div {
   padding-top: 20px;
 }
 
+.page-435 .content form .type-radiobuttons div label,
 .page-435 .content form .type-checkboxgroup div label {
   font-size: 22px;
 }
 
+.page-435 .content form input[type="radio"],
 .page-435 .content form input[type="checkbox"] {
   background: transparent !important;
   border: 2px solid #858688 !important;
@@ -5123,6 +5130,9 @@ span.error {
   margin-right: 10px;
 }
 
+.page-435 .field-24,
+.page-435 .field-25,
+.page-435 .field-26,
 .page-435 .field-6,
 .page-435 .field-7,
 .page-435 .field-8,
@@ -5135,6 +5145,9 @@ span.error {
   position: relative;
 }
 
+.page-435 .field-24:before,
+.page-435 .field-25:before,
+.page-435 .field-26:before,
 .page-435 .field-6:before,
 .page-435 .field-7:before,
 .page-435 .field-8:before,
@@ -5153,6 +5166,9 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
+  .page-435 .field-24:before,
+  .page-435 .field-25:before,
+  .page-435 .field-26:before,
   .page-435 .field-6:before,
   .page-435 .field-7:before,
   .page-435 .field-8:before,
@@ -5166,6 +5182,9 @@ span.error {
   }
 }
 
+.page-435 .field-24 label,
+.page-435 .field-25 label,
+.page-435 .field-26 label,
 .page-435 .field-6 label,
 .page-435 .field-7 label,
 .page-435 .field-8 label,
@@ -5178,6 +5197,9 @@ span.error {
   font-size: 30px;
 }
 
+.page-435 .field-24 label div,
+.page-435 .field-25 label div,
+.page-435 .field-26 label div,
 .page-435 .field-6 label div,
 .page-435 .field-7 label div,
 .page-435 .field-8 label div,
@@ -5191,7 +5213,7 @@ span.error {
   padding-left: 20px;
 }
 
-.page-435 .field-6::before {
+.page-435 .field-25::before {
   background: url("images/cataract-quiz/question-1.png");
 }
 
@@ -5211,11 +5233,11 @@ span.error {
   background: url("images/cataract-quiz/question-5.png");
 }
 
-.page-435 .field-11::before {
+.page-435 .field-26::before {
   background: url("images/cataract-quiz/question-6.png");
 }
 
-.page-435 .field-12::before {
+.page-435 .field-24::before {
   background: url("images/cataract-quiz/question-7.png");
 }
 
@@ -5223,18 +5245,14 @@ span.error {
   background: url("images/cataract-quiz/question-8.png");
 }
 
-.page-435 .field-6::before {
-  background: url("images/cataract-quiz/question-1.png");
-}
-
-.page-435 .field-6::after {
+.page-435 .field-25::after {
   content: "Question 1";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .page-435 .field-6::after {
+  .page-435 .field-25::after {
     top: 30px;
   }
 }
@@ -5287,26 +5305,26 @@ span.error {
   }
 }
 
-.page-435 .field-11::after {
+.page-435 .field-26::after {
   content: "Question 6";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .page-435 .field-11::after {
+  .page-435 .field-26::after {
     top: 30px;
   }
 }
 
-.page-435 .field-12::after {
+.page-435 .field-24::after {
   content: "Question 7";
   position: absolute;
   top: 345px;
 }
 
 @media only screen and (min-width: 768px) {
-  .page-435 .field-12::after {
+  .page-435 .field-24::after {
     top: 30px;
   }
 }

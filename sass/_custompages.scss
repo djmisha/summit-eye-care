@@ -4,7 +4,9 @@
     .content form {
         margin-bottom: 40px;
 
-        .field-6,
+        .field-24,
+        .field-25,
+        .field-26,
         .field-7,
         .field-8,
         .field-9,
@@ -35,6 +37,7 @@
                 // font-size: 30px;
             }
         }
+        .type-radiobuttons,
         .type-checkboxgroup {
             > div {
                 padding-top: 20px;
@@ -43,6 +46,7 @@
                 font-size: 22px;
             }
         }
+        input[type="radio"],
         input[type="checkbox"] {
             background: transparent !important;
             border: 2px solid $secondaryColor !important;
@@ -55,6 +59,9 @@
         }
     }
 
+    .field-24,
+    .field-25,
+    .field-26,
     .field-6,
     .field-7,
     .field-8,
@@ -85,7 +92,7 @@
         }
     }
 
-    .field-6::before {
+    .field-25::before {
         background: url("images/cataract-quiz/question-1.png");
     }
     .field-7::before {
@@ -100,20 +107,20 @@
     .field-10::before {
         background: url("images/cataract-quiz/question-5.png");
     }
-    .field-11::before {
+    .field-26::before {
         background: url("images/cataract-quiz/question-6.png");
     }
-    .field-12::before {
+    .field-24::before {
         background: url("images/cataract-quiz/question-7.png");
     }
     .field-13::before {
         background: url("images/cataract-quiz/question-8.png");
     }
     .field-6::before {
-        background: url("images/cataract-quiz/question-1.png");
+        // background: url("images/cataract-quiz/question-1.png");
     }
 
-    .field-6::after {
+    .field-25::after {
         content: "Question 1";
         position: absolute;
         top: 345px;
@@ -153,7 +160,7 @@
             top: 30px;
         }
     }
-    .field-11::after {
+    .field-26::after {
         content: "Question 6";
         position: absolute;
         top: 345px;
@@ -161,7 +168,7 @@
             top: 30px;
         }
     }
-    .field-12::after {
+    .field-24::after {
         content: "Question 7";
         position: absolute;
         top: 345px;
