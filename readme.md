@@ -1,1 +1,1 @@
-## Custom WordPress theme by Silvr Agency
+
