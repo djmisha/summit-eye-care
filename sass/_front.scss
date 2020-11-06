@@ -295,21 +295,40 @@
             color: $primaryColor !important;
         }
     }
+    .the-docs {
+        @include media($tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            > div {
+                width: 50%;
+            }
+        }
+        @include media($desktop) {
+            display: flex;
+            // flex-wrap: nowrap;
+            > div {
+                width: 25%;
+            }
+
+        }
+    }
     .doctor {
         margin-bottom: 50px;
         position: relative;
         @include media($tablet) {
+            padding: 0 20px;
+        }
+        @include media($desktop) {
             margin-bottom: 80px;
             display: flex;
             justify-content: flex-start;
+            flex-direction: column;
+            width: 25%;
         }
     }
     .doc-bio {
         max-width: 600px;
         text-align: center;
-        @include media($tablet) {
-            text-align: left;
-        }
         p {
             display: none;
             @include media($tablet) {
@@ -323,26 +342,16 @@
     .doc-pic img {
         border-radius: 50%;
         width: 180px;
-        // margin: 0 auto;
         margin-top: 20px;
         margin-bottom: 20px;
         @include media($tablet) {
-            width: 230px;
-            margin-right: 60px;
+            width: 100%;
         }
     }
     .doc-button {
         margin-top: 20px;
-        @include media($tablet) {
-            // margin-top: 0;
-        }
         a {
             min-width: 250px;
-        }
-        @include media(1250px) {
-            position: absolute;
-            right: 0;
-            top: 100px;
         }
     }
 }

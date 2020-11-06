@@ -4535,12 +4535,42 @@ span.error {
   color: #126abf !important;
 }
 
+@media only screen and (min-width: 768px) {
+  .home-doctors .the-docs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .home-doctors .the-docs > div {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  .home-doctors .the-docs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .home-doctors .the-docs > div {
+    width: 25%;
+  }
+}
+
 .home-doctors .doctor {
   margin-bottom: 50px;
   position: relative;
 }
 
 @media only screen and (min-width: 768px) {
+  .home-doctors .doctor {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
   .home-doctors .doctor {
     margin-bottom: 80px;
     display: -webkit-box;
@@ -4549,18 +4579,17 @@ span.error {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 25%;
   }
 }
 
 .home-doctors .doc-bio {
   max-width: 600px;
   text-align: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-doctors .doc-bio {
-    text-align: left;
-  }
 }
 
 .home-doctors .doc-bio p {
@@ -4586,8 +4615,7 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-doctors .doc-pic img {
-    width: 230px;
-    margin-right: 60px;
+    width: 100%;
   }
 }
 
@@ -4597,14 +4625,6 @@ span.error {
 
 .home-doctors .doc-button a {
   min-width: 250px;
-}
-
-@media only screen and (min-width: 1250px) {
-  .home-doctors .doc-button {
-    position: absolute;
-    right: 0;
-    top: 100px;
-  }
 }
 
 .home-testis {

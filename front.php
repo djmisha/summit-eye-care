@@ -49,8 +49,7 @@
         <div class="surgery-single">
             <div class="lines"></div>
             <a href="<?php the_sub_field('link'); ?>"><img src="<?php the_sub_field('image'); ?>" alt="icon"></a>
-            <a href="<?php the_sub_field('link'); ?>" rel="nofollow"
-                class="button button-white"><?php the_sub_field('headline'); ?></a>
+            <a href="<?php the_sub_field('link'); ?>" rel="nofollow" class="button button-white"><?php the_sub_field('headline'); ?></a>
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
@@ -60,6 +59,7 @@
 
 <section class="home-doctors">
     <h2><?php the_field('doctor_headline'); ?></h2>
+    <div class="the-docs">
     <?php if(have_rows('doctor_items')): ?>
     <?php while(have_rows('doctor_items')): the_row(); ?>
     <div class="doctor">
@@ -68,7 +68,7 @@
         </div>
         <div class="doc-bio">
             <h3><?php the_sub_field('headline'); ?></h3>
-            <?php the_sub_field('content'); ?>
+            <?php //the_sub_field('content'); ?>
             <div class="doc-button">
                 <a href="<?php the_sub_field('link'); ?>" rel="nofollow" class="button button-transparent">View Bio</a>
             </div>
@@ -76,6 +76,7 @@
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
+    </div>
 </section>
 
 

@@ -375,7 +375,7 @@
 /* Remove Second Sticky Button */
 
 var removeSecond = function () {
-    let contactPage = document.querySelector('body.conta-us'); 
+    let contactPage = document.querySelector('body.contact-us'); 
     if (contactPage === null) {
         let button = document.querySelectorAll('.sticky-schedule');
         button[1].remove();
@@ -387,13 +387,6 @@ removeSecond();
 /* Hide some stuff in the header Locations */
 
 var headerTrickery = function() {
-    //  if ($(window).width() >= 1010) {
-    //      let addresses = document.querySelectorAll('ul.header-locations li');
-    //      // removed 3 nodes
-    //      addresses[1].firstElementChild.childNodes[1].remove();
-    //      addresses[1].firstElementChild.childNodes[1].remove();
-    //      addresses[1].firstElementChild.childNodes[1].remove();
-    // }
     let secondMapIcon = document.querySelectorAll('.menu-location a');
     secondMapIcon[1].remove();
 }
