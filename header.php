@@ -48,7 +48,7 @@
                 <ul class="header-locations">
 
                     <?php while( have_rows('locations', 'option')): the_row();
-						$locationName = get_sub_field('locationName');
+						$locationName = get_sub_field('location_name');
 						$tag = get_sub_field('location_tag');
 						$street = get_sub_field('street');
 						$suite = get_sub_field('suite');
@@ -59,11 +59,12 @@
 						$tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
 						$map = get_sub_field('map');
 						$gmb = get_sub_field('gmb');
-						$applink = Get_bloginfo('url') .'/contact-us/';
+                        $applink = Get_bloginfo('url') .'/contact-us/';
 					?>
                     <li>
-                        <div>
+                        <div class="<?php echo 'loc-' . $zip . '' ?>">
                             <?php
+                                echo '<div class="mobile-name">' . $locationName . '</div>'; 
 								// phone
 								if($phone) echo '<div class="phone">
 								<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
@@ -72,17 +73,17 @@
 								if($tag) echo '<div class="tag"><a href="' . $applink . '">Appointments</a></div>';
 
 								// Directions wrap open
-								if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Header  Contact - Address" class="track-outbound">';
+								if($gmb) echo '<div class="directions d-'.$zip.'"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Header  Contact - Address" class="track-outbound">';
 
-									// locationName
-									if($locationName) echo '<div class="name">' . $locationName . '</div>';
+                                // Address
+                                if( $street ) {
+                                    echo '<div class="street"><span class="addy">' . $street;
+                                    if ($suite) echo ', ' . $suite. ' ' . $city . ', ' . $state . ' ' . $zip;
+                                    echo '</span><span class="name">' . $locationName . '</span></div>'; // Street Address
+                                }
 
-									// Address
-									if( $street ) {
-										echo '<div class="street">' . $street;
-										if ($suite) echo ', ' . $suite. ' ' . $city . ', ' . $state . ' ' . $zip;
-										echo '</div>'; // Street Address
-									}
+                                // locationName
+                                if($locationName) echo '';
 
 								if($gmb) echo '</a></div>';
 								// Directions wrap close/end

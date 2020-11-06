@@ -54,7 +54,7 @@ gulp.task('browser-sync', function() {
         ui          : false,
         // port        : myPort,
         files       : ['**/*.php','**/*.js'],
-        host        : 'http://basetheme.local/',
+        host        : 'http://summiteyewi.local/',
         open        : false,
         notify      : false,
         ghostMode   : false,

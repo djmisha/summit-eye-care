@@ -10,40 +10,67 @@
     background: #fff;
     padding-top: 40px;
     @include media($tablet) {
-        background: $primaryColor;
-        padding-top: 80px;
-        padding-bottom: 80px;
-        display: flex;
-        flex-direction: row-reverse;
         justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        justify-content: flex-start;
         overflow: hidden;
+        box-shadow: 0px 10px 15px rgba(#000, 0.16);
+        margin: 0 auto;
+        padding-left: 60px;
+        padding-right: 40px;
+        @include media($desktop) {
+            padding-left: 0;
+            padding-right: 0;
+            border-radius: 30px;
+            display: flex;
+            max-width: 800px;
+        }
+        @include media(1320px) {
+            max-width: 1280px;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            
+        }
         > div {
             margin: 0;
-            width: 50%;
             padding: 0;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
         }
     }
     .locations-info-wrapper {
         @include media($tablet) {
             background: #fff;
-            padding: 40px;
-            border-radius: 50px;
             position: relative;
-            right: -18px;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            box-shadow: 0px 10px 15px rgba(#000, 0.16);
         }
         @include media($desktop) {
-            padding: 40px 80px 20px 70px;
+            padding-left: 100px;
         }
+        @include media(1320px) {
+            padding-left: 30px;
+            width: calc(100% - 650px);
+        }
+
     }
     .footer-map {
+        width: calc(100vw - 40px);
+        height: 80vw;
+        margin-right: 20px;
+        margin-left: 20px;
         @include media($tablet) {
+            margin-left: 20px;
+            width: 580px;
             position: relative;
-            left: -18px;
+            margin-top: 20px;
+            height: 430px;
+        }
+         @include media($desktop) {
+             margin-left: 100px;
+            }
+            @include media(1320px) {
+            margin-top: 0px;
+            margin-left: 40px;
         }
     }
 }
@@ -61,29 +88,17 @@
 
 .footer-map {
     margin: 0 auto;
-    width: 85vw;
-    height: 75vw;
-    border-radius: 50px;
-    box-shadow: 0px 10px 15px rgba(#000, 0.16);
+    border-radius: 10px;
     position: relative;
     z-index: 1000;
-    // top: 30vw;
     background: $secondaryColor url("images/map.jpg") center center no-repeat;
     background-size: 240%;
-    background-position-x: calc(55% - 50px;);
+    background-position-x: calc(55% - 0px;);
     position: relative;
     @include media($tablet) {
-        // width: 50%;
         height: auto;
-        // background-size: cover;
         background-size: cover;
         background-position: center;
-    }
-    @include media($desktop) {
-        background-size: auto 120%;
-    }
-    @include media(1480px) {
-        background-size: cover;
     }
     a {
         width: 100%;
@@ -96,18 +111,35 @@
 }
 
 .f-locations {
-    padding-left: 20px;
     background: #fff;
     text-align: left;
     list-style: none;
+    @include media($tablet) {
+        display: flex;
+        
+    }
+    @include media($desktop) {
+    }
     li {
         padding-left: 70px;
+         &:nth-of-type(2) {
+                // margin-top: 45px;
+            }
         div > div {
             margin-bottom: 30px;
             &:nth-of-type(2) {
                 margin-bottom: 15px;
             }
         }
+    }
+    .location-name {
+        // margin: 20px 0;
+        margin-left: -40px;
+        margin-bottom: 10px;
+        color: $primaryColor;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 17px;
     }
     a {
         color: $secondaryColor;
@@ -119,7 +151,7 @@
         color: $primaryColor;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 25px;
+        font-size: 16px;
         a {
             color: $primaryColor;
         }
@@ -132,32 +164,34 @@
             background: url("images/svg/icon-phone.svg");
             background-repeat: no-repeat;
             width: 30px;
-            height: 40px;
-            left: -70px;
+            height: 30px;
+            background-size: cover;
+            left: -40px;
         }
     }
     .tag {
         position: relative;
         max-width: 230px;
         a {
-            // line-height: 10px;
-            font-size: 15px;
+            font-size: 14px;
+            line-height: 1px;
         }
         &:before {
             content: "";
             position: absolute;
             background: url("images/svg/icon-cal.svg");
             background-repeat: no-repeat;
-            width: 35px;
-            height: 42px;
-            left: -68px;
+            background-size: cover;
+            width: 27px;
+            height: 25px;
+            left: -40px
         }
     }
     .directions {
-        padding-top: 10px;
+        padding-top: 0px;
         a {
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 14px;
+            line-height: 18px;
         }
     }
     .street {
@@ -170,7 +204,7 @@
             background-repeat: no-repeat;
             width: 28px;
             height: 45px;
-            left: -65px;
+            left: -40px;
             top: 0px;
         }
     }
@@ -186,17 +220,17 @@
         flex-wrap: nowrap;
         flex-direction: row;
     }
-    @include media(1220px) {
-        display: block;
-        position: absolute;
-        left: 480px;
-        top: 230px;
-    }
-    @include media(1400px) {
-        left: 490px;
+    // @include media(1220px) {
+    //     display: block;
+    //     position: absolute;
+    //     left: 480px;
+    //     top: 230px;
+    // }
+    // @include media(1400px) {
+        // left: 490px;
         // position: fixed;
         // left: calc(50% - 200px);
-    }
+    // }
     a {
         display: block;
         text-align: left;
@@ -216,18 +250,18 @@
             top: 40px;
             position: relative;
         }
-        @include media(1220px) {
-            margin: 0;
-            top: 0;
-            padding-left: 35px;
-        }
-        @include media(1220px) {
-            display: none;
-        }
-        @include media(1441px) {
-            display: block;
-            // visibility: visible;
-        }
+        // @include media(1220px) {
+        //     margin: 0;
+        //     top: 0;
+        //     padding-left: 35px;
+        // }
+        // @include media(1220px) {
+        //     display: none;
+        // }
+        // @include media(1441px) {
+        //     display: block;
+        //     // visibility: visible;
+        // }
     }
     i {
         width: 40px;
@@ -443,28 +477,21 @@
     height: 56px;
     border-radius: 50px;
     transition: bottom 0.5s ease-out, background 0.15s ease-out;
-    // transition: ;
     bottom: -200px;
     position: fixed;
-    // padding: 12px 90px 12px 50px !important;
     width: 140px;
-    border: 1px solid pink;
     right: 20px;
     z-index: 8999;
     background: $primaryColor;
-    border: 1px solid #fff;
     display: block;
     box-shadow: 0px 10px 15px rgba(#000, 0.16);
     @include media($tablet) {
         right: 0px;
         width: 310px !important;
         max-width: 310px !important;
-
         background: transparent;
         box-shadow: none;
         border: none;
-
-        // height: auto;
         padding-top: 12px;
         padding-bottom: 12px;
     }
@@ -486,10 +513,8 @@
         color: #fff;
         text-decoration: none;
         position: relative;
-        // border: 1px solid pink;
         display: block;
-        // width: 40px;
-        // height: 40px;
+        
         span {
             display: none;
             @include media($tablet) {
@@ -498,21 +523,10 @@
         }
         &.sticky-schedule {
             width: 40px;
-            // height: 40px;
-            // position: absolute;
             @include media($tablet) {
-                // width: 400px;
-                // display: none;
-                // height: auto;
-                // z-index: 9999;
-                // display: block;
-                // height: 56px;
                 border-radius: 50px;
                 position: relative;
-                // border: 1px solid pink;
                 width: 320px;
-                // height: 40px;
-                // top: 0;
                 right: 40px;
                 background: $primaryColor;
                 border: 1px solid #fff;
@@ -521,7 +535,6 @@
                 padding-top: 12px;
                 padding-bottom: 12px;
                 transition: bottom 0.5s ease-out, background 0.15s ease-out;
-
                 &:hover {
                     background: darken($primaryColor, 10%);
                 }
@@ -532,15 +545,6 @@
                 @include media($tablet) {
                     display: block;
                 }
-                // width: 320px;
-                // t
-
-                // text-align: left;
-                // position: absolute;
-                // left: -100px;
-                // display: block;
-                // width: 300px;
-                // border: 1px solid pink;
             }
             &:before {
                 content: "";

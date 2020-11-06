@@ -19,7 +19,7 @@
 	                <ul class="f-locations">
 
 	                    <?php while( have_rows('locations', 'option')): the_row();
-							$locationName = get_sub_field('locationName');
+							$locationName = get_sub_field('location_name');
 							$tag = get_sub_field('location_tag');
 							$street = get_sub_field('street');
 							$suite = get_sub_field('suite');
@@ -36,13 +36,14 @@
 
 	                    <li>
 
-
 	                        <div>
 
-	                            <?php
+								<?php
+										// Loc Name
+										if($locationName) echo '<div class="location-name">' . $locationName . '</div>';
+
 										// phone
-										if($phone) echo '<div class="phone">
-										<a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
+										if($phone) echo '<div class="phone"> <a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
 
 										// Tag
 										if($tag) echo '<div class="tag"><a href="' . $applink . '">' . $tag . '</a></div>';
@@ -51,9 +52,8 @@
 										if($gmb) echo '<div class="directions"><a href="' . $gmb . '" target="_blank" rel="nofollow noopener" data-label="Footer Contact - Address" class="track-outbound">';
 
 											// locationName
-											if($locationName) echo '<div class="name">' . $locationName . '</div>';
+											// if($locationName) echo '<div class="name">' . $locationName . '</div>';
 											
-
 
 											// Address
 											if( $street ) {
@@ -79,18 +79,14 @@
 	                <?php if( have_rows('social_buttons', 'option')): ?>
 
 	                <div class="f-social">
-
 	                    <?php
 							while( have_rows('social_buttons', 'option')): the_row();
 								$icon = get_sub_field('social_icon');
 								$name = get_sub_field('social_name');
 								$link = get_sub_field('social_link');
-
 								if( $name ) echo '<a href="' . $link . '" aria-label="' . $name . '" rel="nofollow noopener" target="_blank">' . $icon . '<span>' . $name . '</span></a>';
-
 							endwhile;
 						?>
-
 	                </div>
 
 	                <?php endif; ?>
@@ -99,7 +95,7 @@
 	            <div class="footer-map">
 	                <?php if( have_rows('locations', 'option')): ?>
 	                <?php while( have_rows('locations', 'option')): the_row(); $gmb = get_sub_field('gmb'); ?>
-	                <a href="<?php echo $gmb; ?>" aria-label="Map" target="_blank" rel="nofollow noopener"></a>
+	                <!-- <a href="<?php echo $gmb; ?>" aria-label="Map" target="_blank" rel="nofollow noopener"></a> -->
 	                <?php endwhile; ?>
 	                <?php endif; ?>
 	            </div>
@@ -151,11 +147,10 @@
 
 	<?php wp_footer();?>
 
-
-	<?php if($_SERVER['SERVER_NAME'] == 'gandola-eye.local'): ?>
+	<?php if($_SERVER['SERVER_NAME'] == 'summiteyewi.local'): ?>
 	<script id="__bs_script__">
 //<![CDATA[
-document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace(
+document.write("<script async src='http://summiteyewi.local:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace(
     "HOST", location.hostname));
 //]]>
 	</script>
